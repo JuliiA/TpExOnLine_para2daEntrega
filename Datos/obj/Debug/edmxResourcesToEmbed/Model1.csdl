@@ -1,0 +1,192 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ExamenOnLineModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="ExamenOnLineEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="ALUMNO" EntityType="ExamenOnLineModel.ALUMNO" />
+    <EntitySet Name="CURSO" EntityType="ExamenOnLineModel.CURSO" />
+    <EntitySet Name="EXAMEN" EntityType="ExamenOnLineModel.EXAMEN" />
+    <EntitySet Name="PREGUNTA" EntityType="ExamenOnLineModel.PREGUNTA" />
+    <EntitySet Name="PROFESOR" EntityType="ExamenOnLineModel.PROFESOR" />
+    <EntitySet Name="RESPUESTA" EntityType="ExamenOnLineModel.RESPUESTA" />
+    <EntitySet Name="RESULTADO" EntityType="ExamenOnLineModel.RESULTADO" />
+    <AssociationSet Name="FK_RESULTADO_ALUMNO" Association="ExamenOnLineModel.FK_RESULTADO_ALUMNO">
+      <End Role="ALUMNO" EntitySet="ALUMNO" />
+      <End Role="RESULTADO" EntitySet="RESULTADO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CURSO_PROFESOR" Association="ExamenOnLineModel.FK_CURSO_PROFESOR">
+      <End Role="PROFESOR" EntitySet="PROFESOR" />
+      <End Role="CURSO" EntitySet="CURSO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EXAMEN_CURSO" Association="ExamenOnLineModel.FK_EXAMEN_CURSO">
+      <End Role="CURSO" EntitySet="CURSO" />
+      <End Role="EXAMEN" EntitySet="EXAMEN" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PREGUNTA_EXAMEN" Association="ExamenOnLineModel.FK_PREGUNTA_EXAMEN">
+      <End Role="EXAMEN" EntitySet="EXAMEN" />
+      <End Role="PREGUNTA" EntitySet="PREGUNTA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RESULTADO_EXAMEN" Association="ExamenOnLineModel.FK_RESULTADO_EXAMEN">
+      <End Role="EXAMEN" EntitySet="EXAMEN" />
+      <End Role="RESULTADO" EntitySet="RESULTADO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RESPUESTA_PREGUNTA" Association="ExamenOnLineModel.FK_RESPUESTA_PREGUNTA">
+      <End Role="PREGUNTA" EntitySet="PREGUNTA" />
+      <End Role="RESPUESTA" EntitySet="RESPUESTA" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="ALUMNO">
+    <Key>
+      <PropertyRef Name="IdAlumno" />
+    </Key>
+    <Property Name="IdAlumno" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DNI" Type="Int64" />
+    <Property Name="Nombre" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Apellido" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Mail" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Name="Contrasenia" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="RESULTADO" Relationship="ExamenOnLineModel.FK_RESULTADO_ALUMNO" FromRole="ALUMNO" ToRole="RESULTADO" />
+  </EntityType>
+  <EntityType Name="CURSO">
+    <Key>
+      <PropertyRef Name="IdCurso" />
+    </Key>
+    <Property Name="IdCurso" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Name="Estado" Type="Int32" />
+    <Property Name="FecIni" Type="DateTime" />
+    <Property Name="FecFin" Type="DateTime" />
+    <Property Name="ProfId" Type="Int32" />
+    <NavigationProperty Name="PROFESOR" Relationship="ExamenOnLineModel.FK_CURSO_PROFESOR" FromRole="CURSO" ToRole="PROFESOR" />
+    <NavigationProperty Name="EXAMEN" Relationship="ExamenOnLineModel.FK_EXAMEN_CURSO" FromRole="CURSO" ToRole="EXAMEN" />
+  </EntityType>
+  <EntityType Name="EXAMEN">
+    <Key>
+      <PropertyRef Name="IdExamen" />
+    </Key>
+    <Property Name="IdExamen" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Descripcion" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Name="Duracion" Type="Time" />
+    <Property Name="FecHora" Type="DateTime" />
+    <Property Name="CursoId" Type="Int32" />
+    <NavigationProperty Name="CURSO" Relationship="ExamenOnLineModel.FK_EXAMEN_CURSO" FromRole="EXAMEN" ToRole="CURSO" />
+    <NavigationProperty Name="PREGUNTA" Relationship="ExamenOnLineModel.FK_PREGUNTA_EXAMEN" FromRole="EXAMEN" ToRole="PREGUNTA" />
+    <NavigationProperty Name="RESULTADO" Relationship="ExamenOnLineModel.FK_RESULTADO_EXAMEN" FromRole="EXAMEN" ToRole="RESULTADO" />
+  </EntityType>
+  <EntityType Name="PREGUNTA">
+    <Key>
+      <PropertyRef Name="IdPregunta" />
+    </Key>
+    <Property Name="IdPregunta" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Descripcion" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Name="ExamenId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="EXAMEN" Relationship="ExamenOnLineModel.FK_PREGUNTA_EXAMEN" FromRole="PREGUNTA" ToRole="EXAMEN" />
+    <NavigationProperty Name="RESPUESTA" Relationship="ExamenOnLineModel.FK_RESPUESTA_PREGUNTA" FromRole="PREGUNTA" ToRole="RESPUESTA" />
+  </EntityType>
+  <EntityType Name="PROFESOR">
+    <Key>
+      <PropertyRef Name="IdProfesor" />
+    </Key>
+    <Property Name="IdProfesor" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Mail" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Name="Contrasenia" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="CURSO" Relationship="ExamenOnLineModel.FK_CURSO_PROFESOR" FromRole="PROFESOR" ToRole="CURSO" />
+  </EntityType>
+  <EntityType Name="RESPUESTA">
+    <Key>
+      <PropertyRef Name="IdRespuesta" />
+    </Key>
+    <Property Name="IdRespuesta" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Descripcion" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Name="EsValida" Type="Int32" />
+    <Property Name="PreguntaId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="PREGUNTA" Relationship="ExamenOnLineModel.FK_RESPUESTA_PREGUNTA" FromRole="RESPUESTA" ToRole="PREGUNTA" />
+  </EntityType>
+  <EntityType Name="RESULTADO">
+    <Key>
+      <PropertyRef Name="IdResultado" />
+    </Key>
+    <Property Name="IdResultado" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FecHora" Type="DateTime" />
+    <Property Name="FecIni" Type="DateTime" />
+    <Property Name="Demora" Type="Time" />
+    <Property Name="Porcentaje" Type="Int32" />
+    <Property Name="Nota" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="AlumnoId" Type="Int32" Nullable="false" />
+    <Property Name="ExamenId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="ALUMNO" Relationship="ExamenOnLineModel.FK_RESULTADO_ALUMNO" FromRole="RESULTADO" ToRole="ALUMNO" />
+    <NavigationProperty Name="EXAMEN" Relationship="ExamenOnLineModel.FK_RESULTADO_EXAMEN" FromRole="RESULTADO" ToRole="EXAMEN" />
+  </EntityType>
+  <Association Name="FK_RESULTADO_ALUMNO">
+    <End Role="ALUMNO" Type="ExamenOnLineModel.ALUMNO" Multiplicity="1" />
+    <End Role="RESULTADO" Type="ExamenOnLineModel.RESULTADO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ALUMNO">
+        <PropertyRef Name="IdAlumno" />
+      </Principal>
+      <Dependent Role="RESULTADO">
+        <PropertyRef Name="AlumnoId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CURSO_PROFESOR">
+    <End Role="PROFESOR" Type="ExamenOnLineModel.PROFESOR" Multiplicity="0..1" />
+    <End Role="CURSO" Type="ExamenOnLineModel.CURSO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PROFESOR">
+        <PropertyRef Name="IdProfesor" />
+      </Principal>
+      <Dependent Role="CURSO">
+        <PropertyRef Name="ProfId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EXAMEN_CURSO">
+    <End Role="CURSO" Type="ExamenOnLineModel.CURSO" Multiplicity="0..1" />
+    <End Role="EXAMEN" Type="ExamenOnLineModel.EXAMEN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CURSO">
+        <PropertyRef Name="IdCurso" />
+      </Principal>
+      <Dependent Role="EXAMEN">
+        <PropertyRef Name="CursoId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PREGUNTA_EXAMEN">
+    <End Role="EXAMEN" Type="ExamenOnLineModel.EXAMEN" Multiplicity="1" />
+    <End Role="PREGUNTA" Type="ExamenOnLineModel.PREGUNTA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EXAMEN">
+        <PropertyRef Name="IdExamen" />
+      </Principal>
+      <Dependent Role="PREGUNTA">
+        <PropertyRef Name="ExamenId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RESULTADO_EXAMEN">
+    <End Role="EXAMEN" Type="ExamenOnLineModel.EXAMEN" Multiplicity="1" />
+    <End Role="RESULTADO" Type="ExamenOnLineModel.RESULTADO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EXAMEN">
+        <PropertyRef Name="IdExamen" />
+      </Principal>
+      <Dependent Role="RESULTADO">
+        <PropertyRef Name="ExamenId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RESPUESTA_PREGUNTA">
+    <End Role="PREGUNTA" Type="ExamenOnLineModel.PREGUNTA" Multiplicity="1" />
+    <End Role="RESPUESTA" Type="ExamenOnLineModel.RESPUESTA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PREGUNTA">
+        <PropertyRef Name="IdPregunta" />
+      </Principal>
+      <Dependent Role="RESPUESTA">
+        <PropertyRef Name="PreguntaId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

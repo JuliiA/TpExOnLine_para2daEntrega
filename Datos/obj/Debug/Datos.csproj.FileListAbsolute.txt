@@ -1,0 +1,12 @@
+C:\Users\Juliana\Documents\Visual Studio 2010\Projects\TP-ExamenesEnLinea\Datos\bin\Debug\Datos.dll
+C:\Users\Juliana\Documents\Visual Studio 2010\Projects\TP-ExamenesEnLinea\Datos\bin\Debug\Datos.pdb
+C:\Users\Juliana\Documents\Visual Studio 2010\Projects\TP-ExamenesEnLinea\Datos\obj\Debug\Datos.dll
+C:\Users\Juliana\Documents\Visual Studio 2010\Projects\TP-ExamenesEnLinea\Datos\obj\Debug\Datos.pdb
+C:\Users\Juliana\Documents\Visual Studio 2010\Projects\TP-ExamenesEnLinea\Datos\bin\Debug\Datos.dll.config
+C:\Users\Juliana\Documents\Visual Studio 2010\Projects\TP-ExamenesEnLinea\Datos\obj\Debug\Datos.csprojResolveAssemblyReference.cache
+C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\Datos\bin\Debug\Datos.dll.config
+C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\Datos\bin\Debug\Datos.dll
+C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\Datos\bin\Debug\Datos.pdb
+C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\Datos\obj\Debug\Datos.csprojResolveAssemblyReference.cache
+C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\Datos\obj\Debug\Datos.dll
+C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\Datos\obj\Debug\Datos.pdb

@@ -1,0 +1,62 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site2.master.cs" Inherits="TP_ExamenesEnLinea.Site2" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <link rel="stylesheet" type="text/css" href="bootstrap/bootstrap.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-responsive.css"
+        media="all" />
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-responsive.min.css"
+        media="all" />
+   <link rel="stylesheet" href="bootstrap/jquery-ui-1.10.3.custom/css/vader/jquery-ui-1.10.3.custom.css" />
+    <link rel="stylesheet" href="bootstrap/jquery-ui-1.10.3.custom/css/vader/jquery-ui-1.10.3.custom.min.css" />
+    <script language="javascript" type="text/javascript" src="bootstrap/jquery-ui-1.10.3.custom/js/jquery-1.9.1.js"></script>
+    <script language="javascript" type="text/javascript" src="bootstrap/jquery-ui-1.10.3.custom/js/jquery-ui-1.10.3.custom.js"></script>
+    <script language="javascript" type="text/javascript" src="bootstrap/jquery-ui-1.10.3.custom/js/jquery-ui-1.10.3.custom.min.js"></script>
+    <script language="javascript" type="text/javascript" src="bootstrap/js/Script.js"></script>
+  <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <title>Portal de examenes en linea</title>
+</head>
+<body class="body">
+    <div class="container">
+        <div class="modal-header text-center">
+            <h1 class="text-success">
+                Sistemas de Examenes OnLine</h1>
+        </div>
+        <form id="form1" runat="server" class="brand">
+        <div class="">
+            <div class="btn-group">
+                <a href="EditarDatosAlumno.aspx" class="btn btn-large btn-info"><i class="icon-edit">
+                </i>Editar Mis Datos</a> <a href="ExamenesDisponiblesAlumnos.aspx" class="btn btn-large btn-info">
+                    <i class=" icon-list"></i>Examenes Disponibles</a><i class="icon-off icon-white"></i>
+                <asp:Button ID="btnsalir" runat="server" Text="Salir" 
+                    CssClass="btn btn-large btn-primary" onclick="btnsalir_Click" 
+                    ValidationGroup="btnexit" />
+            </div>
+             <div class="tab-content text-info text-right">
+            <h2>
+                <i class="icon-user"></i>Usuario:
+                <asp:Label ID="lbluser" runat="server" Text="Label"></asp:Label>
+                </h2>
+        </div>
+        </div>
+        <br />
+        
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        </form>
+       <div id="pie">
+            <div class="modal-footer">
+                <asp:SiteMapPath ID="SiteMapPath1" runat="server">
+                </asp:SiteMapPath>
+               ||<i class="icon-star"></i><b>Copyright 2013- Avellaneda Juliana, Vaccaro Cecilia</b></div>
+        </div>
+
+    </div>
+</body>
+</html>
