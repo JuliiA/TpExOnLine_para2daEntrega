@@ -40,31 +40,40 @@ namespace TP_ExamenesEnLinea {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
         
         /// <summary>
-        /// Control Label1.
+        /// Control CheckBox1.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
+        protected global::System.Web.UI.WebControls.CheckBox CheckBox1;
         
         /// <summary>
-        /// Control check.
+        /// Control CustomValidator1.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBoxList check;
+        protected global::System.Web.UI.WebControls.CustomValidator CustomValidator1;
         
         /// <summary>
-        /// Control fecini.
+        /// Control fecCalendario1.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::TP_ExamenesEnLinea.Fecha fecini;
+        protected global::TP_ExamenesEnLinea.Fecha fecCalendario1;
+        
+        /// <summary>
+        /// Control fecCalendario2.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::TP_ExamenesEnLinea.Fecha fecCalendario2;
         
         /// <summary>
         /// Control lblmails.
@@ -85,13 +94,13 @@ namespace TP_ExamenesEnLinea {
         protected global::System.Web.UI.WebControls.Label Label2;
         
         /// <summary>
-        /// Control TextBox2.
+        /// Control txtmails.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox2;
+        protected global::System.Web.UI.WebControls.TextBox txtmails;
         
         /// <summary>
         /// Control btncrear.

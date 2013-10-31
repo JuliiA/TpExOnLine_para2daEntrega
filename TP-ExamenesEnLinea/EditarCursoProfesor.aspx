@@ -5,7 +5,8 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="nav-tabs breadcrumb col-md-offset-0">
         <h3>
-            Editar Curso</h3>
+            Editar Curso: </h3>
+        <asp:Label ID="lblid" runat="server" Text="" CssClass="text-info"></asp:Label>
         <div class="breadcrumb col-mg-2">
             <div class="formio">
                 <div class="control-group">
@@ -15,10 +16,8 @@
                 </div>
                 <div class="control-group">
                     <div class="controls">
-                        <asp:Label ID="Label1" runat="server" Text="Estado Activo:"></asp:Label>
-                        <asp:CheckBoxList ID="check" runat="server">
-                            <asp:ListItem Selected="True">Verdadero</asp:ListItem>
-                        </asp:CheckBoxList>
+                        <asp:Label ID="Label1" runat="server" Text="Estado Activo/Desactivo:"></asp:Label>
+                        <asp:CheckBox ID="check" runat="server" />
                     </div>
                     <div class="control-group">
                         <fec:Calendario ID="fecini" runat="server"></fec:Calendario>
@@ -31,7 +30,8 @@
                     </div>
                 </div>
                 <div class="controls">
-                    <asp:Button ID="Button1" runat="server" class="btn btn-success" Text="Guardar cambios" />
+                    <asp:Button ID="Button1" runat="server" class="btn btn-success" 
+                        Text="Guardar cambios" onclick="Button1_Click" />
                 </div>
             </div>
         </div>

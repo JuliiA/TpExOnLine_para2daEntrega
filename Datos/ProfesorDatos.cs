@@ -47,30 +47,34 @@ namespace Datos
         }
 
 
-        public void altaExamen(string Nombre, string Descripcion, int Duracion, DateTime tiempotope,DateTime horatope, int porcentaje, int idcurso)
+        public void altaExamen(string nombre, string descripcion, int duracion, DateTime tiempotope, DateTime horatope, int idcurso)
         {
-            DateTime Fecha = Convert.ToDateTime(tiempotope.Day);
-            DateTime Hora = Convert.ToDateTime(horatope.Minute);
+            //DateTime Fecha = Convert.ToDateTime(tiempotope.Date);
+            //DateTime Hora = Convert.ToDateTime(horatope.TimeOfDay);
 
-            //concatenar los valores fecha y hora
+            //concatenar los valores fecha y hora:
+            DateTime fechahora = Convert.ToDateTime(tiempotope.Date + "" + horatope.TimeOfDay);
 
-            ExamenEntidad miExamen = new ExamenEntidad();
-            miExamen.nombrexamen = Nombre;
-            miExamen.descripcion = Descripcion;
-            miExamen.duracion = Duracion;
-            
-            miExamen.porcentajeAprobacion = porcentaje;
-            miExamen.idcurso = idcurso;
+            // ExamenEntidad miExamen = new ExamenEntidad();
+            // miExamen.nombrexamen = Nombre;
+            // miExamen.descripcion = Descripcion;
+            // miExamen.duracion = Duracion;
+
+            //miExamen.porcentajeAprobacion = porcentaje;  
+            // miExamen.idcurso = idcurso;
+
 
             EXAMEN exa = new EXAMEN();
-            exa.Nombre = Nombre;
-            exa.Descripcion = Descripcion;
-            exa.Duracion = Duracion;
-            exa.FecHora = tiempotope;
+            exa.Nombre = nombre;
+            exa.Descripcion = descripcion;
+            exa.Duracion = duracion;
+            exa.FecHora = tiempotope; //concatenado
             exa.CursoId = idcurso;
+
 
             ctx.Examenes.AddObject(exa);
             ctx.SaveChanges();
+
         }
     }
 }

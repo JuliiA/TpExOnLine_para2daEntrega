@@ -99,5 +99,14 @@
         </ComplexTypeMapping>
       </ResultMapping>
     </FunctionImportMapping>
+    <EntitySetMapping Name="CursosAl">
+      <EntityTypeMapping TypeName="ExamenOnLineModel.Curso_Alumno">
+        <MappingFragment StoreEntitySet="Curso_Alumno">
+          <ScalarProperty Name="IDALUMNO" ColumnName="IDALUMNO" />
+          <ScalarProperty Name="IDCURSO" ColumnName="IDCURSO" />
+          <ScalarProperty Name="idTab" ColumnName="idTab" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

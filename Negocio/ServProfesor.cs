@@ -35,16 +35,10 @@ namespace Negocio
             return resulta;
         }
 
-
-        public void crearNuevoExamen(string p, string p_2, string p_3, string p_4, string p_5, string p_6, int idcurso)
+        public void crearNuevoExamen(string nombre, string descripcion, int duracion, DateTime tiempotope, DateTime horatope, int idcurso)
         {
-            string Nombre = p;
-            string Descripcion = p_2;
-            int Duracion = Convert.ToInt32(p_3);
-            DateTime fechatope = Convert.ToDateTime(p_4);
-            DateTime horatope = Convert.ToDateTime(p_5);
-            int porcentaje = Convert.ToInt32(p_6);
-            esProfesor.altaExamen(Nombre, Descripcion, Duracion, fechatope,horatope, porcentaje, idcurso);
+
+            esProfesor.altaExamen(nombre, descripcion, duracion, tiempotope, horatope, idcurso);
         }
     }
 }

@@ -9,6 +9,13 @@ namespace TP_ExamenesEnLinea
 {
     public partial class Fecha : System.Web.UI.UserControl
     {
-        
+        public DateTime Calendario
+        {
+            get { return Calendar1.SelectedDate; }
+            set { Calendar1.SelectedDate = value; }
+
+
+        }
+
     }
 }

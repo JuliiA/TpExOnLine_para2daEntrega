@@ -3,11 +3,20 @@
   <EntityContainer Name="ExamenOnLineModelStoreContainer">
     <EntitySet Name="ALUMNO" EntityType="ExamenOnLineModel.Store.ALUMNO" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="CURSO" EntityType="ExamenOnLineModel.Store.CURSO" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Curso_Alumno" EntityType="ExamenOnLineModel.Store.Curso_Alumno" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="EXAMEN" EntityType="ExamenOnLineModel.Store.EXAMEN" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="PREGUNTA" EntityType="ExamenOnLineModel.Store.PREGUNTA" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="PROFESOR" EntityType="ExamenOnLineModel.Store.PROFESOR" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="RESPUESTA" EntityType="ExamenOnLineModel.Store.RESPUESTA" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="RESULTADO" EntityType="ExamenOnLineModel.Store.RESULTADO" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_Curso_Alumno_ALUMNO" Association="ExamenOnLineModel.Store.FK_Curso_Alumno_ALUMNO">
+      <End Role="ALUMNO" EntitySet="ALUMNO" />
+      <End Role="Curso_Alumno" EntitySet="Curso_Alumno" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Curso_Alumno_CURSO" Association="ExamenOnLineModel.Store.FK_Curso_Alumno_CURSO">
+      <End Role="CURSO" EntitySet="CURSO" />
+      <End Role="Curso_Alumno" EntitySet="Curso_Alumno" />
+    </AssociationSet>
     <AssociationSet Name="FK_CURSO_PROFESOR" Association="ExamenOnLineModel.Store.FK_CURSO_PROFESOR">
       <End Role="PROFESOR" EntitySet="PROFESOR" />
       <End Role="CURSO" EntitySet="CURSO" />
@@ -54,6 +63,16 @@
     <Property Name="FecIni" Type="datetime" />
     <Property Name="FecFin" Type="datetime" />
     <Property Name="ProfId" Type="int" />
+  </EntityType>
+  <EntityType Name="Curso_Alumno">
+    <Key>
+      <PropertyRef Name="idTab" />
+      <PropertyRef Name="IDCURSO" />
+      <PropertyRef Name="IDALUMNO" />
+    </Key>
+    <Property Name="idTab" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="IDCURSO" Type="int" Nullable="false" />
+    <Property Name="IDALUMNO" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="EXAMEN">
     <Key>
@@ -106,6 +125,30 @@
     <Property Name="AlumnoId" Type="int" Nullable="false" />
     <Property Name="ExamenId" Type="int" Nullable="false" />
   </EntityType>
+  <Association Name="FK_Curso_Alumno_ALUMNO">
+    <End Role="ALUMNO" Type="ExamenOnLineModel.Store.ALUMNO" Multiplicity="1" />
+    <End Role="Curso_Alumno" Type="ExamenOnLineModel.Store.Curso_Alumno" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ALUMNO">
+        <PropertyRef Name="IdAlumno" />
+      </Principal>
+      <Dependent Role="Curso_Alumno">
+        <PropertyRef Name="IDALUMNO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Curso_Alumno_CURSO">
+    <End Role="CURSO" Type="ExamenOnLineModel.Store.CURSO" Multiplicity="1" />
+    <End Role="Curso_Alumno" Type="ExamenOnLineModel.Store.Curso_Alumno" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CURSO">
+        <PropertyRef Name="IdCurso" />
+      </Principal>
+      <Dependent Role="Curso_Alumno">
+        <PropertyRef Name="IDCURSO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK_CURSO_PROFESOR">
     <End Role="PROFESOR" Type="ExamenOnLineModel.Store.PROFESOR" Multiplicity="0..1" />
     <End Role="CURSO" Type="ExamenOnLineModel.Store.CURSO" Multiplicity="*" />

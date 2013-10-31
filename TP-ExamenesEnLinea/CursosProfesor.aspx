@@ -14,26 +14,19 @@
             <%-- onrowcommand="gvcursos_RowCommand" --%>
                 <asp:GridView ID="gvcursos" runat="server" OnLoad="Page_Load" 
                     onrowcreated="gvcursos_RowCreated"
-                    onrowdatabound="gvcursos_RowDataBound">
+                    onrowdatabound="gvcursos_RowDataBound" 
+                    onselectedindexchanging="gvcursos_SelectedIndexChanging">
                     <Columns>
-                        <asp:TemplateField HeaderText="Editar">
-                                <ItemTemplate>
-                                    <asp:HyperLink ID="editLink" runat="server" NavigateUrl="~/EditarCursoProfesor.aspx"><i class="icon-pencil"></i>Editar</asp:HyperLink>
-                                </ItemTemplate>
-                        </asp:TemplateField>
-                        <asp:TemplateField HeaderText="Borrar">
-                                <ItemTemplate>
-                                    <asp:HyperLink ID="borLink" runat="server" NavigateUrl="~/BorrarCursoProfesor.aspx"><i class="icon-remove-circle"></i>Borrar</asp:HyperLink>
-                                </ItemTemplate>
-                        </asp:TemplateField>
+                        <asp:HyperLinkField DataNavigateUrlFields="IdCurso" 
+                            DataNavigateUrlFormatString="~/EditarCursoProfesor.aspx?id={0}" HeaderText="Edicion" Text="Editar" ControlStyle-CssClass="icon-pencil" />
+                        <asp:HyperLinkField DataNavigateUrlFields="IdCurso" 
+                            DataNavigateUrlFormatString="~/BorrarCursoProfesor.aspx?id={0}" HeaderText="Borrado" Text="Borrar" ControlStyle-CssClass="icon-remove-circle" />
+                     
                         <asp:TemplateField HeaderText="Cantidad Alumnos">
                             <ItemTemplate>
                                 <asp:Label ID="Label1" runat="server" Text=""></asp:Label>           
                             </ItemTemplate>
-                        </asp:TemplateField><%--
-                        <asp:HyperLinkField DataNavigateUrlFields="Nombre" 
-                            DataNavigateUrlFormatString="EditarCursoProfesor?name={0}" 
-                            DataTextField="Nombre" HeaderText="ProbarEdicion" />--%>
+                        </asp:TemplateField>
                     </Columns>
                 </asp:GridView>
             </div>

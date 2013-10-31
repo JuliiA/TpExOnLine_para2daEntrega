@@ -57,10 +57,11 @@ namespace TP_ExamenesEnLinea
         private void erroLogueo()
         {
             string mensaje = "Usuario y/o contraseña incorrecta.Reingrese";
-                lblmensaje.Text = mensaje;
-                RequiredFieldValidator2.ErrorMessage = "Contraseña Incorrecta";
-                Response.Redirect("LoginUsuario.aspx?msj=" + mensaje);
+            lblmensaje.Text = mensaje;
+            //RequiredFieldValidator2.ErrorMessage = "Contraseña Incorrecta";
+            //Response.Redirect("LoginUsuario.aspx?msj=" + mensaje);
         }
+
       
     }
 }

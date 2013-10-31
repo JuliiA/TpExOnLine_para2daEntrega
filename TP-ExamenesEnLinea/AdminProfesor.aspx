@@ -9,33 +9,35 @@
         <div class="breadcrumb col-mg-2">
             <div class="formio">
                 <div class="control-group">
-                    <asp:Label ID="lblcurso" runat="server" class="control-label" Text="Nombre Curso"></asp:Label>
+                    <asp:Label ID="lblcurso" runat="server" CssClass="control-label" Text="Nombre Curso"></asp:Label>
                     <div>
                         <asp:TextBox ID="txtcurso" runat="server" ValidationGroup="btncurso"></asp:TextBox></div>
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Ingrese un nombre para el curso"
-                        ControlToValidate="txtcurso" Display="Dynamic" CssClass="text-danger" Text="*Campo obligatorio"></asp:RequiredFieldValidator>
+                        ControlToValidate="txtcurso" Display="Dynamic" CssClass="text-danger" Text="*Campo obligatorio" ValidationGroup="crear"></asp:RequiredFieldValidator>
                 </div>
                 <div class="control-group">
                     <div class="controls">
-                        <asp:Label ID="Label1" runat="server" Text="Estado Activo:"></asp:Label><br />
-                        <asp:CheckBoxList ID="check" runat="server" ValidationGroup="btncurso">
-                            <asp:ListItem>Activo/Desactivo</asp:ListItem>
-                        </asp:CheckBoxList>
+                        <asp:CheckBox ID="CheckBox1" runat="server" Text="Estado: Activo/Desactivo"/>
+                        <asp:CustomValidator ID="CustomValidator1" runat="server" 
+                            ErrorMessage="*Campo Obligatorio" 
+                            onservervalidate="CustomValidator1_ServerValidate" ValidationGroup="crear" CssClass="text-danger"></asp:CustomValidator>
                     </div>
                 </div>
                 <div class="control-group">
-                    <fec:Calendario ID="fecini" runat="server"></fec:Calendario><br />
+                   Fecha de Inicio<fec:Calendario ID="fecCalendario1" runat="server"></fec:Calendario>
+                  <br />
+                  Fecha de Finalizacion<fec:Calendario ID="fecCalendario2" runat="server" />
                 </div>
                 <div class="control-group">
-                    <asp:Label ID="lblmails" runat="server" class="control-label" Text="Email Alumnos"></asp:Label>
+                    <asp:Label ID="lblmails" runat="server" CssClass="control-label" Text="Email Alumnos"></asp:Label>
                     <div class="controls">
                         <asp:Label ID="Label2" runat="server" Text="[INGRESE LOS MAIL SEPARADOS POR COMA(,)]"></asp:Label>
-                        <asp:TextBox ID="TextBox2" runat="server" MaxLength="140" Rows="6" TextMode="MultiLine" ValidationGroup="btncurso"></asp:TextBox>    
+                        <asp:TextBox ID="txtmails" runat="server" MaxLength="140" Rows="6" TextMode="MultiLine" ValidationGroup="btncurso"></asp:TextBox>    
                     </div>
                 </div>
                 <div class="controls">
-                    <asp:Button ID="btncrear" runat="server" class="btn btn-success" 
-                        Text="Crear Curso" ValidationGroup="btncurso" onclick="btncrear_Click" />
+                    <asp:Button ID="btncrear" runat="server" CssClass="btn btn-success" 
+                        Text="Crear Curso" ValidationGroup="crear" onclick="btncrear_Click" />
                     <asp:Button ID="btncancelar" runat="server" CssClass="btn btn-inverse" 
                         Text="Cancelar" onclick="btncancelar_Click" />
                 </div>

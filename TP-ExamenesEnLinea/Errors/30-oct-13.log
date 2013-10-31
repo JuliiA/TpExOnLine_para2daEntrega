@@ -1,0 +1,152 @@
+
+ Fecha del Log : 30/10/2013 12:22:13 p.m.
+ Error ocurrido en la pagina : http://localhost:49168/LoginUsuario.aspx
+
+ Descripcion :
+System.Threading.ThreadAbortException: Subproceso anulado.
+   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en TP_ExamenesEnLinea.LoginUsuario.abrirSesionProfesor(String passUsuario, String mailU) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\LoginUsuario.aspx.cs:línea 47
+
+<===========================================================================>
+
+ Fecha del Log : 30/10/2013 12:31:34 p.m.
+ Error ocurrido en la pagina : http://localhost:49168/LoginUsuario.aspx
+
+ Descripcion :
+System.Threading.ThreadAbortException: Subproceso anulado.
+   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en TP_ExamenesEnLinea.LoginUsuario.abrirSesionProfesor(String passUsuario, String mailU) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\LoginUsuario.aspx.cs:línea 47
+
+<===========================================================================>
+
+ Fecha del Log : 30/10/2013 12:33:07 p.m.
+ Error ocurrido en la pagina : http://localhost:49168/AdminProfesor.aspx
+
+ Descripcion :
+System.Data.UpdateException: Se produjo un error mientras se actualizaban las entradas. Vea la excepción interna para obtener detalles. ---> System.Data.SqlClient.SqlException: La conversión del tipo de datos datetime2 en datetime produjo un valor fuera de intervalo.
+Se terminó la instrucción.
+   en System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   en System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   en System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   en System.Data.SqlClient.SqlDataReader.get_MetaData()
+   en System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   en System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   en System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   en System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+   en System.Data.Mapping.Update.Internal.DynamicUpdateCommand.Execute(UpdateTranslator translator, EntityConnection connection, Dictionary`2 identifierValues, List`1 generatedValues)
+   en System.Data.Mapping.Update.Internal.UpdateTranslator.Update(IEntityStateManager stateManager, IEntityAdapter adapter)
+   --- Fin del seguimiento de la pila de la excepción interna ---
+   en System.Data.Mapping.Update.Internal.UpdateTranslator.Update(IEntityStateManager stateManager, IEntityAdapter adapter)
+   en System.Data.EntityClient.EntityAdapter.Update(IEntityStateManager entityCache)
+   en System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   en System.Data.Objects.ObjectContext.SaveChanges()
+   en Datos.CursoDatos.CrearNuevoCurso(String nombre, Int32 estado, DateTime fini, DateTime ffin, Int32 id_p) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\Datos\CursoDatos.cs:línea 85
+   en Negocio.ServCurso.AltaCurso(String nombre, Int32 estado, DateTime fini, DateTime ffin, Int32 id_p, String mails) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\Negocio\ServCurso.cs:línea 34
+   en TP_ExamenesEnLinea.AdminProfesor.btncrear_Click(Object sender, EventArgs e) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\AdminProfesor.aspx.cs:línea 35
+
+<===========================================================================>
+
+ Fecha del Log : 30/10/2013 12:37:15 p.m.
+ Error ocurrido en la pagina : http://localhost:49168/LoginUsuario.aspx
+
+ Descripcion :
+System.Threading.ThreadAbortException: Subproceso anulado.
+   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en TP_ExamenesEnLinea.LoginUsuario.abrirSesionProfesor(String passUsuario, String mailU) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\LoginUsuario.aspx.cs:línea 47
+
+<===========================================================================>
+
+ Fecha del Log : 30/10/2013 12:44:48 p.m.
+ Error ocurrido en la pagina : http://localhost:49168/LoginUsuario.aspx
+
+ Descripcion :
+System.Threading.ThreadAbortException: Subproceso anulado.
+   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en TP_ExamenesEnLinea.LoginUsuario.abrirSesionProfesor(String passUsuario, String mailU) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\LoginUsuario.aspx.cs:línea 47
+
+<===========================================================================>
+
+ Fecha del Log : 30/10/2013 01:20:13 p.m.
+ Error ocurrido en la pagina : http://localhost:49168/LoginUsuario.aspx
+
+ Descripcion :
+System.Threading.ThreadAbortException: Subproceso anulado.
+   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en TP_ExamenesEnLinea.LoginUsuario.abrirSesionProfesor(String passUsuario, String mailU) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\LoginUsuario.aspx.cs:línea 47
+
+<===========================================================================>
+
+ Fecha del Log : 30/10/2013 01:21:44 p.m.
+ Error ocurrido en la pagina : http://localhost:49168/LoginUsuario.aspx
+
+ Descripcion :
+System.Threading.ThreadAbortException: Subproceso anulado.
+   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en TP_ExamenesEnLinea.LoginUsuario.abrirSesionProfesor(String passUsuario, String mailU) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\LoginUsuario.aspx.cs:línea 47
+
+<===========================================================================>
+
+ Fecha del Log : 30/10/2013 02:05:32 p.m.
+ Error ocurrido en la pagina : http://localhost:49168/LoginUsuario.aspx
+
+ Descripcion :
+System.Threading.ThreadAbortException: Subproceso anulado.
+   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en TP_ExamenesEnLinea.LoginUsuario.abrirSesionProfesor(String passUsuario, String mailU) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\LoginUsuario.aspx.cs:línea 47
+
+<===========================================================================>
+
+ Fecha del Log : 30/10/2013 02:08:14 p.m.
+ Error ocurrido en la pagina : http://localhost:49168/LoginUsuario.aspx
+
+ Descripcion :
+System.Threading.ThreadAbortException: Subproceso anulado.
+   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en TP_ExamenesEnLinea.LoginUsuario.abrirSesionProfesor(String passUsuario, String mailU) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\LoginUsuario.aspx.cs:línea 47
+
+<===========================================================================>

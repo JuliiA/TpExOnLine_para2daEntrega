@@ -1,0 +1,101 @@
+
+ Fecha del Log : 28/10/2013 09:43:34 p.m.
+ Error ocurrido en la pagina : http://localhost:49168/LoginUsuario.aspx
+
+ Descripcion :
+System.Threading.ThreadAbortException: Subproceso anulado.
+   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en TP_ExamenesEnLinea.LoginUsuario.abrirSesionProfesor(String passUsuario, String mailU) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\LoginUsuario.aspx.cs:línea 47
+
+<===========================================================================>
+
+ Fecha del Log : 28/10/2013 09:48:16 p.m.
+ Error ocurrido en la pagina : http://localhost:49168/LoginUsuario.aspx
+
+ Descripcion :
+System.Threading.ThreadAbortException: Subproceso anulado.
+   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en TP_ExamenesEnLinea.LoginUsuario.abrirSesionProfesor(String passUsuario, String mailU) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\LoginUsuario.aspx.cs:línea 47
+
+<===========================================================================>
+
+ Fecha del Log : 28/10/2013 09:50:29 p.m.
+ Error ocurrido en la pagina : http://localhost:49168/CrearExamenProfesor.aspx
+
+ Descripcion :
+System.FormatException: No se puede reconocer la cadena como valor DateTime válido.
+   en System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   en System.Convert.ToDateTime(String value)
+   en Datos.ProfesorDatos.altaExamen(String nombre, String descripcion, Int32 duracion, DateTime tiempotope, DateTime horatope, Int32 idcurso) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\Datos\ProfesorDatos.cs:línea 56
+   en Negocio.ServProfesor.crearNuevoExamen(Int32 idcurso, String nombre, String descripcion, DateTime tiempotope, Int32 duracion, DateTime horatope) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\Negocio\ServProfesor.cs:línea 40
+   en TP_ExamenesEnLinea.CrearExamenProfesor.btnsig_Click(Object sender, EventArgs e) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\CrearExamenProfesor.aspx.cs:línea 42
+
+<===========================================================================>
+
+ Fecha del Log : 28/10/2013 09:57:22 p.m.
+ Error ocurrido en la pagina : http://localhost:49168/LoginUsuario.aspx
+
+ Descripcion :
+System.Threading.ThreadAbortException: Subproceso anulado.
+   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en TP_ExamenesEnLinea.LoginUsuario.abrirSesionProfesor(String passUsuario, String mailU) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\LoginUsuario.aspx.cs:línea 47
+
+<===========================================================================>
+
+ Fecha del Log : 28/10/2013 09:58:02 p.m.
+ Error ocurrido en la pagina : http://localhost:49168/CrearExamenProfesor.aspx
+
+ Descripcion :
+System.FormatException: No se puede reconocer la cadena como valor DateTime válido.
+   en System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   en System.Convert.ToDateTime(String value)
+   en Datos.ProfesorDatos.altaExamen(String nombre, String descripcion, Int32 duracion, DateTime tiempotope, DateTime horatope, Int32 idcurso) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\Datos\ProfesorDatos.cs:línea 56
+   en Negocio.ServProfesor.crearNuevoExamen(String nombre, String descripcion, Int32 duracion, DateTime tiempotope, DateTime horatope, Int32 idcurso) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\Negocio\ServProfesor.cs:línea 41
+   en TP_ExamenesEnLinea.CrearExamenProfesor.btnsig_Click(Object sender, EventArgs e) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\CrearExamenProfesor.aspx.cs:línea 42
+
+<===========================================================================>
+
+ Fecha del Log : 28/10/2013 10:05:01 p.m.
+ Error ocurrido en la pagina : http://localhost:49168/LoginUsuario2.aspx
+
+ Descripcion :
+System.Threading.ThreadAbortException: Subproceso anulado.
+   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en TP_ExamenesEnLinea.LoginUsuario2.abrirSesionAlumno(String mailu, String passu) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\LoginUsuario2.aspx.cs:línea 53
+
+<===========================================================================>
+
+ Fecha del Log : 28/10/2013 10:06:42 p.m.
+ Error ocurrido en la pagina : http://localhost:49168/LoginUsuario2.aspx
+
+ Descripcion :
+System.Threading.ThreadAbortException: Subproceso anulado.
+   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en TP_ExamenesEnLinea.LoginUsuario2.abrirSesionAlumno(String mailu, String passu) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\LoginUsuario2.aspx.cs:línea 53
+
+<===========================================================================>

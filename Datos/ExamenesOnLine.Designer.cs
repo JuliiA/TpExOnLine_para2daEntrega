@@ -25,6 +25,8 @@ using System.Xml.Serialization;
 [assembly: EdmRelationshipAttribute("ExamenOnLineModel", "FK_PREGUNTA_EXAMEN", "EXAMEN", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Datos.EXAMEN), "PREGUNTA", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Datos.PREGUNTA), true)]
 [assembly: EdmRelationshipAttribute("ExamenOnLineModel", "FK_RESULTADO_EXAMEN", "EXAMEN", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Datos.EXAMEN), "RESULTADO", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Datos.RESULTADO), true)]
 [assembly: EdmRelationshipAttribute("ExamenOnLineModel", "FK_RESPUESTA_PREGUNTA", "PREGUNTA", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Datos.PREGUNTA), "RESPUESTA", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Datos.RESPUESTA), true)]
+[assembly: EdmRelationshipAttribute("ExamenOnLineModel", "FK_Curso_Alumno_ALUMNO", "ALUMNO", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Datos.ALUMNO), "Curso_Alumno", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Datos.Curso_Alumno), true)]
+[assembly: EdmRelationshipAttribute("ExamenOnLineModel", "FK_Curso_Alumno_CURSO", "CURSO", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Datos.CURSO), "Curso_Alumno", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Datos.Curso_Alumno), true)]
 
 #endregion
 
@@ -187,6 +189,22 @@ namespace Datos
             }
         }
         private ObjectSet<RESULTADO> _Resultados;
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        public ObjectSet<Curso_Alumno> CursosAl
+        {
+            get
+            {
+                if ((_CursosAl == null))
+                {
+                    _CursosAl = base.CreateObjectSet<Curso_Alumno>("CursosAl");
+                }
+                return _CursosAl;
+            }
+        }
+        private ObjectSet<Curso_Alumno> _CursosAl;
 
         #endregion
 
@@ -246,6 +264,14 @@ namespace Datos
         public void AddToResultados(RESULTADO rESULTADO)
         {
             base.AddObject("Resultados", rESULTADO);
+        }
+    
+        /// <summary>
+        /// Método desusado para agregar un nuevo objeto al EntitySet CursosAl. Considere la posibilidad de usar el método .Add de la propiedad ObjectSet&lt;T&gt; asociada.
+        /// </summary>
+        public void AddToCursosAl(Curso_Alumno curso_Alumno)
+        {
+            base.AddObject("CursosAl", curso_Alumno);
         }
 
         #endregion
@@ -496,6 +522,28 @@ namespace Datos
                 }
             }
         }
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("ExamenOnLineModel", "FK_Curso_Alumno_ALUMNO", "Curso_Alumno")]
+        public EntityCollection<Curso_Alumno> Curso_Alumno
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Curso_Alumno>("ExamenOnLineModel.FK_Curso_Alumno_ALUMNO", "Curso_Alumno");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Curso_Alumno>("ExamenOnLineModel.FK_Curso_Alumno_ALUMNO", "Curso_Alumno", value);
+                }
+            }
+        }
 
         #endregion
 
@@ -734,6 +782,223 @@ namespace Datos
                 if ((value != null))
                 {
                     ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<EXAMEN>("ExamenOnLineModel.FK_EXAMEN_CURSO", "EXAMEN", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("ExamenOnLineModel", "FK_Curso_Alumno_CURSO", "Curso_Alumno")]
+        public EntityCollection<Curso_Alumno> Curso_Alumno
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Curso_Alumno>("ExamenOnLineModel.FK_Curso_Alumno_CURSO", "Curso_Alumno");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Curso_Alumno>("ExamenOnLineModel.FK_Curso_Alumno_CURSO", "Curso_Alumno", value);
+                }
+            }
+        }
+
+        #endregion
+
+    }
+    
+    /// <summary>
+    /// No hay documentación de metadatos disponible.
+    /// </summary>
+    [EdmEntityTypeAttribute(NamespaceName="ExamenOnLineModel", Name="Curso_Alumno")]
+    [Serializable()]
+    [DataContractAttribute(IsReference=true)]
+    public partial class Curso_Alumno : EntityObject
+    {
+        #region Método de generador
+    
+        /// <summary>
+        /// Crear un nuevo objeto Curso_Alumno.
+        /// </summary>
+        /// <param name="idTab">Valor inicial de la propiedad idTab.</param>
+        /// <param name="iDCURSO">Valor inicial de la propiedad IDCURSO.</param>
+        /// <param name="iDALUMNO">Valor inicial de la propiedad IDALUMNO.</param>
+        public static Curso_Alumno CreateCurso_Alumno(global::System.Int32 idTab, global::System.Int32 iDCURSO, global::System.Int32 iDALUMNO)
+        {
+            Curso_Alumno curso_Alumno = new Curso_Alumno();
+            curso_Alumno.idTab = idTab;
+            curso_Alumno.IDCURSO = iDCURSO;
+            curso_Alumno.IDALUMNO = iDALUMNO;
+            return curso_Alumno;
+        }
+
+        #endregion
+
+        #region Propiedades primitivas
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 idTab
+        {
+            get
+            {
+                return _idTab;
+            }
+            set
+            {
+                if (_idTab != value)
+                {
+                    OnidTabChanging(value);
+                    ReportPropertyChanging("idTab");
+                    _idTab = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("idTab");
+                    OnidTabChanged();
+                }
+            }
+        }
+        private global::System.Int32 _idTab;
+        partial void OnidTabChanging(global::System.Int32 value);
+        partial void OnidTabChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 IDCURSO
+        {
+            get
+            {
+                return _IDCURSO;
+            }
+            set
+            {
+                if (_IDCURSO != value)
+                {
+                    OnIDCURSOChanging(value);
+                    ReportPropertyChanging("IDCURSO");
+                    _IDCURSO = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("IDCURSO");
+                    OnIDCURSOChanged();
+                }
+            }
+        }
+        private global::System.Int32 _IDCURSO;
+        partial void OnIDCURSOChanging(global::System.Int32 value);
+        partial void OnIDCURSOChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 IDALUMNO
+        {
+            get
+            {
+                return _IDALUMNO;
+            }
+            set
+            {
+                if (_IDALUMNO != value)
+                {
+                    OnIDALUMNOChanging(value);
+                    ReportPropertyChanging("IDALUMNO");
+                    _IDALUMNO = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("IDALUMNO");
+                    OnIDALUMNOChanged();
+                }
+            }
+        }
+        private global::System.Int32 _IDALUMNO;
+        partial void OnIDALUMNOChanging(global::System.Int32 value);
+        partial void OnIDALUMNOChanged();
+
+        #endregion
+
+    
+        #region Propiedades de navegación
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("ExamenOnLineModel", "FK_Curso_Alumno_ALUMNO", "ALUMNO")]
+        public ALUMNO ALUMNO
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ALUMNO>("ExamenOnLineModel.FK_Curso_Alumno_ALUMNO", "ALUMNO").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ALUMNO>("ExamenOnLineModel.FK_Curso_Alumno_ALUMNO", "ALUMNO").Value = value;
+            }
+        }
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<ALUMNO> ALUMNOReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ALUMNO>("ExamenOnLineModel.FK_Curso_Alumno_ALUMNO", "ALUMNO");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<ALUMNO>("ExamenOnLineModel.FK_Curso_Alumno_ALUMNO", "ALUMNO", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("ExamenOnLineModel", "FK_Curso_Alumno_CURSO", "CURSO")]
+        public CURSO CURSO
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CURSO>("ExamenOnLineModel.FK_Curso_Alumno_CURSO", "CURSO").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CURSO>("ExamenOnLineModel.FK_Curso_Alumno_CURSO", "CURSO").Value = value;
+            }
+        }
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<CURSO> CURSOReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CURSO>("ExamenOnLineModel.FK_Curso_Alumno_CURSO", "CURSO");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<CURSO>("ExamenOnLineModel.FK_Curso_Alumno_CURSO", "CURSO", value);
                 }
             }
         }

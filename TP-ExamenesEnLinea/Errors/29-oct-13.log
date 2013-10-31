@@ -1,0 +1,285 @@
+
+ Fecha del Log : 29/10/2013 12:25:47 a.m.
+ Error ocurrido en la pagina : http://localhost:49168/LoginUsuario.aspx
+
+ Descripcion :
+System.Threading.ThreadAbortException: Subproceso anulado.
+   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en TP_ExamenesEnLinea.LoginUsuario.abrirSesionProfesor(String passUsuario, String mailU) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\LoginUsuario.aspx.cs:línea 47
+
+<===========================================================================>
+
+ Fecha del Log : 29/10/2013 12:26:54 a.m.
+ Error ocurrido en la pagina : http://localhost:49168/LoginUsuario.aspx
+
+ Descripcion :
+System.Threading.ThreadAbortException: Subproceso anulado.
+   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en TP_ExamenesEnLinea.LoginUsuario.abrirSesionProfesor(String passUsuario, String mailU) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\LoginUsuario.aspx.cs:línea 47
+
+<===========================================================================>
+
+ Fecha del Log : 29/10/2013 12:31:10 a.m.
+ Error ocurrido en la pagina : http://localhost:49168/LoginUsuario.aspx
+
+ Descripcion :
+System.Threading.ThreadAbortException: Subproceso anulado.
+   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en TP_ExamenesEnLinea.LoginUsuario.abrirSesionProfesor(String passUsuario, String mailU) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\LoginUsuario.aspx.cs:línea 47
+
+<===========================================================================>
+
+ Fecha del Log : 29/10/2013 12:31:55 a.m.
+ Error ocurrido en la pagina : http://localhost:49168/LoginUsuario.aspx
+
+ Descripcion :
+System.Threading.ThreadAbortException: Subproceso anulado.
+   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en TP_ExamenesEnLinea.LoginUsuario.abrirSesionProfesor(String passUsuario, String mailU) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\LoginUsuario.aspx.cs:línea 47
+
+<===========================================================================>
+
+ Fecha del Log : 29/10/2013 12:34:04 a.m.
+ Error ocurrido en la pagina : http://localhost:49168/LoginUsuario.aspx
+
+ Descripcion :
+System.Threading.ThreadAbortException: Subproceso anulado.
+   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en TP_ExamenesEnLinea.LoginUsuario.abrirSesionProfesor(String passUsuario, String mailU) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\LoginUsuario.aspx.cs:línea 47
+
+<===========================================================================>
+
+ Fecha del Log : 29/10/2013 12:42:10 a.m.
+ Error ocurrido en la pagina : http://localhost:49168/LoginUsuario.aspx
+
+ Descripcion :
+System.Threading.ThreadAbortException: Subproceso anulado.
+   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en TP_ExamenesEnLinea.LoginUsuario.abrirSesionProfesor(String passUsuario, String mailU) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\LoginUsuario.aspx.cs:línea 47
+
+<===========================================================================>
+
+ Fecha del Log : 29/10/2013 12:47:50 a.m.
+ Error ocurrido en la pagina : http://localhost:49168/LoginUsuario.aspx
+
+ Descripcion :
+System.Threading.ThreadAbortException: Subproceso anulado.
+   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en TP_ExamenesEnLinea.LoginUsuario.abrirSesionProfesor(String passUsuario, String mailU) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\LoginUsuario.aspx.cs:línea 47
+
+<===========================================================================>
+
+ Fecha del Log : 29/10/2013 12:55:15 a.m.
+ Error ocurrido en la pagina : http://localhost:49168/LoginUsuario.aspx
+
+ Descripcion :
+System.Threading.ThreadAbortException: Subproceso anulado.
+   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en TP_ExamenesEnLinea.LoginUsuario.abrirSesionProfesor(String passUsuario, String mailU) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\LoginUsuario.aspx.cs:línea 47
+
+<===========================================================================>
+
+ Fecha del Log : 29/10/2013 12:57:12 a.m.
+ Error ocurrido en la pagina : http://localhost:49168/LoginUsuario.aspx
+
+ Descripcion :
+System.Threading.ThreadAbortException: Subproceso anulado.
+   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en TP_ExamenesEnLinea.LoginUsuario.abrirSesionProfesor(String passUsuario, String mailU) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\LoginUsuario.aspx.cs:línea 47
+
+<===========================================================================>
+
+ Fecha del Log : 29/10/2013 12:59:24 a.m.
+ Error ocurrido en la pagina : http://localhost:49168/LoginUsuario.aspx
+
+ Descripcion :
+System.Threading.ThreadAbortException: Subproceso anulado.
+   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en TP_ExamenesEnLinea.LoginUsuario.abrirSesionProfesor(String passUsuario, String mailU) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\LoginUsuario.aspx.cs:línea 47
+
+<===========================================================================>
+
+ Fecha del Log : 29/10/2013 01:02:19 a.m.
+ Error ocurrido en la pagina : http://localhost:49168/LoginUsuario.aspx
+
+ Descripcion :
+System.Threading.ThreadAbortException: Subproceso anulado.
+   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en TP_ExamenesEnLinea.LoginUsuario.abrirSesionProfesor(String passUsuario, String mailU) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\LoginUsuario.aspx.cs:línea 47
+
+<===========================================================================>
+
+ Fecha del Log : 29/10/2013 01:04:17 a.m.
+ Error ocurrido en la pagina : http://localhost:49168/LoginUsuario.aspx
+
+ Descripcion :
+System.Threading.ThreadAbortException: Subproceso anulado.
+   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en TP_ExamenesEnLinea.LoginUsuario.abrirSesionProfesor(String passUsuario, String mailU) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\LoginUsuario.aspx.cs:línea 47
+
+<===========================================================================>
+
+ Fecha del Log : 29/10/2013 11:59:48 a.m.
+ Error ocurrido en la pagina : http://localhost:49168/LoginUsuario.aspx
+
+ Descripcion :
+System.Threading.ThreadAbortException: Subproceso anulado.
+   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en TP_ExamenesEnLinea.LoginUsuario.abrirSesionProfesor(String passUsuario, String mailU) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\LoginUsuario.aspx.cs:línea 47
+
+<===========================================================================>
+
+ Fecha del Log : 29/10/2013 12:33:25 p.m.
+ Error ocurrido en la pagina : http://localhost:49168/LoginUsuario.aspx
+
+ Descripcion :
+System.Threading.ThreadAbortException: Subproceso anulado.
+   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en TP_ExamenesEnLinea.LoginUsuario.abrirSesionProfesor(String passUsuario, String mailU) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\LoginUsuario.aspx.cs:línea 47
+
+<===========================================================================>
+
+ Fecha del Log : 29/10/2013 12:37:17 p.m.
+ Error ocurrido en la pagina : http://localhost:49168/LoginUsuario.aspx
+
+ Descripcion :
+System.Threading.ThreadAbortException: Subproceso anulado.
+   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en TP_ExamenesEnLinea.LoginUsuario.abrirSesionProfesor(String passUsuario, String mailU) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\LoginUsuario.aspx.cs:línea 47
+
+<===========================================================================>
+
+ Fecha del Log : 29/10/2013 12:44:42 p.m.
+ Error ocurrido en la pagina : http://localhost:49168/LoginUsuario.aspx
+
+ Descripcion :
+System.Threading.ThreadAbortException: Subproceso anulado.
+   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en TP_ExamenesEnLinea.LoginUsuario.abrirSesionProfesor(String passUsuario, String mailU) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\LoginUsuario.aspx.cs:línea 47
+
+<===========================================================================>
+
+ Fecha del Log : 29/10/2013 01:28:36 p.m.
+ Error ocurrido en la pagina : http://localhost:49168/LoginUsuario.aspx
+
+ Descripcion :
+System.Threading.ThreadAbortException: Subproceso anulado.
+   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en TP_ExamenesEnLinea.LoginUsuario.abrirSesionProfesor(String passUsuario, String mailU) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\LoginUsuario.aspx.cs:línea 47
+
+<===========================================================================>
+
+ Fecha del Log : 29/10/2013 02:10:48 p.m.
+ Error ocurrido en la pagina : http://localhost:49168/LoginUsuario.aspx
+
+ Descripcion :
+System.Threading.ThreadAbortException: Subproceso anulado.
+   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en TP_ExamenesEnLinea.LoginUsuario.abrirSesionProfesor(String passUsuario, String mailU) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\LoginUsuario.aspx.cs:línea 47
+
+<===========================================================================>
+
+ Fecha del Log : 29/10/2013 07:34:48 p.m.
+ Error ocurrido en la pagina : http://localhost:49168/LoginUsuario.aspx
+
+ Descripcion :
+System.Threading.ThreadAbortException: Subproceso anulado.
+   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en TP_ExamenesEnLinea.LoginUsuario.abrirSesionProfesor(String passUsuario, String mailU) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\LoginUsuario.aspx.cs:línea 47
+
+<===========================================================================>

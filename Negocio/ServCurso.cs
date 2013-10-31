@@ -23,25 +23,55 @@ namespace Negocio
         //    elCurso.CrearNuevoCurso(nombre, estado, fini, ffin, id_p);
         //}
 
-        public void AltaCurso(string nombre, int estado, DateTime fini, DateTime ffin, int id_p, string mails)
+        public void AltaCurso(string nombre, int estado, DateTime fini, DateTime ffin, int id_p)
+        {
+            elCurso.CrearNuevoCurso(nombre, estado, fini, ffin, id_p);
+        }
+        
+        public void crearBucle(string[] words, int cantidadMails)
+        {
+            List<string> mails = new List<string>();
+            foreach (string s in words)
+            {
+                while (cantidadMails > 0)
+                {
+                    mails.Add(words[cantidadMails - 1]);
+                    cantidadMails = cantidadMails - 1;
+                }
+            }
+            elCurso.buscarMailsNoRegistrados(mails);
+        }
+
+        public void eliminarCurso(int id_p)
+        {
+            elCurso.darBajaAlCurso(id_p);
+        }
+
+        //public void AltaCurso(string p, int estado, DateTime feini, DateTime fefin, int id_p)
+        //{
+        //    elCurso.CrearNuevoCurso(p, estado, feini, fefin, id_p);
+        //}
+
+        public string consultarNombre(int id_c)
+        {
+            return elCurso.buscarNombreCurso(id_c);
+        }
+
+        public bool tieneExamenOAlumno(int id_c)
+        {
+            bool resulta = elCurso.tieneAsignaciones(id_c);
+            return resulta;
+        }
+
+        public bool consultarEstado(int id_c)
+        {
+            bool resulta = elCurso.obtenerEstadoCurso(id_c);
+            return resulta;
+        }
+
+        public DateTime consultarFechaInicio(int id_c)
         {
             throw new NotImplementedException();
         }
-
-        public void AltaCurso(string nombre, int estado, DateTime fini, int id_p, string mails)
-        {
-            throw new NotImplementedException();
-        }
-
-        //public void actualizarDatosCursos(int id_p, string Curso_Nombre, string Examen_Nombre, string Fecha_Examen, string Rindieron)
-        //{
-        //    int totalRind = Convert.ToInt32(Rindieron);
-        //    elCurso.modificarCurso(id_p, Curso_Nombre, Examen_Nombre, Fecha_Examen, totalRind);
-        //}
-
-        //public void eliminarCurso(int id_p)
-        //{
-        //    elCurso.bajaCurso(id_p);
-        //}
     }
 }

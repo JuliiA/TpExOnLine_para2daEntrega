@@ -8,11 +8,20 @@
         <EntityContainer Name="ExamenOnLineModelStoreContainer">
           <EntitySet Name="ALUMNO" EntityType="ExamenOnLineModel.Store.ALUMNO" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="CURSO" EntityType="ExamenOnLineModel.Store.CURSO" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Curso_Alumno" EntityType="ExamenOnLineModel.Store.Curso_Alumno" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="EXAMEN" EntityType="ExamenOnLineModel.Store.EXAMEN" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="PREGUNTA" EntityType="ExamenOnLineModel.Store.PREGUNTA" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="PROFESOR" EntityType="ExamenOnLineModel.Store.PROFESOR" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="RESPUESTA" EntityType="ExamenOnLineModel.Store.RESPUESTA" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="RESULTADO" EntityType="ExamenOnLineModel.Store.RESULTADO" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK_Curso_Alumno_ALUMNO" Association="ExamenOnLineModel.Store.FK_Curso_Alumno_ALUMNO">
+            <End Role="ALUMNO" EntitySet="ALUMNO" />
+            <End Role="Curso_Alumno" EntitySet="Curso_Alumno" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Curso_Alumno_CURSO" Association="ExamenOnLineModel.Store.FK_Curso_Alumno_CURSO">
+            <End Role="CURSO" EntitySet="CURSO" />
+            <End Role="Curso_Alumno" EntitySet="Curso_Alumno" />
+          </AssociationSet>
           <AssociationSet Name="FK_CURSO_PROFESOR" Association="ExamenOnLineModel.Store.FK_CURSO_PROFESOR">
             <End Role="PROFESOR" EntitySet="PROFESOR" />
             <End Role="CURSO" EntitySet="CURSO" />
@@ -59,6 +68,16 @@
           <Property Name="FecIni" Type="datetime" />
           <Property Name="FecFin" Type="datetime" />
           <Property Name="ProfId" Type="int" />
+        </EntityType>
+        <EntityType Name="Curso_Alumno">
+          <Key>
+            <PropertyRef Name="idTab" />
+            <PropertyRef Name="IDCURSO" />
+            <PropertyRef Name="IDALUMNO" />
+          </Key>
+          <Property Name="idTab" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="IDCURSO" Type="int" Nullable="false" />
+          <Property Name="IDALUMNO" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="EXAMEN">
           <Key>
@@ -111,6 +130,30 @@
           <Property Name="AlumnoId" Type="int" Nullable="false" />
           <Property Name="ExamenId" Type="int" Nullable="false" />
         </EntityType>
+        <Association Name="FK_Curso_Alumno_ALUMNO">
+          <End Role="ALUMNO" Type="ExamenOnLineModel.Store.ALUMNO" Multiplicity="1" />
+          <End Role="Curso_Alumno" Type="ExamenOnLineModel.Store.Curso_Alumno" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ALUMNO">
+              <PropertyRef Name="IdAlumno" />
+            </Principal>
+            <Dependent Role="Curso_Alumno">
+              <PropertyRef Name="IDALUMNO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Curso_Alumno_CURSO">
+          <End Role="CURSO" Type="ExamenOnLineModel.Store.CURSO" Multiplicity="1" />
+          <End Role="Curso_Alumno" Type="ExamenOnLineModel.Store.Curso_Alumno" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CURSO">
+              <PropertyRef Name="IdCurso" />
+            </Principal>
+            <Dependent Role="Curso_Alumno">
+              <PropertyRef Name="IDCURSO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_CURSO_PROFESOR">
           <End Role="PROFESOR" Type="ExamenOnLineModel.Store.PROFESOR" Multiplicity="0..1" />
           <End Role="CURSO" Type="ExamenOnLineModel.Store.CURSO" Multiplicity="*" />
@@ -231,6 +274,15 @@
           <FunctionImport Name="ListarExamenes" ReturnType="Collection(ExamenOnLineModel.ListarExamenes_Result)">
           <Parameter Name="Id_Profesor" Mode="In" Type="Int32" />
           </FunctionImport>
+          <EntitySet Name="CursosAl" EntityType="ExamenOnLineModel.Curso_Alumno" />
+          <AssociationSet Name="FK_Curso_Alumno_ALUMNO" Association="ExamenOnLineModel.FK_Curso_Alumno_ALUMNO">
+            <End Role="ALUMNO" EntitySet="Alumnos" />
+            <End Role="Curso_Alumno" EntitySet="CursosAl" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Curso_Alumno_CURSO" Association="ExamenOnLineModel.FK_Curso_Alumno_CURSO">
+            <End Role="CURSO" EntitySet="Cursos" />
+            <End Role="Curso_Alumno" EntitySet="CursosAl" />
+          </AssociationSet>
         </EntityContainer>
         <EntityType Name="ALUMNO">
           <Key>
@@ -243,6 +295,7 @@
           <Property Name="Mail" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
           <Property Name="Contrasenia" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
           <NavigationProperty Name="RESULTADO" Relationship="ExamenOnLineModel.FK_RESULTADO_ALUMNO" FromRole="ALUMNO" ToRole="RESULTADO" />
+          <NavigationProperty Name="Curso_Alumno" Relationship="ExamenOnLineModel.FK_Curso_Alumno_ALUMNO" FromRole="ALUMNO" ToRole="Curso_Alumno" />
         </EntityType>
         <EntityType Name="CURSO">
           <Key>
@@ -256,6 +309,7 @@
           <Property Name="ProfId" Type="Int32" />
           <NavigationProperty Name="PROFESOR" Relationship="ExamenOnLineModel.FK_CURSO_PROFESOR" FromRole="CURSO" ToRole="PROFESOR" />
           <NavigationProperty Name="EXAMEN" Relationship="ExamenOnLineModel.FK_EXAMEN_CURSO" FromRole="CURSO" ToRole="EXAMEN" />
+          <NavigationProperty Name="Curso_Alumno" Relationship="ExamenOnLineModel.FK_Curso_Alumno_CURSO" FromRole="CURSO" ToRole="Curso_Alumno" />
         </EntityType>
         <EntityType Name="EXAMEN">
           <Key>
@@ -399,6 +453,42 @@
           <Property Type="String" Name="EXAMEN" Nullable="true" MaxLength="50" />
           <Property Type="DateTime" Name="FECHA_Y_HORA" Nullable="true" Precision="23" />
         </ComplexType>
+        <EntityType Name="Curso_Alumno">
+          <Key>
+            <PropertyRef Name="idTab" />
+            <PropertyRef Name="IDCURSO" />
+            <PropertyRef Name="IDALUMNO" />
+          </Key>
+          <Property Type="Int32" Name="idTab" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="IDCURSO" Nullable="false" />
+          <Property Type="Int32" Name="IDALUMNO" Nullable="false" />
+          <NavigationProperty Name="ALUMNO" Relationship="ExamenOnLineModel.FK_Curso_Alumno_ALUMNO" FromRole="Curso_Alumno" ToRole="ALUMNO" />
+          <NavigationProperty Name="CURSO" Relationship="ExamenOnLineModel.FK_Curso_Alumno_CURSO" FromRole="Curso_Alumno" ToRole="CURSO" />
+        </EntityType>
+        <Association Name="FK_Curso_Alumno_ALUMNO">
+          <End Type="ExamenOnLineModel.ALUMNO" Role="ALUMNO" Multiplicity="1" />
+          <End Type="ExamenOnLineModel.Curso_Alumno" Role="Curso_Alumno" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ALUMNO">
+              <PropertyRef Name="IdAlumno" />
+            </Principal>
+            <Dependent Role="Curso_Alumno">
+              <PropertyRef Name="IDALUMNO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Curso_Alumno_CURSO">
+          <End Type="ExamenOnLineModel.CURSO" Role="CURSO" Multiplicity="1" />
+          <End Type="ExamenOnLineModel.Curso_Alumno" Role="Curso_Alumno" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CURSO">
+              <PropertyRef Name="IdCurso" />
+            </Principal>
+            <Dependent Role="Curso_Alumno">
+              <PropertyRef Name="IDCURSO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -503,6 +593,15 @@
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
+          <EntitySetMapping Name="CursosAl">
+            <EntityTypeMapping TypeName="ExamenOnLineModel.Curso_Alumno">
+              <MappingFragment StoreEntitySet="Curso_Alumno">
+                <ScalarProperty Name="IDALUMNO" ColumnName="IDALUMNO" />
+                <ScalarProperty Name="IDCURSO" ColumnName="IDCURSO" />
+                <ScalarProperty Name="idTab" ColumnName="idTab" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
@@ -534,16 +633,16 @@
         <AssociationConnector Association="ExamenOnLineModel.FK_RESULTADO_ALUMNO" ManuallyRouted="false">
           <ConnectorPoint PointX="6.75" PointY="9.7511528461538468" />
           <ConnectorPoint PointX="7.125" PointY="9.3761528461538468" />
-          <ConnectorPoint PointX="7.125" PointY="2.2208968098958337" />
-          <ConnectorPoint PointX="7.5" PointY="2.2208968098958337" />
+          <ConnectorPoint PointX="7.125" PointY="2.9875972148437513" />
+          <ConnectorPoint PointX="7.5" PointY="2.9875972148437513" />
         </AssociationConnector>
         <AssociationConnector Association="ExamenOnLineModel.FK_CURSO_PROFESOR" ManuallyRouted="false">
-          <ConnectorPoint PointX="2.25" PointY="6.2401432291666676" />
-          <ConnectorPoint PointX="3" PointY="6.2401432291666676" />
+          <ConnectorPoint PointX="2.25" PointY="6.3362939453125" />
+          <ConnectorPoint PointX="3" PointY="6.3362939453125" />
         </AssociationConnector>
         <AssociationConnector Association="ExamenOnLineModel.FK_EXAMEN_CURSO" ManuallyRouted="false">
-          <ConnectorPoint PointX="4.5" PointY="6.2785953776041659" />
-          <ConnectorPoint PointX="5.25" PointY="6.2785953776041659" />
+          <ConnectorPoint PointX="4.5" PointY="6.31224609375" />
+          <ConnectorPoint PointX="5.25" PointY="6.31224609375" />
         </AssociationConnector>
         <AssociationConnector Association="ExamenOnLineModel.FK_PREGUNTA_EXAMEN" ManuallyRouted="false">
           <ConnectorPoint PointX="6.75" PointY="6.2401432291666667" />
@@ -553,14 +652,24 @@
         </AssociationConnector>
         <AssociationConnector Association="ExamenOnLineModel.FK_RESULTADO_EXAMEN" ManuallyRouted="false">
           <ConnectorPoint PointX="6" PointY="4.875" />
-          <ConnectorPoint PointX="6" PointY="2.9875977148437514" />
-          <ConnectorPoint PointX="7.041666666666667" PointY="2.9875977148437509" />
-          <ConnectorPoint PointX="7.208333333333333" PointY="2.9875977148437514" />
-          <ConnectorPoint PointX="7.5" PointY="2.9875977148437514" />
+          <ConnectorPoint PointX="6" PointY="2.2208968098958337" />
+          <ConnectorPoint PointX="7.5" PointY="2.2208968098958337" />
         </AssociationConnector>
         <AssociationConnector Association="ExamenOnLineModel.FK_RESPUESTA_PREGUNTA" ManuallyRouted="false">
           <ConnectorPoint PointX="9" PointY="6.2401432291666659" />
           <ConnectorPoint PointX="9.75" PointY="6.2401432291666659" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="ExamenOnLineModel.Curso_Alumno" Width="1.5" PointX="7.5" PointY="8.625" Height="1.9802864583333317" />
+        <AssociationConnector Association="ExamenOnLineModel.FK_Curso_Alumno_ALUMNO" >
+          <ConnectorPoint PointX="6.75" PointY="10.209472152243588" />
+          <ConnectorPoint PointX="7.5" PointY="10.209472152243588" />
+        </AssociationConnector>
+        <AssociationConnector Association="ExamenOnLineModel.FK_Curso_Alumno_CURSO" >
+          <ConnectorPoint PointX="3.75" PointY="7.7494921875" />
+          <ConnectorPoint PointX="3.75" PointY="9.15625" />
+          <ConnectorPoint PointX="7.041666666666667" PointY="9.15625" />
+          <ConnectorPoint PointX="7.208333333333333" PointY="9.15625" />
+          <ConnectorPoint PointX="7.5" PointY="9.15625" />
         </AssociationConnector>
       </Diagram>
     </Diagrams>

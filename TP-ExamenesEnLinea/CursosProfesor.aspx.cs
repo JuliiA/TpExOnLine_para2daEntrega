@@ -72,6 +72,13 @@ namespace TP_ExamenesEnLinea
             }
         }
 
+        protected void gvcursos_SelectedIndexChanging(object sender, GridViewSelectEventArgs e)
+        {
+            //esto se prueba con el HiperLinkField del aspx
+            GridViewRow rw = gvcursos.Rows[e.NewSelectedIndex];
+            this.lblmensaje.Text = Convert.ToString(gvcursos.DataKeys[rw.RowIndex].Values["idcurso"]);
+
+        }
         
     }
 }

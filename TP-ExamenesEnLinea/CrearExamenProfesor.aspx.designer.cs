@@ -112,22 +112,22 @@ namespace TP_ExamenesEnLinea {
         protected global::System.Web.UI.WebControls.Label lblfectope;
         
         /// <summary>
-        /// Control txtfectope.
+        /// Control fechatope.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtfectope;
+        protected global::TP_ExamenesEnLinea.Fecha fechatope;
         
         /// <summary>
-        /// Control lblhoratope.
+        /// Control Label2.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblhoratope;
+        protected global::System.Web.UI.WebControls.Label Label2;
         
         /// <summary>
         /// Control txthoratope.

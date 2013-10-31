@@ -11,30 +11,26 @@
                 <asp:Label ID="lblcurso" runat="server" Text="Curso"></asp:Label>
                 <div>
                     <asp:DropDownList ID="ddlcursos" runat="server">
-                        <asp:ListItem Selected="True" Text="Seleccione curso" Value="0"></asp:ListItem>
-                        <asp:ListItem Text="Matematica 1" Value="1"></asp:ListItem>
-                        <asp:ListItem Text="Taller 2" Value="2"></asp:ListItem>
                     </asp:DropDownList>
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Seleccione una opcion"
                         ControlToValidate="ddlcursos" Display="Static" Text="*Campo obligatorio" CssClass="text-danger"
                         InitialValue="0"></asp:RequiredFieldValidator>
                 </div>
                 <asp:Label ID="lblnomcurso" runat="server" Text="Nombre"></asp:Label>
-                <div>
-                    <asp:TextBox ID="txtnomcurso" runat="server"></asp:TextBox>
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Ingrese un nombre de examen"
-                        ControlToValidate="txtnomcurso" Display="Dynamic" CssClass="text-danger" Text="*Campo obligatorio"></asp:RequiredFieldValidator></div>
+                    <div>
+                        <asp:TextBox ID="txtnomcurso" runat="server"></asp:TextBox>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Ingrese un nombre de examen"
+                            ControlToValidate="txtnomcurso" Display="Dynamic" CssClass="text-danger" Text="*Campo obligatorio"></asp:RequiredFieldValidator></div>
                 <asp:Label ID="lbldesc" runat="server" Text="Descripcion"></asp:Label>
-                <div>
-                    <asp:TextBox ID="txtdesc" runat="server" TextMode="MultiLine" TabIndex="4"></asp:TextBox></div>
-                <asp:Label ID="lblduracion" runat="server" Text="Duracion"></asp:Label>
+                    <div>
+                        <asp:TextBox ID="txtdesc" runat="server" TextMode="MultiLine" TabIndex="4"></asp:TextBox></div>
+                    <asp:Label ID="lblduracion" runat="server" Text="Duracion"></asp:Label>
                 <div>
                     <asp:TextBox ID="txtduracion" runat="server"></asp:TextBox>minutos</div>
-                <asp:Label ID="lblfectope" runat="server" Text="Fecha Tope"></asp:Label>
+                    <asp:Label ID="lblfectope" runat="server" Text="Fecha Tope"></asp:Label>
                 <div>
-                    <asp:TextBox ID="txtfectope" runat="server"></asp:TextBox>(MM/DD/AAAA)</div>
-                <asp:Label ID="lblhoratope" runat="server" Text="Hora Tope"></asp:Label>
-                <div>
+                     <fec:Calendario ID="fechatope" runat="server" /><div>
+                    <asp:Label ID="Label2" runat="server" Text="Hora Tope"></asp:Label><br />
                     <asp:TextBox ID="txthoratope" runat="server"></asp:TextBox>hh:mm</div>
                 <br />
                 <asp:Label ID="lblporcentaje" runat="server" Text="Porcentaje de aprobacion"></asp:Label>
@@ -53,6 +49,6 @@
                 <%--<a href="Preguntas.aspx">[PREGUNTAS]</a>--%>
                 <asp:Label ID="Label1" runat="server" CssClass="text-danger" Text=""></asp:Label>
             </div>
-        </div>
+        </div></div>
     </div>
 </asp:Content>

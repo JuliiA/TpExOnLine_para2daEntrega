@@ -1,10 +1,10 @@
-﻿/*$("#datepicker").datepicker({
-    inline: true
-});
+﻿//$("#date").datepicker({
+//    inline: true
+//});
 
 $(document).ready(function () {
 
-    $('#txtFecha').datepicker(
+    $('#date').datepicker(
 
       { dateFormat: 'd MM, yy',
 
@@ -35,10 +35,10 @@ $(document).ready(function () {
       });
 
 });
-*/
-$(document).ready(function() {
-    $("#fecini").datepicker({ minDate: -20, maxDate: "+1M +10D" });
-    $("#fecfin").datepicker();
+
+$(document).ready(function () {
+    $("#fecfin").datepicker({ minDate: -20, maxDate: "+1M +10D" });
+    $("#fecini").datepicker();
 });
 
 var today = new Date();
