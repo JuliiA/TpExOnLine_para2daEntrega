@@ -74,7 +74,6 @@ namespace Datos
 
         public void CrearNuevoCurso(string nombre, int estado, DateTime fini, DateTime ffin, int id_p)
         {
-            
             CURSO miCurso = new CURSO();
             miCurso.Nombre = nombre;
             miCurso.Estado = estado;
@@ -84,53 +83,21 @@ namespace Datos
             ctxto.Cursos.AddObject(miCurso);
             ctxto.SaveChanges();
         }
-        public void buscarMailsNoRegistrados(List<string> mails)
-        {
-            List<string> resulta = new List<string>();
 
-            //traigo todos los mails de la base de datos
-            var consulta = (from c in ctxto.Alumnos
-                            select c.Mail).ToList();
-            //comparo componentes de cada lista
-            IEnumerable<string> Diferencias = mails.Except(consulta);
-            //guardo en nueva lista los componentes que no son iguales
-            foreach (string f in Diferencias)
-            {
-                resulta.Add(f);
-            }
-            //valor de retorno->Lista de componentes diferentes a los traidos de la base
-            crearNuevoAlumnosDesdeMail(resulta);
-        }
-        private void crearNuevoAlumnosDesdeMail(List<string> resulta)
+        public int obtenerUltimoCurso(string c)
         {
-            int cantidad = resulta.Count();
-            var id_c = (from ul in ctxto.Cursos
-                        orderby ul.IdCurso descending
-                        select ul).FirstOrDefault();
-            
-            for (int i = 0; i < cantidad; i++)
-            {
-                string nuevoMail = resulta[i];
-
-                ALUMNO neoAl = new ALUMNO();
-                neoAl.Mail = nuevoMail;
-                neoAl.Contrasenia = nuevoMail;
-                
-                ctxto.Alumnos.AddObject(neoAl);
-                ctxto.SaveChanges();
-                incluirCamposEnBD(id_c);
-            }
+            var ultc = (from ul in ctxto.Cursos
+                        where ul.Nombre == c
+                        select ul.IdCurso).FirstOrDefault();
+            return ultc;
         }
 
-        private void incluirCamposEnBD(object id_c)
+        public void asociarCursoConAlumno(int id_c, int idALumnoAux)
         {
-            var ultimoAl = (from ul in ctxto.Alumnos
-                            where ul.IdAlumno !=null
-                            select ul.IdAlumno).LastOrDefault();
-            Curso_Alumno ins = new Curso_Alumno();
-            ins.IDCURSO = id_c;
-            ins.IDALUMNO = ultimoAl;
-            ctxto.CursosAl.AddObject(ins);
+            Curso_Alumno cal = new Curso_Alumno();
+            cal.IDCURSO = id_c;
+            cal.IDALUMNO = idALumnoAux;
+            ctxto.CursosAl.AddObject(cal);
             ctxto.SaveChanges();
         }
     }

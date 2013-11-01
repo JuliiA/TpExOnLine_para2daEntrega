@@ -1,86 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="ExamenOnLineModelStoreContainer" CdmEntityContainer="ExOnLineEntities">
-    <EntitySetMapping Name="Alumnos">
-      <EntityTypeMapping TypeName="ExamenOnLineModel.ALUMNO">
-        <MappingFragment StoreEntitySet="ALUMNO">
-          <ScalarProperty Name="IdAlumno" ColumnName="IdAlumno" />
-          <ScalarProperty Name="DNI" ColumnName="DNI" />
-          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
-          <ScalarProperty Name="Apellido" ColumnName="Apellido" />
-          <ScalarProperty Name="Mail" ColumnName="Mail" />
-          <ScalarProperty Name="Contrasenia" ColumnName="Contrasenia" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="Cursos">
-      <EntityTypeMapping TypeName="ExamenOnLineModel.CURSO">
-        <MappingFragment StoreEntitySet="CURSO">
-          <ScalarProperty Name="IdCurso" ColumnName="IdCurso" />
-          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
-          <ScalarProperty Name="Estado" ColumnName="Estado" />
-          <ScalarProperty Name="FecIni" ColumnName="FecIni" />
-          <ScalarProperty Name="FecFin" ColumnName="FecFin" />
-          <ScalarProperty Name="ProfId" ColumnName="ProfId" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="Examenes">
-      <EntityTypeMapping TypeName="ExamenOnLineModel.EXAMEN">
-        <MappingFragment StoreEntitySet="EXAMEN">
-          <ScalarProperty Name="IdExamen" ColumnName="IdExamen" />
-          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
-          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
-          <ScalarProperty Name="Duracion" ColumnName="Duracion" />
-          <ScalarProperty Name="FecHora" ColumnName="FecHora" />
-          <ScalarProperty Name="CursoId" ColumnName="CursoId" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="Preguntas">
-      <EntityTypeMapping TypeName="ExamenOnLineModel.PREGUNTA">
-        <MappingFragment StoreEntitySet="PREGUNTA">
-          <ScalarProperty Name="IdPregunta" ColumnName="IdPregunta" />
-          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
-          <ScalarProperty Name="ExamenId" ColumnName="ExamenId" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="Profesores">
-      <EntityTypeMapping TypeName="ExamenOnLineModel.PROFESOR">
-        <MappingFragment StoreEntitySet="PROFESOR">
-          <ScalarProperty Name="EsUsuario" ColumnName="EsUsuario" />
-          <ScalarProperty Name="IdProfesor" ColumnName="IdProfesor" />
-          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
-          <ScalarProperty Name="Mail" ColumnName="Mail" />
-          <ScalarProperty Name="Contrasenia" ColumnName="Contrasenia" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="Respuestas">
-      <EntityTypeMapping TypeName="ExamenOnLineModel.RESPUESTA">
-        <MappingFragment StoreEntitySet="RESPUESTA">
-          <ScalarProperty Name="IdRespuesta" ColumnName="IdRespuesta" />
-          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
-          <ScalarProperty Name="EsValida" ColumnName="EsValida" />
-          <ScalarProperty Name="PreguntaId" ColumnName="PreguntaId" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="Resultados">
-      <EntityTypeMapping TypeName="ExamenOnLineModel.RESULTADO">
-        <MappingFragment StoreEntitySet="RESULTADO">
-          <ScalarProperty Name="IdResultado" ColumnName="IdResultado" />
-          <ScalarProperty Name="FecHora" ColumnName="FecHora" />
-          <ScalarProperty Name="FecIni" ColumnName="FecIni" />
-          <ScalarProperty Name="Demora" ColumnName="Demora" />
-          <ScalarProperty Name="Porcentaje" ColumnName="Porcentaje" />
-          <ScalarProperty Name="Nota" ColumnName="Nota" />
-          <ScalarProperty Name="AlumnoId" ColumnName="AlumnoId" />
-          <ScalarProperty Name="ExamenId" ColumnName="ExamenId" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <FunctionImportMapping FunctionImportName="ListarCursos" FunctionName="ExamenOnLineModel.Store.listarCursosProfesor">
       <ResultMapping>
         <ComplexTypeMapping TypeName="ExamenOnLineModel.ListarCursos_Result">
@@ -99,12 +19,92 @@
         </ComplexTypeMapping>
       </ResultMapping>
     </FunctionImportMapping>
+    <EntitySetMapping Name="Alumnos">
+      <EntityTypeMapping TypeName="ExamenOnLineModel.ALUMNO">
+        <MappingFragment StoreEntitySet="ALUMNO">
+          <ScalarProperty Name="Contrasenia" ColumnName="Contrasenia" />
+          <ScalarProperty Name="Mail" ColumnName="Mail" />
+          <ScalarProperty Name="Apellido" ColumnName="Apellido" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="DNI" ColumnName="DNI" />
+          <ScalarProperty Name="IdAlumno" ColumnName="IdAlumno" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Cursos">
+      <EntityTypeMapping TypeName="ExamenOnLineModel.CURSO">
+        <MappingFragment StoreEntitySet="CURSO">
+          <ScalarProperty Name="ProfId" ColumnName="ProfId" />
+          <ScalarProperty Name="FecFin" ColumnName="FecFin" />
+          <ScalarProperty Name="FecIni" ColumnName="FecIni" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="IdCurso" ColumnName="IdCurso" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="CursosAl">
       <EntityTypeMapping TypeName="ExamenOnLineModel.Curso_Alumno">
         <MappingFragment StoreEntitySet="Curso_Alumno">
           <ScalarProperty Name="IDALUMNO" ColumnName="IDALUMNO" />
           <ScalarProperty Name="IDCURSO" ColumnName="IDCURSO" />
           <ScalarProperty Name="idTab" ColumnName="idTab" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Examenes">
+      <EntityTypeMapping TypeName="ExamenOnLineModel.EXAMEN">
+        <MappingFragment StoreEntitySet="EXAMEN">
+          <ScalarProperty Name="CursoId" ColumnName="CursoId" />
+          <ScalarProperty Name="FecHora" ColumnName="FecHora" />
+          <ScalarProperty Name="Duracion" ColumnName="Duracion" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="IdExamen" ColumnName="IdExamen" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Preguntas">
+      <EntityTypeMapping TypeName="ExamenOnLineModel.PREGUNTA">
+        <MappingFragment StoreEntitySet="PREGUNTA">
+          <ScalarProperty Name="ExamenId" ColumnName="ExamenId" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="IdPregunta" ColumnName="IdPregunta" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Profesores">
+      <EntityTypeMapping TypeName="ExamenOnLineModel.PROFESOR">
+        <MappingFragment StoreEntitySet="PROFESOR">
+          <ScalarProperty Name="EsUsuario" ColumnName="EsUsuario" />
+          <ScalarProperty Name="Contrasenia" ColumnName="Contrasenia" />
+          <ScalarProperty Name="Mail" ColumnName="Mail" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="IdProfesor" ColumnName="IdProfesor" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Respuestas">
+      <EntityTypeMapping TypeName="ExamenOnLineModel.RESPUESTA">
+        <MappingFragment StoreEntitySet="RESPUESTA">
+          <ScalarProperty Name="PreguntaId" ColumnName="PreguntaId" />
+          <ScalarProperty Name="EsValida" ColumnName="EsValida" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="IdRespuesta" ColumnName="IdRespuesta" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Resultados">
+      <EntityTypeMapping TypeName="ExamenOnLineModel.RESULTADO">
+        <MappingFragment StoreEntitySet="RESULTADO">
+          <ScalarProperty Name="ExamenId" ColumnName="ExamenId" />
+          <ScalarProperty Name="AlumnoId" ColumnName="AlumnoId" />
+          <ScalarProperty Name="Nota" ColumnName="Nota" />
+          <ScalarProperty Name="Porcentaje" ColumnName="Porcentaje" />
+          <ScalarProperty Name="Demora" ColumnName="Demora" />
+          <ScalarProperty Name="FecIni" ColumnName="FecIni" />
+          <ScalarProperty Name="FecHora" ColumnName="FecHora" />
+          <ScalarProperty Name="IdResultado" ColumnName="IdResultado" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

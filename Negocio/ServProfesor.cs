@@ -40,5 +40,11 @@ namespace Negocio
 
             esProfesor.altaExamen(nombre, descripcion, duracion, tiempotope, horatope, idcurso);
         }
+
+        public bool validarUsuario(string user, string pass)
+        {
+            bool comprobar = esProfesor.ComprobarUsuario(user, pass);
+            return comprobar;
+        }
     }
 }

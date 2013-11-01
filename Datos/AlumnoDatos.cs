@@ -10,6 +10,22 @@ namespace Datos
     public class AlumnoDatos
     {
         ExOnLineEntities ctx = new ExOnLineEntities();
+        public bool ComprobarUsuario(string usuario, string pass)
+        {
+            bool esUsuario = false;
+            var alumno = (from al in ctx.Alumnos
+                        where al.Mail == usuario && al.Contrasenia == pass
+                        select al).FirstOrDefault();
+            if (alumno != null)
+            {
+                esUsuario = true;
+            }
+            else
+            {
+                esUsuario = false;
+            }
+            return esUsuario;
+        }
         public int BuscarId(string passUsuario)
         {
             var _usId = (from u in ctx.Alumnos
@@ -21,12 +37,19 @@ namespace Datos
 
         public string BuscarNombre(string mailu)
         {
+            string user;
             var _name = (from b in ctx.Alumnos
                              where b.Mail == mailu
                              select b.Nombre).FirstOrDefault();
-             
-            return _name;
-
+            if (_name == null)
+            {
+                user = "ALumno";
+            }
+            else
+            {
+                user = _name;
+            }
+            return user;
         }
 
         public string BuscarMail(int id_p)
@@ -59,7 +82,7 @@ namespace Datos
             }
         }
 
-        public void CargarDatos(int id_p, string p, string p_2, long dni)
+        public void CargarDatos(int id_p, string p, string p_2, int dni)
         {
             ALUMNO editA = ctx.Alumnos.Where(s => s.IdAlumno == id_p).First();
             editA.Nombre = p;
@@ -75,6 +98,35 @@ namespace Datos
                 return true;
             else
                     return false;
+        }
+
+        public void CrearAlumnoDesdeMail(string p)
+        {
+            ALUMNO neoAl = new ALUMNO();
+            neoAl.Mail = p;
+            neoAl.Contrasenia = p;
+
+            ctx.Alumnos.AddObject(neoAl);
+            ctx.SaveChanges();
+        }
+
+        public bool buscarMailsRegistrados(string p)
+        {
+            ALUMNO mailSi = ctx.Alumnos.Where(m => m.Mail == p).FirstOrDefault();
+            bool resulta;
+            if (mailSi != null)
+                resulta = true;
+            else
+                resulta = false;
+            return resulta;
+        }
+
+        public int obtenerIdPorMail(string p)
+        {
+            var ultimo = (from ula in ctx.Alumnos
+                          where ula.Mail == p
+                          select ula.IdAlumno).First();
+            return ultimo;
         }
     }
 }

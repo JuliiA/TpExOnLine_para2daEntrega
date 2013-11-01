@@ -25,11 +25,7 @@ namespace TP_ExamenesEnLinea
             char[] delimiterChars = { ',' };
             //creo un array 
             string[] words = mails.Split(delimiterChars);
-            int cantidadMails = words.Length;
-            elServicio.crearBucle(words, cantidadMails);
-            
             int estado = 1;
-            //string mails = lblmails.Text;
             int id_p = Convert.ToInt32(Session["Id"]);
             //PARA GUARDAR LAS FECHAS:
             DateTime feini = fecCalendario1.Calendario;
@@ -41,6 +37,7 @@ namespace TP_ExamenesEnLinea
                 {
                     //crear logica de alta curso
                     elServicio.AltaCurso(txtcurso.Text, estado, feini, fefin, id_p);
+                    elServicio.crearBucle(words, nombre);
                     lblmensaje.Text = "Curso creado correctamente";
                     
                 }

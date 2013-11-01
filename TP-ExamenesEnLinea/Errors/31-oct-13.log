@@ -73,3 +73,1543 @@ System.Threading.ThreadAbortException: Subproceso anulado.
    en TP_ExamenesEnLinea.LoginUsuario.abrirSesionProfesor(String passUsuario, String mailU) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\LoginUsuario.aspx.cs:línea 47
 
 <===========================================================================>
+
+ Fecha del Log : 31/10/2013 05:35:25 p.m.
+ Error ocurrido en la pagina : http://localhost:49168/LoginUsuario.aspx
+
+ Descripcion :
+System.Threading.ThreadAbortException: Subproceso anulado.
+   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en TP_ExamenesEnLinea.LoginUsuario.abrirSesionProfesor(String passUsuario, String mailU) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\LoginUsuario.aspx.cs:línea 47
+
+<===========================================================================>
+
+ Fecha del Log : 31/10/2013 05:38:49 p.m.
+ Error ocurrido en la pagina : http://localhost:49168/LoginUsuario.aspx
+
+ Descripcion :
+System.Threading.ThreadAbortException: Subproceso anulado.
+   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en TP_ExamenesEnLinea.LoginUsuario.abrirSesionProfesor(String passUsuario, String mailU) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\LoginUsuario.aspx.cs:línea 47
+
+<===========================================================================>
+
+ Fecha del Log : 31/10/2013 06:02:16 p.m.
+ Error ocurrido en la pagina : http://localhost:49168/LoginUsuario.aspx
+
+ Descripcion :
+System.Threading.ThreadAbortException: Subproceso anulado.
+   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en TP_ExamenesEnLinea.LoginUsuario.abrirSesionProfesor(String passUsuario, String mailU) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\LoginUsuario.aspx.cs:línea 47
+
+<===========================================================================>
+
+ Fecha del Log : 31/10/2013 06:34:38 p.m.
+ Error ocurrido en la pagina : http://localhost:49168/LoginUsuario.aspx
+
+ Descripcion :
+System.Threading.ThreadAbortException: Subproceso anulado.
+   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en TP_ExamenesEnLinea.LoginUsuario.abrirSesionProfesor(String passUsuario, String mailU) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\LoginUsuario.aspx.cs:línea 47
+
+<===========================================================================>
+
+ Fecha del Log : 31/10/2013 06:35:35 p.m.
+ Error ocurrido en la pagina : http://localhost:49168/AdminProfesor.aspx
+
+ Descripcion :
+System.Data.UpdateException: Se produjo un error mientras se actualizaban las entradas. Vea la excepción interna para obtener detalles. ---> System.Data.SqlClient.SqlException: La conversión del tipo de datos datetime2 en datetime produjo un valor fuera de intervalo.
+Se terminó la instrucción.
+   en System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   en System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   en System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   en System.Data.SqlClient.SqlDataReader.get_MetaData()
+   en System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   en System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   en System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   en System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+   en System.Data.Mapping.Update.Internal.DynamicUpdateCommand.Execute(UpdateTranslator translator, EntityConnection connection, Dictionary`2 identifierValues, List`1 generatedValues)
+   en System.Data.Mapping.Update.Internal.UpdateTranslator.Update(IEntityStateManager stateManager, IEntityAdapter adapter)
+   --- Fin del seguimiento de la pila de la excepción interna ---
+   en System.Data.Mapping.Update.Internal.UpdateTranslator.Update(IEntityStateManager stateManager, IEntityAdapter adapter)
+   en System.Data.EntityClient.EntityAdapter.Update(IEntityStateManager entityCache)
+   en System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   en System.Data.Objects.ObjectContext.SaveChanges()
+   en Datos.CursoDatos.CrearNuevoCurso(String nombre, Int32 estado, DateTime fini, DateTime ffin, Int32 id_p) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\Datos\CursoDatos.cs:línea 85
+   en Negocio.ServCurso.AltaCurso(String nombre, Int32 estado, DateTime fini, DateTime ffin, Int32 id_p) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\Negocio\ServCurso.cs:línea 28
+   en TP_ExamenesEnLinea.AdminProfesor.btncrear_Click(Object sender, EventArgs e) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\AdminProfesor.aspx.cs:línea 35
+
+<===========================================================================>
+
+ Fecha del Log : 31/10/2013 06:37:01 p.m.
+ Error ocurrido en la pagina : http://localhost:49168/LoginUsuario.aspx
+
+ Descripcion :
+System.Threading.ThreadAbortException: Subproceso anulado.
+   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en TP_ExamenesEnLinea.LoginUsuario.abrirSesionProfesor(String passUsuario, String mailU) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\LoginUsuario.aspx.cs:línea 47
+
+<===========================================================================>
+
+ Fecha del Log : 31/10/2013 06:37:27 p.m.
+ Error ocurrido en la pagina : http://localhost:49168/AdminProfesor.aspx
+
+ Descripcion :
+System.Data.UpdateException: Se produjo un error mientras se actualizaban las entradas. Vea la excepción interna para obtener detalles. ---> System.Data.SqlClient.SqlException: La conversión del tipo de datos datetime2 en datetime produjo un valor fuera de intervalo.
+Se terminó la instrucción.
+   en System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   en System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   en System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   en System.Data.SqlClient.SqlDataReader.get_MetaData()
+   en System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   en System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   en System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   en System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+   en System.Data.Mapping.Update.Internal.DynamicUpdateCommand.Execute(UpdateTranslator translator, EntityConnection connection, Dictionary`2 identifierValues, List`1 generatedValues)
+   en System.Data.Mapping.Update.Internal.UpdateTranslator.Update(IEntityStateManager stateManager, IEntityAdapter adapter)
+   --- Fin del seguimiento de la pila de la excepción interna ---
+   en System.Data.Mapping.Update.Internal.UpdateTranslator.Update(IEntityStateManager stateManager, IEntityAdapter adapter)
+   en System.Data.EntityClient.EntityAdapter.Update(IEntityStateManager entityCache)
+   en System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   en System.Data.Objects.ObjectContext.SaveChanges()
+   en Datos.CursoDatos.CrearNuevoCurso(String nombre, Int32 estado, DateTime fini, DateTime ffin, Int32 id_p) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\Datos\CursoDatos.cs:línea 85
+   en Negocio.ServCurso.AltaCurso(String nombre, Int32 estado, DateTime fini, DateTime ffin, Int32 id_p) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\Negocio\ServCurso.cs:línea 28
+   en TP_ExamenesEnLinea.AdminProfesor.btncrear_Click(Object sender, EventArgs e) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\AdminProfesor.aspx.cs:línea 35
+
+<===========================================================================>
+
+ Fecha del Log : 31/10/2013 06:38:17 p.m.
+ Error ocurrido en la pagina : http://localhost:49168/LoginUsuario.aspx
+
+ Descripcion :
+System.Threading.ThreadAbortException: Subproceso anulado.
+   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en TP_ExamenesEnLinea.LoginUsuario.abrirSesionProfesor(String passUsuario, String mailU) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\LoginUsuario.aspx.cs:línea 47
+
+<===========================================================================>
+
+ Fecha del Log : 31/10/2013 06:39:05 p.m.
+ Error ocurrido en la pagina : http://localhost:49168/AdminProfesor.aspx
+
+ Descripcion :
+System.Data.UpdateException: Se produjo un error mientras se actualizaban las entradas. Vea la excepción interna para obtener detalles. ---> System.Data.SqlClient.SqlException: La conversión del tipo de datos datetime2 en datetime produjo un valor fuera de intervalo.
+Se terminó la instrucción.
+   en System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   en System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   en System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   en System.Data.SqlClient.SqlDataReader.get_MetaData()
+   en System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   en System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   en System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   en System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+   en System.Data.Mapping.Update.Internal.DynamicUpdateCommand.Execute(UpdateTranslator translator, EntityConnection connection, Dictionary`2 identifierValues, List`1 generatedValues)
+   en System.Data.Mapping.Update.Internal.UpdateTranslator.Update(IEntityStateManager stateManager, IEntityAdapter adapter)
+   --- Fin del seguimiento de la pila de la excepción interna ---
+   en System.Data.Mapping.Update.Internal.UpdateTranslator.Update(IEntityStateManager stateManager, IEntityAdapter adapter)
+   en System.Data.EntityClient.EntityAdapter.Update(IEntityStateManager entityCache)
+   en System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   en System.Data.Objects.ObjectContext.SaveChanges()
+   en Datos.CursoDatos.CrearNuevoCurso(String nombre, Int32 estado, DateTime fini, DateTime ffin, Int32 id_p) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\Datos\CursoDatos.cs:línea 85
+   en Negocio.ServCurso.AltaCurso(String nombre, Int32 estado, DateTime fini, DateTime ffin, Int32 id_p) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\Negocio\ServCurso.cs:línea 28
+   en TP_ExamenesEnLinea.AdminProfesor.btncrear_Click(Object sender, EventArgs e) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\AdminProfesor.aspx.cs:línea 35
+
+<===========================================================================>
+
+ Fecha del Log : 31/10/2013 06:39:27 p.m.
+ Error ocurrido en la pagina : http://localhost:49168/LoginUsuario.aspx
+
+ Descripcion :
+System.Threading.ThreadAbortException: Subproceso anulado.
+   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en TP_ExamenesEnLinea.LoginUsuario.abrirSesionProfesor(String passUsuario, String mailU) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\LoginUsuario.aspx.cs:línea 47
+
+<===========================================================================>
+
+ Fecha del Log : 31/10/2013 06:40:50 p.m.
+ Error ocurrido en la pagina : http://localhost:49168/AdminProfesor.aspx
+
+ Descripcion :
+System.ArgumentException: Las expresiones DbSortClause deben tener un tipo con orden comparable.
+Nombre del parámetro: key
+   en System.Data.Common.CommandTrees.ExpressionBuilder.Internal.ArgumentValidation.ValidateSortClause(DbExpression key)
+   en System.Data.Common.CommandTrees.ExpressionBuilder.DbExpressionBuilder.ToSortClauseDescending(DbExpression key)
+   en System.Data.Objects.ELinq.ExpressionConverter.MethodCallTranslator.OrderByTranslatorBase.TranslateOneLambda(ExpressionConverter parent, DbExpressionBinding sourceBinding, DbExpression lambda)
+   en System.Data.Objects.ELinq.ExpressionConverter.MethodCallTranslator.OneLambdaTranslator.Translate(ExpressionConverter parent, MethodCallExpression call, DbExpression& source, DbExpressionBinding& sourceBinding, DbExpression& lambda)
+   en System.Data.Objects.ELinq.ExpressionConverter.MethodCallTranslator.OneLambdaTranslator.Translate(ExpressionConverter parent, MethodCallExpression call)
+   en System.Data.Objects.ELinq.ExpressionConverter.MethodCallTranslator.SequenceMethodTranslator.Translate(ExpressionConverter parent, MethodCallExpression call, SequenceMethod sequenceMethod)
+   en System.Data.Objects.ELinq.ExpressionConverter.MethodCallTranslator.TypedTranslate(ExpressionConverter parent, MethodCallExpression linq)
+   en System.Data.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)
+   en System.Data.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)
+   en System.Data.Objects.ELinq.ExpressionConverter.MethodCallTranslator.OneLambdaTranslator.Translate(ExpressionConverter parent, MethodCallExpression call, DbExpression& source, DbExpressionBinding& sourceBinding, DbExpression& lambda)
+   en System.Data.Objects.ELinq.ExpressionConverter.MethodCallTranslator.SelectTranslator.Translate(ExpressionConverter parent, MethodCallExpression call)
+   en System.Data.Objects.ELinq.ExpressionConverter.MethodCallTranslator.SequenceMethodTranslator.Translate(ExpressionConverter parent, MethodCallExpression call, SequenceMethod sequenceMethod)
+   en System.Data.Objects.ELinq.ExpressionConverter.MethodCallTranslator.TypedTranslate(ExpressionConverter parent, MethodCallExpression linq)
+   en System.Data.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)
+   en System.Data.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)
+   en System.Data.Objects.ELinq.ExpressionConverter.TranslateSet(Expression linq)
+   en System.Data.Objects.ELinq.ExpressionConverter.MethodCallTranslator.UnarySequenceMethodTranslator.Translate(ExpressionConverter parent, MethodCallExpression call)
+   en System.Data.Objects.ELinq.ExpressionConverter.MethodCallTranslator.SequenceMethodTranslator.Translate(ExpressionConverter parent, MethodCallExpression call, SequenceMethod sequenceMethod)
+   en System.Data.Objects.ELinq.ExpressionConverter.MethodCallTranslator.TypedTranslate(ExpressionConverter parent, MethodCallExpression linq)
+   en System.Data.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)
+   en System.Data.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)
+   en System.Data.Objects.ELinq.ExpressionConverter.Convert()
+   en System.Data.Objects.ELinq.ELinqQueryState.GetExecutionPlan(Nullable`1 forMergeOption)
+   en System.Data.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   en System.Data.Objects.ObjectQuery`1.System.Collections.Generic.IEnumerable<T>.GetEnumerator()
+   en System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   en System.Data.Objects.ELinq.ObjectQueryProvider.<GetElementFunction>b__0[TResult](IEnumerable`1 sequence)
+   en System.Data.Objects.ELinq.ObjectQueryProvider.ExecuteSingle[TResult](IEnumerable`1 query, Expression queryRoot)
+   en System.Data.Objects.ELinq.ObjectQueryProvider.System.Linq.IQueryProvider.Execute[S](Expression expression)
+   en System.Linq.Queryable.First[TSource](IQueryable`1 source)
+   en Datos.CursoDatos.crearNuevoAlumnosDesdeMail(List`1 resulta) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\Datos\CursoDatos.cs:línea 107
+   en Datos.CursoDatos.buscarMailsNoRegistrados(List`1 mails) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\Datos\CursoDatos.cs:línea 102
+   en Negocio.ServCurso.crearBucle(String[] words, Int32 cantidadMails) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\Negocio\ServCurso.cs:línea 42
+   en TP_ExamenesEnLinea.AdminProfesor.btncrear_Click(Object sender, EventArgs e) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\AdminProfesor.aspx.cs:línea 41
+
+<===========================================================================>
+
+ Fecha del Log : 31/10/2013 06:40:56 p.m.
+ Error ocurrido en la pagina : http://localhost:49168/LoginUsuario.aspx
+
+ Descripcion :
+System.Threading.ThreadAbortException: Subproceso anulado.
+   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en TP_ExamenesEnLinea.LoginUsuario.abrirSesionProfesor(String passUsuario, String mailU) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\LoginUsuario.aspx.cs:línea 47
+
+<===========================================================================>
+
+ Fecha del Log : 31/10/2013 06:41:33 p.m.
+ Error ocurrido en la pagina : http://localhost:49168/AdminProfesor.aspx
+
+ Descripcion :
+System.ArgumentException: Las expresiones DbSortClause deben tener un tipo con orden comparable.
+Nombre del parámetro: key
+   en System.Data.Common.CommandTrees.ExpressionBuilder.Internal.ArgumentValidation.ValidateSortClause(DbExpression key)
+   en System.Data.Common.CommandTrees.ExpressionBuilder.DbExpressionBuilder.ToSortClauseDescending(DbExpression key)
+   en System.Data.Objects.ELinq.ExpressionConverter.MethodCallTranslator.OrderByTranslatorBase.TranslateOneLambda(ExpressionConverter parent, DbExpressionBinding sourceBinding, DbExpression lambda)
+   en System.Data.Objects.ELinq.ExpressionConverter.MethodCallTranslator.OneLambdaTranslator.Translate(ExpressionConverter parent, MethodCallExpression call, DbExpression& source, DbExpressionBinding& sourceBinding, DbExpression& lambda)
+   en System.Data.Objects.ELinq.ExpressionConverter.MethodCallTranslator.OneLambdaTranslator.Translate(ExpressionConverter parent, MethodCallExpression call)
+   en System.Data.Objects.ELinq.ExpressionConverter.MethodCallTranslator.SequenceMethodTranslator.Translate(ExpressionConverter parent, MethodCallExpression call, SequenceMethod sequenceMethod)
+   en System.Data.Objects.ELinq.ExpressionConverter.MethodCallTranslator.TypedTranslate(ExpressionConverter parent, MethodCallExpression linq)
+   en System.Data.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)
+   en System.Data.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)
+   en System.Data.Objects.ELinq.ExpressionConverter.MethodCallTranslator.OneLambdaTranslator.Translate(ExpressionConverter parent, MethodCallExpression call, DbExpression& source, DbExpressionBinding& sourceBinding, DbExpression& lambda)
+   en System.Data.Objects.ELinq.ExpressionConverter.MethodCallTranslator.SelectTranslator.Translate(ExpressionConverter parent, MethodCallExpression call)
+   en System.Data.Objects.ELinq.ExpressionConverter.MethodCallTranslator.SequenceMethodTranslator.Translate(ExpressionConverter parent, MethodCallExpression call, SequenceMethod sequenceMethod)
+   en System.Data.Objects.ELinq.ExpressionConverter.MethodCallTranslator.TypedTranslate(ExpressionConverter parent, MethodCallExpression linq)
+   en System.Data.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)
+   en System.Data.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)
+   en System.Data.Objects.ELinq.ExpressionConverter.TranslateSet(Expression linq)
+   en System.Data.Objects.ELinq.ExpressionConverter.MethodCallTranslator.UnarySequenceMethodTranslator.Translate(ExpressionConverter parent, MethodCallExpression call)
+   en System.Data.Objects.ELinq.ExpressionConverter.MethodCallTranslator.SequenceMethodTranslator.Translate(ExpressionConverter parent, MethodCallExpression call, SequenceMethod sequenceMethod)
+   en System.Data.Objects.ELinq.ExpressionConverter.MethodCallTranslator.TypedTranslate(ExpressionConverter parent, MethodCallExpression linq)
+   en System.Data.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)
+   en System.Data.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)
+   en System.Data.Objects.ELinq.ExpressionConverter.Convert()
+   en System.Data.Objects.ELinq.ELinqQueryState.GetExecutionPlan(Nullable`1 forMergeOption)
+   en System.Data.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   en System.Data.Objects.ObjectQuery`1.System.Collections.Generic.IEnumerable<T>.GetEnumerator()
+   en System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   en System.Data.Objects.ELinq.ObjectQueryProvider.<GetElementFunction>b__0[TResult](IEnumerable`1 sequence)
+   en System.Data.Objects.ELinq.ObjectQueryProvider.ExecuteSingle[TResult](IEnumerable`1 query, Expression queryRoot)
+   en System.Data.Objects.ELinq.ObjectQueryProvider.System.Linq.IQueryProvider.Execute[S](Expression expression)
+   en System.Linq.Queryable.First[TSource](IQueryable`1 source)
+   en Datos.CursoDatos.crearNuevoAlumnosDesdeMail(List`1 resulta) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\Datos\CursoDatos.cs:línea 107
+   en Datos.CursoDatos.buscarMailsNoRegistrados(List`1 mails) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\Datos\CursoDatos.cs:línea 102
+   en Negocio.ServCurso.crearBucle(String[] words, Int32 cantidadMails) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\Negocio\ServCurso.cs:línea 42
+   en TP_ExamenesEnLinea.AdminProfesor.btncrear_Click(Object sender, EventArgs e) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\AdminProfesor.aspx.cs:línea 41
+
+<===========================================================================>
+
+ Fecha del Log : 31/10/2013 06:47:47 p.m.
+ Error ocurrido en la pagina : http://localhost:49168/LoginUsuario.aspx
+
+ Descripcion :
+System.Threading.ThreadAbortException: Subproceso anulado.
+   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en TP_ExamenesEnLinea.LoginUsuario.abrirSesionProfesor(String passUsuario, String mailU) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\LoginUsuario.aspx.cs:línea 47
+
+<===========================================================================>
+
+ Fecha del Log : 31/10/2013 06:50:11 p.m.
+ Error ocurrido en la pagina : http://localhost:49168/LoginUsuario.aspx
+
+ Descripcion :
+System.Threading.ThreadAbortException: Subproceso anulado.
+   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en TP_ExamenesEnLinea.LoginUsuario.abrirSesionProfesor(String passUsuario, String mailU) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\LoginUsuario.aspx.cs:línea 47
+
+<===========================================================================>
+
+ Fecha del Log : 31/10/2013 06:52:23 p.m.
+ Error ocurrido en la pagina : http://localhost:49168/AdminProfesor.aspx
+
+ Descripcion :
+System.ArgumentException: Las expresiones DbSortClause deben tener un tipo con orden comparable.
+Nombre del parámetro: key
+   en System.Data.Common.CommandTrees.ExpressionBuilder.Internal.ArgumentValidation.ValidateSortClause(DbExpression key)
+   en System.Data.Common.CommandTrees.ExpressionBuilder.DbExpressionBuilder.ToSortClauseDescending(DbExpression key)
+   en System.Data.Objects.ELinq.ExpressionConverter.MethodCallTranslator.OrderByTranslatorBase.TranslateOneLambda(ExpressionConverter parent, DbExpressionBinding sourceBinding, DbExpression lambda)
+   en System.Data.Objects.ELinq.ExpressionConverter.MethodCallTranslator.OneLambdaTranslator.Translate(ExpressionConverter parent, MethodCallExpression call, DbExpression& source, DbExpressionBinding& sourceBinding, DbExpression& lambda)
+   en System.Data.Objects.ELinq.ExpressionConverter.MethodCallTranslator.OneLambdaTranslator.Translate(ExpressionConverter parent, MethodCallExpression call)
+   en System.Data.Objects.ELinq.ExpressionConverter.MethodCallTranslator.SequenceMethodTranslator.Translate(ExpressionConverter parent, MethodCallExpression call, SequenceMethod sequenceMethod)
+   en System.Data.Objects.ELinq.ExpressionConverter.MethodCallTranslator.TypedTranslate(ExpressionConverter parent, MethodCallExpression linq)
+   en System.Data.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)
+   en System.Data.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)
+   en System.Data.Objects.ELinq.ExpressionConverter.MethodCallTranslator.OneLambdaTranslator.Translate(ExpressionConverter parent, MethodCallExpression call, DbExpression& source, DbExpressionBinding& sourceBinding, DbExpression& lambda)
+   en System.Data.Objects.ELinq.ExpressionConverter.MethodCallTranslator.SelectTranslator.Translate(ExpressionConverter parent, MethodCallExpression call)
+   en System.Data.Objects.ELinq.ExpressionConverter.MethodCallTranslator.SequenceMethodTranslator.Translate(ExpressionConverter parent, MethodCallExpression call, SequenceMethod sequenceMethod)
+   en System.Data.Objects.ELinq.ExpressionConverter.MethodCallTranslator.TypedTranslate(ExpressionConverter parent, MethodCallExpression linq)
+   en System.Data.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)
+   en System.Data.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)
+   en System.Data.Objects.ELinq.ExpressionConverter.TranslateSet(Expression linq)
+   en System.Data.Objects.ELinq.ExpressionConverter.MethodCallTranslator.UnarySequenceMethodTranslator.Translate(ExpressionConverter parent, MethodCallExpression call)
+   en System.Data.Objects.ELinq.ExpressionConverter.MethodCallTranslator.SequenceMethodTranslator.Translate(ExpressionConverter parent, MethodCallExpression call, SequenceMethod sequenceMethod)
+   en System.Data.Objects.ELinq.ExpressionConverter.MethodCallTranslator.TypedTranslate(ExpressionConverter parent, MethodCallExpression linq)
+   en System.Data.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)
+   en System.Data.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)
+   en System.Data.Objects.ELinq.ExpressionConverter.Convert()
+   en System.Data.Objects.ELinq.ELinqQueryState.GetExecutionPlan(Nullable`1 forMergeOption)
+   en System.Data.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   en System.Data.Objects.ObjectQuery`1.System.Collections.Generic.IEnumerable<T>.GetEnumerator()
+   en System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   en System.Data.Objects.ELinq.ObjectQueryProvider.<GetElementFunction>b__0[TResult](IEnumerable`1 sequence)
+   en System.Data.Objects.ELinq.ObjectQueryProvider.ExecuteSingle[TResult](IEnumerable`1 query, Expression queryRoot)
+   en System.Data.Objects.ELinq.ObjectQueryProvider.System.Linq.IQueryProvider.Execute[S](Expression expression)
+   en System.Linq.Queryable.First[TSource](IQueryable`1 source)
+   en Datos.CursoDatos.crearNuevoAlumnosDesdeMail(List`1 resulta) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\Datos\CursoDatos.cs:línea 107
+   en Datos.CursoDatos.buscarMailsNoRegistrados(List`1 mails) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\Datos\CursoDatos.cs:línea 102
+   en Negocio.ServCurso.crearBucle(String[] words, Int32 cantidadMails) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\Negocio\ServCurso.cs:línea 42
+   en TP_ExamenesEnLinea.AdminProfesor.btncrear_Click(Object sender, EventArgs e) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\AdminProfesor.aspx.cs:línea 41
+
+<===========================================================================>
+
+ Fecha del Log : 31/10/2013 06:52:30 p.m.
+ Error ocurrido en la pagina : http://localhost:49168/LoginUsuario.aspx
+
+ Descripcion :
+System.Threading.ThreadAbortException: Subproceso anulado.
+   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en TP_ExamenesEnLinea.LoginUsuario.abrirSesionProfesor(String passUsuario, String mailU) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\LoginUsuario.aspx.cs:línea 47
+
+<===========================================================================>
+
+ Fecha del Log : 31/10/2013 06:53:50 p.m.
+ Error ocurrido en la pagina : http://localhost:49168/AdminProfesor.aspx
+
+ Descripcion :
+System.ArgumentException: Las expresiones DbSortClause deben tener un tipo con orden comparable.
+Nombre del parámetro: key
+   en System.Data.Common.CommandTrees.ExpressionBuilder.Internal.ArgumentValidation.ValidateSortClause(DbExpression key)
+   en System.Data.Common.CommandTrees.ExpressionBuilder.DbExpressionBuilder.ToSortClauseDescending(DbExpression key)
+   en System.Data.Objects.ELinq.ExpressionConverter.MethodCallTranslator.OrderByTranslatorBase.TranslateOneLambda(ExpressionConverter parent, DbExpressionBinding sourceBinding, DbExpression lambda)
+   en System.Data.Objects.ELinq.ExpressionConverter.MethodCallTranslator.OneLambdaTranslator.Translate(ExpressionConverter parent, MethodCallExpression call, DbExpression& source, DbExpressionBinding& sourceBinding, DbExpression& lambda)
+   en System.Data.Objects.ELinq.ExpressionConverter.MethodCallTranslator.OneLambdaTranslator.Translate(ExpressionConverter parent, MethodCallExpression call)
+   en System.Data.Objects.ELinq.ExpressionConverter.MethodCallTranslator.SequenceMethodTranslator.Translate(ExpressionConverter parent, MethodCallExpression call, SequenceMethod sequenceMethod)
+   en System.Data.Objects.ELinq.ExpressionConverter.MethodCallTranslator.TypedTranslate(ExpressionConverter parent, MethodCallExpression linq)
+   en System.Data.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)
+   en System.Data.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)
+   en System.Data.Objects.ELinq.ExpressionConverter.MethodCallTranslator.OneLambdaTranslator.Translate(ExpressionConverter parent, MethodCallExpression call, DbExpression& source, DbExpressionBinding& sourceBinding, DbExpression& lambda)
+   en System.Data.Objects.ELinq.ExpressionConverter.MethodCallTranslator.SelectTranslator.Translate(ExpressionConverter parent, MethodCallExpression call)
+   en System.Data.Objects.ELinq.ExpressionConverter.MethodCallTranslator.SequenceMethodTranslator.Translate(ExpressionConverter parent, MethodCallExpression call, SequenceMethod sequenceMethod)
+   en System.Data.Objects.ELinq.ExpressionConverter.MethodCallTranslator.TypedTranslate(ExpressionConverter parent, MethodCallExpression linq)
+   en System.Data.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)
+   en System.Data.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)
+   en System.Data.Objects.ELinq.ExpressionConverter.TranslateSet(Expression linq)
+   en System.Data.Objects.ELinq.ExpressionConverter.MethodCallTranslator.UnarySequenceMethodTranslator.Translate(ExpressionConverter parent, MethodCallExpression call)
+   en System.Data.Objects.ELinq.ExpressionConverter.MethodCallTranslator.SequenceMethodTranslator.Translate(ExpressionConverter parent, MethodCallExpression call, SequenceMethod sequenceMethod)
+   en System.Data.Objects.ELinq.ExpressionConverter.MethodCallTranslator.TypedTranslate(ExpressionConverter parent, MethodCallExpression linq)
+   en System.Data.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)
+   en System.Data.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)
+   en System.Data.Objects.ELinq.ExpressionConverter.Convert()
+   en System.Data.Objects.ELinq.ELinqQueryState.GetExecutionPlan(Nullable`1 forMergeOption)
+   en System.Data.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   en System.Data.Objects.ObjectQuery`1.System.Collections.Generic.IEnumerable<T>.GetEnumerator()
+   en System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   en System.Data.Objects.ELinq.ObjectQueryProvider.<GetElementFunction>b__0[TResult](IEnumerable`1 sequence)
+   en System.Data.Objects.ELinq.ObjectQueryProvider.ExecuteSingle[TResult](IEnumerable`1 query, Expression queryRoot)
+   en System.Data.Objects.ELinq.ObjectQueryProvider.System.Linq.IQueryProvider.Execute[S](Expression expression)
+   en System.Linq.Queryable.First[TSource](IQueryable`1 source)
+   en Datos.CursoDatos.crearNuevoAlumnosDesdeMail(List`1 resulta) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\Datos\CursoDatos.cs:línea 107
+   en Datos.CursoDatos.buscarMailsNoRegistrados(List`1 mails) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\Datos\CursoDatos.cs:línea 102
+   en Negocio.ServCurso.crearBucle(String[] words, Int32 cantidadMails) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\Negocio\ServCurso.cs:línea 42
+   en TP_ExamenesEnLinea.AdminProfesor.btncrear_Click(Object sender, EventArgs e) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\AdminProfesor.aspx.cs:línea 41
+
+<===========================================================================>
+
+ Fecha del Log : 31/10/2013 06:53:57 p.m.
+ Error ocurrido en la pagina : http://localhost:49168/LoginUsuario.aspx
+
+ Descripcion :
+System.Threading.ThreadAbortException: Subproceso anulado.
+   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en TP_ExamenesEnLinea.LoginUsuario.abrirSesionProfesor(String passUsuario, String mailU) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\LoginUsuario.aspx.cs:línea 47
+
+<===========================================================================>
+
+ Fecha del Log : 31/10/2013 06:55:01 p.m.
+ Error ocurrido en la pagina : http://localhost:49168/AdminProfesor.aspx
+
+ Descripcion :
+System.ArgumentException: Las expresiones DbSortClause deben tener un tipo con orden comparable.
+Nombre del parámetro: key
+   en System.Data.Common.CommandTrees.ExpressionBuilder.Internal.ArgumentValidation.ValidateSortClause(DbExpression key)
+   en System.Data.Common.CommandTrees.ExpressionBuilder.DbExpressionBuilder.ToSortClauseDescending(DbExpression key)
+   en System.Data.Objects.ELinq.ExpressionConverter.MethodCallTranslator.OrderByTranslatorBase.TranslateOneLambda(ExpressionConverter parent, DbExpressionBinding sourceBinding, DbExpression lambda)
+   en System.Data.Objects.ELinq.ExpressionConverter.MethodCallTranslator.OneLambdaTranslator.Translate(ExpressionConverter parent, MethodCallExpression call, DbExpression& source, DbExpressionBinding& sourceBinding, DbExpression& lambda)
+   en System.Data.Objects.ELinq.ExpressionConverter.MethodCallTranslator.OneLambdaTranslator.Translate(ExpressionConverter parent, MethodCallExpression call)
+   en System.Data.Objects.ELinq.ExpressionConverter.MethodCallTranslator.SequenceMethodTranslator.Translate(ExpressionConverter parent, MethodCallExpression call, SequenceMethod sequenceMethod)
+   en System.Data.Objects.ELinq.ExpressionConverter.MethodCallTranslator.TypedTranslate(ExpressionConverter parent, MethodCallExpression linq)
+   en System.Data.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)
+   en System.Data.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)
+   en System.Data.Objects.ELinq.ExpressionConverter.MethodCallTranslator.OneLambdaTranslator.Translate(ExpressionConverter parent, MethodCallExpression call, DbExpression& source, DbExpressionBinding& sourceBinding, DbExpression& lambda)
+   en System.Data.Objects.ELinq.ExpressionConverter.MethodCallTranslator.SelectTranslator.Translate(ExpressionConverter parent, MethodCallExpression call)
+   en System.Data.Objects.ELinq.ExpressionConverter.MethodCallTranslator.SequenceMethodTranslator.Translate(ExpressionConverter parent, MethodCallExpression call, SequenceMethod sequenceMethod)
+   en System.Data.Objects.ELinq.ExpressionConverter.MethodCallTranslator.TypedTranslate(ExpressionConverter parent, MethodCallExpression linq)
+   en System.Data.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)
+   en System.Data.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)
+   en System.Data.Objects.ELinq.ExpressionConverter.TranslateSet(Expression linq)
+   en System.Data.Objects.ELinq.ExpressionConverter.MethodCallTranslator.UnarySequenceMethodTranslator.Translate(ExpressionConverter parent, MethodCallExpression call)
+   en System.Data.Objects.ELinq.ExpressionConverter.MethodCallTranslator.SequenceMethodTranslator.Translate(ExpressionConverter parent, MethodCallExpression call, SequenceMethod sequenceMethod)
+   en System.Data.Objects.ELinq.ExpressionConverter.MethodCallTranslator.TypedTranslate(ExpressionConverter parent, MethodCallExpression linq)
+   en System.Data.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)
+   en System.Data.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)
+   en System.Data.Objects.ELinq.ExpressionConverter.Convert()
+   en System.Data.Objects.ELinq.ELinqQueryState.GetExecutionPlan(Nullable`1 forMergeOption)
+   en System.Data.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   en System.Data.Objects.ObjectQuery`1.System.Collections.Generic.IEnumerable<T>.GetEnumerator()
+   en System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   en System.Data.Objects.ELinq.ObjectQueryProvider.<GetElementFunction>b__0[TResult](IEnumerable`1 sequence)
+   en System.Data.Objects.ELinq.ObjectQueryProvider.ExecuteSingle[TResult](IEnumerable`1 query, Expression queryRoot)
+   en System.Data.Objects.ELinq.ObjectQueryProvider.System.Linq.IQueryProvider.Execute[S](Expression expression)
+   en System.Linq.Queryable.First[TSource](IQueryable`1 source)
+   en Datos.CursoDatos.crearNuevoAlumnosDesdeMail(List`1 resulta) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\Datos\CursoDatos.cs:línea 107
+   en Datos.CursoDatos.buscarMailsNoRegistrados(List`1 mails) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\Datos\CursoDatos.cs:línea 102
+   en Negocio.ServCurso.crearBucle(String[] words, Int32 cantidadMails) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\Negocio\ServCurso.cs:línea 42
+   en TP_ExamenesEnLinea.AdminProfesor.btncrear_Click(Object sender, EventArgs e) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\AdminProfesor.aspx.cs:línea 41
+
+<===========================================================================>
+
+ Fecha del Log : 31/10/2013 06:56:32 p.m.
+ Error ocurrido en la pagina : http://localhost:49168/LoginUsuario.aspx
+
+ Descripcion :
+System.Threading.ThreadAbortException: Subproceso anulado.
+   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en TP_ExamenesEnLinea.LoginUsuario.abrirSesionProfesor(String passUsuario, String mailU) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\LoginUsuario.aspx.cs:línea 47
+
+<===========================================================================>
+
+ Fecha del Log : 31/10/2013 07:00:30 p.m.
+ Error ocurrido en la pagina : http://localhost:49168/AdminProfesor.aspx
+
+ Descripcion :
+System.ArgumentException: Las expresiones DbSortClause deben tener un tipo con orden comparable.
+Nombre del parámetro: key
+   en System.Data.Common.CommandTrees.ExpressionBuilder.Internal.ArgumentValidation.ValidateSortClause(DbExpression key)
+   en System.Data.Common.CommandTrees.ExpressionBuilder.DbExpressionBuilder.ToSortClauseDescending(DbExpression key)
+   en System.Data.Objects.ELinq.ExpressionConverter.MethodCallTranslator.OrderByTranslatorBase.TranslateOneLambda(ExpressionConverter parent, DbExpressionBinding sourceBinding, DbExpression lambda)
+   en System.Data.Objects.ELinq.ExpressionConverter.MethodCallTranslator.OneLambdaTranslator.Translate(ExpressionConverter parent, MethodCallExpression call, DbExpression& source, DbExpressionBinding& sourceBinding, DbExpression& lambda)
+   en System.Data.Objects.ELinq.ExpressionConverter.MethodCallTranslator.OneLambdaTranslator.Translate(ExpressionConverter parent, MethodCallExpression call)
+   en System.Data.Objects.ELinq.ExpressionConverter.MethodCallTranslator.SequenceMethodTranslator.Translate(ExpressionConverter parent, MethodCallExpression call, SequenceMethod sequenceMethod)
+   en System.Data.Objects.ELinq.ExpressionConverter.MethodCallTranslator.TypedTranslate(ExpressionConverter parent, MethodCallExpression linq)
+   en System.Data.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)
+   en System.Data.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)
+   en System.Data.Objects.ELinq.ExpressionConverter.MethodCallTranslator.OneLambdaTranslator.Translate(ExpressionConverter parent, MethodCallExpression call, DbExpression& source, DbExpressionBinding& sourceBinding, DbExpression& lambda)
+   en System.Data.Objects.ELinq.ExpressionConverter.MethodCallTranslator.SelectTranslator.Translate(ExpressionConverter parent, MethodCallExpression call)
+   en System.Data.Objects.ELinq.ExpressionConverter.MethodCallTranslator.SequenceMethodTranslator.Translate(ExpressionConverter parent, MethodCallExpression call, SequenceMethod sequenceMethod)
+   en System.Data.Objects.ELinq.ExpressionConverter.MethodCallTranslator.TypedTranslate(ExpressionConverter parent, MethodCallExpression linq)
+   en System.Data.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)
+   en System.Data.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)
+   en System.Data.Objects.ELinq.ExpressionConverter.TranslateSet(Expression linq)
+   en System.Data.Objects.ELinq.ExpressionConverter.MethodCallTranslator.UnarySequenceMethodTranslator.Translate(ExpressionConverter parent, MethodCallExpression call)
+   en System.Data.Objects.ELinq.ExpressionConverter.MethodCallTranslator.SequenceMethodTranslator.Translate(ExpressionConverter parent, MethodCallExpression call, SequenceMethod sequenceMethod)
+   en System.Data.Objects.ELinq.ExpressionConverter.MethodCallTranslator.TypedTranslate(ExpressionConverter parent, MethodCallExpression linq)
+   en System.Data.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)
+   en System.Data.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)
+   en System.Data.Objects.ELinq.ExpressionConverter.Convert()
+   en System.Data.Objects.ELinq.ELinqQueryState.GetExecutionPlan(Nullable`1 forMergeOption)
+   en System.Data.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   en System.Data.Objects.ObjectQuery`1.System.Collections.Generic.IEnumerable<T>.GetEnumerator()
+   en System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   en System.Data.Objects.ELinq.ObjectQueryProvider.<GetElementFunction>b__0[TResult](IEnumerable`1 sequence)
+   en System.Data.Objects.ELinq.ObjectQueryProvider.ExecuteSingle[TResult](IEnumerable`1 query, Expression queryRoot)
+   en System.Data.Objects.ELinq.ObjectQueryProvider.System.Linq.IQueryProvider.Execute[S](Expression expression)
+   en System.Linq.Queryable.First[TSource](IQueryable`1 source)
+   en Datos.CursoDatos.crearNuevoAlumnosDesdeMail(List`1 resulta) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\Datos\CursoDatos.cs:línea 107
+   en Datos.CursoDatos.buscarMailsNoRegistrados(List`1 mails) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\Datos\CursoDatos.cs:línea 102
+   en Negocio.ServCurso.crearBucle(String[] words, Int32 cantidadMails) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\Negocio\ServCurso.cs:línea 42
+   en TP_ExamenesEnLinea.AdminProfesor.btncrear_Click(Object sender, EventArgs e) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\AdminProfesor.aspx.cs:línea 41
+
+<===========================================================================>
+
+ Fecha del Log : 31/10/2013 07:00:40 p.m.
+ Error ocurrido en la pagina : http://localhost:49168/LoginUsuario.aspx
+
+ Descripcion :
+System.Threading.ThreadAbortException: Subproceso anulado.
+   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en TP_ExamenesEnLinea.LoginUsuario.abrirSesionProfesor(String passUsuario, String mailU) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\LoginUsuario.aspx.cs:línea 47
+
+<===========================================================================>
+
+ Fecha del Log : 31/10/2013 07:01:19 p.m.
+ Error ocurrido en la pagina : http://localhost:49168/AdminProfesor.aspx
+
+ Descripcion :
+System.ArgumentException: Las expresiones DbSortClause deben tener un tipo con orden comparable.
+Nombre del parámetro: key
+   en System.Data.Common.CommandTrees.ExpressionBuilder.Internal.ArgumentValidation.ValidateSortClause(DbExpression key)
+   en System.Data.Common.CommandTrees.ExpressionBuilder.DbExpressionBuilder.ToSortClauseDescending(DbExpression key)
+   en System.Data.Objects.ELinq.ExpressionConverter.MethodCallTranslator.OrderByTranslatorBase.TranslateOneLambda(ExpressionConverter parent, DbExpressionBinding sourceBinding, DbExpression lambda)
+   en System.Data.Objects.ELinq.ExpressionConverter.MethodCallTranslator.OneLambdaTranslator.Translate(ExpressionConverter parent, MethodCallExpression call, DbExpression& source, DbExpressionBinding& sourceBinding, DbExpression& lambda)
+   en System.Data.Objects.ELinq.ExpressionConverter.MethodCallTranslator.OneLambdaTranslator.Translate(ExpressionConverter parent, MethodCallExpression call)
+   en System.Data.Objects.ELinq.ExpressionConverter.MethodCallTranslator.SequenceMethodTranslator.Translate(ExpressionConverter parent, MethodCallExpression call, SequenceMethod sequenceMethod)
+   en System.Data.Objects.ELinq.ExpressionConverter.MethodCallTranslator.TypedTranslate(ExpressionConverter parent, MethodCallExpression linq)
+   en System.Data.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)
+   en System.Data.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)
+   en System.Data.Objects.ELinq.ExpressionConverter.MethodCallTranslator.OneLambdaTranslator.Translate(ExpressionConverter parent, MethodCallExpression call, DbExpression& source, DbExpressionBinding& sourceBinding, DbExpression& lambda)
+   en System.Data.Objects.ELinq.ExpressionConverter.MethodCallTranslator.SelectTranslator.Translate(ExpressionConverter parent, MethodCallExpression call)
+   en System.Data.Objects.ELinq.ExpressionConverter.MethodCallTranslator.SequenceMethodTranslator.Translate(ExpressionConverter parent, MethodCallExpression call, SequenceMethod sequenceMethod)
+   en System.Data.Objects.ELinq.ExpressionConverter.MethodCallTranslator.TypedTranslate(ExpressionConverter parent, MethodCallExpression linq)
+   en System.Data.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)
+   en System.Data.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)
+   en System.Data.Objects.ELinq.ExpressionConverter.TranslateSet(Expression linq)
+   en System.Data.Objects.ELinq.ExpressionConverter.MethodCallTranslator.UnarySequenceMethodTranslator.Translate(ExpressionConverter parent, MethodCallExpression call)
+   en System.Data.Objects.ELinq.ExpressionConverter.MethodCallTranslator.SequenceMethodTranslator.Translate(ExpressionConverter parent, MethodCallExpression call, SequenceMethod sequenceMethod)
+   en System.Data.Objects.ELinq.ExpressionConverter.MethodCallTranslator.TypedTranslate(ExpressionConverter parent, MethodCallExpression linq)
+   en System.Data.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)
+   en System.Data.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)
+   en System.Data.Objects.ELinq.ExpressionConverter.Convert()
+   en System.Data.Objects.ELinq.ELinqQueryState.GetExecutionPlan(Nullable`1 forMergeOption)
+   en System.Data.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   en System.Data.Objects.ObjectQuery`1.System.Collections.Generic.IEnumerable<T>.GetEnumerator()
+   en System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   en System.Data.Objects.ELinq.ObjectQueryProvider.<GetElementFunction>b__0[TResult](IEnumerable`1 sequence)
+   en System.Data.Objects.ELinq.ObjectQueryProvider.ExecuteSingle[TResult](IEnumerable`1 query, Expression queryRoot)
+   en System.Data.Objects.ELinq.ObjectQueryProvider.System.Linq.IQueryProvider.Execute[S](Expression expression)
+   en System.Linq.Queryable.First[TSource](IQueryable`1 source)
+   en Datos.CursoDatos.crearNuevoAlumnosDesdeMail(List`1 resulta) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\Datos\CursoDatos.cs:línea 107
+   en Datos.CursoDatos.buscarMailsNoRegistrados(List`1 mails) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\Datos\CursoDatos.cs:línea 102
+   en Negocio.ServCurso.crearBucle(String[] words, Int32 cantidadMails) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\Negocio\ServCurso.cs:línea 42
+   en TP_ExamenesEnLinea.AdminProfesor.btncrear_Click(Object sender, EventArgs e) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\AdminProfesor.aspx.cs:línea 41
+
+<===========================================================================>
+
+ Fecha del Log : 31/10/2013 07:02:52 p.m.
+ Error ocurrido en la pagina : http://localhost:49168/LoginUsuario.aspx
+
+ Descripcion :
+System.Threading.ThreadAbortException: Subproceso anulado.
+   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en TP_ExamenesEnLinea.LoginUsuario.abrirSesionProfesor(String passUsuario, String mailU) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\LoginUsuario.aspx.cs:línea 47
+
+<===========================================================================>
+
+ Fecha del Log : 31/10/2013 07:08:34 p.m.
+ Error ocurrido en la pagina : http://localhost:49168/AdminProfesor.aspx
+
+ Descripcion :
+System.ArgumentException: Las expresiones DbSortClause deben tener un tipo con orden comparable.
+Nombre del parámetro: key
+   en System.Data.Common.CommandTrees.ExpressionBuilder.Internal.ArgumentValidation.ValidateSortClause(DbExpression key)
+   en System.Data.Common.CommandTrees.ExpressionBuilder.DbExpressionBuilder.ToSortClauseDescending(DbExpression key)
+   en System.Data.Objects.ELinq.ExpressionConverter.MethodCallTranslator.OrderByTranslatorBase.TranslateOneLambda(ExpressionConverter parent, DbExpressionBinding sourceBinding, DbExpression lambda)
+   en System.Data.Objects.ELinq.ExpressionConverter.MethodCallTranslator.OneLambdaTranslator.Translate(ExpressionConverter parent, MethodCallExpression call, DbExpression& source, DbExpressionBinding& sourceBinding, DbExpression& lambda)
+   en System.Data.Objects.ELinq.ExpressionConverter.MethodCallTranslator.OneLambdaTranslator.Translate(ExpressionConverter parent, MethodCallExpression call)
+   en System.Data.Objects.ELinq.ExpressionConverter.MethodCallTranslator.SequenceMethodTranslator.Translate(ExpressionConverter parent, MethodCallExpression call, SequenceMethod sequenceMethod)
+   en System.Data.Objects.ELinq.ExpressionConverter.MethodCallTranslator.TypedTranslate(ExpressionConverter parent, MethodCallExpression linq)
+   en System.Data.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)
+   en System.Data.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)
+   en System.Data.Objects.ELinq.ExpressionConverter.MethodCallTranslator.OneLambdaTranslator.Translate(ExpressionConverter parent, MethodCallExpression call, DbExpression& source, DbExpressionBinding& sourceBinding, DbExpression& lambda)
+   en System.Data.Objects.ELinq.ExpressionConverter.MethodCallTranslator.SelectTranslator.Translate(ExpressionConverter parent, MethodCallExpression call)
+   en System.Data.Objects.ELinq.ExpressionConverter.MethodCallTranslator.SequenceMethodTranslator.Translate(ExpressionConverter parent, MethodCallExpression call, SequenceMethod sequenceMethod)
+   en System.Data.Objects.ELinq.ExpressionConverter.MethodCallTranslator.TypedTranslate(ExpressionConverter parent, MethodCallExpression linq)
+   en System.Data.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)
+   en System.Data.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)
+   en System.Data.Objects.ELinq.ExpressionConverter.TranslateSet(Expression linq)
+   en System.Data.Objects.ELinq.ExpressionConverter.MethodCallTranslator.UnarySequenceMethodTranslator.Translate(ExpressionConverter parent, MethodCallExpression call)
+   en System.Data.Objects.ELinq.ExpressionConverter.MethodCallTranslator.SequenceMethodTranslator.Translate(ExpressionConverter parent, MethodCallExpression call, SequenceMethod sequenceMethod)
+   en System.Data.Objects.ELinq.ExpressionConverter.MethodCallTranslator.TypedTranslate(ExpressionConverter parent, MethodCallExpression linq)
+   en System.Data.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)
+   en System.Data.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)
+   en System.Data.Objects.ELinq.ExpressionConverter.Convert()
+   en System.Data.Objects.ELinq.ELinqQueryState.GetExecutionPlan(Nullable`1 forMergeOption)
+   en System.Data.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   en System.Data.Objects.ObjectQuery`1.System.Collections.Generic.IEnumerable<T>.GetEnumerator()
+   en System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   en System.Data.Objects.ELinq.ObjectQueryProvider.<GetElementFunction>b__0[TResult](IEnumerable`1 sequence)
+   en System.Data.Objects.ELinq.ObjectQueryProvider.ExecuteSingle[TResult](IEnumerable`1 query, Expression queryRoot)
+   en System.Data.Objects.ELinq.ObjectQueryProvider.System.Linq.IQueryProvider.Execute[S](Expression expression)
+   en System.Linq.Queryable.First[TSource](IQueryable`1 source)
+   en Datos.CursoDatos.crearNuevoAlumnosDesdeMail(List`1 resulta) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\Datos\CursoDatos.cs:línea 107
+   en Datos.CursoDatos.buscarMailsNoRegistrados(List`1 mails) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\Datos\CursoDatos.cs:línea 102
+   en Negocio.ServCurso.crearBucle(String[] words, Int32 cantidadMails) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\Negocio\ServCurso.cs:línea 42
+   en TP_ExamenesEnLinea.AdminProfesor.btncrear_Click(Object sender, EventArgs e) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\AdminProfesor.aspx.cs:línea 41
+
+<===========================================================================>
+
+ Fecha del Log : 31/10/2013 07:09:42 p.m.
+ Error ocurrido en la pagina : http://localhost:49168/LoginUsuario.aspx
+
+ Descripcion :
+System.Threading.ThreadAbortException: Subproceso anulado.
+   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en TP_ExamenesEnLinea.LoginUsuario.abrirSesionProfesor(String passUsuario, String mailU) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\LoginUsuario.aspx.cs:línea 47
+
+<===========================================================================>
+
+ Fecha del Log : 31/10/2013 07:10:25 p.m.
+ Error ocurrido en la pagina : http://localhost:49168/AdminProfesor.aspx
+
+ Descripcion :
+System.Data.EntityException: Error del proveedor subyacente en Open. ---> System.Runtime.InteropServices.COMException: Controlador no válido. (Excepción de HRESULT: 0x80070006 (E_HANDLE))
+   en System.Runtime.InteropServices.Marshal.ThrowExceptionForHRInternal(Int32 errorCode, IntPtr errorInfo)
+   en System.Runtime.InteropServices.Marshal.ThrowExceptionForHR(Int32 errorCode)
+   en System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   en System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   en System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   en System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   en System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   en System.Data.SqlClient.SqlConnection.Open()
+   en System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   --- Fin del seguimiento de la pila de la excepción interna ---
+   en System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean& closeStoreConnectionOnFailure)
+   en System.Data.EntityClient.EntityConnection.Open()
+   en System.Data.Objects.ObjectContext.EnsureConnection()
+   en System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   en System.Data.Objects.ObjectContext.SaveChanges()
+   en Datos.CursoDatos.CrearNuevoCurso(String nombre, Int32 estado, DateTime fini, DateTime ffin, Int32 id_p) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\Datos\CursoDatos.cs:línea 85
+   en Negocio.ServCurso.AltaCurso(String nombre, Int32 estado, DateTime fini, DateTime ffin, Int32 id_p) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\Negocio\ServCurso.cs:línea 28
+   en TP_ExamenesEnLinea.AdminProfesor.btncrear_Click(Object sender, EventArgs e) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\AdminProfesor.aspx.cs:línea 40
+
+<===========================================================================>
+
+ Fecha del Log : 31/10/2013 07:18:22 p.m.
+ Error ocurrido en la pagina : http://localhost:49168/LoginUsuario2.aspx
+
+ Descripcion :
+System.Threading.ThreadAbortException: Subproceso anulado.
+   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en TP_ExamenesEnLinea.LoginUsuario2.abrirSesionAlumno(String mailu, String passu) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\LoginUsuario2.aspx.cs:línea 53
+
+<===========================================================================>
+
+ Fecha del Log : 31/10/2013 07:18:58 p.m.
+ Error ocurrido en la pagina : http://localhost:49168/LoginUsuario2.aspx
+
+ Descripcion :
+System.Threading.ThreadAbortException: Subproceso anulado.
+   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en TP_ExamenesEnLinea.LoginUsuario2.abrirSesionAlumno(String mailu, String passu) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\LoginUsuario2.aspx.cs:línea 53
+
+<===========================================================================>
+
+ Fecha del Log : 31/10/2013 07:22:18 p.m.
+ Error ocurrido en la pagina : http://localhost:49168/LoginUsuario2.aspx
+
+ Descripcion :
+System.Threading.ThreadAbortException: Subproceso anulado.
+   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en TP_ExamenesEnLinea.LoginUsuario2.abrirSesionAlumno(String mailu, String passu) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\LoginUsuario2.aspx.cs:línea 53
+
+<===========================================================================>
+
+ Fecha del Log : 31/10/2013 07:36:03 p.m.
+ Error ocurrido en la pagina : http://localhost:49168/LoginUsuario2.aspx
+
+ Descripcion :
+System.Threading.ThreadAbortException: Subproceso anulado.
+   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en TP_ExamenesEnLinea.LoginUsuario2.abrirSesionAlumno(String mailu, String passu) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\LoginUsuario2.aspx.cs:línea 53
+
+<===========================================================================>
+
+ Fecha del Log : 31/10/2013 07:38:15 p.m.
+ Error ocurrido en la pagina : http://localhost:49168/LoginUsuario2.aspx
+
+ Descripcion :
+System.Threading.ThreadAbortException: Subproceso anulado.
+   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en TP_ExamenesEnLinea.LoginUsuario2.abrirSesionAlumno(String mailu, String passu) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\LoginUsuario2.aspx.cs:línea 53
+
+<===========================================================================>
+
+ Fecha del Log : 31/10/2013 07:41:54 p.m.
+ Error ocurrido en la pagina : http://localhost:49168/LoginUsuario2.aspx
+
+ Descripcion :
+System.Threading.ThreadAbortException: Subproceso anulado.
+   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en TP_ExamenesEnLinea.LoginUsuario2.abrirSesionAlumno(String mailu, String passu) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\LoginUsuario2.aspx.cs:línea 53
+
+<===========================================================================>
+
+ Fecha del Log : 31/10/2013 07:44:28 p.m.
+ Error ocurrido en la pagina : http://localhost:49168/LoginUsuario2.aspx
+
+ Descripcion :
+System.Threading.ThreadAbortException: Subproceso anulado.
+   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en TP_ExamenesEnLinea.LoginUsuario2.abrirSesionAlumno(String mailu, String passu) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\LoginUsuario2.aspx.cs:línea 53
+
+<===========================================================================>
+
+ Fecha del Log : 31/10/2013 07:48:09 p.m.
+ Error ocurrido en la pagina : http://localhost:49168/LoginUsuario2.aspx
+
+ Descripcion :
+System.Threading.ThreadAbortException: Subproceso anulado.
+   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en TP_ExamenesEnLinea.LoginUsuario2.abrirSesionAlumno(String mailu, String passu) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\LoginUsuario2.aspx.cs:línea 53
+
+<===========================================================================>
+
+ Fecha del Log : 31/10/2013 07:49:04 p.m.
+ Error ocurrido en la pagina : http://localhost:49168/LoginUsuario2.aspx
+
+ Descripcion :
+System.Threading.ThreadAbortException: Subproceso anulado.
+   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en TP_ExamenesEnLinea.LoginUsuario2.abrirSesionAlumno(String mailu, String passu) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\LoginUsuario2.aspx.cs:línea 53
+
+<===========================================================================>
+
+ Fecha del Log : 31/10/2013 07:49:38 p.m.
+ Error ocurrido en la pagina : http://localhost:49168/LoginUsuario2.aspx
+
+ Descripcion :
+System.Threading.ThreadAbortException: Subproceso anulado.
+   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en TP_ExamenesEnLinea.LoginUsuario2.abrirSesionAlumno(String mailu, String passu) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\LoginUsuario2.aspx.cs:línea 53
+
+<===========================================================================>
+
+ Fecha del Log : 31/10/2013 07:53:19 p.m.
+ Error ocurrido en la pagina : http://localhost:49168/LoginUsuario2.aspx
+
+ Descripcion :
+System.Threading.ThreadAbortException: Subproceso anulado.
+   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en TP_ExamenesEnLinea.LoginUsuario2.abrirSesionAlumno(String mailu, String passu) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\LoginUsuario2.aspx.cs:línea 53
+
+<===========================================================================>
+
+ Fecha del Log : 31/10/2013 07:54:17 p.m.
+ Error ocurrido en la pagina : http://localhost:49168/LoginUsuario.aspx
+
+ Descripcion :
+System.Threading.ThreadAbortException: Subproceso anulado.
+   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en TP_ExamenesEnLinea.LoginUsuario.abrirSesionProfesor(String passUsuario, String mailU) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\LoginUsuario.aspx.cs:línea 47
+
+<===========================================================================>
+
+ Fecha del Log : 31/10/2013 07:54:40 p.m.
+ Error ocurrido en la pagina : http://localhost:49168/BorrarCursoProfesor.aspx?id=18
+
+ Descripcion :
+System.InvalidOperationException: La secuencia contiene más de un elemento
+   en System.Linq.Enumerable.Single[TSource](IEnumerable`1 source)
+   en System.Data.Objects.ELinq.ObjectQueryProvider.<GetElementFunction>b__3[TResult](IEnumerable`1 sequence)
+   en System.Data.Objects.ELinq.ObjectQueryProvider.ExecuteSingle[TResult](IEnumerable`1 query, Expression queryRoot)
+   en System.Data.Objects.ELinq.ObjectQueryProvider.System.Linq.IQueryProvider.Execute[S](Expression expression)
+   en System.Linq.Queryable.Single[TSource](IQueryable`1 source)
+   en Datos.CursoDatos.darBajaAlCurso(Int32 id_p) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\Datos\CursoDatos.cs:línea 37
+   en Negocio.ServCurso.eliminarCurso(Int32 id_p) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\Negocio\ServCurso.cs:línea 47
+   en TP_ExamenesEnLinea.BorrarCursoProfesor.Button1_Click(Object sender, EventArgs e) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\BorrarCursoProfesor.aspx.cs:línea 38
+
+<===========================================================================>
+
+ Fecha del Log : 31/10/2013 07:54:59 p.m.
+ Error ocurrido en la pagina : http://localhost:49168/LoginUsuario.aspx
+
+ Descripcion :
+System.Threading.ThreadAbortException: Subproceso anulado.
+   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en TP_ExamenesEnLinea.LoginUsuario.abrirSesionProfesor(String passUsuario, String mailU) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\LoginUsuario.aspx.cs:línea 47
+
+<===========================================================================>
+
+ Fecha del Log : 31/10/2013 07:55:28 p.m.
+ Error ocurrido en la pagina : http://localhost:49168/BorrarCursoProfesor.aspx?id=19
+
+ Descripcion :
+System.InvalidOperationException: La secuencia contiene más de un elemento
+   en System.Linq.Enumerable.Single[TSource](IEnumerable`1 source)
+   en System.Data.Objects.ELinq.ObjectQueryProvider.<GetElementFunction>b__3[TResult](IEnumerable`1 sequence)
+   en System.Data.Objects.ELinq.ObjectQueryProvider.ExecuteSingle[TResult](IEnumerable`1 query, Expression queryRoot)
+   en System.Data.Objects.ELinq.ObjectQueryProvider.System.Linq.IQueryProvider.Execute[S](Expression expression)
+   en System.Linq.Queryable.Single[TSource](IQueryable`1 source)
+   en Datos.CursoDatos.darBajaAlCurso(Int32 id_p) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\Datos\CursoDatos.cs:línea 37
+   en Negocio.ServCurso.eliminarCurso(Int32 id_p) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\Negocio\ServCurso.cs:línea 47
+   en TP_ExamenesEnLinea.BorrarCursoProfesor.Button1_Click(Object sender, EventArgs e) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\BorrarCursoProfesor.aspx.cs:línea 38
+
+<===========================================================================>
+
+ Fecha del Log : 31/10/2013 08:02:59 p.m.
+ Error ocurrido en la pagina : http://localhost:49168/LoginUsuario.aspx
+
+ Descripcion :
+System.Threading.ThreadAbortException: Subproceso anulado.
+   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en TP_ExamenesEnLinea.LoginUsuario.abrirSesionProfesor(String passUsuario, String mailU) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\LoginUsuario.aspx.cs:línea 47
+
+<===========================================================================>
+
+ Fecha del Log : 31/10/2013 08:04:31 p.m.
+ Error ocurrido en la pagina : http://localhost:49168/AdminProfesor.aspx
+
+ Descripcion :
+System.ArgumentException: Las expresiones DbSortClause deben tener un tipo con orden comparable.
+Nombre del parámetro: key
+   en System.Data.Common.CommandTrees.ExpressionBuilder.Internal.ArgumentValidation.ValidateSortClause(DbExpression key)
+   en System.Data.Common.CommandTrees.ExpressionBuilder.DbExpressionBuilder.ToSortClauseDescending(DbExpression key)
+   en System.Data.Objects.ELinq.ExpressionConverter.MethodCallTranslator.OrderByTranslatorBase.TranslateOneLambda(ExpressionConverter parent, DbExpressionBinding sourceBinding, DbExpression lambda)
+   en System.Data.Objects.ELinq.ExpressionConverter.MethodCallTranslator.OneLambdaTranslator.Translate(ExpressionConverter parent, MethodCallExpression call, DbExpression& source, DbExpressionBinding& sourceBinding, DbExpression& lambda)
+   en System.Data.Objects.ELinq.ExpressionConverter.MethodCallTranslator.OneLambdaTranslator.Translate(ExpressionConverter parent, MethodCallExpression call)
+   en System.Data.Objects.ELinq.ExpressionConverter.MethodCallTranslator.SequenceMethodTranslator.Translate(ExpressionConverter parent, MethodCallExpression call, SequenceMethod sequenceMethod)
+   en System.Data.Objects.ELinq.ExpressionConverter.MethodCallTranslator.TypedTranslate(ExpressionConverter parent, MethodCallExpression linq)
+   en System.Data.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)
+   en System.Data.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)
+   en System.Data.Objects.ELinq.ExpressionConverter.MethodCallTranslator.OneLambdaTranslator.Translate(ExpressionConverter parent, MethodCallExpression call, DbExpression& source, DbExpressionBinding& sourceBinding, DbExpression& lambda)
+   en System.Data.Objects.ELinq.ExpressionConverter.MethodCallTranslator.SelectTranslator.Translate(ExpressionConverter parent, MethodCallExpression call)
+   en System.Data.Objects.ELinq.ExpressionConverter.MethodCallTranslator.SequenceMethodTranslator.Translate(ExpressionConverter parent, MethodCallExpression call, SequenceMethod sequenceMethod)
+   en System.Data.Objects.ELinq.ExpressionConverter.MethodCallTranslator.TypedTranslate(ExpressionConverter parent, MethodCallExpression linq)
+   en System.Data.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)
+   en System.Data.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)
+   en System.Data.Objects.ELinq.ExpressionConverter.TranslateSet(Expression linq)
+   en System.Data.Objects.ELinq.ExpressionConverter.MethodCallTranslator.UnarySequenceMethodTranslator.Translate(ExpressionConverter parent, MethodCallExpression call)
+   en System.Data.Objects.ELinq.ExpressionConverter.MethodCallTranslator.SequenceMethodTranslator.Translate(ExpressionConverter parent, MethodCallExpression call, SequenceMethod sequenceMethod)
+   en System.Data.Objects.ELinq.ExpressionConverter.MethodCallTranslator.TypedTranslate(ExpressionConverter parent, MethodCallExpression linq)
+   en System.Data.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)
+   en System.Data.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)
+   en System.Data.Objects.ELinq.ExpressionConverter.Convert()
+   en System.Data.Objects.ELinq.ELinqQueryState.GetExecutionPlan(Nullable`1 forMergeOption)
+   en System.Data.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   en System.Data.Objects.ObjectQuery`1.System.Collections.Generic.IEnumerable<T>.GetEnumerator()
+   en System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   en System.Data.Objects.ELinq.ObjectQueryProvider.<GetElementFunction>b__0[TResult](IEnumerable`1 sequence)
+   en System.Data.Objects.ELinq.ObjectQueryProvider.ExecuteSingle[TResult](IEnumerable`1 query, Expression queryRoot)
+   en System.Data.Objects.ELinq.ObjectQueryProvider.System.Linq.IQueryProvider.Execute[S](Expression expression)
+   en System.Linq.Queryable.First[TSource](IQueryable`1 source)
+   en Datos.CursoDatos.crearNuevoAlumnosDesdeMail(List`1 resulta) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\Datos\CursoDatos.cs:línea 107
+   en Datos.CursoDatos.buscarMailsNoRegistrados(List`1 mails) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\Datos\CursoDatos.cs:línea 102
+   en Negocio.ServCurso.crearBucle(String[] words, Int32 cantidadMails) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\Negocio\ServCurso.cs:línea 42
+   en TP_ExamenesEnLinea.AdminProfesor.btncrear_Click(Object sender, EventArgs e) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\AdminProfesor.aspx.cs:línea 41
+
+<===========================================================================>
+
+ Fecha del Log : 31/10/2013 08:41:33 p.m.
+ Error ocurrido en la pagina : http://localhost:49168/LoginUsuario.aspx
+
+ Descripcion :
+System.Threading.ThreadAbortException: Subproceso anulado.
+   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en TP_ExamenesEnLinea.LoginUsuario.abrirSesionProfesor(String passUsuario, String mailU) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\LoginUsuario.aspx.cs:línea 47
+
+<===========================================================================>
+
+ Fecha del Log : 31/10/2013 08:42:37 p.m.
+ Error ocurrido en la pagina : http://localhost:49168/AdminProfesor.aspx
+
+ Descripcion :
+System.ArgumentException: Las expresiones DbSortClause deben tener un tipo con orden comparable.
+Nombre del parámetro: key
+   en System.Data.Common.CommandTrees.ExpressionBuilder.Internal.ArgumentValidation.ValidateSortClause(DbExpression key)
+   en System.Data.Common.CommandTrees.ExpressionBuilder.DbExpressionBuilder.ToSortClauseDescending(DbExpression key)
+   en System.Data.Objects.ELinq.ExpressionConverter.MethodCallTranslator.OrderByTranslatorBase.TranslateOneLambda(ExpressionConverter parent, DbExpressionBinding sourceBinding, DbExpression lambda)
+   en System.Data.Objects.ELinq.ExpressionConverter.MethodCallTranslator.OneLambdaTranslator.Translate(ExpressionConverter parent, MethodCallExpression call, DbExpression& source, DbExpressionBinding& sourceBinding, DbExpression& lambda)
+   en System.Data.Objects.ELinq.ExpressionConverter.MethodCallTranslator.OneLambdaTranslator.Translate(ExpressionConverter parent, MethodCallExpression call)
+   en System.Data.Objects.ELinq.ExpressionConverter.MethodCallTranslator.SequenceMethodTranslator.Translate(ExpressionConverter parent, MethodCallExpression call, SequenceMethod sequenceMethod)
+   en System.Data.Objects.ELinq.ExpressionConverter.MethodCallTranslator.TypedTranslate(ExpressionConverter parent, MethodCallExpression linq)
+   en System.Data.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)
+   en System.Data.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)
+   en System.Data.Objects.ELinq.ExpressionConverter.MethodCallTranslator.OneLambdaTranslator.Translate(ExpressionConverter parent, MethodCallExpression call, DbExpression& source, DbExpressionBinding& sourceBinding, DbExpression& lambda)
+   en System.Data.Objects.ELinq.ExpressionConverter.MethodCallTranslator.SelectTranslator.Translate(ExpressionConverter parent, MethodCallExpression call)
+   en System.Data.Objects.ELinq.ExpressionConverter.MethodCallTranslator.SequenceMethodTranslator.Translate(ExpressionConverter parent, MethodCallExpression call, SequenceMethod sequenceMethod)
+   en System.Data.Objects.ELinq.ExpressionConverter.MethodCallTranslator.TypedTranslate(ExpressionConverter parent, MethodCallExpression linq)
+   en System.Data.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)
+   en System.Data.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)
+   en System.Data.Objects.ELinq.ExpressionConverter.TranslateSet(Expression linq)
+   en System.Data.Objects.ELinq.ExpressionConverter.MethodCallTranslator.UnarySequenceMethodTranslator.Translate(ExpressionConverter parent, MethodCallExpression call)
+   en System.Data.Objects.ELinq.ExpressionConverter.MethodCallTranslator.SequenceMethodTranslator.Translate(ExpressionConverter parent, MethodCallExpression call, SequenceMethod sequenceMethod)
+   en System.Data.Objects.ELinq.ExpressionConverter.MethodCallTranslator.TypedTranslate(ExpressionConverter parent, MethodCallExpression linq)
+   en System.Data.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)
+   en System.Data.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)
+   en System.Data.Objects.ELinq.ExpressionConverter.Convert()
+   en System.Data.Objects.ELinq.ELinqQueryState.GetExecutionPlan(Nullable`1 forMergeOption)
+   en System.Data.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   en System.Data.Objects.ObjectQuery`1.System.Collections.Generic.IEnumerable<T>.GetEnumerator()
+   en System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   en System.Data.Objects.ELinq.ObjectQueryProvider.<GetElementFunction>b__0[TResult](IEnumerable`1 sequence)
+   en System.Data.Objects.ELinq.ObjectQueryProvider.ExecuteSingle[TResult](IEnumerable`1 query, Expression queryRoot)
+   en System.Data.Objects.ELinq.ObjectQueryProvider.System.Linq.IQueryProvider.Execute[S](Expression expression)
+   en System.Linq.Queryable.First[TSource](IQueryable`1 source)
+   en Datos.CursoDatos.obtenerUltimoCurso() en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\Datos\CursoDatos.cs:línea 90
+   en Negocio.ServCurso.crearBucle(String[] words, Int32 cantidadMails) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\Negocio\ServCurso.cs:línea 34
+   en TP_ExamenesEnLinea.AdminProfesor.btncrear_Click(Object sender, EventArgs e) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\AdminProfesor.aspx.cs:línea 41
+
+<===========================================================================>
+
+ Fecha del Log : 31/10/2013 08:43:25 p.m.
+ Error ocurrido en la pagina : http://localhost:49168/LoginUsuario.aspx
+
+ Descripcion :
+System.Threading.ThreadAbortException: Subproceso anulado.
+   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en TP_ExamenesEnLinea.LoginUsuario.abrirSesionProfesor(String passUsuario, String mailU) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\LoginUsuario.aspx.cs:línea 47
+
+<===========================================================================>
+
+ Fecha del Log : 31/10/2013 08:45:09 p.m.
+ Error ocurrido en la pagina : http://localhost:49168/AdminProfesor.aspx
+
+ Descripcion :
+System.ArgumentException: Las expresiones DbSortClause deben tener un tipo con orden comparable.
+Nombre del parámetro: key
+   en System.Data.Common.CommandTrees.ExpressionBuilder.Internal.ArgumentValidation.ValidateSortClause(DbExpression key)
+   en System.Data.Common.CommandTrees.ExpressionBuilder.DbExpressionBuilder.ToSortClauseDescending(DbExpression key)
+   en System.Data.Objects.ELinq.ExpressionConverter.MethodCallTranslator.OrderByTranslatorBase.TranslateOneLambda(ExpressionConverter parent, DbExpressionBinding sourceBinding, DbExpression lambda)
+   en System.Data.Objects.ELinq.ExpressionConverter.MethodCallTranslator.OneLambdaTranslator.Translate(ExpressionConverter parent, MethodCallExpression call, DbExpression& source, DbExpressionBinding& sourceBinding, DbExpression& lambda)
+   en System.Data.Objects.ELinq.ExpressionConverter.MethodCallTranslator.OneLambdaTranslator.Translate(ExpressionConverter parent, MethodCallExpression call)
+   en System.Data.Objects.ELinq.ExpressionConverter.MethodCallTranslator.SequenceMethodTranslator.Translate(ExpressionConverter parent, MethodCallExpression call, SequenceMethod sequenceMethod)
+   en System.Data.Objects.ELinq.ExpressionConverter.MethodCallTranslator.TypedTranslate(ExpressionConverter parent, MethodCallExpression linq)
+   en System.Data.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)
+   en System.Data.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)
+   en System.Data.Objects.ELinq.ExpressionConverter.MethodCallTranslator.OneLambdaTranslator.Translate(ExpressionConverter parent, MethodCallExpression call, DbExpression& source, DbExpressionBinding& sourceBinding, DbExpression& lambda)
+   en System.Data.Objects.ELinq.ExpressionConverter.MethodCallTranslator.SelectTranslator.Translate(ExpressionConverter parent, MethodCallExpression call)
+   en System.Data.Objects.ELinq.ExpressionConverter.MethodCallTranslator.SequenceMethodTranslator.Translate(ExpressionConverter parent, MethodCallExpression call, SequenceMethod sequenceMethod)
+   en System.Data.Objects.ELinq.ExpressionConverter.MethodCallTranslator.TypedTranslate(ExpressionConverter parent, MethodCallExpression linq)
+   en System.Data.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)
+   en System.Data.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)
+   en System.Data.Objects.ELinq.ExpressionConverter.TranslateSet(Expression linq)
+   en System.Data.Objects.ELinq.ExpressionConverter.MethodCallTranslator.UnarySequenceMethodTranslator.Translate(ExpressionConverter parent, MethodCallExpression call)
+   en System.Data.Objects.ELinq.ExpressionConverter.MethodCallTranslator.SequenceMethodTranslator.Translate(ExpressionConverter parent, MethodCallExpression call, SequenceMethod sequenceMethod)
+   en System.Data.Objects.ELinq.ExpressionConverter.MethodCallTranslator.TypedTranslate(ExpressionConverter parent, MethodCallExpression linq)
+   en System.Data.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)
+   en System.Data.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)
+   en System.Data.Objects.ELinq.ExpressionConverter.Convert()
+   en System.Data.Objects.ELinq.ELinqQueryState.GetExecutionPlan(Nullable`1 forMergeOption)
+   en System.Data.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   en System.Data.Objects.ObjectQuery`1.System.Collections.Generic.IEnumerable<T>.GetEnumerator()
+   en System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   en System.Data.Objects.ELinq.ObjectQueryProvider.<GetElementFunction>b__0[TResult](IEnumerable`1 sequence)
+   en System.Data.Objects.ELinq.ObjectQueryProvider.ExecuteSingle[TResult](IEnumerable`1 query, Expression queryRoot)
+   en System.Data.Objects.ELinq.ObjectQueryProvider.System.Linq.IQueryProvider.Execute[S](Expression expression)
+   en System.Linq.Queryable.First[TSource](IQueryable`1 source)
+   en Datos.CursoDatos.obtenerUltimoCurso() en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\Datos\CursoDatos.cs:línea 89
+   en Negocio.ServCurso.crearBucle(String[] words, Int32 cantidadMails) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\Negocio\ServCurso.cs:línea 34
+   en TP_ExamenesEnLinea.AdminProfesor.btncrear_Click(Object sender, EventArgs e) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\AdminProfesor.aspx.cs:línea 41
+
+<===========================================================================>
+
+ Fecha del Log : 31/10/2013 08:49:02 p.m.
+ Error ocurrido en la pagina : http://localhost:49168/LoginUsuario.aspx
+
+ Descripcion :
+System.Threading.ThreadAbortException: Subproceso anulado.
+   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en TP_ExamenesEnLinea.LoginUsuario.abrirSesionProfesor(String passUsuario, String mailU) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\LoginUsuario.aspx.cs:línea 47
+
+<===========================================================================>
+
+ Fecha del Log : 31/10/2013 08:50:24 p.m.
+ Error ocurrido en la pagina : http://localhost:49168/AdminProfesor.aspx
+
+ Descripcion :
+System.NotSupportedException: LINQ to Entities no reconoce el método 'Int32 Last[Int32](System.Linq.IQueryable`1[System.Int32])' del método, y este método no se puede traducir en una expresión de almacén.
+   en System.Data.Objects.ELinq.ExpressionConverter.MethodCallTranslator.DefaultTranslator.Translate(ExpressionConverter parent, MethodCallExpression call)
+   en System.Data.Objects.ELinq.ExpressionConverter.MethodCallTranslator.TypedTranslate(ExpressionConverter parent, MethodCallExpression linq)
+   en System.Data.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)
+   en System.Data.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)
+   en System.Data.Objects.ELinq.ExpressionConverter.Convert()
+   en System.Data.Objects.ELinq.ELinqQueryState.GetExecutionPlan(Nullable`1 forMergeOption)
+   en System.Data.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   en System.Data.Objects.ObjectQuery`1.System.Collections.Generic.IEnumerable<T>.GetEnumerator()
+   en System.Linq.Enumerable.Single[TSource](IEnumerable`1 source)
+   en System.Data.Objects.ELinq.ObjectQueryProvider.<GetElementFunction>b__3[TResult](IEnumerable`1 sequence)
+   en System.Data.Objects.ELinq.ObjectQueryProvider.ExecuteSingle[TResult](IEnumerable`1 query, Expression queryRoot)
+   en System.Data.Objects.ELinq.ObjectQueryProvider.System.Linq.IQueryProvider.Execute[S](Expression expression)
+   en System.Linq.Queryable.Last[TSource](IQueryable`1 source)
+   en Datos.CursoDatos.obtenerUltimoCurso() en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\Datos\CursoDatos.cs:línea 89
+   en Negocio.ServCurso.crearBucle(String[] words, Int32 cantidadMails) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\Negocio\ServCurso.cs:línea 34
+   en TP_ExamenesEnLinea.AdminProfesor.btncrear_Click(Object sender, EventArgs e) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\AdminProfesor.aspx.cs:línea 41
+
+<===========================================================================>
+
+ Fecha del Log : 31/10/2013 08:54:03 p.m.
+ Error ocurrido en la pagina : http://localhost:49168/LoginUsuario.aspx
+
+ Descripcion :
+System.Threading.ThreadAbortException: Subproceso anulado.
+   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en TP_ExamenesEnLinea.LoginUsuario.abrirSesionProfesor(String passUsuario, String mailU) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\LoginUsuario.aspx.cs:línea 47
+
+<===========================================================================>
+
+ Fecha del Log : 31/10/2013 08:55:04 p.m.
+ Error ocurrido en la pagina : http://localhost:49168/AdminProfesor.aspx
+
+ Descripcion :
+System.Data.UpdateException: Se produjo un error mientras se actualizaban las entradas. Vea la excepción interna para obtener detalles. ---> System.Data.SqlClient.SqlException: No se puede insertar el valor NULL en la columna 'IdAlumno', tabla 'ExamenOnLine.dbo.ALUMNO'. La columna no admite valores NULL. Error de INSERT.
+Se terminó la instrucción.
+   en System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   en System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   en System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   en System.Data.SqlClient.SqlDataReader.get_MetaData()
+   en System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   en System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   en System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   en System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+   en System.Data.Mapping.Update.Internal.DynamicUpdateCommand.Execute(UpdateTranslator translator, EntityConnection connection, Dictionary`2 identifierValues, List`1 generatedValues)
+   en System.Data.Mapping.Update.Internal.UpdateTranslator.Update(IEntityStateManager stateManager, IEntityAdapter adapter)
+   --- Fin del seguimiento de la pila de la excepción interna ---
+   en System.Data.Mapping.Update.Internal.UpdateTranslator.Update(IEntityStateManager stateManager, IEntityAdapter adapter)
+   en System.Data.EntityClient.EntityAdapter.Update(IEntityStateManager entityCache)
+   en System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   en System.Data.Objects.ObjectContext.SaveChanges()
+   en Datos.AlumnoDatos.CrearAlumnoDesdeMail(String p) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\Datos\AlumnoDatos.cs:línea 94
+   en Negocio.ServCurso.crearBucle(String[] words, Int32 cantidadMails, String n) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\Negocio\ServCurso.cs:línea 41
+   en TP_ExamenesEnLinea.AdminProfesor.btncrear_Click(Object sender, EventArgs e) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\AdminProfesor.aspx.cs:línea 41
+
+<===========================================================================>
+
+ Fecha del Log : 31/10/2013 08:55:50 p.m.
+ Error ocurrido en la pagina : http://localhost:49168/LoginUsuario.aspx
+
+ Descripcion :
+System.Threading.ThreadAbortException: Subproceso anulado.
+   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en TP_ExamenesEnLinea.LoginUsuario.abrirSesionProfesor(String passUsuario, String mailU) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\LoginUsuario.aspx.cs:línea 47
+
+<===========================================================================>
+
+ Fecha del Log : 31/10/2013 08:58:10 p.m.
+ Error ocurrido en la pagina : http://localhost:49168/BorrarCursoProfesor.aspx?id=30
+
+ Descripcion :
+System.Data.UpdateException: Se produjo un error mientras se actualizaban las entradas. Vea la excepción interna para obtener detalles. ---> System.Data.SqlClient.SqlException: Instrucción DELETE en conflicto con la restricción REFERENCE "FK_Curso_Alumno_CURSO". El conflicto ha aparecido en la base de datos "ExamenOnLine", tabla "dbo.Curso_Alumno", column 'IDCURSO'.
+Se terminó la instrucción.
+   en System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   en System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   en System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   en System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   en System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   en System.Data.Mapping.Update.Internal.DynamicUpdateCommand.Execute(UpdateTranslator translator, EntityConnection connection, Dictionary`2 identifierValues, List`1 generatedValues)
+   en System.Data.Mapping.Update.Internal.UpdateTranslator.Update(IEntityStateManager stateManager, IEntityAdapter adapter)
+   --- Fin del seguimiento de la pila de la excepción interna ---
+   en System.Data.Mapping.Update.Internal.UpdateTranslator.Update(IEntityStateManager stateManager, IEntityAdapter adapter)
+   en System.Data.EntityClient.EntityAdapter.Update(IEntityStateManager entityCache)
+   en System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   en System.Data.Objects.ObjectContext.SaveChanges()
+   en Datos.CursoDatos.darBajaAlCurso(Int32 id_p) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\Datos\CursoDatos.cs:línea 41
+   en Negocio.ServCurso.eliminarCurso(Int32 id_p) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\Negocio\ServCurso.cs:línea 52
+   en TP_ExamenesEnLinea.BorrarCursoProfesor.Button1_Click(Object sender, EventArgs e) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\BorrarCursoProfesor.aspx.cs:línea 38
+
+<===========================================================================>
+
+ Fecha del Log : 31/10/2013 08:59:01 p.m.
+ Error ocurrido en la pagina : http://localhost:49168/BorrarCursoProfesor.aspx?id=30
+
+ Descripcion :
+System.Data.UpdateException: Se produjo un error mientras se actualizaban las entradas. Vea la excepción interna para obtener detalles. ---> System.Data.SqlClient.SqlException: Instrucción DELETE en conflicto con la restricción REFERENCE "FK_Curso_Alumno_CURSO". El conflicto ha aparecido en la base de datos "ExamenOnLine", tabla "dbo.Curso_Alumno", column 'IDCURSO'.
+Se terminó la instrucción.
+   en System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   en System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   en System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   en System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   en System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   en System.Data.Mapping.Update.Internal.DynamicUpdateCommand.Execute(UpdateTranslator translator, EntityConnection connection, Dictionary`2 identifierValues, List`1 generatedValues)
+   en System.Data.Mapping.Update.Internal.UpdateTranslator.Update(IEntityStateManager stateManager, IEntityAdapter adapter)
+   --- Fin del seguimiento de la pila de la excepción interna ---
+   en System.Data.Mapping.Update.Internal.UpdateTranslator.Update(IEntityStateManager stateManager, IEntityAdapter adapter)
+   en System.Data.EntityClient.EntityAdapter.Update(IEntityStateManager entityCache)
+   en System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   en System.Data.Objects.ObjectContext.SaveChanges()
+   en Datos.CursoDatos.darBajaAlCurso(Int32 id_p) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\Datos\CursoDatos.cs:línea 41
+   en Negocio.ServCurso.eliminarCurso(Int32 id_p) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\Negocio\ServCurso.cs:línea 52
+   en TP_ExamenesEnLinea.BorrarCursoProfesor.Button1_Click(Object sender, EventArgs e) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\BorrarCursoProfesor.aspx.cs:línea 38
+
+<===========================================================================>
+
+ Fecha del Log : 31/10/2013 09:09:35 p.m.
+ Error ocurrido en la pagina : http://localhost:49168/LoginUsuario.aspx
+
+ Descripcion :
+System.Threading.ThreadAbortException: Subproceso anulado.
+   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en TP_ExamenesEnLinea.LoginUsuario.abrirSesionProfesor(String passUsuario, String mailU) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\LoginUsuario.aspx.cs:línea 47
+
+<===========================================================================>
+
+ Fecha del Log : 31/10/2013 09:10:41 p.m.
+ Error ocurrido en la pagina : http://localhost:49168/AdminProfesor.aspx
+
+ Descripcion :
+System.Data.UpdateException: Se produjo un error mientras se actualizaban las entradas. Vea la excepción interna para obtener detalles. ---> System.Data.SqlClient.SqlException: No se puede insertar el valor NULL en la columna 'IdAlumno', tabla 'ExamenOnLine.dbo.ALUMNO'. La columna no admite valores NULL. Error de INSERT.
+Se terminó la instrucción.
+   en System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   en System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   en System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   en System.Data.SqlClient.SqlDataReader.get_MetaData()
+   en System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   en System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   en System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   en System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+   en System.Data.Mapping.Update.Internal.DynamicUpdateCommand.Execute(UpdateTranslator translator, EntityConnection connection, Dictionary`2 identifierValues, List`1 generatedValues)
+   en System.Data.Mapping.Update.Internal.UpdateTranslator.Update(IEntityStateManager stateManager, IEntityAdapter adapter)
+   --- Fin del seguimiento de la pila de la excepción interna ---
+   en System.Data.Mapping.Update.Internal.UpdateTranslator.Update(IEntityStateManager stateManager, IEntityAdapter adapter)
+   en System.Data.EntityClient.EntityAdapter.Update(IEntityStateManager entityCache)
+   en System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   en System.Data.Objects.ObjectContext.SaveChanges()
+   en Datos.AlumnoDatos.CrearAlumnoDesdeMail(String p) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\Datos\AlumnoDatos.cs:línea 94
+   en Negocio.ServCurso.crearBucle(String[] words, String n) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\Negocio\ServCurso.cs:línea 42
+   en TP_ExamenesEnLinea.AdminProfesor.btncrear_Click(Object sender, EventArgs e) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\AdminProfesor.aspx.cs:línea 40
+
+<===========================================================================>
+
+ Fecha del Log : 31/10/2013 09:12:44 p.m.
+ Error ocurrido en la pagina : http://localhost:49168/LoginUsuario.aspx
+
+ Descripcion :
+System.Threading.ThreadAbortException: Subproceso anulado.
+   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en TP_ExamenesEnLinea.LoginUsuario.abrirSesionProfesor(String passUsuario, String mailU) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\LoginUsuario.aspx.cs:línea 47
+
+<===========================================================================>
+
+ Fecha del Log : 31/10/2013 09:14:31 p.m.
+ Error ocurrido en la pagina : http://localhost:49168/AdminProfesor.aspx
+
+ Descripcion :
+System.Data.UpdateException: Se produjo un error mientras se actualizaban las entradas. Vea la excepción interna para obtener detalles. ---> System.Data.SqlClient.SqlException: No se puede insertar el valor NULL en la columna 'IdAlumno', tabla 'ExamenOnLine.dbo.ALUMNO'. La columna no admite valores NULL. Error de INSERT.
+Se terminó la instrucción.
+   en System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   en System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   en System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   en System.Data.SqlClient.SqlDataReader.get_MetaData()
+   en System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   en System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   en System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   en System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+   en System.Data.Mapping.Update.Internal.DynamicUpdateCommand.Execute(UpdateTranslator translator, EntityConnection connection, Dictionary`2 identifierValues, List`1 generatedValues)
+   en System.Data.Mapping.Update.Internal.UpdateTranslator.Update(IEntityStateManager stateManager, IEntityAdapter adapter)
+   --- Fin del seguimiento de la pila de la excepción interna ---
+   en System.Data.Mapping.Update.Internal.UpdateTranslator.Update(IEntityStateManager stateManager, IEntityAdapter adapter)
+   en System.Data.EntityClient.EntityAdapter.Update(IEntityStateManager entityCache)
+   en System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   en System.Data.Objects.ObjectContext.SaveChanges()
+   en Datos.AlumnoDatos.CrearAlumnoDesdeMail(String p) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\Datos\AlumnoDatos.cs:línea 94
+   en Negocio.ServCurso.crearBucle(String[] words, String n) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\Negocio\ServCurso.cs:línea 42
+   en TP_ExamenesEnLinea.AdminProfesor.btncrear_Click(Object sender, EventArgs e) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\AdminProfesor.aspx.cs:línea 40
+
+<===========================================================================>
+
+ Fecha del Log : 31/10/2013 09:20:00 p.m.
+ Error ocurrido en la pagina : http://localhost:49168/LoginUsuario.aspx
+
+ Descripcion :
+System.Threading.ThreadAbortException: Subproceso anulado.
+   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en TP_ExamenesEnLinea.LoginUsuario.abrirSesionProfesor(String passUsuario, String mailU) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\LoginUsuario.aspx.cs:línea 47
+
+<===========================================================================>
+
+ Fecha del Log : 31/10/2013 09:20:55 p.m.
+ Error ocurrido en la pagina : http://localhost:49168/AdminProfesor.aspx
+
+ Descripcion :
+System.Data.UpdateException: Se produjo un error mientras se actualizaban las entradas. Vea la excepción interna para obtener detalles. ---> System.Data.SqlClient.SqlException: No se puede insertar el valor NULL en la columna 'IdAlumno', tabla 'ExamenOnLine.dbo.ALUMNO'. La columna no admite valores NULL. Error de INSERT.
+Se terminó la instrucción.
+   en System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   en System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   en System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   en System.Data.SqlClient.SqlDataReader.get_MetaData()
+   en System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   en System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   en System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   en System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+   en System.Data.Mapping.Update.Internal.DynamicUpdateCommand.Execute(UpdateTranslator translator, EntityConnection connection, Dictionary`2 identifierValues, List`1 generatedValues)
+   en System.Data.Mapping.Update.Internal.UpdateTranslator.Update(IEntityStateManager stateManager, IEntityAdapter adapter)
+   --- Fin del seguimiento de la pila de la excepción interna ---
+   en System.Data.Mapping.Update.Internal.UpdateTranslator.Update(IEntityStateManager stateManager, IEntityAdapter adapter)
+   en System.Data.EntityClient.EntityAdapter.Update(IEntityStateManager entityCache)
+   en System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   en System.Data.Objects.ObjectContext.SaveChanges()
+   en Datos.AlumnoDatos.CrearAlumnoDesdeMail(String p) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\Datos\AlumnoDatos.cs:línea 94
+   en Negocio.ServCurso.crearBucle(String[] words, String n) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\Negocio\ServCurso.cs:línea 42
+   en TP_ExamenesEnLinea.AdminProfesor.btncrear_Click(Object sender, EventArgs e) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\AdminProfesor.aspx.cs:línea 40
+
+<===========================================================================>
+
+ Fecha del Log : 31/10/2013 09:24:57 p.m.
+ Error ocurrido en la pagina : http://localhost:49168/LoginUsuario.aspx
+
+ Descripcion :
+System.Threading.ThreadAbortException: Subproceso anulado.
+   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en TP_ExamenesEnLinea.LoginUsuario.abrirSesionProfesor(String passUsuario, String mailU) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\LoginUsuario.aspx.cs:línea 47
+
+<===========================================================================>
+
+ Fecha del Log : 31/10/2013 09:25:34 p.m.
+ Error ocurrido en la pagina : http://localhost:49168/AdminProfesor.aspx
+
+ Descripcion :
+System.Data.UpdateException: Se produjo un error mientras se actualizaban las entradas. Vea la excepción interna para obtener detalles. ---> System.Data.SqlClient.SqlException: No se puede insertar el valor NULL en la columna 'IdAlumno', tabla 'ExamenOnLine.dbo.ALUMNO'. La columna no admite valores NULL. Error de INSERT.
+Se terminó la instrucción.
+   en System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   en System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   en System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   en System.Data.SqlClient.SqlDataReader.get_MetaData()
+   en System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   en System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   en System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   en System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+   en System.Data.Mapping.Update.Internal.DynamicUpdateCommand.Execute(UpdateTranslator translator, EntityConnection connection, Dictionary`2 identifierValues, List`1 generatedValues)
+   en System.Data.Mapping.Update.Internal.UpdateTranslator.Update(IEntityStateManager stateManager, IEntityAdapter adapter)
+   --- Fin del seguimiento de la pila de la excepción interna ---
+   en System.Data.Mapping.Update.Internal.UpdateTranslator.Update(IEntityStateManager stateManager, IEntityAdapter adapter)
+   en System.Data.EntityClient.EntityAdapter.Update(IEntityStateManager entityCache)
+   en System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   en System.Data.Objects.ObjectContext.SaveChanges()
+   en Datos.AlumnoDatos.CrearAlumnoDesdeMail(String p) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\Datos\AlumnoDatos.cs:línea 94
+   en Negocio.ServCurso.crearBucle(String[] words, String n) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\Negocio\ServCurso.cs:línea 42
+   en TP_ExamenesEnLinea.AdminProfesor.btncrear_Click(Object sender, EventArgs e) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\AdminProfesor.aspx.cs:línea 40
+
+<===========================================================================>
+
+ Fecha del Log : 31/10/2013 09:30:17 p.m.
+ Error ocurrido en la pagina : http://localhost:49168/LoginUsuario.aspx
+
+ Descripcion :
+System.Threading.ThreadAbortException: Subproceso anulado.
+   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en TP_ExamenesEnLinea.LoginUsuario.abrirSesionProfesor(String passUsuario, String mailU) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\LoginUsuario.aspx.cs:línea 47
+
+<===========================================================================>
+
+ Fecha del Log : 31/10/2013 09:31:03 p.m.
+ Error ocurrido en la pagina : http://localhost:49168/AdminProfesor.aspx
+
+ Descripcion :
+System.Data.UpdateException: Se produjo un error mientras se actualizaban las entradas. Vea la excepción interna para obtener detalles. ---> System.Data.SqlClient.SqlException: No se puede insertar el valor NULL en la columna 'IdAlumno', tabla 'ExamenOnLine.dbo.ALUMNO'. La columna no admite valores NULL. Error de INSERT.
+Se terminó la instrucción.
+   en System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   en System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   en System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   en System.Data.SqlClient.SqlDataReader.get_MetaData()
+   en System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   en System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   en System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   en System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+   en System.Data.Mapping.Update.Internal.DynamicUpdateCommand.Execute(UpdateTranslator translator, EntityConnection connection, Dictionary`2 identifierValues, List`1 generatedValues)
+   en System.Data.Mapping.Update.Internal.UpdateTranslator.Update(IEntityStateManager stateManager, IEntityAdapter adapter)
+   --- Fin del seguimiento de la pila de la excepción interna ---
+   en System.Data.Mapping.Update.Internal.UpdateTranslator.Update(IEntityStateManager stateManager, IEntityAdapter adapter)
+   en System.Data.EntityClient.EntityAdapter.Update(IEntityStateManager entityCache)
+   en System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   en System.Data.Objects.ObjectContext.SaveChanges()
+   en Datos.AlumnoDatos.CrearAlumnoDesdeMail(String p) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\Datos\AlumnoDatos.cs:línea 94
+   en Negocio.ServCurso.crearBucle(String[] words, String n) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\Negocio\ServCurso.cs:línea 44
+   en TP_ExamenesEnLinea.AdminProfesor.btncrear_Click(Object sender, EventArgs e) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\AdminProfesor.aspx.cs:línea 40
+
+<===========================================================================>
+
+ Fecha del Log : 31/10/2013 09:53:51 p.m.
+ Error ocurrido en la pagina : http://localhost:49168/LoginUsuario.aspx
+
+ Descripcion :
+System.Threading.ThreadAbortException: Subproceso anulado.
+   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en TP_ExamenesEnLinea.LoginUsuario.abrirSesionProfesor(String passUsuario, String mailU) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\LoginUsuario.aspx.cs:línea 46
+
+<===========================================================================>
+
+ Fecha del Log : 31/10/2013 10:12:02 p.m.
+ Error ocurrido en la pagina : http://localhost:49168/BorrarCursoProfesor.aspx?id=33
+
+ Descripcion :
+System.Data.UpdateException: Se produjo un error mientras se actualizaban las entradas. Vea la excepción interna para obtener detalles. ---> System.Data.SqlClient.SqlException: Instrucción DELETE en conflicto con la restricción REFERENCE "FK_Curso_Alumno_CURSO". El conflicto ha aparecido en la base de datos "ExamenOnLine", tabla "dbo.Curso_Alumno", column 'IDCURSO'.
+Se terminó la instrucción.
+   en System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   en System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   en System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   en System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   en System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   en System.Data.Mapping.Update.Internal.DynamicUpdateCommand.Execute(UpdateTranslator translator, EntityConnection connection, Dictionary`2 identifierValues, List`1 generatedValues)
+   en System.Data.Mapping.Update.Internal.UpdateTranslator.Update(IEntityStateManager stateManager, IEntityAdapter adapter)
+   --- Fin del seguimiento de la pila de la excepción interna ---
+   en System.Data.Mapping.Update.Internal.UpdateTranslator.Update(IEntityStateManager stateManager, IEntityAdapter adapter)
+   en System.Data.EntityClient.EntityAdapter.Update(IEntityStateManager entityCache)
+   en System.Data.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   en System.Data.Objects.ObjectContext.SaveChanges()
+   en Datos.CursoDatos.darBajaAlCurso(Int32 id_p) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\Datos\CursoDatos.cs:línea 41
+   en Negocio.ServCurso.eliminarCurso(Int32 id_p) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\Negocio\ServCurso.cs:línea 59
+   en TP_ExamenesEnLinea.BorrarCursoProfesor.Button1_Click(Object sender, EventArgs e) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\BorrarCursoProfesor.aspx.cs:línea 38
+
+<===========================================================================>

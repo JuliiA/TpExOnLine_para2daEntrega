@@ -11,6 +11,24 @@ namespace Datos
     public class ProfesorDatos
     {
         ExOnLineEntities ctx = new ExOnLineEntities();
+
+        public bool ComprobarUsuario(string usuario, string pass)
+        {
+            bool esUsuario;
+            var prof = (from p in ctx.Profesores
+                        where p.Mail == usuario && p.Contrasenia == pass
+                        select p).FirstOrDefault();
+            if (prof != null)
+            {
+                esUsuario = true;
+            }
+            else
+            {
+                esUsuario = false;
+            }
+            return esUsuario;
+        }
+
         public int BuscarId(string passUsuario)
         {
             int RetornaId;

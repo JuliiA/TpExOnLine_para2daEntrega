@@ -52,7 +52,6 @@
       <DependentUpon>ExamenesOnLine.edmx</DependentUpon>
     </Compile>
     <Compile Include="ProfesorDatos.cs" />
-    <Compile Include="Configuracion.cs" />
     <Compile Include="AlumnoDatos.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

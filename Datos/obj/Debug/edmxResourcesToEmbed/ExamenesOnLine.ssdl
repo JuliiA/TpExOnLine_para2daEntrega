@@ -67,8 +67,6 @@
   <EntityType Name="Curso_Alumno">
     <Key>
       <PropertyRef Name="idTab" />
-      <PropertyRef Name="IDCURSO" />
-      <PropertyRef Name="IDALUMNO" />
     </Key>
     <Property Name="idTab" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="IDCURSO" Type="int" Nullable="false" />

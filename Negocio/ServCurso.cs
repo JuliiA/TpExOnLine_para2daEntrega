@@ -11,7 +11,7 @@ namespace Negocio
     public class ServCurso
     {
         CursoDatos elCurso = new CursoDatos();
-
+        AlumnoDatos elAlumno = new AlumnoDatos();
 
         public object muestraCursos(int idlogueado)
         {
@@ -28,29 +28,36 @@ namespace Negocio
             elCurso.CrearNuevoCurso(nombre, estado, fini, ffin, id_p);
         }
         
-        public void crearBucle(string[] words, int cantidadMails)
+        public void crearBucle(string[] words, string n)
         {
-            List<string> mails = new List<string>();
-            foreach (string s in words)
+            int cantidadMails = words.Length;
+            //itero por cada mail
+            for (int i = 0; i < cantidadMails; i++)
             {
-                while (cantidadMails > 0)
+                //obtengo el id del ultimo curso
+                int IdCurso = elCurso.obtenerUltimoCurso(n);
+                int IdAlumno;
+                //busco si no existe
+                if (!elAlumno.buscarMailsRegistrados(words[i]))
                 {
-                    mails.Add(words[cantidadMails - 1]);
-                    cantidadMails = cantidadMails - 1;
+                    //lo creo si no existe
+                    elAlumno.CrearAlumnoDesdeMail(words[i]);
+                    //IdAlumno = elAlumno.obtenerIdPorMail(words[i]);
                 }
+                //else
+                //{
+                    //busco el ID del Alumno ya existiendo 
+                    IdAlumno = elAlumno.obtenerIdPorMail(words[i]);
+                //}
+                //asocio alumno a curso
+                elCurso.asociarCursoConAlumno(IdCurso,IdAlumno);
             }
-            elCurso.buscarMailsNoRegistrados(mails);
         }
 
         public void eliminarCurso(int id_p)
         {
             elCurso.darBajaAlCurso(id_p);
         }
-
-        //public void AltaCurso(string p, int estado, DateTime feini, DateTime fefin, int id_p)
-        //{
-        //    elCurso.CrearNuevoCurso(p, estado, feini, fefin, id_p);
-        //}
 
         public string consultarNombre(int id_c)
         {

@@ -10,7 +10,6 @@ namespace TP_ExamenesEnLinea
 {
     public partial class LoginUsuario2 : System.Web.UI.Page
     {
-        ServConfiguracion elServicio = new ServConfiguracion();
         ServAlumno miServicio = new ServAlumno();
 
         protected void Page_Load(object sender, EventArgs e)
@@ -23,7 +22,7 @@ namespace TP_ExamenesEnLinea
             String mailUsuario = txtmail.Text;
             String passUsuario = txtpass.Text;
 
-            bool valido = elServicio.validarUsuario(mailUsuario, passUsuario);
+            bool valido = miServicio.validarUsuario(mailUsuario, passUsuario);
             if (valido == true)
             {
                 abrirSesionAlumno(mailUsuario,passUsuario);
