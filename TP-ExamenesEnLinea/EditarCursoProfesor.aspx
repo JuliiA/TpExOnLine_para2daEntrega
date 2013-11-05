@@ -33,6 +33,7 @@
                     <asp:Button ID="Button1" runat="server" class="btn btn-success" 
                         Text="Guardar cambios" onclick="Button1_Click" />
                 </div>
+                <asp:Label ID="lblmensaje" runat="server" Text=""></asp:Label>
             </div>
         </div>
     </div>

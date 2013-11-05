@@ -39,8 +39,7 @@ namespace TP_ExamenesEnLinea
                 {
                     if (ddlcursos.Items.Count != 0)
                     {
-                        miServicio.crearNuevoExamen(nombre, descripcion,duracion, tiempotope, hora,idcurso);
-                       //      Response.Redirect("Preguntas.aspx");
+                        miServicio.crearNuevoExamen(nombre, descripcion, duracion, tiempotope, hora, idcurso);
                         Label1.Text = "Se creo la primera parte";
                     }
                 }
@@ -52,8 +51,13 @@ namespace TP_ExamenesEnLinea
 
                 }
             }
+            redireccionarAPreguntas();
+        }
 
-
+        private void redireccionarAPreguntas()
+        {
+            int idPregunta = 1;
+            Response.Redirect("Preguntas.aspx?x="+idPregunta);
         }
     }
 }

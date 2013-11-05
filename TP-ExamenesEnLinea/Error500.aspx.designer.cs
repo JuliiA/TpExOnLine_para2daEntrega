@@ -10,7 +10,7 @@
 namespace TP_ExamenesEnLinea {
     
     
-    public partial class Error404 {
+    public partial class Error500 {
         
         /// <summary>
         /// Control Head1.

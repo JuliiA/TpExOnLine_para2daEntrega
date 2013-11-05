@@ -46,5 +46,11 @@ namespace Negocio
             bool comprobar = esProfesor.ComprobarUsuario(user, pass);
             return comprobar;
         }
+
+        public bool tieneCursosCreados(int id_p)
+        {
+            bool resulta = esProfesor.tieneCursos(id_p);
+            return resulta;
+        }
     }
 }

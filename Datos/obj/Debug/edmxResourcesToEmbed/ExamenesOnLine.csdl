@@ -9,23 +9,14 @@
     </FunctionImport>
     <EntitySet Name="Alumnos" EntityType="ExamenOnLineModel.ALUMNO" />
     <EntitySet Name="Cursos" EntityType="ExamenOnLineModel.CURSO" />
-    <EntitySet Name="CursosAl" EntityType="ExamenOnLineModel.Curso_Alumno" />
     <EntitySet Name="Examenes" EntityType="ExamenOnLineModel.EXAMEN" />
     <EntitySet Name="Preguntas" EntityType="ExamenOnLineModel.PREGUNTA" />
     <EntitySet Name="Profesores" EntityType="ExamenOnLineModel.PROFESOR" />
     <EntitySet Name="Respuestas" EntityType="ExamenOnLineModel.RESPUESTA" />
     <EntitySet Name="Resultados" EntityType="ExamenOnLineModel.RESULTADO" />
-    <AssociationSet Name="FK_Curso_Alumno_ALUMNO" Association="ExamenOnLineModel.FK_Curso_Alumno_ALUMNO">
-      <End Role="ALUMNO" EntitySet="Alumnos" />
-      <End Role="Curso_Alumno" EntitySet="CursosAl" />
-    </AssociationSet>
     <AssociationSet Name="FK_RESULTADO_ALUMNO" Association="ExamenOnLineModel.FK_RESULTADO_ALUMNO">
       <End Role="ALUMNO" EntitySet="Alumnos" />
       <End Role="RESULTADO" EntitySet="Resultados" />
-    </AssociationSet>
-    <AssociationSet Name="FK_Curso_Alumno_CURSO" Association="ExamenOnLineModel.FK_Curso_Alumno_CURSO">
-      <End Role="CURSO" EntitySet="Cursos" />
-      <End Role="Curso_Alumno" EntitySet="CursosAl" />
     </AssociationSet>
     <AssociationSet Name="FK_CURSO_PROFESOR" Association="ExamenOnLineModel.FK_CURSO_PROFESOR">
       <End Role="PROFESOR" EntitySet="Profesores" />
@@ -46,6 +37,15 @@
     <AssociationSet Name="FK_RESPUESTA_PREGUNTA" Association="ExamenOnLineModel.FK_RESPUESTA_PREGUNTA">
       <End Role="PREGUNTA" EntitySet="Preguntas" />
       <End Role="RESPUESTA" EntitySet="Respuestas" />
+    </AssociationSet>
+    <EntitySet Name="CursosAl" EntityType="ExamenOnLineModel.Curso_Alumno" />
+    <AssociationSet Name="FK_Curso_Alumno_ALUMNO" Association="ExamenOnLineModel.FK_Curso_Alumno_ALUMNO">
+      <End Role="ALUMNO" EntitySet="Alumnos" />
+      <End Role="Curso_Alumno" EntitySet="CursosAl" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Curso_Alumno_CURSO" Association="ExamenOnLineModel.FK_Curso_Alumno_CURSO">
+      <End Role="CURSO" EntitySet="Cursos" />
+      <End Role="Curso_Alumno" EntitySet="CursosAl" />
     </AssociationSet>
   </EntityContainer>
   <ComplexType Name="ListarCursos_Result">
@@ -68,8 +68,8 @@
     <Property Type="String" Name="Apellido" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Type="String" Name="Mail" MaxLength="Max" FixedLength="false" Unicode="false" />
     <Property Type="String" Name="Contrasenia" MaxLength="50" FixedLength="false" Unicode="false" />
-    <NavigationProperty Name="Curso_Alumno" Relationship="ExamenOnLineModel.FK_Curso_Alumno_ALUMNO" FromRole="ALUMNO" ToRole="Curso_Alumno" />
     <NavigationProperty Name="RESULTADO" Relationship="ExamenOnLineModel.FK_RESULTADO_ALUMNO" FromRole="ALUMNO" ToRole="RESULTADO" />
+    <NavigationProperty Name="Curso_Alumno" Relationship="ExamenOnLineModel.FK_Curso_Alumno_ALUMNO" FromRole="ALUMNO" ToRole="Curso_Alumno" />
   </EntityType>
   <EntityType Name="CURSO">
     <Key>
@@ -81,19 +81,9 @@
     <Property Type="DateTime" Name="FecIni" />
     <Property Type="DateTime" Name="FecFin" />
     <Property Type="Int32" Name="ProfId" />
-    <NavigationProperty Name="Curso_Alumno" Relationship="ExamenOnLineModel.FK_Curso_Alumno_CURSO" FromRole="CURSO" ToRole="Curso_Alumno" />
     <NavigationProperty Name="PROFESOR" Relationship="ExamenOnLineModel.FK_CURSO_PROFESOR" FromRole="CURSO" ToRole="PROFESOR" />
     <NavigationProperty Name="EXAMEN" Relationship="ExamenOnLineModel.FK_EXAMEN_CURSO" FromRole="CURSO" ToRole="EXAMEN" />
-  </EntityType>
-  <EntityType Name="Curso_Alumno">
-    <Key>
-      <PropertyRef Name="idTab" />
-    </Key>
-    <Property Type="Int32" Name="idTab" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Type="Int32" Name="IDCURSO" Nullable="false" />
-    <Property Type="Int32" Name="IDALUMNO" Nullable="false" />
-    <NavigationProperty Name="ALUMNO" Relationship="ExamenOnLineModel.FK_Curso_Alumno_ALUMNO" FromRole="Curso_Alumno" ToRole="ALUMNO" />
-    <NavigationProperty Name="CURSO" Relationship="ExamenOnLineModel.FK_Curso_Alumno_CURSO" FromRole="Curso_Alumno" ToRole="CURSO" />
+    <NavigationProperty Name="Curso_Alumno" Relationship="ExamenOnLineModel.FK_Curso_Alumno_CURSO" FromRole="CURSO" ToRole="Curso_Alumno" />
   </EntityType>
   <EntityType Name="EXAMEN">
     <Key>
@@ -155,18 +145,6 @@
     <NavigationProperty Name="ALUMNO" Relationship="ExamenOnLineModel.FK_RESULTADO_ALUMNO" FromRole="RESULTADO" ToRole="ALUMNO" />
     <NavigationProperty Name="EXAMEN" Relationship="ExamenOnLineModel.FK_RESULTADO_EXAMEN" FromRole="RESULTADO" ToRole="EXAMEN" />
   </EntityType>
-  <Association Name="FK_Curso_Alumno_ALUMNO">
-    <End Type="ExamenOnLineModel.ALUMNO" Role="ALUMNO" Multiplicity="1" />
-    <End Type="ExamenOnLineModel.Curso_Alumno" Role="Curso_Alumno" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="ALUMNO">
-        <PropertyRef Name="IdAlumno" />
-      </Principal>
-      <Dependent Role="Curso_Alumno">
-        <PropertyRef Name="IDALUMNO" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="FK_RESULTADO_ALUMNO">
     <End Type="ExamenOnLineModel.ALUMNO" Role="ALUMNO" Multiplicity="1" />
     <End Type="ExamenOnLineModel.RESULTADO" Role="RESULTADO" Multiplicity="*" />
@@ -176,18 +154,6 @@
       </Principal>
       <Dependent Role="RESULTADO">
         <PropertyRef Name="AlumnoId" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_Curso_Alumno_CURSO">
-    <End Type="ExamenOnLineModel.CURSO" Role="CURSO" Multiplicity="1" />
-    <End Type="ExamenOnLineModel.Curso_Alumno" Role="Curso_Alumno" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="CURSO">
-        <PropertyRef Name="IdCurso" />
-      </Principal>
-      <Dependent Role="Curso_Alumno">
-        <PropertyRef Name="IDCURSO" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -248,6 +214,40 @@
       </Principal>
       <Dependent Role="RESPUESTA">
         <PropertyRef Name="PreguntaId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Curso_Alumno">
+    <Key>
+      <PropertyRef Name="idTab" />
+    </Key>
+    <Property Type="Int32" Name="idTab" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="IDCURSO" Nullable="false" />
+    <Property Type="Int32" Name="IDALUMNO" Nullable="false" />
+    <NavigationProperty Name="ALUMNO" Relationship="ExamenOnLineModel.FK_Curso_Alumno_ALUMNO" FromRole="Curso_Alumno" ToRole="ALUMNO" />
+    <NavigationProperty Name="CURSO" Relationship="ExamenOnLineModel.FK_Curso_Alumno_CURSO" FromRole="Curso_Alumno" ToRole="CURSO" />
+  </EntityType>
+  <Association Name="FK_Curso_Alumno_ALUMNO">
+    <End Type="ExamenOnLineModel.ALUMNO" Role="ALUMNO" Multiplicity="1" />
+    <End Type="ExamenOnLineModel.Curso_Alumno" Role="Curso_Alumno" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ALUMNO">
+        <PropertyRef Name="IdAlumno" />
+      </Principal>
+      <Dependent Role="Curso_Alumno">
+        <PropertyRef Name="IDALUMNO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Curso_Alumno_CURSO">
+    <End Type="ExamenOnLineModel.CURSO" Role="CURSO" Multiplicity="1" />
+    <End Type="ExamenOnLineModel.Curso_Alumno" Role="Curso_Alumno" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CURSO">
+        <PropertyRef Name="IdCurso" />
+      </Principal>
+      <Dependent Role="Curso_Alumno">
+        <PropertyRef Name="IDCURSO" />
       </Dependent>
     </ReferentialConstraint>
   </Association>

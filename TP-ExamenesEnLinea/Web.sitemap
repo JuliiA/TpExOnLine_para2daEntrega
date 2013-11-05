@@ -1,17 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
-  <siteMapNode url="~/Index.aspx" title="Home"  description="Inicio del Sitio">
-      <siteMapNode url="~/AdminProfesor.aspx" title="Inicio"  description="Ver panel">
-          <siteMapNode url="~/CrearExamenProfesor.aspx" title="Examenes"  description="Cree sus examenes" />
-          <siteMapNode url="~/CursosProfesor.aspx" title="Mis Cursos"  description="Visualice cursos creados" />
-          <siteMapNode url="~/EditarCursoProfesor.aspx" title="Edicion" description="Edite el curso que elija"/>
-          <siteMapNode url="~/ExamenesProfesor.aspx" title="Mis Examenes"  description="Panel de examenes" />
+  <siteMapNode url="~/Index.aspx" title="Home"  description="Inicio del Sitio" roles="Profesor,Alumno">
+      <siteMapNode url="~/AdminProfesor.aspx" title="Inicio"  description="Ver panel" roles="Profesor">
+        <siteMapNode url="~/LoginUsuario.aspx" title="Ingreso" description="Log In" roles="Profesor"></siteMapNode>
+          <siteMapNode url="~/CrearExamenProfesor.aspx" title="Examenes"  description="Cree sus examenes" roles="Profesor" />
+          <siteMapNode url="~/CursosProfesor.aspx" title="Mis Cursos"  description="Visualice cursos creados" roles="Profesor"/>
+          <siteMapNode url="~/EditarCursoProfesor.aspx" title="Edicion" description="Edite el curso que elija" roles="Profesor"/>
+          <siteMapNode url="~/ExamenesProfesor.aspx" title="Mis Examenes"  description="Panel de examenes" roles="Profesor"/>
        </siteMapNode>
-       <siteMapNode url="~/EditarDatosAlumno.aspx" title="Mis Datos"  description="Edite sus datos">
-          <siteMapNode url="~/ExamenesDisponiblesAlumnos.aspx" title="Sus Examenes"  description="Examenes hechos y por hacer" />
-          <siteMapNode url="~/PrevioExamenAlumno.aspx" title="Realizacion de examen"  description="Preguntas de examen" />
-          <siteMapNode url="~/RealizarExamenAlumno.aspx" title="Realizar"  description="Ver panel" />
-          <siteMapNode url="~/ResultadoExamenAlumno.aspx" title="Su Resultado"  description="Cree sus examenes" />
+       <siteMapNode url="~/EditarDatosAlumno.aspx" title="Mis Datos"  description="Edite sus datos" roles="Alumno">
+         <siteMapNode url="~/LoginUsuario2.aspx" title="Ingreso" description="Log In" roles="Alumno"></siteMapNode>
+          <siteMapNode url="~/ExamenesDisponiblesAlumnos.aspx" title="Sus Examenes"  description="Examenes hechos y por hacer" roles="Alumno"/>
+          <siteMapNode url="~/PrevioExamenAlumno.aspx" title="Realizacion de examen"  description="Preguntas de examen" roles="Alumno"/>
+          <siteMapNode url="~/RealizarExamenAlumno.aspx" title="Realizar"  description="Ver panel" roles="Alumno"/>
+          <siteMapNode url="~/ResultadoExamenAlumno.aspx" title="Su Resultado"  description="Cree sus examenes" roles="Alumno"/>
       </siteMapNode>
     </siteMapNode>
 </siteMap>

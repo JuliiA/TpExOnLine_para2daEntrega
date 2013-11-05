@@ -51,6 +51,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ExamenesOnLine.edmx</DependentUpon>
     </Compile>
+    <Compile Include="PreguntaDatos.cs" />
     <Compile Include="ProfesorDatos.cs" />
     <Compile Include="AlumnoDatos.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

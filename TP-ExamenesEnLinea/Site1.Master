@@ -12,6 +12,7 @@
         media="all" />
     <link rel="stylesheet" href="bootstrap/jquery-ui-1.10.3.custom/css/vader/jquery-ui-1.10.3.custom.css" />
     <link rel="stylesheet" href="bootstrap/jquery-ui-1.10.3.custom/css/vader/jquery-ui-1.10.3.custom.min.css" />
+        <link rel="Shortcut Icon" href="imagen/curso_online.png" />
     <script language="javascript" type="text/javascript" src="bootstrap/jquery-ui-1.10.3.custom/js/jquery-1.9.1.js"></script>
     <script language="javascript" type="text/javascript" src="bootstrap/jquery-ui-1.10.3.custom/js/jquery-ui-1.10.3.custom.js"></script>
     <script language="javascript" type="text/javascript" src="bootstrap/jquery-ui-1.10.3.custom/js/jquery-ui-1.10.3.custom.min.js"></script>

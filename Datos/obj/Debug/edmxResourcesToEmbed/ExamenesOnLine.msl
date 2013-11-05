@@ -43,15 +43,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="CursosAl">
-      <EntityTypeMapping TypeName="ExamenOnLineModel.Curso_Alumno">
-        <MappingFragment StoreEntitySet="Curso_Alumno">
-          <ScalarProperty Name="IDALUMNO" ColumnName="IDALUMNO" />
-          <ScalarProperty Name="IDCURSO" ColumnName="IDCURSO" />
-          <ScalarProperty Name="idTab" ColumnName="idTab" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="Examenes">
       <EntityTypeMapping TypeName="ExamenOnLineModel.EXAMEN">
         <MappingFragment StoreEntitySet="EXAMEN">
@@ -105,6 +96,15 @@
           <ScalarProperty Name="FecIni" ColumnName="FecIni" />
           <ScalarProperty Name="FecHora" ColumnName="FecHora" />
           <ScalarProperty Name="IdResultado" ColumnName="IdResultado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CursosAl">
+      <EntityTypeMapping TypeName="ExamenOnLineModel.Curso_Alumno">
+        <MappingFragment StoreEntitySet="Curso_Alumno">
+          <ScalarProperty Name="IDALUMNO" ColumnName="IDALUMNO" />
+          <ScalarProperty Name="IDCURSO" ColumnName="IDCURSO" />
+          <ScalarProperty Name="idTab" ColumnName="idTab" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

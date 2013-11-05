@@ -41,7 +41,7 @@
                     <asp:Button ID="btncancelar" runat="server" CssClass="btn btn-inverse" 
                         Text="Cancelar" onclick="btncancelar_Click" />
                 </div>
-                <asp:Label ID="lblmensaje" runat="server" Text=""></asp:Label>
+                <asp:Label ID="lblmensaje" runat="server" Text="" CssClass="text-danger"></asp:Label>
             </div>
         </div>
     </div>

@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="ServAlumno.cs" />
     <Compile Include="ServCurso.cs" />
+    <Compile Include="ServPregunta.cs" />
     <Compile Include="ServProfesor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

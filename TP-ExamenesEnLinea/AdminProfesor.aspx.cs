@@ -14,17 +14,14 @@ namespace TP_ExamenesEnLinea
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+            fecCalendario2.Calendario = DateTime.Today.AddMonths(1);
         }
 
         protected void btncrear_Click(object sender, EventArgs e)
         {
             string nombre = txtcurso.Text;
             string mails = txtmails.Text;
-            //cadena que resulta de busqueda en el texto ingresado como separador
-            char[] delimiterChars = { ',' };
-            //creo un array 
-            string[] words = mails.Split(delimiterChars);
+            
             int estado = 1;
             int id_p = Convert.ToInt32(Session["Id"]);
             //PARA GUARDAR LAS FECHAS:
@@ -36,8 +33,15 @@ namespace TP_ExamenesEnLinea
                 try
                 {
                     //crear logica de alta curso
-                    elServicio.AltaCurso(txtcurso.Text, estado, feini, fefin, id_p);
-                    elServicio.crearBucle(words, nombre);
+                    elServicio.AltaCurso(nombre, estado, feini, fefin, id_p);
+                    if (mails != null)
+                    {
+                        //cadena que resulta de busqueda en el texto ingresado como separador
+                        char[] delimiterChars = { ',' };
+                        //creo un array 
+                        string[] words = mails.Split(delimiterChars);
+                        elServicio.crearBucle(words, nombre);
+                    }
                     lblmensaje.Text = "Curso creado correctamente";
                     
                 }

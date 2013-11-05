@@ -18,11 +18,7 @@ namespace Negocio
             var cursos = elCurso.listarCursos(idlogueado);
             return cursos;
         }
-        //public void AltaCurso(string nombre, int estado, DateTime fini, DateTime ffin, int id_p)
-        //{
-        //    elCurso.CrearNuevoCurso(nombre, estado, fini, ffin, id_p);
-        //}
-
+        
         public void AltaCurso(string nombre, int estado, DateTime fini, DateTime ffin, int id_p)
         {
             elCurso.CrearNuevoCurso(nombre, estado, fini, ffin, id_p);
@@ -78,7 +74,22 @@ namespace Negocio
 
         public DateTime consultarFechaInicio(int id_c)
         {
-            throw new NotImplementedException();
+            DateTime fecha = elCurso.obtenerFechaInicial(id_c);
+            return fecha;
+        }
+
+        public string calcularCantidadAlumnos(int p)
+        {
+            string obt = elCurso.obtenerTotalAlumnos(p);
+            return obt;
+        }
+
+
+        public string consultarLosMails(int id_c)
+        {
+            List<string> losMails = elCurso.obtenerLosMailsCurso(id_c);
+            string resulta = string.Concat(losMails);
+            return resulta;
         }
     }
 }

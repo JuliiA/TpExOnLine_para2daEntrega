@@ -23,7 +23,7 @@
                     <i class="icon-exclamation-sign"></i>Ha ocurrido un error!</h2>
                 <br />
                 <br />
-                Volver al<a href="Index.aspx"> Index</a>
+                Volver al<a href="~/Index.aspx"> Index</a>
             </div>
         </div>
     </center>

@@ -94,5 +94,19 @@ namespace Datos
             ctx.SaveChanges();
 
         }
+
+        public bool tieneCursos(int id_p)
+        {
+            CURSO unCurso = ctx.Cursos.Where(c => c.ProfId == id_p).FirstOrDefault();
+            //LA ASIGNACION DE ALGUN ALUMNO A UN CURSO COMO LA CONSULTO??
+            if (unCurso == null)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
     }
 }

@@ -57,6 +57,7 @@
     <Content Include="EditarCursoProfesor.aspx" />
     <Content Include="EditarDatosAlumno.aspx" />
     <Content Include="Error404.aspx" />
+    <Content Include="Error500.aspx" />
     <Content Include="ErrorGeneral.aspx" />
     <Content Include="ExamenesDisponiblesAlumnos.aspx" />
     <Content Include="ExamenesProfesor.aspx" />
@@ -129,6 +130,13 @@
     </Compile>
     <Compile Include="Error404.aspx.designer.cs">
       <DependentUpon>Error404.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Error500.aspx.cs">
+      <DependentUpon>Error500.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Error500.aspx.designer.cs">
+      <DependentUpon>Error500.aspx</DependentUpon>
     </Compile>
     <Compile Include="ErrorGeneral.aspx.cs">
       <DependentUpon>ErrorGeneral.aspx</DependentUpon>

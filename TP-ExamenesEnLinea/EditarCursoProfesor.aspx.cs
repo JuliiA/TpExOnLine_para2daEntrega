@@ -28,17 +28,25 @@ namespace TP_ExamenesEnLinea
                 TextBox1.Text = elCurso.consultarNombre(id_c);
                 check.Checked = elCurso.consultarEstado(id_c);
                 fecini.Calendario = elCurso.consultarFechaInicio(id_c);
-
+                txtmails.Text = elCurso.consultarLosMails(id_c);
+                if (!String.IsNullOrEmpty(txtmails.Text)) {
+                    lblmensaje.Text = "Aun no ha cargado algun mail";
+                }
             }
             catch (Exception ex) {
-               // string mensaje = "No se pudieron recuperar los datos del curso";
+                //string mensaje = "No se pudieron recuperar los datos del curso";
                 //ClientException.LogException(ex, mensaje); Server.Transfer("ErrorGeneral.aspx"); 
             }
         }
 
         protected void Button1_Click(object sender, EventArgs e)
         {
+            if (Page.IsValid) {
+                if (!String.IsNullOrEmpty(txtmails.Text))
+                {
 
+                }
+            }
         }
     }
 }

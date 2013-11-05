@@ -11,22 +11,25 @@
         <asp:Label ID="lblmensaje" CssClass="text-danger" runat="server" Text=""></asp:Label>
         <div class="breadcrumb col-mg-2">
             <div class="table table-striped table-hover">
-            <%-- onrowcommand="gvcursos_RowCommand" --%>
                 <asp:GridView ID="gvcursos" runat="server" OnLoad="Page_Load" 
                     onrowcreated="gvcursos_RowCreated"
                     onrowdatabound="gvcursos_RowDataBound" 
-                    onselectedindexchanging="gvcursos_SelectedIndexChanging">
+                    onselectedindexchanging="gvcursos_SelectedIndexChanging" >
                     <Columns>
                         <asp:HyperLinkField DataNavigateUrlFields="IdCurso" 
-                            DataNavigateUrlFormatString="~/EditarCursoProfesor.aspx?id={0}" HeaderText="Edicion" Text="Editar" ControlStyle-CssClass="icon-pencil" />
+                            DataNavigateUrlFormatString="~/EditarCursoProfesor.aspx?id={0}" 
+                            HeaderText="Edicion" Text="" ControlStyle-CssClass="icon-pencil" >
+<ControlStyle CssClass="icon-pencil"></ControlStyle>
+                        </asp:HyperLinkField>
                         <asp:HyperLinkField DataNavigateUrlFields="IdCurso" 
-                            DataNavigateUrlFormatString="~/BorrarCursoProfesor.aspx?id={0}" HeaderText="Borrado" Text="Borrar" ControlStyle-CssClass="icon-remove-circle" />
+                            DataNavigateUrlFormatString="~/BorrarCursoProfesor.aspx?id={0}" 
+                            HeaderText="Borrado" Text="" ControlStyle-CssClass="icon-remove-circle" >
                      
-                        <asp:TemplateField HeaderText="Cantidad Alumnos">
-                            <ItemTemplate>
-                                <asp:Label ID="Label1" runat="server" Text=""></asp:Label>           
-                            </ItemTemplate>
-                        </asp:TemplateField>
+<ControlStyle CssClass="icon-remove-circle"></ControlStyle>
+                        </asp:HyperLinkField>
+                        
+                        <asp:BoundField HeaderText="Cantidad Alumnos" />
+                        
                     </Columns>
                 </asp:GridView>
             </div>

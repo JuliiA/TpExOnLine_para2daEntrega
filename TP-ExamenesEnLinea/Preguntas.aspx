@@ -18,28 +18,32 @@
         <div class="modal-body">
             <div class="modal-content">
                 <h3>
-                    Pregunta</h3>
-                <textarea id="TextArea1" cols="10" rows="3" class="input-xxlarge"></textarea>
+                    Pregunta <asp:Label ID="lblnrp" 
+                        runat="server"></asp:Label></h3>
+                <asp:TextBox ID="txtpregunta" runat="server" CssClass="input-xxlarge" Columns="30" TextMode="MultiLine"></asp:TextBox>
+                
             </div>
             <div class="modal-content">
                 <pre>Debe seleccionar una o dos respuesta como correcta</pre>
-                a)<asp:TextBox ID="txtrespa" runat="server"></asp:TextBox><br />
-                <asp:CheckBox ID="CheckBox1" runat="server" Text="Correcta" /><br />
-                b)<asp:TextBox ID="txtrespb" runat="server"></asp:TextBox><br />
-                <asp:CheckBox ID="CheckBox2" runat="server" Text="Correcta" /><br />
-                c)<asp:TextBox ID="txtrespc" runat="server"></asp:TextBox><br />
-                <asp:CheckBox ID="CheckBox3" runat="server" Text="Correcta" /><br />
+                a)<asp:TextBox ID="txtresp1" runat="server"></asp:TextBox><br />
+                <asp:CheckBox ID="check1" runat="server" Text="Correcta" /><br />
+                b)<asp:TextBox ID="txtresp2" runat="server"></asp:TextBox><br />
+                <asp:CheckBox ID="check2" runat="server" Text="Correcta" /><br />
+                c)<asp:TextBox ID="txtresp3" runat="server"></asp:TextBox><br />
+                <asp:CheckBox ID="check3" runat="server" Text="Correcta" /><br />
             </div>
             <div class="modal-footer">
-                Puntaje por Respuesta Correcta
-                <input id="Text4" type="text" />punto/s.
+                Calificacion maxima -> todas respuestas correctas
+                <input id="txtpuntaje" type="text" />punto/s.
             </div>
         </div>
         <%--Con siguiente podemos cargar otra pregunta, o sino le damos click a Crear Examen, el cual nos crearia el examen y nos redirecciona hacia el 
         Mis examenes--%>
-        <asp:Button ID="btnsig" runat="server" Text="Siguiente" CssClass="btn btn-default"
-            PostBackUrl="~/Preguntas.aspx" />
-        <a href="ExamenesProfesor.aspx" class="btn btn-success">Crear Examen</a><br />
+        <asp:Button ID="btnsig" runat="server" Text="Siguiente" 
+            CssClass="btn btn-default" onclick="btnsig_Click1" />
+        <asp:Button ID="btncrear" runat="server" Text="Crear Examen" 
+            CssClass="btn btn-success" onclick="btncrear_Click" />
+        <asp:Label ID="lblmensaje" runat="server" Text=""></asp:Label>
         <div class="modal-header text-center">
             <h1 class="text-success">
                 Sistemas de Examenes OnLine</h1>

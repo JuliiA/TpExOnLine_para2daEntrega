@@ -100,5 +100,35 @@ namespace Datos
             ctxto.CursosAl.AddObject(cal);
             ctxto.SaveChanges();
         }
+
+        public string obtenerTotalAlumnos(int p)
+        {
+            string total;
+            int cantA = (from cl in ctxto.CursosAl
+                         where cl.IDCURSO == p
+                         select cl.IDALUMNO).Count();
+
+            total = cantA.ToString();
+            return total;
+         }
+
+        public DateTime obtenerFechaInicial(int id_c)
+        {
+            DateTime f_curso;
+            var fech = (from f in ctxto.Cursos
+                        where f.IdCurso == id_c
+                        select f.FecIni).FirstOrDefault();
+            f_curso = Convert.ToDateTime(fech);
+            return f_curso;
+        }
+
+        public List<string> obtenerLosMailsCurso(int id_c)
+        {
+            var mail = (from m in ctxto.CursosAl
+                        join pe in ctxto.Alumnos on m.IDALUMNO equals pe.IdAlumno
+                        where m.IDCURSO == id_c
+                        select pe.Mail).ToList();
+            return mail;
+        }
     }
 }

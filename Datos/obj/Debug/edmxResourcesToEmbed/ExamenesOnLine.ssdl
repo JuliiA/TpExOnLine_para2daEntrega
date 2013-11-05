@@ -124,7 +124,9 @@
     <Property Name="ExamenId" Type="int" Nullable="false" />
   </EntityType>
   <Association Name="FK_Curso_Alumno_ALUMNO">
-    <End Role="ALUMNO" Type="ExamenOnLineModel.Store.ALUMNO" Multiplicity="1" />
+    <End Role="ALUMNO" Type="ExamenOnLineModel.Store.ALUMNO" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
     <End Role="Curso_Alumno" Type="ExamenOnLineModel.Store.Curso_Alumno" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="ALUMNO">
@@ -136,7 +138,9 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Curso_Alumno_CURSO">
-    <End Role="CURSO" Type="ExamenOnLineModel.Store.CURSO" Multiplicity="1" />
+    <End Role="CURSO" Type="ExamenOnLineModel.Store.CURSO" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
     <End Role="Curso_Alumno" Type="ExamenOnLineModel.Store.Curso_Alumno" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="CURSO">
