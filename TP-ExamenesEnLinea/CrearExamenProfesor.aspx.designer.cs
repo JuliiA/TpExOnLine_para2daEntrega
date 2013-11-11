@@ -94,22 +94,13 @@ namespace TP_ExamenesEnLinea {
         protected global::System.Web.UI.WebControls.Label lblduracion;
         
         /// <summary>
-        /// Control txtduracion.
+        /// Control ddlduracion.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtduracion;
-        
-        /// <summary>
-        /// Control lblfectope.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblfectope;
+        protected global::System.Web.UI.WebControls.DropDownList ddlduracion;
         
         /// <summary>
         /// Control fechatope.
@@ -148,31 +139,13 @@ namespace TP_ExamenesEnLinea {
         protected global::System.Web.UI.WebControls.Label lblporcentaje;
         
         /// <summary>
-        /// Control txtporcentaje.
+        /// Control ddlporcentaje.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtporcentaje;
-        
-        /// <summary>
-        /// Control RequiredFieldValidator3.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator3;
-        
-        /// <summary>
-        /// Control validadorRango.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RangeValidator validadorRango;
+        protected global::System.Web.UI.WebControls.DropDownList ddlporcentaje;
         
         /// <summary>
         /// Control btnsig.

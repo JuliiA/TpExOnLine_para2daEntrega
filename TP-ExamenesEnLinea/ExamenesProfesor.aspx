@@ -11,29 +11,20 @@
         <%-- ACA SE REEPLAZARA LUEGO POR UNA GRIDVIEW CON DATOS DESDE LA BASE DE DATOS--%>
         <div class="breadcrumb col-mg-2">
             <div class="table text-center table-condensed">
-                <asp:GridView ID="gvexamenes" runat="server">
+                <asp:GridView ID="gvexamenes" runat="server" CellPadding="4" 
+                    ForeColor="#333333" GridLines="None" Width="90%">
+                    <AlternatingRowStyle BackColor="White" />
+                    <EditRowStyle BackColor="#2461BF" />
+                    <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                    <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                    <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
+                    <RowStyle BackColor="#EFF3FB" />
+                    <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
+                    <SortedAscendingCellStyle BackColor="#F5F7FB" />
+                    <SortedAscendingHeaderStyle BackColor="#6D95E1" />
+                    <SortedDescendingCellStyle BackColor="#E9EBEF" />
+                    <SortedDescendingHeaderStyle BackColor="#4870BE" />
                 </asp:GridView>
-                       <%--<th>
-                            Curso
-                        </th>
-                        <th>
-                            Examen
-                        </th>
-                        <th>
-                            Fecha y hora tope
-                        </th>
-                        <th>
-                            Rindieron
-                        </th>
-                        <th>
-                            Aprobados
-                        </th>
-                        <th>
-                            Reprobados
-                        </th>
-                        <th>
-                            Alumnos que Faltan
-                        </th>--%>
                   <asp:Label ID="lblmensaje" runat="server" Text=""></asp:Label>
                        </div>
         </div>

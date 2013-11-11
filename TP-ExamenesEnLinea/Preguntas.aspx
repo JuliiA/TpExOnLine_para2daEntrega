@@ -33,8 +33,8 @@
                 <asp:CheckBox ID="check3" runat="server" Text="Correcta" /><br />
             </div>
             <div class="modal-footer">
-                Calificacion maxima -> todas respuestas correctas
-                <input id="txtpuntaje" type="text" />punto/s.
+                Calificacion maxima por examen -> todas respuestas correctas
+                <input id="txtpuntaje" type="text" value="1 pregunta correcta = 20% (Todas Respuestas marcadas)"/>punto/s.
             </div>
         </div>
         <%--Con siguiente podemos cargar otra pregunta, o sino le damos click a Crear Examen, el cual nos crearia el examen y nos redirecciona hacia el 

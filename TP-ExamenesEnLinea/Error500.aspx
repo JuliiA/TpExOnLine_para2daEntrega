@@ -9,6 +9,7 @@
         media="all" />
     <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-responsive.min.css"
         media="all" />
+        <link rel="Shortcut Icon" href="imagen/Error.png" />
     <title>Error!</title>
 </head>
 <body class="body">
@@ -17,7 +18,9 @@
     <h2>
      <i class="icon-info-sign"></i> Ha ocurrido un error interno</h2><br />
     <h4><i class="icon-off"></i>Problema en el Servidor</>
-    </h4><br />
+    </h4>
+                <asp:Image ID="Image1" src="imagen/sin-conexion.jpg" CssClass="img-circle large" runat="server" />
+    <br />
     Volver al<a href="~/index.aspx"> Index</a>
   </div>
  </center>

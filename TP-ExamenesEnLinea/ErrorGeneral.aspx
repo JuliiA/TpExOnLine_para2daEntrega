@@ -11,6 +11,7 @@
         media="all" />
     <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-responsive.min.css"
         media="all" />
+    <link rel="Shortcut Icon" href="imagen/Error.png" />
     <title>Error!</title>
 </head>
 <body class="body">
@@ -22,6 +23,7 @@
                 <h2>
                     <i class="icon-exclamation-sign"></i>Ha ocurrido un error!</h2>
                 <br />
+                <asp:Image ID="Image1" src="imagen/Error.png" CssClass="img-circle" runat="server" />
                 <br />
                 Volver al<a href="~/Index.aspx"> Index</a>
             </div>

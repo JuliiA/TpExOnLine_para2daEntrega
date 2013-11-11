@@ -1,0 +1,1058 @@
+
+ Fecha del Log : 09/11/2013 11:21:26 a.m.
+ Error ocurrido en la pagina : http://localhost:56719/LoginUsuario2.aspx
+
+ Descripcion :
+System.Threading.ThreadAbortException: Subproceso anulado.
+   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en TP_ExamenesEnLinea.LoginUsuario2.abrirSesionAlumno(String mailu, String passu) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\LoginUsuario2.aspx.cs:línea 52
+
+<===========================================================================>
+
+ Fecha del Log : 09/11/2013 11:21:37 a.m.
+ Error ocurrido en la pagina : http://localhost:56719/ExamenesDisponiblesAlumnos.aspx
+
+ Descripcion :
+System.NotSupportedException: LINQ to Entities no reconoce el método 'System.DateTime ToDateTime(System.Object)' del método, y este método no se puede traducir en una expresión de almacén.
+   en System.Data.Objects.ELinq.ExpressionConverter.MethodCallTranslator.DefaultTranslator.Translate(ExpressionConverter parent, MethodCallExpression call)
+   en System.Data.Objects.ELinq.ExpressionConverter.MethodCallTranslator.TypedTranslate(ExpressionConverter parent, MethodCallExpression linq)
+   en System.Data.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)
+   en System.Data.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)
+   en System.Data.Objects.ELinq.ExpressionConverter.MemberInitTranslator.TypedTranslate(ExpressionConverter parent, MemberInitExpression linq)
+   en System.Data.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)
+   en System.Data.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)
+   en System.Data.Objects.ELinq.ExpressionConverter.TranslateLambda(LambdaExpression lambda, DbExpression input)
+   en System.Data.Objects.ELinq.ExpressionConverter.TranslateLambda(LambdaExpression lambda, DbExpression input, DbExpressionBinding& binding)
+   en System.Data.Objects.ELinq.ExpressionConverter.MethodCallTranslator.OneLambdaTranslator.Translate(ExpressionConverter parent, MethodCallExpression call, DbExpression& source, DbExpressionBinding& sourceBinding, DbExpression& lambda)
+   en System.Data.Objects.ELinq.ExpressionConverter.MethodCallTranslator.SelectTranslator.Translate(ExpressionConverter parent, MethodCallExpression call)
+   en System.Data.Objects.ELinq.ExpressionConverter.MethodCallTranslator.SequenceMethodTranslator.Translate(ExpressionConverter parent, MethodCallExpression call, SequenceMethod sequenceMethod)
+   en System.Data.Objects.ELinq.ExpressionConverter.MethodCallTranslator.TypedTranslate(ExpressionConverter parent, MethodCallExpression linq)
+   en System.Data.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)
+   en System.Data.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)
+   en System.Data.Objects.ELinq.ExpressionConverter.Convert()
+   en System.Data.Objects.ELinq.ELinqQueryState.GetExecutionPlan(Nullable`1 forMergeOption)
+   en System.Data.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   en System.Data.Objects.ObjectQuery`1.System.Collections.Generic.IEnumerable<T>.GetEnumerator()
+   en System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   en System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   en Datos.AlumnoDatos.consultarExamenes(Int32 id_p) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\Datos\AlumnoDatos.cs:línea 160
+   en Negocio.ServAlumno.traerTodosExamenes(Int32 id_p) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\Negocio\ServAlumno.cs:línea 66
+   en TP_ExamenesEnLinea.ExamenesDisponiblesAlumnos.cargarGvExamenes(Int32 id_p) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\ExamenesDisponiblesAlumnos.aspx.cs:línea 32
+
+<===========================================================================>
+
+ Fecha del Log : 09/11/2013 11:27:24 a.m.
+ Error ocurrido en la pagina : http://localhost:56719/LoginUsuario2.aspx
+
+ Descripcion :
+System.Threading.ThreadAbortException: Subproceso anulado.
+   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en TP_ExamenesEnLinea.LoginUsuario2.abrirSesionAlumno(String mailu, String passu) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\LoginUsuario2.aspx.cs:línea 52
+
+<===========================================================================>
+
+ Fecha del Log : 09/11/2013 11:27:31 a.m.
+ Error ocurrido en la pagina : http://localhost:56719/ExamenesDisponiblesAlumnos.aspx
+
+ Descripcion :
+System.InvalidOperationException: El origen de datos no es un tipo válido. Deber ser IListSource, IEnumerable o IDataSource.
+   en System.Web.UI.WebControls.DataBoundControl.ValidateDataSource(Object dataSource)
+   en System.Web.UI.WebControls.BaseDataBoundControl.set_DataSource(Object value)
+   en TP_ExamenesEnLinea.ExamenesDisponiblesAlumnos.cargarGvExamenes(Int32 id_p) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\ExamenesDisponiblesAlumnos.aspx.cs:línea 32
+
+<===========================================================================>
+
+ Fecha del Log : 09/11/2013 11:49:55 a.m.
+ Error ocurrido en la pagina : http://localhost:56719/LoginUsuario2.aspx
+
+ Descripcion :
+System.Threading.ThreadAbortException: Subproceso anulado.
+   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en TP_ExamenesEnLinea.LoginUsuario2.abrirSesionAlumno(String mailu, String passu) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\LoginUsuario2.aspx.cs:línea 52
+
+<===========================================================================>
+
+ Fecha del Log : 09/11/2013 11:50:04 a.m.
+ Error ocurrido en la pagina : http://localhost:56719/ExamenesDisponiblesAlumnos.aspx
+
+ Descripcion :
+System.InvalidOperationException: El origen de datos no es un tipo válido. Deber ser IListSource, IEnumerable o IDataSource.
+   en System.Web.UI.WebControls.DataBoundControl.ValidateDataSource(Object dataSource)
+   en System.Web.UI.WebControls.BaseDataBoundControl.set_DataSource(Object value)
+   en TP_ExamenesEnLinea.ExamenesDisponiblesAlumnos.cargarGvExamenes(Int32 id_p) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\ExamenesDisponiblesAlumnos.aspx.cs:línea 32
+
+<===========================================================================>
+
+ Fecha del Log : 09/11/2013 11:50:30 a.m.
+ Error ocurrido en la pagina : http://localhost:56719/LoginUsuario.aspx
+
+ Descripcion :
+System.Threading.ThreadAbortException: Subproceso anulado.
+   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en TP_ExamenesEnLinea.LoginUsuario.abrirSesionProfesor(String passUsuario, String mailU) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\LoginUsuario.aspx.cs:línea 46
+
+<===========================================================================>
+
+ Fecha del Log : 09/11/2013 11:51:46 a.m.
+ Error ocurrido en la pagina : http://localhost:56719/LoginUsuario2.aspx
+
+ Descripcion :
+System.Threading.ThreadAbortException: Subproceso anulado.
+   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en TP_ExamenesEnLinea.LoginUsuario2.abrirSesionAlumno(String mailu, String passu) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\LoginUsuario2.aspx.cs:línea 52
+
+<===========================================================================>
+
+ Fecha del Log : 09/11/2013 11:51:49 a.m.
+ Error ocurrido en la pagina : http://localhost:56719/ExamenesDisponiblesAlumnos.aspx
+
+ Descripcion :
+System.InvalidOperationException: El origen de datos no es un tipo válido. Deber ser IListSource, IEnumerable o IDataSource.
+   en System.Web.UI.WebControls.DataBoundControl.ValidateDataSource(Object dataSource)
+   en System.Web.UI.WebControls.BaseDataBoundControl.set_DataSource(Object value)
+   en TP_ExamenesEnLinea.ExamenesDisponiblesAlumnos.cargarGvExamenes(Int32 id_p) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\ExamenesDisponiblesAlumnos.aspx.cs:línea 32
+
+<===========================================================================>
+
+ Fecha del Log : 09/11/2013 11:54:31 a.m.
+ Error ocurrido en la pagina : http://localhost:56719/LoginUsuario2.aspx
+
+ Descripcion :
+System.Threading.ThreadAbortException: Subproceso anulado.
+   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en TP_ExamenesEnLinea.LoginUsuario2.abrirSesionAlumno(String mailu, String passu) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\LoginUsuario2.aspx.cs:línea 52
+
+<===========================================================================>
+
+ Fecha del Log : 09/11/2013 11:54:56 a.m.
+ Error ocurrido en la pagina : http://localhost:56719/ExamenesDisponiblesAlumnos.aspx
+
+ Descripcion :
+System.InvalidOperationException: El origen de datos no es un tipo válido. Deber ser IListSource, IEnumerable o IDataSource.
+   en System.Web.UI.WebControls.DataBoundControl.ValidateDataSource(Object dataSource)
+   en System.Web.UI.WebControls.BaseDataBoundControl.set_DataSource(Object value)
+   en TP_ExamenesEnLinea.ExamenesDisponiblesAlumnos.cargarGvExamenes(Int32 id_p) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\ExamenesDisponiblesAlumnos.aspx.cs:línea 32
+
+<===========================================================================>
+
+ Fecha del Log : 09/11/2013 11:57:13 a.m.
+ Error ocurrido en la pagina : http://localhost:56719/LoginUsuario2.aspx
+
+ Descripcion :
+System.Threading.ThreadAbortException: Subproceso anulado.
+   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en TP_ExamenesEnLinea.LoginUsuario2.abrirSesionAlumno(String mailu, String passu) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\LoginUsuario2.aspx.cs:línea 52
+
+<===========================================================================>
+
+ Fecha del Log : 09/11/2013 11:57:47 a.m.
+ Error ocurrido en la pagina : http://localhost:56719/ExamenesDisponiblesAlumnos.aspx
+
+ Descripcion :
+System.InvalidOperationException: El origen de datos no es un tipo válido. Deber ser IListSource, IEnumerable o IDataSource.
+   en System.Web.UI.WebControls.DataBoundControl.ValidateDataSource(Object dataSource)
+   en System.Web.UI.WebControls.BaseDataBoundControl.set_DataSource(Object value)
+   en TP_ExamenesEnLinea.ExamenesDisponiblesAlumnos.cargarGvExamenes(Int32 id_p) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\ExamenesDisponiblesAlumnos.aspx.cs:línea 32
+
+<===========================================================================>
+
+ Fecha del Log : 09/11/2013 11:58:36 a.m.
+ Error ocurrido en la pagina : http://localhost:56719/LoginUsuario2.aspx
+
+ Descripcion :
+System.Threading.ThreadAbortException: Subproceso anulado.
+   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en TP_ExamenesEnLinea.LoginUsuario2.abrirSesionAlumno(String mailu, String passu) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\LoginUsuario2.aspx.cs:línea 52
+
+<===========================================================================>
+
+ Fecha del Log : 09/11/2013 11:59:19 a.m.
+ Error ocurrido en la pagina : http://localhost:56719/ExamenesDisponiblesAlumnos.aspx
+
+ Descripcion :
+System.InvalidOperationException: El origen de datos no es un tipo válido. Deber ser IListSource, IEnumerable o IDataSource.
+   en System.Web.UI.WebControls.DataBoundControl.ValidateDataSource(Object dataSource)
+   en System.Web.UI.WebControls.BaseDataBoundControl.set_DataSource(Object value)
+   en TP_ExamenesEnLinea.ExamenesDisponiblesAlumnos.cargarGvExamenes(Int32 id_p) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\ExamenesDisponiblesAlumnos.aspx.cs:línea 32
+
+<===========================================================================>
+
+ Fecha del Log : 09/11/2013 12:01:35 p.m.
+ Error ocurrido en la pagina : http://localhost:56719/LoginUsuario2.aspx
+
+ Descripcion :
+System.Threading.ThreadAbortException: Subproceso anulado.
+   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en TP_ExamenesEnLinea.LoginUsuario2.abrirSesionAlumno(String mailu, String passu) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\LoginUsuario2.aspx.cs:línea 52
+
+<===========================================================================>
+
+ Fecha del Log : 09/11/2013 12:03:41 p.m.
+ Error ocurrido en la pagina : http://localhost:56719/LoginUsuario.aspx
+
+ Descripcion :
+System.Threading.ThreadAbortException: Subproceso anulado.
+   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en TP_ExamenesEnLinea.LoginUsuario.abrirSesionProfesor(String passUsuario, String mailU) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\LoginUsuario.aspx.cs:línea 46
+
+<===========================================================================>
+
+ Fecha del Log : 09/11/2013 12:21:57 p.m.
+ Error ocurrido en la pagina : http://localhost:56719/LoginUsuario2.aspx
+
+ Descripcion :
+System.Threading.ThreadAbortException: Subproceso anulado.
+   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en TP_ExamenesEnLinea.LoginUsuario2.abrirSesionAlumno(String mailu, String passu) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\LoginUsuario2.aspx.cs:línea 52
+
+<===========================================================================>
+
+ Fecha del Log : 09/11/2013 01:26:40 p.m.
+ Error ocurrido en la pagina : http://localhost:56719/LoginUsuario2.aspx
+
+ Descripcion :
+System.Threading.ThreadAbortException: Subproceso anulado.
+   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en TP_ExamenesEnLinea.LoginUsuario2.abrirSesionAlumno(String mailu, String passu) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\LoginUsuario2.aspx.cs:línea 52
+
+<===========================================================================>
+
+ Fecha del Log : 09/11/2013 01:26:45 p.m.
+ Error ocurrido en la pagina : http://localhost:56719/ExamenesDisponiblesAlumnos.aspx
+
+ Descripcion :
+System.Data.EntityCommandExecutionException: El lector de datos es incompatible con el 'ExamenOnLineModel.listarExamenesDisponibles_Result' especificado. Un miembro del tipo, 'Nota', no tiene una columna correspondiente en el lector de datos con el mismo nombre.
+   en System.Data.Query.InternalTrees.ColumnMapFactory.GetMemberOrdinalFromReader(DbDataReader storeDataReader, EdmMember member, EdmType currentType, Dictionary`2 renameList)
+   en System.Data.Query.InternalTrees.ColumnMapFactory.GetColumnMapsForType(DbDataReader storeDataReader, EdmType edmType, Dictionary`2 renameList)
+   en System.Data.Query.InternalTrees.ColumnMapFactory.CreateColumnMapFromReaderAndType(DbDataReader storeDataReader, EdmType edmType, EntitySet entitySet, Dictionary`2 renameList)
+   en System.Data.Query.InternalTrees.ColumnMapFactory.CreateFunctionImportStructuralTypeColumnMap(DbDataReader storeDataReader, FunctionImportMappingNonComposable mapping, Int32 resultSetIndex, EntitySet entitySet, StructuralType baseStructuralType)
+   en System.Data.EntityClient.EntityCommandDefinition.FunctionColumnMapGenerator.System.Data.EntityClient.EntityCommandDefinition.IColumnMapGenerator.CreateColumnMap(DbDataReader reader)
+   en System.Data.EntityClient.EntityCommandDefinition.CreateColumnMap(DbDataReader storeDataReader, Int32 resultSetIndex)
+   en System.Data.Objects.ObjectContext.MaterializedDataRecord[TElement](EntityCommand entityCommand, DbDataReader storeReader, Int32 resultSetIndex, ReadOnlyMetadataCollection`1 entitySets, EdmType[] edmTypes, MergeOption mergeOption)
+   en System.Data.Objects.ObjectContext.CreateFunctionObjectResult[TElement](EntityCommand entityCommand, ReadOnlyMetadataCollection`1 entitySets, EdmType[] edmTypes, MergeOption mergeOption)
+   en System.Data.Objects.ObjectContext.ExecuteFunction[TElement](String functionName, MergeOption mergeOption, ObjectParameter[] parameters)
+   en System.Data.Objects.ObjectContext.ExecuteFunction[TElement](String functionName, ObjectParameter[] parameters)
+   en Datos.ExOnLineEntities.listarExamenesDisponibles(Nullable`1 id_Alumno) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\Datos\ExamenesOnLine.Designer.cs:línea 341
+   en Datos.AlumnoDatos.consultarExamenes(Int32 id_p) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\Datos\AlumnoDatos.cs:línea 161
+   en Negocio.ServAlumno.traerTodosExamenes(Int32 id_p) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\Negocio\ServAlumno.cs:línea 66
+   en TP_ExamenesEnLinea.ExamenesDisponiblesAlumnos.cargarGvExamenes(Int32 id_p) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\ExamenesDisponiblesAlumnos.aspx.cs:línea 32
+
+<===========================================================================>
+
+ Fecha del Log : 09/11/2013 01:28:16 p.m.
+ Error ocurrido en la pagina : http://localhost:56719/LoginUsuario2.aspx
+
+ Descripcion :
+System.Threading.ThreadAbortException: Subproceso anulado.
+   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en TP_ExamenesEnLinea.LoginUsuario2.abrirSesionAlumno(String mailu, String passu) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\LoginUsuario2.aspx.cs:línea 52
+
+<===========================================================================>
+
+ Fecha del Log : 09/11/2013 01:35:43 p.m.
+ Error ocurrido en la pagina : http://localhost:56719/LoginUsuario2.aspx
+
+ Descripcion :
+System.Threading.ThreadAbortException: Subproceso anulado.
+   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en TP_ExamenesEnLinea.LoginUsuario2.abrirSesionAlumno(String mailu, String passu) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\LoginUsuario2.aspx.cs:línea 52
+
+<===========================================================================>
+
+ Fecha del Log : 09/11/2013 01:35:46 p.m.
+ Error ocurrido en la pagina : http://localhost:56719/ExamenesDisponiblesAlumnos.aspx
+
+ Descripcion :
+System.FormatException: La cadena de entrada no tiene el formato correcto.
+   en System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   en System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   en System.Convert.ToInt32(String value)
+   en TP_ExamenesEnLinea.ExamenesDisponiblesAlumnos.gvexamenes_RowDataBound(Object sender, GridViewRowEventArgs e) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\ExamenesDisponiblesAlumnos.aspx.cs:línea 47
+   en System.Web.UI.WebControls.GridView.OnRowDataBound(GridViewRowEventArgs e)
+   en System.Web.UI.WebControls.GridView.CreateRow(Int32 rowIndex, Int32 dataSourceIndex, DataControlRowType rowType, DataControlRowState rowState, Boolean dataBind, Object dataItem, DataControlField[] fields, TableRowCollection rows, PagedDataSource pagedDataSource)
+   en System.Web.UI.WebControls.GridView.CreateChildControls(IEnumerable dataSource, Boolean dataBinding)
+   en System.Web.UI.WebControls.CompositeDataBoundControl.PerformDataBinding(IEnumerable data)
+   en System.Web.UI.WebControls.GridView.PerformDataBinding(IEnumerable data)
+   en System.Web.UI.WebControls.DataBoundControl.OnDataSourceViewSelectCallback(IEnumerable data)
+   en System.Web.UI.DataSourceView.Select(DataSourceSelectArguments arguments, DataSourceViewSelectCallback callback)
+   en System.Web.UI.WebControls.DataBoundControl.PerformSelect()
+   en System.Web.UI.WebControls.BaseDataBoundControl.DataBind()
+   en System.Web.UI.WebControls.GridView.DataBind()
+   en TP_ExamenesEnLinea.ExamenesDisponiblesAlumnos.cargarGvExamenes(Int32 id_p) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\ExamenesDisponiblesAlumnos.aspx.cs:línea 33
+
+<===========================================================================>
+
+ Fecha del Log : 09/11/2013 01:39:29 p.m.
+ Error ocurrido en la pagina : http://localhost:56719/LoginUsuario2.aspx
+
+ Descripcion :
+System.Threading.ThreadAbortException: Subproceso anulado.
+   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en TP_ExamenesEnLinea.LoginUsuario2.abrirSesionAlumno(String mailu, String passu) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\LoginUsuario2.aspx.cs:línea 52
+
+<===========================================================================>
+
+ Fecha del Log : 09/11/2013 01:39:32 p.m.
+ Error ocurrido en la pagina : http://localhost:56719/ExamenesDisponiblesAlumnos.aspx
+
+ Descripcion :
+System.FormatException: La cadena de entrada no tiene el formato correcto.
+   en System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   en System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   en System.Convert.ToInt32(String value)
+   en TP_ExamenesEnLinea.ExamenesDisponiblesAlumnos.gvexamenes_RowDataBound(Object sender, GridViewRowEventArgs e) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\ExamenesDisponiblesAlumnos.aspx.cs:línea 47
+   en System.Web.UI.WebControls.GridView.OnRowDataBound(GridViewRowEventArgs e)
+   en System.Web.UI.WebControls.GridView.CreateRow(Int32 rowIndex, Int32 dataSourceIndex, DataControlRowType rowType, DataControlRowState rowState, Boolean dataBind, Object dataItem, DataControlField[] fields, TableRowCollection rows, PagedDataSource pagedDataSource)
+   en System.Web.UI.WebControls.GridView.CreateChildControls(IEnumerable dataSource, Boolean dataBinding)
+   en System.Web.UI.WebControls.CompositeDataBoundControl.PerformDataBinding(IEnumerable data)
+   en System.Web.UI.WebControls.GridView.PerformDataBinding(IEnumerable data)
+   en System.Web.UI.WebControls.DataBoundControl.OnDataSourceViewSelectCallback(IEnumerable data)
+   en System.Web.UI.DataSourceView.Select(DataSourceSelectArguments arguments, DataSourceViewSelectCallback callback)
+   en System.Web.UI.WebControls.DataBoundControl.PerformSelect()
+   en System.Web.UI.WebControls.BaseDataBoundControl.DataBind()
+   en System.Web.UI.WebControls.GridView.DataBind()
+   en TP_ExamenesEnLinea.ExamenesDisponiblesAlumnos.cargarGvExamenes(Int32 id_p) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\ExamenesDisponiblesAlumnos.aspx.cs:línea 33
+
+<===========================================================================>
+
+ Fecha del Log : 09/11/2013 01:41:33 p.m.
+ Error ocurrido en la pagina : http://localhost:56719/LoginUsuario2.aspx
+
+ Descripcion :
+System.Threading.ThreadAbortException: Subproceso anulado.
+   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en TP_ExamenesEnLinea.LoginUsuario2.abrirSesionAlumno(String mailu, String passu) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\LoginUsuario2.aspx.cs:línea 52
+
+<===========================================================================>
+
+ Fecha del Log : 09/11/2013 01:41:36 p.m.
+ Error ocurrido en la pagina : http://localhost:56719/ExamenesDisponiblesAlumnos.aspx
+
+ Descripcion :
+System.InvalidCastException: No se puede convertir un objeto de tipo 'System.Web.UI.WebControls.DataControlFieldCell' al tipo 'System.IConvertible'.
+   en System.Convert.ToInt16(Object value)
+   en TP_ExamenesEnLinea.ExamenesDisponiblesAlumnos.gvexamenes_RowDataBound(Object sender, GridViewRowEventArgs e) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\ExamenesDisponiblesAlumnos.aspx.cs:línea 47
+   en System.Web.UI.WebControls.GridView.OnRowDataBound(GridViewRowEventArgs e)
+   en System.Web.UI.WebControls.GridView.CreateRow(Int32 rowIndex, Int32 dataSourceIndex, DataControlRowType rowType, DataControlRowState rowState, Boolean dataBind, Object dataItem, DataControlField[] fields, TableRowCollection rows, PagedDataSource pagedDataSource)
+   en System.Web.UI.WebControls.GridView.CreateChildControls(IEnumerable dataSource, Boolean dataBinding)
+   en System.Web.UI.WebControls.CompositeDataBoundControl.PerformDataBinding(IEnumerable data)
+   en System.Web.UI.WebControls.GridView.PerformDataBinding(IEnumerable data)
+   en System.Web.UI.WebControls.DataBoundControl.OnDataSourceViewSelectCallback(IEnumerable data)
+   en System.Web.UI.DataSourceView.Select(DataSourceSelectArguments arguments, DataSourceViewSelectCallback callback)
+   en System.Web.UI.WebControls.DataBoundControl.PerformSelect()
+   en System.Web.UI.WebControls.BaseDataBoundControl.DataBind()
+   en System.Web.UI.WebControls.GridView.DataBind()
+   en TP_ExamenesEnLinea.ExamenesDisponiblesAlumnos.cargarGvExamenes(Int32 id_p) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\ExamenesDisponiblesAlumnos.aspx.cs:línea 33
+
+<===========================================================================>
+
+ Fecha del Log : 09/11/2013 01:49:03 p.m.
+ Error ocurrido en la pagina : http://localhost:56719/LoginUsuario2.aspx
+
+ Descripcion :
+System.Threading.ThreadAbortException: Subproceso anulado.
+   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en TP_ExamenesEnLinea.LoginUsuario2.abrirSesionAlumno(String mailu, String passu) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\LoginUsuario2.aspx.cs:línea 52
+
+<===========================================================================>
+
+ Fecha del Log : 09/11/2013 01:49:06 p.m.
+ Error ocurrido en la pagina : http://localhost:56719/ExamenesDisponiblesAlumnos.aspx
+
+ Descripcion :
+System.ArgumentOutOfRangeException: El argumento especificado está fuera del intervalo de valores válidos.
+Nombre del parámetro: index
+   en System.Web.UI.ControlCollection.get_Item(Int32 index)
+   en System.Web.UI.WebControls.TableCellCollection.get_Item(Int32 index)
+   en TP_ExamenesEnLinea.ExamenesDisponiblesAlumnos.gvexamenes_RowDataBound(Object sender, GridViewRowEventArgs e) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\ExamenesDisponiblesAlumnos.aspx.cs:línea 47
+   en System.Web.UI.WebControls.GridView.OnRowDataBound(GridViewRowEventArgs e)
+   en System.Web.UI.WebControls.GridView.CreateRow(Int32 rowIndex, Int32 dataSourceIndex, DataControlRowType rowType, DataControlRowState rowState, Boolean dataBind, Object dataItem, DataControlField[] fields, TableRowCollection rows, PagedDataSource pagedDataSource)
+   en System.Web.UI.WebControls.GridView.CreateChildControls(IEnumerable dataSource, Boolean dataBinding)
+   en System.Web.UI.WebControls.CompositeDataBoundControl.PerformDataBinding(IEnumerable data)
+   en System.Web.UI.WebControls.GridView.PerformDataBinding(IEnumerable data)
+   en System.Web.UI.WebControls.DataBoundControl.OnDataSourceViewSelectCallback(IEnumerable data)
+   en System.Web.UI.DataSourceView.Select(DataSourceSelectArguments arguments, DataSourceViewSelectCallback callback)
+   en System.Web.UI.WebControls.DataBoundControl.PerformSelect()
+   en System.Web.UI.WebControls.BaseDataBoundControl.DataBind()
+   en System.Web.UI.WebControls.GridView.DataBind()
+   en TP_ExamenesEnLinea.ExamenesDisponiblesAlumnos.cargarGvExamenes(Int32 id_p) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\ExamenesDisponiblesAlumnos.aspx.cs:línea 33
+
+<===========================================================================>
+
+ Fecha del Log : 09/11/2013 01:56:17 p.m.
+ Error ocurrido en la pagina : http://localhost:56719/LoginUsuario2.aspx
+
+ Descripcion :
+System.Threading.ThreadAbortException: Subproceso anulado.
+   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en TP_ExamenesEnLinea.LoginUsuario2.abrirSesionAlumno(String mailu, String passu) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\LoginUsuario2.aspx.cs:línea 52
+
+<===========================================================================>
+
+ Fecha del Log : 09/11/2013 01:56:22 p.m.
+ Error ocurrido en la pagina : http://localhost:56719/ExamenesDisponiblesAlumnos.aspx
+
+ Descripcion :
+System.InvalidCastException: No se puede convertir un objeto de tipo 'System.Web.UI.WebControls.DataControlFieldCell' al tipo 'System.IConvertible'.
+   en System.Convert.ToInt32(Object value)
+   en TP_ExamenesEnLinea.ExamenesDisponiblesAlumnos.gvexamenes_RowDataBound(Object sender, GridViewRowEventArgs e) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\ExamenesDisponiblesAlumnos.aspx.cs:línea 47
+   en System.Web.UI.WebControls.GridView.OnRowDataBound(GridViewRowEventArgs e)
+   en System.Web.UI.WebControls.GridView.CreateRow(Int32 rowIndex, Int32 dataSourceIndex, DataControlRowType rowType, DataControlRowState rowState, Boolean dataBind, Object dataItem, DataControlField[] fields, TableRowCollection rows, PagedDataSource pagedDataSource)
+   en System.Web.UI.WebControls.GridView.CreateChildControls(IEnumerable dataSource, Boolean dataBinding)
+   en System.Web.UI.WebControls.CompositeDataBoundControl.PerformDataBinding(IEnumerable data)
+   en System.Web.UI.WebControls.GridView.PerformDataBinding(IEnumerable data)
+   en System.Web.UI.WebControls.DataBoundControl.OnDataSourceViewSelectCallback(IEnumerable data)
+   en System.Web.UI.DataSourceView.Select(DataSourceSelectArguments arguments, DataSourceViewSelectCallback callback)
+   en System.Web.UI.WebControls.DataBoundControl.PerformSelect()
+   en System.Web.UI.WebControls.BaseDataBoundControl.DataBind()
+   en System.Web.UI.WebControls.GridView.DataBind()
+   en TP_ExamenesEnLinea.ExamenesDisponiblesAlumnos.cargarGvExamenes(Int32 id_p) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\ExamenesDisponiblesAlumnos.aspx.cs:línea 33
+
+<===========================================================================>
+
+ Fecha del Log : 09/11/2013 01:59:00 p.m.
+ Error ocurrido en la pagina : http://localhost:56719/LoginUsuario2.aspx
+
+ Descripcion :
+System.Threading.ThreadAbortException: Subproceso anulado.
+   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en TP_ExamenesEnLinea.LoginUsuario2.abrirSesionAlumno(String mailu, String passu) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\LoginUsuario2.aspx.cs:línea 52
+
+<===========================================================================>
+
+ Fecha del Log : 09/11/2013 02:00:27 p.m.
+ Error ocurrido en la pagina : http://localhost:56719/LoginUsuario2.aspx
+
+ Descripcion :
+System.Threading.ThreadAbortException: Subproceso anulado.
+   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en TP_ExamenesEnLinea.LoginUsuario2.abrirSesionAlumno(String mailu, String passu) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\LoginUsuario2.aspx.cs:línea 52
+
+<===========================================================================>
+
+ Fecha del Log : 09/11/2013 02:10:54 p.m.
+ Error ocurrido en la pagina : http://localhost:56719/LoginUsuario2.aspx
+
+ Descripcion :
+System.Threading.ThreadAbortException: Subproceso anulado.
+   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en TP_ExamenesEnLinea.LoginUsuario2.abrirSesionAlumno(String mailu, String passu) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\LoginUsuario2.aspx.cs:línea 52
+
+<===========================================================================>
+
+ Fecha del Log : 09/11/2013 02:10:57 p.m.
+ Error ocurrido en la pagina : http://localhost:56719/ExamenesDisponiblesAlumnos.aspx
+
+ Descripcion :
+System.ArgumentOutOfRangeException: El argumento especificado está fuera del intervalo de valores válidos.
+Nombre del parámetro: index
+   en System.Web.UI.ControlCollection.get_Item(Int32 index)
+   en System.Web.UI.WebControls.TableCellCollection.get_Item(Int32 index)
+   en TP_ExamenesEnLinea.ExamenesDisponiblesAlumnos.gvexamenes_RowDataBound(Object sender, GridViewRowEventArgs e) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\ExamenesDisponiblesAlumnos.aspx.cs:línea 47
+   en System.Web.UI.WebControls.GridView.OnRowDataBound(GridViewRowEventArgs e)
+   en System.Web.UI.WebControls.GridView.CreateRow(Int32 rowIndex, Int32 dataSourceIndex, DataControlRowType rowType, DataControlRowState rowState, Boolean dataBind, Object dataItem, DataControlField[] fields, TableRowCollection rows, PagedDataSource pagedDataSource)
+   en System.Web.UI.WebControls.GridView.CreateChildControls(IEnumerable dataSource, Boolean dataBinding)
+   en System.Web.UI.WebControls.CompositeDataBoundControl.PerformDataBinding(IEnumerable data)
+   en System.Web.UI.WebControls.GridView.PerformDataBinding(IEnumerable data)
+   en System.Web.UI.WebControls.DataBoundControl.OnDataSourceViewSelectCallback(IEnumerable data)
+   en System.Web.UI.DataSourceView.Select(DataSourceSelectArguments arguments, DataSourceViewSelectCallback callback)
+   en System.Web.UI.WebControls.DataBoundControl.PerformSelect()
+   en System.Web.UI.WebControls.BaseDataBoundControl.DataBind()
+   en System.Web.UI.WebControls.GridView.DataBind()
+   en TP_ExamenesEnLinea.ExamenesDisponiblesAlumnos.cargarGvExamenes(Int32 id_p) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\ExamenesDisponiblesAlumnos.aspx.cs:línea 33
+
+<===========================================================================>
+
+ Fecha del Log : 09/11/2013 02:12:35 p.m.
+ Error ocurrido en la pagina : http://localhost:56719/LoginUsuario2.aspx
+
+ Descripcion :
+System.Threading.ThreadAbortException: Subproceso anulado.
+   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en TP_ExamenesEnLinea.LoginUsuario2.abrirSesionAlumno(String mailu, String passu) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\LoginUsuario2.aspx.cs:línea 52
+
+<===========================================================================>
+
+ Fecha del Log : 09/11/2013 02:12:38 p.m.
+ Error ocurrido en la pagina : http://localhost:56719/ExamenesDisponiblesAlumnos.aspx
+
+ Descripcion :
+System.FormatException: La cadena de entrada no tiene el formato correcto.
+   en System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   en System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   en System.Convert.ToInt32(String value)
+   en TP_ExamenesEnLinea.ExamenesDisponiblesAlumnos.gvexamenes_RowDataBound(Object sender, GridViewRowEventArgs e) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\ExamenesDisponiblesAlumnos.aspx.cs:línea 47
+   en System.Web.UI.WebControls.GridView.OnRowDataBound(GridViewRowEventArgs e)
+   en System.Web.UI.WebControls.GridView.CreateRow(Int32 rowIndex, Int32 dataSourceIndex, DataControlRowType rowType, DataControlRowState rowState, Boolean dataBind, Object dataItem, DataControlField[] fields, TableRowCollection rows, PagedDataSource pagedDataSource)
+   en System.Web.UI.WebControls.GridView.CreateChildControls(IEnumerable dataSource, Boolean dataBinding)
+   en System.Web.UI.WebControls.CompositeDataBoundControl.PerformDataBinding(IEnumerable data)
+   en System.Web.UI.WebControls.GridView.PerformDataBinding(IEnumerable data)
+   en System.Web.UI.WebControls.DataBoundControl.OnDataSourceViewSelectCallback(IEnumerable data)
+   en System.Web.UI.DataSourceView.Select(DataSourceSelectArguments arguments, DataSourceViewSelectCallback callback)
+   en System.Web.UI.WebControls.DataBoundControl.PerformSelect()
+   en System.Web.UI.WebControls.BaseDataBoundControl.DataBind()
+   en System.Web.UI.WebControls.GridView.DataBind()
+   en TP_ExamenesEnLinea.ExamenesDisponiblesAlumnos.cargarGvExamenes(Int32 id_p) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\ExamenesDisponiblesAlumnos.aspx.cs:línea 33
+
+<===========================================================================>
+
+ Fecha del Log : 09/11/2013 02:14:12 p.m.
+ Error ocurrido en la pagina : http://localhost:56719/LoginUsuario2.aspx
+
+ Descripcion :
+System.Threading.ThreadAbortException: Subproceso anulado.
+   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en TP_ExamenesEnLinea.LoginUsuario2.abrirSesionAlumno(String mailu, String passu) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\LoginUsuario2.aspx.cs:línea 52
+
+<===========================================================================>
+
+ Fecha del Log : 09/11/2013 02:14:15 p.m.
+ Error ocurrido en la pagina : http://localhost:56719/ExamenesDisponiblesAlumnos.aspx
+
+ Descripcion :
+System.FormatException: La cadena de entrada no tiene el formato correcto.
+   en System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   en System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   en System.Convert.ToInt32(String value)
+   en TP_ExamenesEnLinea.ExamenesDisponiblesAlumnos.gvexamenes_RowDataBound(Object sender, GridViewRowEventArgs e) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\ExamenesDisponiblesAlumnos.aspx.cs:línea 47
+   en System.Web.UI.WebControls.GridView.OnRowDataBound(GridViewRowEventArgs e)
+   en System.Web.UI.WebControls.GridView.CreateRow(Int32 rowIndex, Int32 dataSourceIndex, DataControlRowType rowType, DataControlRowState rowState, Boolean dataBind, Object dataItem, DataControlField[] fields, TableRowCollection rows, PagedDataSource pagedDataSource)
+   en System.Web.UI.WebControls.GridView.CreateChildControls(IEnumerable dataSource, Boolean dataBinding)
+   en System.Web.UI.WebControls.CompositeDataBoundControl.PerformDataBinding(IEnumerable data)
+   en System.Web.UI.WebControls.GridView.PerformDataBinding(IEnumerable data)
+   en System.Web.UI.WebControls.DataBoundControl.OnDataSourceViewSelectCallback(IEnumerable data)
+   en System.Web.UI.DataSourceView.Select(DataSourceSelectArguments arguments, DataSourceViewSelectCallback callback)
+   en System.Web.UI.WebControls.DataBoundControl.PerformSelect()
+   en System.Web.UI.WebControls.BaseDataBoundControl.DataBind()
+   en System.Web.UI.WebControls.GridView.DataBind()
+   en TP_ExamenesEnLinea.ExamenesDisponiblesAlumnos.cargarGvExamenes(Int32 id_p) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\ExamenesDisponiblesAlumnos.aspx.cs:línea 33
+
+<===========================================================================>
+
+ Fecha del Log : 09/11/2013 02:27:40 p.m.
+ Error ocurrido en la pagina : http://localhost:56719/LoginUsuario2.aspx
+
+ Descripcion :
+System.Threading.ThreadAbortException: Subproceso anulado.
+   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en TP_ExamenesEnLinea.LoginUsuario2.abrirSesionAlumno(String mailu, String passu) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\LoginUsuario2.aspx.cs:línea 52
+
+<===========================================================================>
+
+ Fecha del Log : 09/11/2013 03:28:25 p.m.
+ Error ocurrido en la pagina : http://localhost:56719/LoginUsuario2.aspx
+
+ Descripcion :
+System.Threading.ThreadAbortException: Subproceso anulado.
+   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en TP_ExamenesEnLinea.LoginUsuario2.abrirSesionAlumno(String mailu, String passu) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\LoginUsuario2.aspx.cs:línea 52
+
+<===========================================================================>
+
+ Fecha del Log : 09/11/2013 03:33:47 p.m.
+ Error ocurrido en la pagina : http://localhost:56719/LoginUsuario2.aspx
+
+ Descripcion :
+System.Threading.ThreadAbortException: Subproceso anulado.
+   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en TP_ExamenesEnLinea.LoginUsuario2.abrirSesionAlumno(String mailu, String passu) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\LoginUsuario2.aspx.cs:línea 52
+
+<===========================================================================>
+
+ Fecha del Log : 09/11/2013 03:35:01 p.m.
+ Error ocurrido en la pagina : http://localhost:56719/LoginUsuario2.aspx
+
+ Descripcion :
+System.Threading.ThreadAbortException: Subproceso anulado.
+   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en TP_ExamenesEnLinea.LoginUsuario2.abrirSesionAlumno(String mailu, String passu) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\LoginUsuario2.aspx.cs:línea 52
+
+<===========================================================================>
+
+ Fecha del Log : 09/11/2013 03:38:04 p.m.
+ Error ocurrido en la pagina : http://localhost:56719/LoginUsuario2.aspx
+
+ Descripcion :
+System.Threading.ThreadAbortException: Subproceso anulado.
+   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en TP_ExamenesEnLinea.LoginUsuario2.abrirSesionAlumno(String mailu, String passu) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\LoginUsuario2.aspx.cs:línea 52
+
+<===========================================================================>
+
+ Fecha del Log : 09/11/2013 03:39:29 p.m.
+ Error ocurrido en la pagina : http://localhost:56719/LoginUsuario2.aspx
+
+ Descripcion :
+System.Threading.ThreadAbortException: Subproceso anulado.
+   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en TP_ExamenesEnLinea.LoginUsuario2.abrirSesionAlumno(String mailu, String passu) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\LoginUsuario2.aspx.cs:línea 52
+
+<===========================================================================>
+
+ Fecha del Log : 09/11/2013 03:40:41 p.m.
+ Error ocurrido en la pagina : http://localhost:56719/LoginUsuario2.aspx
+
+ Descripcion :
+System.Threading.ThreadAbortException: Subproceso anulado.
+   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en TP_ExamenesEnLinea.LoginUsuario2.abrirSesionAlumno(String mailu, String passu) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\LoginUsuario2.aspx.cs:línea 52
+
+<===========================================================================>
+
+ Fecha del Log : 09/11/2013 03:43:30 p.m.
+ Error ocurrido en la pagina : http://localhost:56719/LoginUsuario2.aspx
+
+ Descripcion :
+System.Threading.ThreadAbortException: Subproceso anulado.
+   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en TP_ExamenesEnLinea.LoginUsuario2.abrirSesionAlumno(String mailu, String passu) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\LoginUsuario2.aspx.cs:línea 52
+
+<===========================================================================>
+
+ Fecha del Log : 09/11/2013 03:44:34 p.m.
+ Error ocurrido en la pagina : http://localhost:56719/LoginUsuario.aspx
+
+ Descripcion :
+System.Threading.ThreadAbortException: Subproceso anulado.
+   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en TP_ExamenesEnLinea.LoginUsuario.abrirSesionProfesor(String passUsuario, String mailU) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\LoginUsuario.aspx.cs:línea 46
+
+<===========================================================================>
+
+ Fecha del Log : 09/11/2013 04:18:44 p.m.
+ Error ocurrido en la pagina : http://localhost:56719/LoginUsuario2.aspx
+
+ Descripcion :
+System.Threading.ThreadAbortException: Subproceso anulado.
+   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en TP_ExamenesEnLinea.LoginUsuario2.abrirSesionAlumno(String mailu, String passu) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\LoginUsuario2.aspx.cs:línea 52
+
+<===========================================================================>
+
+ Fecha del Log : 09/11/2013 04:22:09 p.m.
+ Error ocurrido en la pagina : http://localhost:56719/LoginUsuario.aspx
+
+ Descripcion :
+System.Threading.ThreadAbortException: Subproceso anulado.
+   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en TP_ExamenesEnLinea.LoginUsuario.abrirSesionProfesor(String passUsuario, String mailU) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\LoginUsuario.aspx.cs:línea 46
+
+<===========================================================================>
+
+ Fecha del Log : 09/11/2013 04:22:18 p.m.
+ Error ocurrido en la pagina : http://localhost:56719/LoginUsuario2.aspx
+
+ Descripcion :
+System.Threading.ThreadAbortException: Subproceso anulado.
+   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en TP_ExamenesEnLinea.LoginUsuario2.abrirSesionAlumno(String mailu, String passu) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\LoginUsuario2.aspx.cs:línea 52
+
+<===========================================================================>
+
+ Fecha del Log : 09/11/2013 04:22:22 p.m.
+ Error ocurrido en la pagina : http://localhost:56719/ExamenesDisponiblesAlumnos.aspx
+
+ Descripcion :
+System.FormatException: La cadena de entrada no tiene el formato correcto.
+   en System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   en System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   en System.Convert.ToInt32(String value)
+   en TP_ExamenesEnLinea.ExamenesDisponiblesAlumnos.gvexamenes_RowDataBound(Object sender, GridViewRowEventArgs e) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\ExamenesDisponiblesAlumnos.aspx.cs:línea 47
+   en System.Web.UI.WebControls.GridView.OnRowDataBound(GridViewRowEventArgs e)
+   en System.Web.UI.WebControls.GridView.CreateRow(Int32 rowIndex, Int32 dataSourceIndex, DataControlRowType rowType, DataControlRowState rowState, Boolean dataBind, Object dataItem, DataControlField[] fields, TableRowCollection rows, PagedDataSource pagedDataSource)
+   en System.Web.UI.WebControls.GridView.CreateChildControls(IEnumerable dataSource, Boolean dataBinding)
+   en System.Web.UI.WebControls.CompositeDataBoundControl.PerformDataBinding(IEnumerable data)
+   en System.Web.UI.WebControls.GridView.PerformDataBinding(IEnumerable data)
+   en System.Web.UI.WebControls.DataBoundControl.OnDataSourceViewSelectCallback(IEnumerable data)
+   en System.Web.UI.DataSourceView.Select(DataSourceSelectArguments arguments, DataSourceViewSelectCallback callback)
+   en System.Web.UI.WebControls.DataBoundControl.PerformSelect()
+   en System.Web.UI.WebControls.BaseDataBoundControl.DataBind()
+   en System.Web.UI.WebControls.GridView.DataBind()
+   en TP_ExamenesEnLinea.ExamenesDisponiblesAlumnos.cargarGvExamenes(Int32 id_p) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\ExamenesDisponiblesAlumnos.aspx.cs:línea 33
+
+<===========================================================================>
+
+ Fecha del Log : 09/11/2013 04:26:21 p.m.
+ Error ocurrido en la pagina : http://localhost:56719/LoginUsuario2.aspx
+
+ Descripcion :
+System.Threading.ThreadAbortException: Subproceso anulado.
+   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en TP_ExamenesEnLinea.LoginUsuario2.abrirSesionAlumno(String mailu, String passu) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\LoginUsuario2.aspx.cs:línea 52
+
+<===========================================================================>
+
+ Fecha del Log : 09/11/2013 04:27:11 p.m.
+ Error ocurrido en la pagina : http://localhost:56719/LoginUsuario2.aspx
+
+ Descripcion :
+System.Threading.ThreadAbortException: Subproceso anulado.
+   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en TP_ExamenesEnLinea.LoginUsuario2.abrirSesionAlumno(String mailu, String passu) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\LoginUsuario2.aspx.cs:línea 52
+
+<===========================================================================>
+
+ Fecha del Log : 09/11/2013 04:28:37 p.m.
+ Error ocurrido en la pagina : http://localhost:56719/LoginUsuario.aspx
+
+ Descripcion :
+System.Threading.ThreadAbortException: Subproceso anulado.
+   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en TP_ExamenesEnLinea.LoginUsuario.abrirSesionProfesor(String passUsuario, String mailU) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\LoginUsuario.aspx.cs:línea 46
+
+<===========================================================================>
+
+ Fecha del Log : 09/11/2013 08:05:22 p.m.
+ Error ocurrido en la pagina : http://localhost:56719/LoginUsuario.aspx
+
+ Descripcion :
+System.Threading.ThreadAbortException: Subproceso anulado.
+   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en TP_ExamenesEnLinea.LoginUsuario.abrirSesionProfesor(String passUsuario, String mailU) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\LoginUsuario.aspx.cs:línea 46
+
+<===========================================================================>
+
+ Fecha del Log : 09/11/2013 09:06:46 p.m.
+ Error ocurrido en la pagina : http://localhost:56719/LoginUsuario.aspx
+
+ Descripcion :
+System.Threading.ThreadAbortException: Subproceso anulado.
+   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en TP_ExamenesEnLinea.LoginUsuario.abrirSesionProfesor(String passUsuario, String mailU) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\LoginUsuario.aspx.cs:línea 46
+
+<===========================================================================>
+
+ Fecha del Log : 09/11/2013 09:11:11 p.m.
+ Error ocurrido en la pagina : http://localhost:56719/LoginUsuario.aspx
+
+ Descripcion :
+System.Threading.ThreadAbortException: Subproceso anulado.
+   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en TP_ExamenesEnLinea.LoginUsuario.abrirSesionProfesor(String passUsuario, String mailU) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\LoginUsuario.aspx.cs:línea 46
+
+<===========================================================================>
+
+ Fecha del Log : 09/11/2013 09:21:33 p.m.
+ Error ocurrido en la pagina : http://localhost:56719/LoginUsuario2.aspx
+
+ Descripcion :
+System.Threading.ThreadAbortException: Subproceso anulado.
+   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en TP_ExamenesEnLinea.LoginUsuario2.abrirSesionAlumno(String mailu, String passu) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\LoginUsuario2.aspx.cs:línea 52
+
+<===========================================================================>
+
+ Fecha del Log : 09/11/2013 09:23:23 p.m.
+ Error ocurrido en la pagina : http://localhost:56719/LoginUsuario2.aspx
+
+ Descripcion :
+System.Threading.ThreadAbortException: Subproceso anulado.
+   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en TP_ExamenesEnLinea.LoginUsuario2.abrirSesionAlumno(String mailu, String passu) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\LoginUsuario2.aspx.cs:línea 52
+
+<===========================================================================>
+
+ Fecha del Log : 09/11/2013 09:26:44 p.m.
+ Error ocurrido en la pagina : http://localhost:56719/LoginUsuario2.aspx
+
+ Descripcion :
+System.Threading.ThreadAbortException: Subproceso anulado.
+   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en TP_ExamenesEnLinea.LoginUsuario2.abrirSesionAlumno(String mailu, String passu) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\LoginUsuario2.aspx.cs:línea 52
+
+<===========================================================================>
+
+ Fecha del Log : 09/11/2013 09:28:11 p.m.
+ Error ocurrido en la pagina : http://localhost:56719/LoginUsuario2.aspx
+
+ Descripcion :
+System.Threading.ThreadAbortException: Subproceso anulado.
+   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en TP_ExamenesEnLinea.LoginUsuario2.abrirSesionAlumno(String mailu, String passu) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\LoginUsuario2.aspx.cs:línea 52
+
+<===========================================================================>
+
+ Fecha del Log : 09/11/2013 09:29:43 p.m.
+ Error ocurrido en la pagina : http://localhost:56719/LoginUsuario.aspx
+
+ Descripcion :
+System.Threading.ThreadAbortException: Subproceso anulado.
+   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en TP_ExamenesEnLinea.LoginUsuario.abrirSesionProfesor(String passUsuario, String mailU) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\LoginUsuario.aspx.cs:línea 46
+
+<===========================================================================>
+
+ Fecha del Log : 09/11/2013 09:31:10 p.m.
+ Error ocurrido en la pagina : http://localhost:56719/LoginUsuario.aspx
+
+ Descripcion :
+System.Threading.ThreadAbortException: Subproceso anulado.
+   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en TP_ExamenesEnLinea.LoginUsuario.abrirSesionProfesor(String passUsuario, String mailU) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\LoginUsuario.aspx.cs:línea 46
+
+<===========================================================================>
+
+ Fecha del Log : 09/11/2013 09:32:31 p.m.
+ Error ocurrido en la pagina : http://localhost:56719/LoginUsuario.aspx
+
+ Descripcion :
+System.Threading.ThreadAbortException: Subproceso anulado.
+   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en TP_ExamenesEnLinea.LoginUsuario.abrirSesionProfesor(String passUsuario, String mailU) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\LoginUsuario.aspx.cs:línea 46
+
+<===========================================================================>
+
+ Fecha del Log : 09/11/2013 09:36:30 p.m.
+ Error ocurrido en la pagina : http://localhost:56719/LoginUsuario.aspx
+
+ Descripcion :
+System.Threading.ThreadAbortException: Subproceso anulado.
+   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en TP_ExamenesEnLinea.LoginUsuario.abrirSesionProfesor(String passUsuario, String mailU) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\LoginUsuario.aspx.cs:línea 46
+
+<===========================================================================>

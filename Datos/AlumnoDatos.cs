@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Data.SqlClient;
 using System.Data;
+using System.Data.Objects;
 
 namespace Datos
 {
@@ -93,7 +94,10 @@ namespace Datos
 
         public bool BuscarExamenes(int id_p)
         {
-            RESULTADO resul = ctx.Resultados.Where(r => r.AlumnoId == id_p).FirstOrDefault();
+            var resul = (from cl in ctx.CursosAl
+                         join ex in ctx.Examenes on cl.IDCURSO equals ex.CursoId
+                         where cl.IDALUMNO == id_p
+                         select ex).FirstOrDefault();
             if (resul != null)
                 return true;
             else
@@ -127,6 +131,35 @@ namespace Datos
                           where ula.Mail == p
                           select ula.IdAlumno).First();
             return ultimo;
+        }
+
+        public bool buscaIdAlumnoRegistrados(int id_c, int IdAlumno)
+        {
+            Curso_Alumno cural = ctx.CursosAl.Where(m => m.IDALUMNO == IdAlumno && m.IDCURSO == id_c).FirstOrDefault();
+            bool resulta;
+            if (cural != null)
+                resulta = true;
+            else
+                resulta = false;
+            return resulta;
+        }
+
+        public void borrarDelCurso(string p)
+        {
+            int id = obtenerIdPorMail(p);
+            var elimina = (from e in ctx.CursosAl
+                           where e.IDALUMNO == id
+                           select e);
+            foreach (Curso_Alumno cal in elimina)
+                ctx.CursosAl.DeleteObject(cal);
+            ctx.SaveChanges();
+        }
+
+        public object consultarExamenes(int id_p)
+        {
+            ObjectParameter _idAl = new ObjectParameter("id_Alumno", typeof(String));
+            var resulta = ctx.listar_examenes(id_p);
+            return resulta;
         }
     }
 }

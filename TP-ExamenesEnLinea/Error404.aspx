@@ -9,6 +9,7 @@
         media="all" />
     <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-responsive.min.css"
         media="all" />
+    <link rel="Shortcut Icon" href="imagen/Error.png" />
     <title>Error!</title>
 </head>
 <body class="body">
@@ -17,7 +18,9 @@
      <i class="icon-info-sign"></i> No existe la página solicitada</h2>
     Por favor, verifique la url de la pagina a la que quiere acceder.<br />
     <br />
-    Volver al<a href="~/Index.aspx"> Index</a>
+    <asp:Image ID="Image1" src="imagen/404.jpg" CssClass="img-circle" runat="server" />
+    <br />
+    Volver al<a href="Index.aspx"> Index</a>
   </center>
 </body>
 </html>

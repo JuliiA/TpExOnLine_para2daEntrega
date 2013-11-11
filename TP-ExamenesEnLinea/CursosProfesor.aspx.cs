@@ -36,9 +36,10 @@ namespace TP_ExamenesEnLinea
         {
             try
             {
-                gvcursos.DataSource = elServicio.muestraCursos(idlogueado);
-                gvcursos.DataBind();
-
+                //gvcursos.DataSource = elServicio.muestraCursos(idlogueado);
+                //gvcursos.DataBind();
+                gvprueba.DataSource = elServicio.muestraCursos(idlogueado);
+                gvprueba.DataBind();
             }
             catch (Exception ex)
             {
@@ -50,27 +51,35 @@ namespace TP_ExamenesEnLinea
         
         protected void gvcursos_RowCreated(object sender, GridViewRowEventArgs e)
         {
-            e.Row.Cells[3].Visible = false;
-            e.Row.Cells[8].Visible = false;
+            e.Row.Cells[2].Visible = false;
+            e.Row.Cells[7].Visible = false;
         }
 
         protected void gvcursos_RowDataBound(object sender, GridViewRowEventArgs e)
         {
-            if (e.Row.RowType == DataControlRowType.DataRow) {
-                switch (Convert.ToInt32(e.Row.Cells[5].Text)) {
-                    case 1: e.Row.Cells[5].Text = "Activado"; break;
-                    case 2: e.Row.Cells[5].Text = "Desactivado"; break;
+            if (e.Row.RowType == DataControlRowType.DataRow)
+            {
+                switch (Convert.ToInt32(e.Row.Cells[4].Text))
+                {
+                    case 1: e.Row.Cells[4].Text = "Activado"; break;
+                    case 2: e.Row.Cells[4].Text = "Desactivado"; break;
                 }
-             }
+                switch (Convert.ToInt32(e.Row.Cells[8].Text))
+                {
+                    case 1: e.Row.Cells[8].Text = "Sin Alumnos"; break;
+                }
+            }
+           
         }
 
         protected void gvcursos_SelectedIndexChanging(object sender, GridViewSelectEventArgs e)
         {
             //esto se prueba con el HiperLinkField del aspx
-            GridViewRow rw = gvcursos.Rows[e.NewSelectedIndex];
-            this.lblmensaje.Text = Convert.ToString(gvcursos.DataKeys[rw.RowIndex].Values["idcurso"]);
+            GridViewRow rw = gvprueba.Rows[e.NewSelectedIndex];
+            this.lblmensaje.Text = Convert.ToString(gvprueba.DataKeys[rw.RowIndex].Values["_idcurso"]);
 
         }
+
 
 
         

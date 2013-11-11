@@ -22,12 +22,12 @@ namespace TP_ExamenesEnLinea {
         protected global::System.Web.UI.WebControls.Label lblmensaje;
         
         /// <summary>
-        /// Control gvcursos.
+        /// Control gvprueba.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gvcursos;
+        protected global::System.Web.UI.WebControls.GridView gvprueba;
     }
 }

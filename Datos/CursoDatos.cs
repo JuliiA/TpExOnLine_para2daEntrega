@@ -10,21 +10,42 @@ namespace Datos
     public class CursoDatos
     {
         ExOnLineEntities ctxto = new ExOnLineEntities();
-        public object listarCursos(int idlogueado)
+       
+        public List<CursoEntidad> listarCursosCantidad(int idlogueado)
         {
-            var curso = (from p in ctxto.Profesores
-                         join c in ctxto.Cursos on p.IdProfesor equals c.ProfId
-                         where p.IdProfesor == idlogueado
-                         select c).ToList();
+            //List<CursoEntidad> concatena;
+            var curso = (from c in ctxto.Cursos
+                         join c in ctxto.CursosAl on c.IdCurso equals c.IDCURSO
+                         into c2
+                         from fd in c2.DefaultIfEmpty()
+                         where c.ProfId == idlogueado
+                         group c by new
+                         {
+                             idCurso2 = c.IdCurso,
+                             Nombre2 = c.Nombre,
+                             Activo2 = (int)c.Estado,
+                             FecahIni2 = (DateTime)c.FecIni,
+                             FechaFin2 = (DateTime)c.FecFin,
+                             idProf2 = c.ProfId
+                         }
+                         //hago la junta de cantidad con la lista obtenida de cursos
+                             into agrupa
+                             let cantidadAlumnos = agrupa.Count()
+                             orderby cantidadAlumnos
+                         //agrupo los datos obtenidos en una nueva clase CursoEntidad
+                             select new CursoEntidad
+                             {
+                                 _idcurso = agrupa.Key.idCurso2,
+                                 CURSO = agrupa.Key.Nombre2,
+                                 estado = (int)agrupa.Key.Activo2,
+                                 FECHA_INICIO = (DateTime)agrupa.Key.FecahIni2,
+                                 FECHA_FIN = (DateTime)agrupa.Key.FechaFin2,
+                                 _profid = (int)agrupa.Key.idProf2,
+                                 CANTIDAD_ALUMNOS = cantidadAlumnos
+                             }).ToList();
             return curso;
         }
-
-        //public void modificarCurso(int id_p, string Curso_Nombre, string Examen_Nombre, string Fecha_Examen, int totalRind)
-        //{
-        //    CURSO miCurso= (from c in ctxto.Cursos
-        //                    where c.ProfId == id_p
-        //}
-
+  
         public string buscarNombreCurso(int id_c)
         {
             CURSO miCurso = ctxto.Cursos.Where(c => c.IdCurso == id_c).First();
@@ -101,7 +122,7 @@ namespace Datos
             ctxto.SaveChanges();
         }
 
-        public string obtenerTotalAlumnos(int p)
+        private string obtenerTotalAlumnos(int p)
         {
             string total;
             int cantA = (from cl in ctxto.CursosAl
@@ -129,6 +150,28 @@ namespace Datos
                         where m.IDCURSO == id_c
                         select pe.Mail).ToList();
             return mail;
+        }
+
+        public DateTime obtenerFechafin(int id_c)
+        {
+            var fecha = (from fin in ctxto.Cursos
+                         where fin.IdCurso == id_c
+                         select fin.FecFin).FirstOrDefault();
+            DateTime fefinal = Convert.ToDateTime(fecha);
+            return fefinal;
+        }
+
+        public void CargarDatos(int id_c, string p, bool p_2, DateTime dateTime, DateTime dateTime_2)
+        {
+            CURSO edcur = ctxto.Cursos.Where(s => s.IdCurso == id_c).First();
+
+            edcur.IdCurso = id_c;
+            edcur.Nombre = p;
+            edcur.Estado = Convert.ToInt32(p_2);
+            edcur.FecIni = dateTime;
+            edcur.FecFin = dateTime_2;
+
+            ctxto.SaveChanges();
         }
     }
 }

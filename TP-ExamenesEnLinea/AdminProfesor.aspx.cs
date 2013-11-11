@@ -37,7 +37,7 @@ namespace TP_ExamenesEnLinea
                     if (mails != null)
                     {
                         //cadena que resulta de busqueda en el texto ingresado como separador
-                        char[] delimiterChars = { ',' };
+                        char[] delimiterChars = { ';' };
                         //creo un array 
                         string[] words = mails.Split(delimiterChars);
                         elServicio.crearBucle(words, nombre);

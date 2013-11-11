@@ -45,8 +45,6 @@
                             <asp:Button ID="Button1" runat="server" class="btn btn-success" Text="Ingresar" 
                                 onclick="Button1_Click" />
                             <br />
-                             <a href="EditarDatosAlumno.aspx">
-                                [ENTRAR COMO ALUMNO]</a>
                             <asp:Label ID="lblmensaje" runat="server" Text="Mensaje" CssClass="text-danger"></asp:Label>
                         </div>
                     </div>
@@ -61,7 +59,7 @@
         </form>
         <div id="pie">
             <div class="modal-footer">
-                <i class="icon-star"></i>Copyright 2013- Avellaneda Juliana, Vaccaro Cecilia</div>
+                <i class="icon-star"></i>Copyright 2013- Avellaneda Juliana</div>
         </div>
     </div>
 </body>

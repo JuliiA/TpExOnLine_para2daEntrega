@@ -1,0 +1,287 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ExamenOnLineModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="ExOnLineEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Alumnos" EntityType="ExamenOnLineModel.ALUMNO" />
+    <EntitySet Name="Cursos" EntityType="ExamenOnLineModel.CURSO" />
+    <EntitySet Name="Examenes" EntityType="ExamenOnLineModel.EXAMEN" />
+    <EntitySet Name="Preguntas" EntityType="ExamenOnLineModel.PREGUNTA" />
+    <EntitySet Name="Profesores" EntityType="ExamenOnLineModel.PROFESOR" />
+    <EntitySet Name="Respuestas" EntityType="ExamenOnLineModel.RESPUESTA" />
+    <EntitySet Name="Resultados" EntityType="ExamenOnLineModel.RESULTADO" />
+    <AssociationSet Name="FK_RESULTADO_ALUMNO" Association="ExamenOnLineModel.FK_RESULTADO_ALUMNO">
+      <End Role="ALUMNO" EntitySet="Alumnos" />
+      <End Role="RESULTADO" EntitySet="Resultados" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CURSO_PROFESOR" Association="ExamenOnLineModel.FK_CURSO_PROFESOR">
+      <End Role="PROFESOR" EntitySet="Profesores" />
+      <End Role="CURSO" EntitySet="Cursos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EXAMEN_CURSO" Association="ExamenOnLineModel.FK_EXAMEN_CURSO">
+      <End Role="CURSO" EntitySet="Cursos" />
+      <End Role="EXAMEN" EntitySet="Examenes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PREGUNTA_EXAMEN" Association="ExamenOnLineModel.FK_PREGUNTA_EXAMEN">
+      <End Role="EXAMEN" EntitySet="Examenes" />
+      <End Role="PREGUNTA" EntitySet="Preguntas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RESULTADO_EXAMEN" Association="ExamenOnLineModel.FK_RESULTADO_EXAMEN">
+      <End Role="EXAMEN" EntitySet="Examenes" />
+      <End Role="RESULTADO" EntitySet="Resultados" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RESPUESTA_PREGUNTA" Association="ExamenOnLineModel.FK_RESPUESTA_PREGUNTA">
+      <End Role="PREGUNTA" EntitySet="Preguntas" />
+      <End Role="RESPUESTA" EntitySet="Respuestas" />
+    </AssociationSet>
+    <EntitySet Name="CursosAl" EntityType="ExamenOnLineModel.Curso_Alumno" />
+    <AssociationSet Name="FK_Curso_Alumno_ALUMNO" Association="ExamenOnLineModel.FK_Curso_Alumno_ALUMNO">
+      <End Role="ALUMNO" EntitySet="Alumnos" />
+      <End Role="Curso_Alumno" EntitySet="CursosAl" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Curso_Alumno_CURSO" Association="ExamenOnLineModel.FK_Curso_Alumno_CURSO">
+      <End Role="CURSO" EntitySet="Cursos" />
+      <End Role="Curso_Alumno" EntitySet="CursosAl" />
+    </AssociationSet>
+    <EntitySet Name="Porcentaje" EntityType="ExamenOnLineModel.TabPorcentaje" />
+    <AssociationSet Name="FK_TabPorcentaje_EXAMEN" Association="ExamenOnLineModel.FK_TabPorcentaje_EXAMEN">
+      <End Role="EXAMEN" EntitySet="Examenes" />
+      <End Role="TabPorcentaje" EntitySet="Porcentaje" />
+    </AssociationSet>
+    <FunctionImport Name="listar_examenes" ReturnType="Collection(ExamenOnLineModel.listar_examenes_Result)">
+      <Parameter Name="id_Alumno" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="ExamenesProfesor" ReturnType="Collection(ExamenOnLineModel.ExamenesProfesor_Result)">
+      <Parameter Name="Id_Profesor" Mode="In" Type="Int32" />
+    </FunctionImport>
+  </EntityContainer>
+  <EntityType Name="ALUMNO">
+    <Key>
+      <PropertyRef Name="IdAlumno" />
+    </Key>
+    <Property Type="Int32" Name="IdAlumno" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int64" Name="DNI" />
+    <Property Type="String" Name="Nombre" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Apellido" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Mail" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Contrasenia" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="RESULTADO" Relationship="ExamenOnLineModel.FK_RESULTADO_ALUMNO" FromRole="ALUMNO" ToRole="RESULTADO" />
+    <NavigationProperty Name="Curso_Alumno" Relationship="ExamenOnLineModel.FK_Curso_Alumno_ALUMNO" FromRole="ALUMNO" ToRole="Curso_Alumno" />
+  </EntityType>
+  <EntityType Name="CURSO">
+    <Key>
+      <PropertyRef Name="IdCurso" />
+    </Key>
+    <Property Type="Int32" Name="IdCurso" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Nombre" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="Estado" />
+    <Property Type="DateTime" Name="FecIni" />
+    <Property Type="DateTime" Name="FecFin" />
+    <Property Type="Int32" Name="ProfId" />
+    <NavigationProperty Name="PROFESOR" Relationship="ExamenOnLineModel.FK_CURSO_PROFESOR" FromRole="CURSO" ToRole="PROFESOR" />
+    <NavigationProperty Name="EXAMEN" Relationship="ExamenOnLineModel.FK_EXAMEN_CURSO" FromRole="CURSO" ToRole="EXAMEN" />
+    <NavigationProperty Name="Curso_Alumno" Relationship="ExamenOnLineModel.FK_Curso_Alumno_CURSO" FromRole="CURSO" ToRole="Curso_Alumno" />
+  </EntityType>
+  <EntityType Name="EXAMEN">
+    <Key>
+      <PropertyRef Name="IdExamen" />
+    </Key>
+    <Property Type="Int32" Name="IdExamen" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Nombre" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Descripcion" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="Duracion" />
+    <Property Type="DateTime" Name="FecHora" />
+    <Property Type="Int32" Name="CursoId" />
+    <NavigationProperty Name="CURSO" Relationship="ExamenOnLineModel.FK_EXAMEN_CURSO" FromRole="EXAMEN" ToRole="CURSO" />
+    <NavigationProperty Name="PREGUNTA" Relationship="ExamenOnLineModel.FK_PREGUNTA_EXAMEN" FromRole="EXAMEN" ToRole="PREGUNTA" />
+    <NavigationProperty Name="RESULTADO" Relationship="ExamenOnLineModel.FK_RESULTADO_EXAMEN" FromRole="EXAMEN" ToRole="RESULTADO" />
+    <NavigationProperty Name="TabPorcentaje" Relationship="ExamenOnLineModel.FK_TabPorcentaje_EXAMEN" FromRole="EXAMEN" ToRole="TabPorcentaje" />
+  </EntityType>
+  <EntityType Name="PREGUNTA">
+    <Key>
+      <PropertyRef Name="IdPregunta" />
+    </Key>
+    <Property Type="Int32" Name="IdPregunta" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Descripcion" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="ExamenId" Nullable="false" />
+    <NavigationProperty Name="EXAMEN" Relationship="ExamenOnLineModel.FK_PREGUNTA_EXAMEN" FromRole="PREGUNTA" ToRole="EXAMEN" />
+    <NavigationProperty Name="RESPUESTA" Relationship="ExamenOnLineModel.FK_RESPUESTA_PREGUNTA" FromRole="PREGUNTA" ToRole="RESPUESTA" />
+  </EntityType>
+  <EntityType Name="PROFESOR">
+    <Key>
+      <PropertyRef Name="IdProfesor" />
+    </Key>
+    <Property Type="Int32" Name="IdProfesor" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Nombre" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Mail" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Contrasenia" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="EsUsuario" />
+    <NavigationProperty Name="CURSO" Relationship="ExamenOnLineModel.FK_CURSO_PROFESOR" FromRole="PROFESOR" ToRole="CURSO" />
+  </EntityType>
+  <EntityType Name="RESPUESTA">
+    <Key>
+      <PropertyRef Name="IdRespuesta" />
+    </Key>
+    <Property Type="Int32" Name="IdRespuesta" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Descripcion" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="EsValida" />
+    <Property Type="Int32" Name="PreguntaId" Nullable="false" />
+    <NavigationProperty Name="PREGUNTA" Relationship="ExamenOnLineModel.FK_RESPUESTA_PREGUNTA" FromRole="RESPUESTA" ToRole="PREGUNTA" />
+  </EntityType>
+  <EntityType Name="RESULTADO">
+    <Key>
+      <PropertyRef Name="IdResultado" />
+    </Key>
+    <Property Type="Int32" Name="IdResultado" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="DateTime" Name="FecHora" />
+    <Property Type="DateTime" Name="FecIni" />
+    <Property Type="Time" Name="Demora" />
+    <Property Type="Int32" Name="Porcentaje" />
+    <Property Type="String" Name="Nota" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="AlumnoId" Nullable="false" />
+    <Property Type="Int32" Name="ExamenId" Nullable="false" />
+    <NavigationProperty Name="ALUMNO" Relationship="ExamenOnLineModel.FK_RESULTADO_ALUMNO" FromRole="RESULTADO" ToRole="ALUMNO" />
+    <NavigationProperty Name="EXAMEN" Relationship="ExamenOnLineModel.FK_RESULTADO_EXAMEN" FromRole="RESULTADO" ToRole="EXAMEN" />
+  </EntityType>
+  <Association Name="FK_RESULTADO_ALUMNO">
+    <End Type="ExamenOnLineModel.ALUMNO" Role="ALUMNO" Multiplicity="1" />
+    <End Type="ExamenOnLineModel.RESULTADO" Role="RESULTADO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ALUMNO">
+        <PropertyRef Name="IdAlumno" />
+      </Principal>
+      <Dependent Role="RESULTADO">
+        <PropertyRef Name="AlumnoId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CURSO_PROFESOR">
+    <End Type="ExamenOnLineModel.PROFESOR" Role="PROFESOR" Multiplicity="0..1" />
+    <End Type="ExamenOnLineModel.CURSO" Role="CURSO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PROFESOR">
+        <PropertyRef Name="IdProfesor" />
+      </Principal>
+      <Dependent Role="CURSO">
+        <PropertyRef Name="ProfId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EXAMEN_CURSO">
+    <End Type="ExamenOnLineModel.CURSO" Role="CURSO" Multiplicity="0..1" />
+    <End Type="ExamenOnLineModel.EXAMEN" Role="EXAMEN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CURSO">
+        <PropertyRef Name="IdCurso" />
+      </Principal>
+      <Dependent Role="EXAMEN">
+        <PropertyRef Name="CursoId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PREGUNTA_EXAMEN">
+    <End Type="ExamenOnLineModel.EXAMEN" Role="EXAMEN" Multiplicity="1" />
+    <End Type="ExamenOnLineModel.PREGUNTA" Role="PREGUNTA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EXAMEN">
+        <PropertyRef Name="IdExamen" />
+      </Principal>
+      <Dependent Role="PREGUNTA">
+        <PropertyRef Name="ExamenId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RESULTADO_EXAMEN">
+    <End Type="ExamenOnLineModel.EXAMEN" Role="EXAMEN" Multiplicity="1" />
+    <End Type="ExamenOnLineModel.RESULTADO" Role="RESULTADO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EXAMEN">
+        <PropertyRef Name="IdExamen" />
+      </Principal>
+      <Dependent Role="RESULTADO">
+        <PropertyRef Name="ExamenId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RESPUESTA_PREGUNTA">
+    <End Type="ExamenOnLineModel.PREGUNTA" Role="PREGUNTA" Multiplicity="1" />
+    <End Type="ExamenOnLineModel.RESPUESTA" Role="RESPUESTA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PREGUNTA">
+        <PropertyRef Name="IdPregunta" />
+      </Principal>
+      <Dependent Role="RESPUESTA">
+        <PropertyRef Name="PreguntaId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Curso_Alumno">
+    <Key>
+      <PropertyRef Name="idTab" />
+    </Key>
+    <Property Type="Int32" Name="idTab" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="IDCURSO" Nullable="false" />
+    <Property Type="Int32" Name="IDALUMNO" Nullable="false" />
+    <NavigationProperty Name="ALUMNO" Relationship="ExamenOnLineModel.FK_Curso_Alumno_ALUMNO" FromRole="Curso_Alumno" ToRole="ALUMNO" />
+    <NavigationProperty Name="CURSO" Relationship="ExamenOnLineModel.FK_Curso_Alumno_CURSO" FromRole="Curso_Alumno" ToRole="CURSO" />
+  </EntityType>
+  <Association Name="FK_Curso_Alumno_ALUMNO">
+    <End Type="ExamenOnLineModel.ALUMNO" Role="ALUMNO" Multiplicity="1" />
+    <End Type="ExamenOnLineModel.Curso_Alumno" Role="Curso_Alumno" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ALUMNO">
+        <PropertyRef Name="IdAlumno" />
+      </Principal>
+      <Dependent Role="Curso_Alumno">
+        <PropertyRef Name="IDALUMNO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Curso_Alumno_CURSO">
+    <End Type="ExamenOnLineModel.CURSO" Role="CURSO" Multiplicity="1" />
+    <End Type="ExamenOnLineModel.Curso_Alumno" Role="Curso_Alumno" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CURSO">
+        <PropertyRef Name="IdCurso" />
+      </Principal>
+      <Dependent Role="Curso_Alumno">
+        <PropertyRef Name="IDCURSO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="TabPorcentaje">
+    <Key>
+      <PropertyRef Name="idTabla" />
+    </Key>
+    <Property Type="Int32" Name="idTabla" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="PorcentajeAprobacion" />
+    <Property Type="Int32" Name="ExamenId" />
+    <NavigationProperty Name="EXAMEN" Relationship="ExamenOnLineModel.FK_TabPorcentaje_EXAMEN" FromRole="TabPorcentaje" ToRole="EXAMEN" />
+  </EntityType>
+  <Association Name="FK_TabPorcentaje_EXAMEN">
+    <End Type="ExamenOnLineModel.EXAMEN" Role="EXAMEN" Multiplicity="0..1" />
+    <End Type="ExamenOnLineModel.TabPorcentaje" Role="TabPorcentaje" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EXAMEN">
+        <PropertyRef Name="IdExamen" />
+      </Principal>
+      <Dependent Role="TabPorcentaje">
+        <PropertyRef Name="ExamenId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <ComplexType Name="listar_examenes_Result">
+    <Property Type="String" Name="EXAMEN" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="CURSO" Nullable="true" />
+    <Property Type="DateTime" Name="FECHA_HORA" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="RESULTADO" Nullable="false" />
+    <Property Type="Int32" Name="ESTADO" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="ExamenesProfesor_Result">
+    <Property Type="String" Name="EXAMEN" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="CURSOS" Nullable="true" />
+    <Property Type="DateTime" Name="FECHA_Y_HORA" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="RINDIERON" Nullable="true" />
+    <Property Type="Int32" Name="APROBARON" Nullable="true" />
+    <Property Type="Int32" Name="REPROBARON" Nullable="true" />
+    <Property Type="Int32" Name="FALTANTES" Nullable="true" />
+  </ComplexType>
+</Schema>

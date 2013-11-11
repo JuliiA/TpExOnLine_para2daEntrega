@@ -8,11 +8,9 @@ namespace Datos
     public class ExamenEntidad
     {
         
-        public string nombrexamen { get; set; }
-        public string descripcion { get; set; }
-        public int duracion { get; set; }
-        public DateTime fecyhora { get; set; }
-        public int porcentajeAprobacion { get; set; }
-        public int idcurso { get; set; }
+        public string Curso { get; set; }
+        public string Examen { get; set; }
+        public DateTime Fecha_y_Hora { get; set; }
+        public string Resultado { get; set; }
     }
 }

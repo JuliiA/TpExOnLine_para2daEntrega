@@ -108,5 +108,14 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="Porcentaje">
+      <EntityTypeMapping TypeName="ExamenOnLineModel.TabPorcentaje">
+        <MappingFragment StoreEntitySet="TabPorcentaje">
+          <ScalarProperty Name="ExamenId" ColumnName="ExamenId" />
+          <ScalarProperty Name="PorcentajeAprobacion" ColumnName="PorcentajeAprobacion" />
+          <ScalarProperty Name="idTabla" ColumnName="idTabla" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

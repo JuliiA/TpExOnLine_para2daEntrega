@@ -9,6 +9,7 @@
     <EntitySet Name="PROFESOR" EntityType="ExamenOnLineModel.Store.PROFESOR" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="RESPUESTA" EntityType="ExamenOnLineModel.Store.RESPUESTA" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="RESULTADO" EntityType="ExamenOnLineModel.Store.RESULTADO" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TabPorcentaje" EntityType="ExamenOnLineModel.Store.TabPorcentaje" store:Type="Tables" Schema="dbo" />
     <AssociationSet Name="FK_Curso_Alumno_ALUMNO" Association="ExamenOnLineModel.Store.FK_Curso_Alumno_ALUMNO">
       <End Role="ALUMNO" EntitySet="ALUMNO" />
       <End Role="Curso_Alumno" EntitySet="Curso_Alumno" />
@@ -40,6 +41,10 @@
     <AssociationSet Name="FK_RESULTADO_EXAMEN" Association="ExamenOnLineModel.Store.FK_RESULTADO_EXAMEN">
       <End Role="EXAMEN" EntitySet="EXAMEN" />
       <End Role="RESULTADO" EntitySet="RESULTADO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TabPorcentaje_EXAMEN" Association="ExamenOnLineModel.Store.FK_TabPorcentaje_EXAMEN">
+      <End Role="EXAMEN" EntitySet="EXAMEN" />
+      <End Role="TabPorcentaje" EntitySet="TabPorcentaje" />
     </AssociationSet>
   </EntityContainer>
   <EntityType Name="ALUMNO">
@@ -123,6 +128,14 @@
     <Property Name="AlumnoId" Type="int" Nullable="false" />
     <Property Name="ExamenId" Type="int" Nullable="false" />
   </EntityType>
+  <EntityType Name="TabPorcentaje">
+    <Key>
+      <PropertyRef Name="idTabla" />
+    </Key>
+    <Property Name="idTabla" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="PorcentajeAprobacion" Type="int" />
+    <Property Name="ExamenId" Type="int" />
+  </EntityType>
   <Association Name="FK_Curso_Alumno_ALUMNO">
     <End Role="ALUMNO" Type="ExamenOnLineModel.Store.ALUMNO" Multiplicity="1">
       <OnDelete Action="Cascade" />
@@ -188,7 +201,9 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_RESPUESTA_PREGUNTA">
-    <End Role="PREGUNTA" Type="ExamenOnLineModel.Store.PREGUNTA" Multiplicity="1" />
+    <End Role="PREGUNTA" Type="ExamenOnLineModel.Store.PREGUNTA" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
     <End Role="RESPUESTA" Type="ExamenOnLineModel.Store.RESPUESTA" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="PREGUNTA">
@@ -219,6 +234,20 @@
         <PropertyRef Name="IdExamen" />
       </Principal>
       <Dependent Role="RESULTADO">
+        <PropertyRef Name="ExamenId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TabPorcentaje_EXAMEN">
+    <End Role="EXAMEN" Type="ExamenOnLineModel.Store.EXAMEN" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="TabPorcentaje" Type="ExamenOnLineModel.Store.TabPorcentaje" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EXAMEN">
+        <PropertyRef Name="IdExamen" />
+      </Principal>
+      <Dependent Role="TabPorcentaje">
         <PropertyRef Name="ExamenId" />
       </Dependent>
     </ReferentialConstraint>

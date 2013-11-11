@@ -32,12 +32,12 @@
             <div class="btn-group">
                 <a href="EditarDatosAlumno.aspx" class="btn btn-large btn-info"><i class="icon-edit">
                 </i>Editar Mis Datos</a> <a href="ExamenesDisponiblesAlumnos.aspx" class="btn btn-large btn-info">
-                    <i class=" icon-list"></i>Examenes Disponibles</a><i class="icon-off icon-white"></i>
+                    <i class=" icon-list"></i>Examenes Disponibles</a>
                 <asp:Button ID="btnsalir" runat="server" Text="Salir" 
-                    CssClass="btn btn-large btn-primary" onclick="btnsalir_Click" 
+                    CssClass="btn btn-large btn-info" onclick="btnsalir_Click" 
                     ValidationGroup="btnexit" />
             </div>
-             <div class="tab-content text-info text-right">
+             <div class="btn-large btn-default text-right">
             <h2>
                 <i class="icon-user"></i>Usuario:
                 <asp:Label ID="lbluser" runat="server" Text="Label"></asp:Label>
@@ -55,7 +55,7 @@
             <div class="modal-footer">
                 <asp:SiteMapPath ID="SiteMapPath1" runat="server">
                 </asp:SiteMapPath>
-               ||<i class="icon-star"></i><b>Copyright 2013- Avellaneda Juliana, Vaccaro Cecilia</b></div>
+               ||<i class="icon-star"></i><b>Copyright 2013- Avellaneda Juliana</b></div>
         </div>
 
     </div>

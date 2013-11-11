@@ -61,5 +61,10 @@ namespace Negocio
             return resulta;
         }
 
+        public object traerTodosExamenes(int id_p)
+        {
+            var resulta = esAlumno.consultarExamenes(id_p);
+            return resulta;
+        }
     }
 }

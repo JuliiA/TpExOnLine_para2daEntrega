@@ -67,6 +67,7 @@
     <Content Include="LoginUsuario2.aspx" />
     <Content Include="Preguntas.aspx" />
     <Content Include="PrevioExamenAlumno.aspx" />
+    <Content Include="RealizarExamen.aspx" />
     <Content Include="RealizarExamenAlumno.aspx" />
     <Content Include="ResultadoExamenAlumno.aspx" />
     <Content Include="bootstrap\js\Script.js" />
@@ -202,6 +203,13 @@
       <DependentUpon>PrevioExamenAlumno.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RealizarExamen.aspx.cs">
+      <DependentUpon>RealizarExamen.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RealizarExamen.aspx.designer.cs">
+      <DependentUpon>RealizarExamen.aspx</DependentUpon>
+    </Compile>
     <Compile Include="RealizarExamenAlumno.aspx.cs">
       <DependentUpon>RealizarExamenAlumno.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -257,7 +265,7 @@
         <WebProjectProperties>
           <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>49168</DevelopmentServerPort>
+          <DevelopmentServerPort>56719</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>
           </IISUrl>

@@ -47,6 +47,11 @@
       <End Role="CURSO" EntitySet="Cursos" />
       <End Role="Curso_Alumno" EntitySet="CursosAl" />
     </AssociationSet>
+    <EntitySet Name="Porcentaje" EntityType="ExamenOnLineModel.TabPorcentaje" />
+    <AssociationSet Name="FK_TabPorcentaje_EXAMEN" Association="ExamenOnLineModel.FK_TabPorcentaje_EXAMEN">
+      <End Role="EXAMEN" EntitySet="Examenes" />
+      <End Role="TabPorcentaje" EntitySet="Porcentaje" />
+    </AssociationSet>
   </EntityContainer>
   <ComplexType Name="ListarCursos_Result">
     <Property Type="String" Name="CURSOS" Nullable="true" />
@@ -98,6 +103,7 @@
     <NavigationProperty Name="CURSO" Relationship="ExamenOnLineModel.FK_EXAMEN_CURSO" FromRole="EXAMEN" ToRole="CURSO" />
     <NavigationProperty Name="PREGUNTA" Relationship="ExamenOnLineModel.FK_PREGUNTA_EXAMEN" FromRole="EXAMEN" ToRole="PREGUNTA" />
     <NavigationProperty Name="RESULTADO" Relationship="ExamenOnLineModel.FK_RESULTADO_EXAMEN" FromRole="EXAMEN" ToRole="RESULTADO" />
+    <NavigationProperty Name="TabPorcentaje" Relationship="ExamenOnLineModel.FK_TabPorcentaje_EXAMEN" FromRole="EXAMEN" ToRole="TabPorcentaje" />
   </EntityType>
   <EntityType Name="PREGUNTA">
     <Key>
@@ -248,6 +254,27 @@
       </Principal>
       <Dependent Role="Curso_Alumno">
         <PropertyRef Name="IDCURSO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="TabPorcentaje">
+    <Key>
+      <PropertyRef Name="idTabla" />
+    </Key>
+    <Property Type="Int32" Name="idTabla" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="PorcentajeAprobacion" />
+    <Property Type="Int32" Name="ExamenId" />
+    <NavigationProperty Name="EXAMEN" Relationship="ExamenOnLineModel.FK_TabPorcentaje_EXAMEN" FromRole="TabPorcentaje" ToRole="EXAMEN" />
+  </EntityType>
+  <Association Name="FK_TabPorcentaje_EXAMEN">
+    <End Type="ExamenOnLineModel.EXAMEN" Role="EXAMEN" Multiplicity="0..1" />
+    <End Type="ExamenOnLineModel.TabPorcentaje" Role="TabPorcentaje" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EXAMEN">
+        <PropertyRef Name="IdExamen" />
+      </Principal>
+      <Dependent Role="TabPorcentaje">
+        <PropertyRef Name="ExamenId" />
       </Dependent>
     </ReferentialConstraint>
   </Association>

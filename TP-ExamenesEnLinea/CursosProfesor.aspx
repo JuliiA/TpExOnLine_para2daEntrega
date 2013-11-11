@@ -6,31 +6,25 @@
     <br />
     <br />
     <div class="nav-tabs breadcrumb col-md-offset-0">
-         <h3>
+        <h3>
             Grilla Cursos</h3>
         <asp:Label ID="lblmensaje" CssClass="text-danger" runat="server" Text=""></asp:Label>
         <div class="breadcrumb col-mg-2">
             <div class="table table-striped table-hover">
-                <asp:GridView ID="gvcursos" runat="server" OnLoad="Page_Load" 
-                    onrowcreated="gvcursos_RowCreated"
-                    onrowdatabound="gvcursos_RowDataBound" 
-                    onselectedindexchanging="gvcursos_SelectedIndexChanging" >
-                    <Columns>
-                        <asp:HyperLinkField DataNavigateUrlFields="IdCurso" 
-                            DataNavigateUrlFormatString="~/EditarCursoProfesor.aspx?id={0}" 
-                            HeaderText="Edicion" Text="" ControlStyle-CssClass="icon-pencil" >
-<ControlStyle CssClass="icon-pencil"></ControlStyle>
+                <asp:GridView ID="gvprueba" runat="server" 
+                    OnSelectedIndexChanging="gvcursos_SelectedIndexChanging" 
+                    OnRowDataBound="gvcursos_RowDataBound" OnRowCreated="gvcursos_RowCreated" 
+                    Width="90%">
+                <Columns>
+                 <asp:HyperLinkField DataNavigateUrlFields="_idcurso" DataNavigateUrlFormatString="~/EditarCursoProfesor.aspx?id={0}"
+                            HeaderText="Edicion" Text="" ControlStyle-CssClass="icon-pencil">
+                            <ControlStyle CssClass="icon-pencil"></ControlStyle>
                         </asp:HyperLinkField>
-                        <asp:HyperLinkField DataNavigateUrlFields="IdCurso" 
-                            DataNavigateUrlFormatString="~/BorrarCursoProfesor.aspx?id={0}" 
-                            HeaderText="Borrado" Text="" ControlStyle-CssClass="icon-remove-circle" >
-                     
-<ControlStyle CssClass="icon-remove-circle"></ControlStyle>
+                        <asp:HyperLinkField DataNavigateUrlFields="_idcurso" DataNavigateUrlFormatString="~/BorrarCursoProfesor.aspx?id={0}"
+                            HeaderText="Borrado" Text="" ControlStyle-CssClass="icon-remove-circle">
+                            <ControlStyle CssClass="icon-remove-circle"></ControlStyle>
                         </asp:HyperLinkField>
-                        
-                        <asp:BoundField HeaderText="Cantidad Alumnos" />
-                        
-                    </Columns>
+                </Columns>
                 </asp:GridView>
             </div>
         </div>

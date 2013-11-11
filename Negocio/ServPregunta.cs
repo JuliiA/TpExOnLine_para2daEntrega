@@ -9,6 +9,7 @@ namespace Negocio
     public class ServPregunta
     {
         PreguntaDatos esPregunta = new PreguntaDatos();
+        ProfesorDatos elServicio = new ProfesorDatos();
 
         public void guardarValores(int id_e,string pregunta, string respuestauno, bool rval1, string repuestados, bool rval2, string respuestatres, bool rval3)
         {
@@ -28,6 +29,11 @@ namespace Negocio
                 r3=2;
 
             esPregunta.asociarRespuestas(respuestauno, r1, repuestados, r2, respuestatres, r3);
+        }
+
+        public int obtenerUltimoExamen()
+        {
+            return elServicio.consultarUltimoExamen();
         }
     }
 }

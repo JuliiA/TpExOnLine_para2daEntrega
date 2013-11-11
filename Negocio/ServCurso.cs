@@ -13,10 +13,9 @@ namespace Negocio
         CursoDatos elCurso = new CursoDatos();
         AlumnoDatos elAlumno = new AlumnoDatos();
 
-        public object muestraCursos(int idlogueado)
-        {
-            var cursos = elCurso.listarCursos(idlogueado);
-            return cursos;
+        public object muestraCursos(int idlogueado) {
+            List<CursoEntidad> misCursos = elCurso.listarCursosCantidad(idlogueado);
+            return misCursos;
         }
         
         public void AltaCurso(string nombre, int estado, DateTime fini, DateTime ffin, int id_p)
@@ -78,18 +77,54 @@ namespace Negocio
             return fecha;
         }
 
-        public string calcularCantidadAlumnos(int p)
+        public DateTime consultarFechaFin(int id_c)
         {
-            string obt = elCurso.obtenerTotalAlumnos(p);
-            return obt;
+            DateTime resulta = elCurso.obtenerFechafin(id_c);
+            return resulta;
         }
 
-
-        public string consultarLosMails(int id_c)
+        public List<string> consultarLosMails(int id_c)
         {
-            List<string> losMails = elCurso.obtenerLosMailsCurso(id_c);
-            string resulta = string.Concat(losMails);
+            List<string> resulta = elCurso.obtenerLosMailsCurso(id_c);
             return resulta;
+        }
+
+        public object cargarCantidad(int id_p)
+        {
+            return elCurso.listarCursosCantidad(id_p);
+        }
+
+        public void crearBucle(string[] words, int id_c)
+        {
+            for (int i = 0; i < words.Length; i++)
+            {
+                int IdAlumno;
+                //busco si no existe
+                if (!elAlumno.buscarMailsRegistrados(words[i]))
+                {
+                    //lo creo si no existe
+                    elAlumno.CrearAlumnoDesdeMail(words[i]);
+                }
+
+                IdAlumno = elAlumno.obtenerIdPorMail(words[i]);
+
+                if (!elAlumno.buscaIdAlumnoRegistrados(id_c, IdAlumno))//si el alumno registrado NO esta asociado al curso ese, entonces si lo asocia
+                {
+                    elCurso.asociarCursoConAlumno(id_c, IdAlumno);
+                }    
+            }
+        }
+
+        public void CargarCurso(int id_c, string p, bool p_2, DateTime dateTime, DateTime dateTime_2)
+        {
+            elCurso.CargarDatos(id_c, p, p_2, dateTime, dateTime_2);
+        }
+
+        public void borrarLasAusencias(List<string> aBorrar)
+        {
+            for (int i = 0; i < aBorrar.Count(); i++) {
+                elAlumno.borrarDelCurso(aBorrar[i]);
+            }
         }
     }
 }

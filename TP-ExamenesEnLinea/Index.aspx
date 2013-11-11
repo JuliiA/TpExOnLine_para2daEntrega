@@ -54,7 +54,7 @@
         </form>
         <div id="pie">
             <div class="modal-footer">
-                <i class="icon-star"></i>Copyright 2013- Avellaneda Juliana, Vaccaro Cecilia</div>
+                <i class="icon-star"></i>Copyright 2013- Avellaneda Juliana</div>
         </div>
     </div>
 </body>

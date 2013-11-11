@@ -26,29 +26,38 @@
                         <asp:TextBox ID="txtdesc" runat="server" TextMode="MultiLine" TabIndex="4"></asp:TextBox></div>
                     <asp:Label ID="lblduracion" runat="server" Text="Duracion"></asp:Label>
                 <div>
-                    <asp:TextBox ID="txtduracion" runat="server"></asp:TextBox>minutos</div>
-                    <asp:Label ID="lblfectope" runat="server" Text="Fecha Tope"></asp:Label>
-                <div>
+                    <asp:DropDownList ID="ddlduracion" runat="server" AutoPostBack="true">
+                        <asp:ListItem Value="0" Text="Seleccione los minutos"></asp:ListItem>
+                        <asp:ListItem Value="1" Text="5"></asp:ListItem>
+                        <asp:ListItem Value="2" Text="10"></asp:ListItem>
+                        <asp:ListItem Value="3" Text="15"></asp:ListItem>
+                        <asp:ListItem Value="4" Text="30"></asp:ListItem>
+                        <asp:ListItem Value="5" Text="35"></asp:ListItem>
+                        <asp:ListItem Value="6" Text="45"></asp:ListItem>
+                        <asp:ListItem Value="7" Text="60"></asp:ListItem>
+                    </asp:DropDownList>
+                </div>
                      <fec:Calendario ID="fechatope" runat="server" /><div>
                     <asp:Label ID="Label2" runat="server" Text="Hora Tope"></asp:Label><br />
                     <asp:TextBox ID="txthoratope" runat="server"></asp:TextBox>hh:mm</div>
                 <br />
                 <asp:Label ID="lblporcentaje" runat="server" Text="Porcentaje de aprobacion"></asp:Label>
                 <div>
-                    <asp:TextBox ID="txtporcentaje" runat="server" 
-                        ToolTip="El porcentaje de Aprobacion se da de acuerdo a la cantidad de respuestas correctas, es decir,por ejemplo: son 5 preguntas: 3 validas 60%"></asp:TextBox>
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="Ingrese un porcentaje"
-                        ControlToValidate="txtporcentaje" Display="Dynamic" CssClass="text-danger" Text="*Campo obligatorio"></asp:RequiredFieldValidator>
-                    <asp:RangeValidator ID="validadorRango" runat="server" ControlToValidate="txtporcentaje"
-                        ErrorMessage="El porcentaje deber ser numerico" Display="Dynamic" MinimumValue="10"
-                        MaximumValue="100" Type="Integer">
-                    </asp:RangeValidator></div>
+                    <asp:DropDownList ID="ddlporcentaje" runat="server" AutoPostBack="true">
+                        <asp:ListItem Value="0" Text="Seleccione los minutos"></asp:ListItem>
+                        <asp:ListItem Value="1" Text="40"></asp:ListItem>
+                        <asp:ListItem Value="2" Text="60"></asp:ListItem>
+                        <asp:ListItem Value="3" Text="80"></asp:ListItem>
+                        <asp:ListItem Value="4" Text="100"></asp:ListItem>
+                    </asp:DropDownList>
+                </div>
                 <%--Siguiente guardaria los datos en la base de datos y mos lleva a Preguntas.aspx--%>
                 <asp:Button ID="btnsig" runat="server" CssClass="btn btn-success" 
                     Text="Siguiente" onclick="btnsig_Click" />
                 <%--<a href="Preguntas.aspx">[PREGUNTAS]</a>--%>
                 <asp:Label ID="Label1" runat="server" CssClass="text-danger" Text=""></asp:Label>
             </div>
-        </div></div>
-    </div>
+        
+        </div>
+    
 </asp:Content>

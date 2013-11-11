@@ -7,27 +7,27 @@
             Realizar examen</h3>
         <div class="panel panel-danger">
             <div class="panel-heading">
-                Numeros complejos</div>
+                <asp:Label ID="lblexamen" runat="server" Text=""></asp:Label></div>
             <div class="panel-heading">
-                Descripcion: Responder en base al apunte de clase</div>
+                <asp:Label ID="lbldescripcion" runat="server" Text=""></asp:Label></div>
             <div class="panel-heading">
-                Fecha tope: 20/09/2013 13:00</div>
+                <asp:Label ID="lblfechora" runat="server" Text=""></asp:Label></div>
         </div>
         <table class="table">
             <thead>
                 <tr>
                     <th>
                         <h3>
-                            Cual de las siguientes afirmaciones sobre los numeros complejos es la correcta:</h3>
+                            Cual de las siguientes afirmaciones es la correcta:</h3>
                     </th>
                     <br />
                 </tr>
             </thead>
         </table>
         <asp:CheckBoxList ID="check" runat="server">
-            <asp:ListItem>Son una extensión de los números reales.</asp:ListItem>
-            <asp:ListItem>Pueden representarse como la suma de dos números imaginarios</asp:ListItem>
-            <asp:ListItem>Ninguna de las anteriores son correctas</asp:ListItem>
+            <asp:ListItem>Respuesta uno.</asp:ListItem>
+            <asp:ListItem>Respuesta dos</asp:ListItem>
+            <asp:ListItem>Respuesta tres</asp:ListItem>
         </asp:CheckBoxList>
         <ul class="pager">
             <li class="disabled"><a href="#">Pregunta 1 de 1</a></li>

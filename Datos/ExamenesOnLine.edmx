@@ -14,6 +14,7 @@
           <EntitySet Name="PROFESOR" EntityType="ExamenOnLineModel.Store.PROFESOR" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="RESPUESTA" EntityType="ExamenOnLineModel.Store.RESPUESTA" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="RESULTADO" EntityType="ExamenOnLineModel.Store.RESULTADO" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TabPorcentaje" EntityType="ExamenOnLineModel.Store.TabPorcentaje" store:Type="Tables" Schema="dbo" />
           <AssociationSet Name="FK_Curso_Alumno_ALUMNO" Association="ExamenOnLineModel.Store.FK_Curso_Alumno_ALUMNO">
             <End Role="ALUMNO" EntitySet="ALUMNO" />
             <End Role="Curso_Alumno" EntitySet="Curso_Alumno" />
@@ -45,6 +46,10 @@
           <AssociationSet Name="FK_RESULTADO_EXAMEN" Association="ExamenOnLineModel.Store.FK_RESULTADO_EXAMEN">
             <End Role="EXAMEN" EntitySet="EXAMEN" />
             <End Role="RESULTADO" EntitySet="RESULTADO" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TabPorcentaje_EXAMEN" Association="ExamenOnLineModel.Store.FK_TabPorcentaje_EXAMEN">
+            <End Role="EXAMEN" EntitySet="EXAMEN" />
+            <End Role="TabPorcentaje" EntitySet="TabPorcentaje" />
           </AssociationSet>
         </EntityContainer>
         <EntityType Name="ALUMNO">
@@ -128,6 +133,14 @@
           <Property Name="AlumnoId" Type="int" Nullable="false" />
           <Property Name="ExamenId" Type="int" Nullable="false" />
         </EntityType>
+        <EntityType Name="TabPorcentaje">
+          <Key>
+            <PropertyRef Name="idTabla" />
+          </Key>
+          <Property Name="idTabla" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="PorcentajeAprobacion" Type="int" />
+          <Property Name="ExamenId" Type="int" />
+        </EntityType>
         <Association Name="FK_Curso_Alumno_ALUMNO">
           <End Role="ALUMNO" Type="ExamenOnLineModel.Store.ALUMNO" Multiplicity="1">
             <OnDelete Action="Cascade" />
@@ -193,7 +206,9 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_RESPUESTA_PREGUNTA">
-          <End Role="PREGUNTA" Type="ExamenOnLineModel.Store.PREGUNTA" Multiplicity="1" />
+          <End Role="PREGUNTA" Type="ExamenOnLineModel.Store.PREGUNTA" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
           <End Role="RESPUESTA" Type="ExamenOnLineModel.Store.RESPUESTA" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="PREGUNTA">
@@ -228,23 +243,31 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Function Name="listarCursosProfesor" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-          <Parameter Name="Id_Profesor" Type="int" Mode="In" />
-        </Function>
+        <Association Name="FK_TabPorcentaje_EXAMEN">
+          <End Role="EXAMEN" Type="ExamenOnLineModel.Store.EXAMEN" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="TabPorcentaje" Type="ExamenOnLineModel.Store.TabPorcentaje" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EXAMEN">
+              <PropertyRef Name="IdExamen" />
+            </Principal>
+            <Dependent Role="TabPorcentaje">
+              <PropertyRef Name="ExamenId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Function Name="listarExamenesProfesor" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="Id_Profesor" Type="int" Mode="In" />
+        </Function>
+        <Function Name="SP_traer_examenes" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id_Alumno" Type="int" Mode="In" />
         </Function>
       </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="ExamenOnLineModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
         <EntityContainer Name="ExOnLineEntities" annotation:LazyLoadingEnabled="true">
-          <FunctionImport Name="ListarCursos" ReturnType="Collection(ExamenOnLineModel.ListarCursos_Result)">
-          <Parameter Name="Id_Profesor" Mode="In" Type="Int32" />
-          </FunctionImport>
-          <FunctionImport Name="ListarExamenes" ReturnType="Collection(ExamenOnLineModel.ListarExamenes_Result)">
-          <Parameter Name="Id_Profesor" Mode="In" Type="Int32" />
-          </FunctionImport>
           <EntitySet Name="Alumnos" EntityType="ExamenOnLineModel.ALUMNO" />
           <EntitySet Name="Cursos" EntityType="ExamenOnLineModel.CURSO" />
           <EntitySet Name="Examenes" EntityType="ExamenOnLineModel.EXAMEN" />
@@ -285,17 +308,18 @@
             <End Role="CURSO" EntitySet="Cursos" />
             <End Role="Curso_Alumno" EntitySet="CursosAl" />
           </AssociationSet>
+          <EntitySet Name="Porcentaje" EntityType="ExamenOnLineModel.TabPorcentaje" />
+          <AssociationSet Name="FK_TabPorcentaje_EXAMEN" Association="ExamenOnLineModel.FK_TabPorcentaje_EXAMEN">
+            <End Role="EXAMEN" EntitySet="Examenes" />
+            <End Role="TabPorcentaje" EntitySet="Porcentaje" />
+          </AssociationSet>
+          <FunctionImport Name="listar_examenes" ReturnType="Collection(ExamenOnLineModel.listar_examenes_Result)">
+          <Parameter Name="id_Alumno" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="ExamenesProfesor" ReturnType="Collection(ExamenOnLineModel.ExamenesProfesor_Result)">
+            <Parameter Name="Id_Profesor" Mode="In" Type="Int32" />
+          </FunctionImport>
           </EntityContainer>
-        <ComplexType Name="ListarCursos_Result">
-          <Property Type="String" Name="CURSOS" Nullable="true" />
-          <Property Type="String" Name="EXAMEN" Nullable="true" MaxLength="50" />
-          <Property Type="DateTime" Name="FECHA_Y_HORA" Nullable="true" Precision="23" />
-        </ComplexType>
-        <ComplexType Name="ListarExamenes_Result">
-          <Property Type="String" Name="CURSOS" Nullable="true" />
-          <Property Type="String" Name="EXAMEN" Nullable="true" MaxLength="50" />
-          <Property Type="DateTime" Name="FECHA_Y_HORA" Nullable="true" Precision="23" />
-        </ComplexType>
         <EntityType Name="ALUMNO">
           <Key>
             <PropertyRef Name="IdAlumno" />
@@ -336,6 +360,7 @@
           <NavigationProperty Name="CURSO" Relationship="ExamenOnLineModel.FK_EXAMEN_CURSO" FromRole="EXAMEN" ToRole="CURSO" />
           <NavigationProperty Name="PREGUNTA" Relationship="ExamenOnLineModel.FK_PREGUNTA_EXAMEN" FromRole="EXAMEN" ToRole="PREGUNTA" />
           <NavigationProperty Name="RESULTADO" Relationship="ExamenOnLineModel.FK_RESULTADO_EXAMEN" FromRole="EXAMEN" ToRole="RESULTADO" />
+          <NavigationProperty Name="TabPorcentaje" Relationship="ExamenOnLineModel.FK_TabPorcentaje_EXAMEN" FromRole="EXAMEN" ToRole="TabPorcentaje" />
         </EntityType>
         <EntityType Name="PREGUNTA">
           <Key>
@@ -489,30 +514,49 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <EntityType Name="TabPorcentaje">
+          <Key>
+            <PropertyRef Name="idTabla" />
+          </Key>
+          <Property Type="Int32" Name="idTabla" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="PorcentajeAprobacion" />
+          <Property Type="Int32" Name="ExamenId" />
+          <NavigationProperty Name="EXAMEN" Relationship="ExamenOnLineModel.FK_TabPorcentaje_EXAMEN" FromRole="TabPorcentaje" ToRole="EXAMEN" />
+        </EntityType>
+        <Association Name="FK_TabPorcentaje_EXAMEN">
+          <End Type="ExamenOnLineModel.EXAMEN" Role="EXAMEN" Multiplicity="0..1" />
+          <End Type="ExamenOnLineModel.TabPorcentaje" Role="TabPorcentaje" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EXAMEN">
+              <PropertyRef Name="IdExamen" />
+            </Principal>
+            <Dependent Role="TabPorcentaje">
+              <PropertyRef Name="ExamenId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <ComplexType Name="listar_examenes_Result">
+          <Property Type="String" Name="EXAMEN" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="CURSO" Nullable="true" />
+          <Property Type="DateTime" Name="FECHA_HORA" Nullable="true" Precision="23" />
+          <Property Type="Int32" Name="RESULTADO" Nullable="false" />
+          <Property Type="Int32" Name="ESTADO" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="ExamenesProfesor_Result">
+          <Property Type="String" Name="EXAMEN" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="CURSOS" Nullable="true" />
+          <Property Type="DateTime" Name="FECHA_Y_HORA" Nullable="true" Precision="23" />
+          <Property Type="Int32" Name="RINDIERON" Nullable="true" />
+          <Property Type="Int32" Name="APROBARON" Nullable="true" />
+          <Property Type="Int32" Name="REPROBARON" Nullable="true" />
+          <Property Type="Int32" Name="FALTANTES" Nullable="true" />
+        </ComplexType>
         </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="ExamenOnLineModelStoreContainer" CdmEntityContainer="ExOnLineEntities">
-          <FunctionImportMapping FunctionImportName="ListarCursos" FunctionName="ExamenOnLineModel.Store.listarCursosProfesor">
-            <ResultMapping>
-              <ComplexTypeMapping TypeName="ExamenOnLineModel.ListarCursos_Result">
-                <ScalarProperty Name="CURSOS" ColumnName="CURSOS" />
-                <ScalarProperty Name="EXAMEN" ColumnName="EXAMEN" />
-                <ScalarProperty Name="FECHA_Y_HORA" ColumnName="FECHA_Y_HORA" />
-              </ComplexTypeMapping>
-            </ResultMapping>
-          </FunctionImportMapping>
-          <FunctionImportMapping FunctionImportName="ListarExamenes" FunctionName="ExamenOnLineModel.Store.listarExamenesProfesor">
-            <ResultMapping>
-              <ComplexTypeMapping TypeName="ExamenOnLineModel.ListarExamenes_Result">
-                <ScalarProperty Name="CURSOS" ColumnName="CURSOS" />
-                <ScalarProperty Name="EXAMEN" ColumnName="EXAMEN" />
-                <ScalarProperty Name="FECHA_Y_HORA" ColumnName="FECHA_Y_HORA" />
-              </ComplexTypeMapping>
-            </ResultMapping>
-          </FunctionImportMapping>
           <EntitySetMapping Name="Alumnos">
             <EntityTypeMapping TypeName="ExamenOnLineModel.ALUMNO">
               <MappingFragment StoreEntitySet="ALUMNO">
@@ -602,6 +646,39 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="Porcentaje">
+            <EntityTypeMapping TypeName="ExamenOnLineModel.TabPorcentaje">
+              <MappingFragment StoreEntitySet="TabPorcentaje">
+                <ScalarProperty Name="ExamenId" ColumnName="ExamenId" />
+                <ScalarProperty Name="PorcentajeAprobacion" ColumnName="PorcentajeAprobacion" />
+                <ScalarProperty Name="idTabla" ColumnName="idTabla" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="listar_examenes" FunctionName="ExamenOnLineModel.Store.SP_traer_examenes">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ExamenOnLineModel.listar_examenes_Result">
+                <ScalarProperty Name="EXAMEN" ColumnName="EXAMEN" />
+                <ScalarProperty Name="CURSO" ColumnName="CURSO" />
+                <ScalarProperty Name="FECHA_HORA" ColumnName="FECHA_HORA" />
+                <ScalarProperty Name="RESULTADO" ColumnName="RESULTADO" />
+                <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="ExamenesProfesor" FunctionName="ExamenOnLineModel.Store.listarExamenesProfesor">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ExamenOnLineModel.ExamenesProfesor_Result">
+                <ScalarProperty Name="EXAMEN" ColumnName="EXAMEN" />
+                <ScalarProperty Name="CURSOS" ColumnName="CURSOS" />
+                <ScalarProperty Name="FECHA_Y_HORA" ColumnName="FECHA_Y_HORA" />
+                <ScalarProperty Name="RINDIERON" ColumnName="RINDIERON" />
+                <ScalarProperty Name="APROBARON" ColumnName="APROBARON" />
+                <ScalarProperty Name="REPROBARON" ColumnName="REPROBARON" />
+                <ScalarProperty Name="FALTANTES" ColumnName="FALTANTES" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
@@ -641,8 +718,8 @@
         </AssociationConnector>
         <AssociationConnector Association="ExamenOnLineModel.FK_EXAMEN_CURSO" >
           <ConnectorPoint PointX="3.75" PointY="7.3744921875" />
-          <ConnectorPoint PointX="3.75" PointY="8.7497460937500016" />
-          <ConnectorPoint PointX="5.25" PointY="8.7497460937500016" />
+          <ConnectorPoint PointX="3.75" PointY="8.8458968098958337" />
+          <ConnectorPoint PointX="5.25" PointY="8.8458968098958337" />
         </AssociationConnector>
         <AssociationConnector Association="ExamenOnLineModel.FK_PREGUNTA_EXAMEN" >
           <ConnectorPoint PointX="6.75" PointY="8.74014322916667" />
@@ -667,6 +744,12 @@
         <AssociationConnector Association="ExamenOnLineModel.FK_Curso_Alumno_CURSO" >
           <ConnectorPoint PointX="4.5" PointY="4.8651432291666659" />
           <ConnectorPoint PointX="5.25" PointY="4.8651432291666659" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="ExamenOnLineModel.TabPorcentaje" Width="1.5" PointX="7.5" PointY="11" Height="1.7879850260416674" />
+        <AssociationConnector Association="ExamenOnLineModel.FK_TabPorcentaje_EXAMEN" >
+          <ConnectorPoint PointX="6" PointY="10.316793619791666" />
+          <ConnectorPoint PointX="6" PointY="11.893992513020834" />
+          <ConnectorPoint PointX="7.5" PointY="11.893992513020834" />
         </AssociationConnector>
       </Diagram>
     </Diagrams>

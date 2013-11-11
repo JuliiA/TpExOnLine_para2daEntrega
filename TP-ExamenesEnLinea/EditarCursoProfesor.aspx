@@ -20,7 +20,13 @@
                         <asp:CheckBox ID="check" runat="server" />
                     </div>
                     <div class="control-group">
+                        <asp:Label ID="Label2" runat="server" Text="Fecha Inicio:"></asp:Label>
                         <fec:Calendario ID="fecini" runat="server"></fec:Calendario>
+                        <br />
+                    </div>
+                    <div class="control-group">
+                        <asp:Label ID="Label3" runat="server" Text="Fecha Finalizacion:"></asp:Label>
+                        <fec:Calendario ID="fecfin" runat="server"></fec:Calendario>
                         <br />
                     </div>
                     <div class="control-group">
@@ -33,7 +39,7 @@
                     <asp:Button ID="Button1" runat="server" class="btn btn-success" 
                         Text="Guardar cambios" onclick="Button1_Click" />
                 </div>
-                <asp:Label ID="lblmensaje" runat="server" Text=""></asp:Label>
+                <asp:Label ID="lblmensaje" runat="server" Text="" CssClass="text-danger"></asp:Label>
             </div>
         </div>
     </div>

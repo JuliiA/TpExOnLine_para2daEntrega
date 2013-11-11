@@ -38,10 +38,11 @@ namespace TP_ExamenesEnLinea
                         miCurso.eliminarCurso(id_c);
                         lblmensaje.Text = "<h1>Se ha eliminado el curso correctamente</h1>";
                     }
-                    catch (Exception ex)
+                    catch (Exception)
                     {
-                        string mensaje = "No se ha podido dar de baja el curso";
-                        ClientException.LogException(ex, mensaje); Server.Transfer("ErrorGeneral.aspx");
+                        //Para cuando tiene alumnos asociados:
+                        lblmensaje.Text = "<h3>El curso no se puede borrar porque tiene alumnos asociados</h3>";
+
                     }
                 }
             }

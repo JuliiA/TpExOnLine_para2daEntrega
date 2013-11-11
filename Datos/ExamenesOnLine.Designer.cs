@@ -27,6 +27,7 @@ using System.Xml.Serialization;
 [assembly: EdmRelationshipAttribute("ExamenOnLineModel", "FK_RESPUESTA_PREGUNTA", "PREGUNTA", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Datos.PREGUNTA), "RESPUESTA", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Datos.RESPUESTA), true)]
 [assembly: EdmRelationshipAttribute("ExamenOnLineModel", "FK_Curso_Alumno_ALUMNO", "ALUMNO", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Datos.ALUMNO), "Curso_Alumno", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Datos.Curso_Alumno), true)]
 [assembly: EdmRelationshipAttribute("ExamenOnLineModel", "FK_Curso_Alumno_CURSO", "CURSO", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Datos.CURSO), "Curso_Alumno", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Datos.Curso_Alumno), true)]
+[assembly: EdmRelationshipAttribute("ExamenOnLineModel", "FK_TabPorcentaje_EXAMEN", "EXAMEN", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(Datos.EXAMEN), "TabPorcentaje", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Datos.TabPorcentaje), true)]
 
 #endregion
 
@@ -205,6 +206,22 @@ namespace Datos
             }
         }
         private ObjectSet<Curso_Alumno> _CursosAl;
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        public ObjectSet<TabPorcentaje> Porcentaje
+        {
+            get
+            {
+                if ((_Porcentaje == null))
+                {
+                    _Porcentaje = base.CreateObjectSet<TabPorcentaje>("Porcentaje");
+                }
+                return _Porcentaje;
+            }
+        }
+        private ObjectSet<TabPorcentaje> _Porcentaje;
 
         #endregion
 
@@ -273,6 +290,14 @@ namespace Datos
         {
             base.AddObject("CursosAl", curso_Alumno);
         }
+    
+        /// <summary>
+        /// Método desusado para agregar un nuevo objeto al EntitySet Porcentaje. Considere la posibilidad de usar el método .Add de la propiedad ObjectSet&lt;T&gt; asociada.
+        /// </summary>
+        public void AddToPorcentaje(TabPorcentaje tabPorcentaje)
+        {
+            base.AddObject("Porcentaje", tabPorcentaje);
+        }
 
         #endregion
 
@@ -281,27 +306,27 @@ namespace Datos
         /// <summary>
         /// No hay documentación de metadatos disponible.
         /// </summary>
-        /// <param name="id_Profesor">No hay documentación de metadatos disponible.</param>
-        public ObjectResult<ListarCursos_Result> ListarCursos(Nullable<global::System.Int32> id_Profesor)
+        /// <param name="id_Alumno">No hay documentación de metadatos disponible.</param>
+        public ObjectResult<listar_examenes_Result> listar_examenes(Nullable<global::System.Int32> id_Alumno)
         {
-            ObjectParameter id_ProfesorParameter;
-            if (id_Profesor.HasValue)
+            ObjectParameter id_AlumnoParameter;
+            if (id_Alumno.HasValue)
             {
-                id_ProfesorParameter = new ObjectParameter("Id_Profesor", id_Profesor);
+                id_AlumnoParameter = new ObjectParameter("id_Alumno", id_Alumno);
             }
             else
             {
-                id_ProfesorParameter = new ObjectParameter("Id_Profesor", typeof(global::System.Int32));
+                id_AlumnoParameter = new ObjectParameter("id_Alumno", typeof(global::System.Int32));
             }
     
-            return base.ExecuteFunction<ListarCursos_Result>("ListarCursos", id_ProfesorParameter);
+            return base.ExecuteFunction<listar_examenes_Result>("listar_examenes", id_AlumnoParameter);
         }
     
         /// <summary>
         /// No hay documentación de metadatos disponible.
         /// </summary>
         /// <param name="id_Profesor">No hay documentación de metadatos disponible.</param>
-        public ObjectResult<ListarExamenes_Result> ListarExamenes(Nullable<global::System.Int32> id_Profesor)
+        public ObjectResult<ExamenesProfesor_Result> ExamenesProfesor(Nullable<global::System.Int32> id_Profesor)
         {
             ObjectParameter id_ProfesorParameter;
             if (id_Profesor.HasValue)
@@ -313,7 +338,7 @@ namespace Datos
                 id_ProfesorParameter = new ObjectParameter("Id_Profesor", typeof(global::System.Int32));
             }
     
-            return base.ExecuteFunction<ListarExamenes_Result>("ListarExamenes", id_ProfesorParameter);
+            return base.ExecuteFunction<ExamenesProfesor_Result>("ExamenesProfesor", id_ProfesorParameter);
         }
 
         #endregion
@@ -1259,6 +1284,28 @@ namespace Datos
                 }
             }
         }
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("ExamenOnLineModel", "FK_TabPorcentaje_EXAMEN", "TabPorcentaje")]
+        public EntityCollection<TabPorcentaje> TabPorcentaje
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<TabPorcentaje>("ExamenOnLineModel.FK_TabPorcentaje_EXAMEN", "TabPorcentaje");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<TabPorcentaje>("ExamenOnLineModel.FK_TabPorcentaje_EXAMEN", "TabPorcentaje", value);
+                }
+            }
+        }
 
         #endregion
 
@@ -2095,6 +2142,153 @@ namespace Datos
         #endregion
 
     }
+    
+    /// <summary>
+    /// No hay documentación de metadatos disponible.
+    /// </summary>
+    [EdmEntityTypeAttribute(NamespaceName="ExamenOnLineModel", Name="TabPorcentaje")]
+    [Serializable()]
+    [DataContractAttribute(IsReference=true)]
+    public partial class TabPorcentaje : EntityObject
+    {
+        #region Método de generador
+    
+        /// <summary>
+        /// Crear un nuevo objeto TabPorcentaje.
+        /// </summary>
+        /// <param name="idTabla">Valor inicial de la propiedad idTabla.</param>
+        public static TabPorcentaje CreateTabPorcentaje(global::System.Int32 idTabla)
+        {
+            TabPorcentaje tabPorcentaje = new TabPorcentaje();
+            tabPorcentaje.idTabla = idTabla;
+            return tabPorcentaje;
+        }
+
+        #endregion
+
+        #region Propiedades primitivas
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 idTabla
+        {
+            get
+            {
+                return _idTabla;
+            }
+            set
+            {
+                if (_idTabla != value)
+                {
+                    OnidTablaChanging(value);
+                    ReportPropertyChanging("idTabla");
+                    _idTabla = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("idTabla");
+                    OnidTablaChanged();
+                }
+            }
+        }
+        private global::System.Int32 _idTabla;
+        partial void OnidTablaChanging(global::System.Int32 value);
+        partial void OnidTablaChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> PorcentajeAprobacion
+        {
+            get
+            {
+                return _PorcentajeAprobacion;
+            }
+            set
+            {
+                OnPorcentajeAprobacionChanging(value);
+                ReportPropertyChanging("PorcentajeAprobacion");
+                _PorcentajeAprobacion = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("PorcentajeAprobacion");
+                OnPorcentajeAprobacionChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _PorcentajeAprobacion;
+        partial void OnPorcentajeAprobacionChanging(Nullable<global::System.Int32> value);
+        partial void OnPorcentajeAprobacionChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> ExamenId
+        {
+            get
+            {
+                return _ExamenId;
+            }
+            set
+            {
+                OnExamenIdChanging(value);
+                ReportPropertyChanging("ExamenId");
+                _ExamenId = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("ExamenId");
+                OnExamenIdChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _ExamenId;
+        partial void OnExamenIdChanging(Nullable<global::System.Int32> value);
+        partial void OnExamenIdChanged();
+
+        #endregion
+
+    
+        #region Propiedades de navegación
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("ExamenOnLineModel", "FK_TabPorcentaje_EXAMEN", "EXAMEN")]
+        public EXAMEN EXAMEN
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<EXAMEN>("ExamenOnLineModel.FK_TabPorcentaje_EXAMEN", "EXAMEN").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<EXAMEN>("ExamenOnLineModel.FK_TabPorcentaje_EXAMEN", "EXAMEN").Value = value;
+            }
+        }
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<EXAMEN> EXAMENReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<EXAMEN>("ExamenOnLineModel.FK_TabPorcentaje_EXAMEN", "EXAMEN");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<EXAMEN>("ExamenOnLineModel.FK_TabPorcentaje_EXAMEN", "EXAMEN", value);
+                }
+            }
+        }
+
+        #endregion
+
+    }
 
     #endregion
 
@@ -2103,36 +2297,12 @@ namespace Datos
     /// <summary>
     /// No hay documentación de metadatos disponible.
     /// </summary>
-    [EdmComplexTypeAttribute(NamespaceName="ExamenOnLineModel", Name="ListarCursos_Result")]
+    [EdmComplexTypeAttribute(NamespaceName="ExamenOnLineModel", Name="ExamenesProfesor_Result")]
     [DataContractAttribute(IsReference=true)]
     [Serializable()]
-    public partial class ListarCursos_Result : ComplexObject
+    public partial class ExamenesProfesor_Result : ComplexObject
     {
         #region Propiedades primitivas
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public global::System.String CURSOS
-        {
-            get
-            {
-                return _CURSOS;
-            }
-            set
-            {
-                OnCURSOSChanging(value);
-                ReportPropertyChanging("CURSOS");
-                _CURSOS = StructuralObject.SetValidValue(value, true);
-                ReportPropertyChanged("CURSOS");
-                OnCURSOSChanged();
-            }
-        }
-        private global::System.String _CURSOS;
-        partial void OnCURSOSChanging(global::System.String value);
-        partial void OnCURSOSChanged();
     
         /// <summary>
         /// No hay documentación de metadatos disponible.
@@ -2163,6 +2333,30 @@ namespace Datos
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
+        public global::System.String CURSOS
+        {
+            get
+            {
+                return _CURSOS;
+            }
+            set
+            {
+                OnCURSOSChanging(value);
+                ReportPropertyChanging("CURSOS");
+                _CURSOS = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("CURSOS");
+                OnCURSOSChanged();
+            }
+        }
+        private global::System.String _CURSOS;
+        partial void OnCURSOSChanging(global::System.String value);
+        partial void OnCURSOSChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
         public Nullable<global::System.DateTime> FECHA_Y_HORA
         {
             get
@@ -2181,6 +2375,102 @@ namespace Datos
         private Nullable<global::System.DateTime> _FECHA_Y_HORA;
         partial void OnFECHA_Y_HORAChanging(Nullable<global::System.DateTime> value);
         partial void OnFECHA_Y_HORAChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> RINDIERON
+        {
+            get
+            {
+                return _RINDIERON;
+            }
+            set
+            {
+                OnRINDIERONChanging(value);
+                ReportPropertyChanging("RINDIERON");
+                _RINDIERON = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("RINDIERON");
+                OnRINDIERONChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _RINDIERON;
+        partial void OnRINDIERONChanging(Nullable<global::System.Int32> value);
+        partial void OnRINDIERONChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> APROBARON
+        {
+            get
+            {
+                return _APROBARON;
+            }
+            set
+            {
+                OnAPROBARONChanging(value);
+                ReportPropertyChanging("APROBARON");
+                _APROBARON = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("APROBARON");
+                OnAPROBARONChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _APROBARON;
+        partial void OnAPROBARONChanging(Nullable<global::System.Int32> value);
+        partial void OnAPROBARONChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> REPROBARON
+        {
+            get
+            {
+                return _REPROBARON;
+            }
+            set
+            {
+                OnREPROBARONChanging(value);
+                ReportPropertyChanging("REPROBARON");
+                _REPROBARON = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("REPROBARON");
+                OnREPROBARONChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _REPROBARON;
+        partial void OnREPROBARONChanging(Nullable<global::System.Int32> value);
+        partial void OnREPROBARONChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> FALTANTES
+        {
+            get
+            {
+                return _FALTANTES;
+            }
+            set
+            {
+                OnFALTANTESChanging(value);
+                ReportPropertyChanging("FALTANTES");
+                _FALTANTES = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("FALTANTES");
+                OnFALTANTESChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _FALTANTES;
+        partial void OnFALTANTESChanging(Nullable<global::System.Int32> value);
+        partial void OnFALTANTESChanged();
 
         #endregion
 
@@ -2189,36 +2479,29 @@ namespace Datos
     /// <summary>
     /// No hay documentación de metadatos disponible.
     /// </summary>
-    [EdmComplexTypeAttribute(NamespaceName="ExamenOnLineModel", Name="ListarExamenes_Result")]
+    [EdmComplexTypeAttribute(NamespaceName="ExamenOnLineModel", Name="listar_examenes_Result")]
     [DataContractAttribute(IsReference=true)]
     [Serializable()]
-    public partial class ListarExamenes_Result : ComplexObject
+    public partial class listar_examenes_Result : ComplexObject
     {
-        #region Propiedades primitivas
+        #region Método de generador
     
         /// <summary>
-        /// No hay documentación de metadatos disponible.
+        /// Crear un nuevo objeto listar_examenes_Result.
         /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public global::System.String CURSOS
+        /// <param name="rESULTADO">Valor inicial de la propiedad RESULTADO.</param>
+        /// <param name="eSTADO">Valor inicial de la propiedad ESTADO.</param>
+        public static listar_examenes_Result Createlistar_examenes_Result(global::System.Int32 rESULTADO, global::System.Int32 eSTADO)
         {
-            get
-            {
-                return _CURSOS;
-            }
-            set
-            {
-                OnCURSOSChanging(value);
-                ReportPropertyChanging("CURSOS");
-                _CURSOS = StructuralObject.SetValidValue(value, true);
-                ReportPropertyChanged("CURSOS");
-                OnCURSOSChanged();
-            }
+            listar_examenes_Result listar_examenes_Result = new listar_examenes_Result();
+            listar_examenes_Result.RESULTADO = rESULTADO;
+            listar_examenes_Result.ESTADO = eSTADO;
+            return listar_examenes_Result;
         }
-        private global::System.String _CURSOS;
-        partial void OnCURSOSChanging(global::System.String value);
-        partial void OnCURSOSChanged();
+
+        #endregion
+
+        #region Propiedades primitivas
     
         /// <summary>
         /// No hay documentación de metadatos disponible.
@@ -2249,24 +2532,96 @@ namespace Datos
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
-        public Nullable<global::System.DateTime> FECHA_Y_HORA
+        public global::System.String CURSO
         {
             get
             {
-                return _FECHA_Y_HORA;
+                return _CURSO;
             }
             set
             {
-                OnFECHA_Y_HORAChanging(value);
-                ReportPropertyChanging("FECHA_Y_HORA");
-                _FECHA_Y_HORA = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("FECHA_Y_HORA");
-                OnFECHA_Y_HORAChanged();
+                OnCURSOChanging(value);
+                ReportPropertyChanging("CURSO");
+                _CURSO = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("CURSO");
+                OnCURSOChanged();
             }
         }
-        private Nullable<global::System.DateTime> _FECHA_Y_HORA;
-        partial void OnFECHA_Y_HORAChanging(Nullable<global::System.DateTime> value);
-        partial void OnFECHA_Y_HORAChanged();
+        private global::System.String _CURSO;
+        partial void OnCURSOChanging(global::System.String value);
+        partial void OnCURSOChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.DateTime> FECHA_HORA
+        {
+            get
+            {
+                return _FECHA_HORA;
+            }
+            set
+            {
+                OnFECHA_HORAChanging(value);
+                ReportPropertyChanging("FECHA_HORA");
+                _FECHA_HORA = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("FECHA_HORA");
+                OnFECHA_HORAChanged();
+            }
+        }
+        private Nullable<global::System.DateTime> _FECHA_HORA;
+        partial void OnFECHA_HORAChanging(Nullable<global::System.DateTime> value);
+        partial void OnFECHA_HORAChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 RESULTADO
+        {
+            get
+            {
+                return _RESULTADO;
+            }
+            set
+            {
+                OnRESULTADOChanging(value);
+                ReportPropertyChanging("RESULTADO");
+                _RESULTADO = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("RESULTADO");
+                OnRESULTADOChanged();
+            }
+        }
+        private global::System.Int32 _RESULTADO;
+        partial void OnRESULTADOChanging(global::System.Int32 value);
+        partial void OnRESULTADOChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 ESTADO
+        {
+            get
+            {
+                return _ESTADO;
+            }
+            set
+            {
+                OnESTADOChanging(value);
+                ReportPropertyChanging("ESTADO");
+                _ESTADO = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("ESTADO");
+                OnESTADOChanged();
+            }
+        }
+        private global::System.Int32 _ESTADO;
+        partial void OnESTADOChanging(global::System.Int32 value);
+        partial void OnESTADOChanged();
 
         #endregion
 

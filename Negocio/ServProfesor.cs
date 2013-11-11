@@ -22,7 +22,6 @@ namespace Negocio
             return NameUser;
         }
 
-        //llamamos a Store Procedure listarExamenes
         public object mostrarExamenes(int id_p)
         {
             var resulta = esProfesor.ListarLosExamenes(id_p);
@@ -35,12 +34,6 @@ namespace Negocio
             return resulta;
         }
 
-        public void crearNuevoExamen(string nombre, string descripcion, int duracion, DateTime tiempotope, DateTime horatope, int idcurso)
-        {
-
-            esProfesor.altaExamen(nombre, descripcion, duracion, tiempotope, horatope, idcurso);
-        }
-
         public bool validarUsuario(string user, string pass)
         {
             bool comprobar = esProfesor.ComprobarUsuario(user, pass);
@@ -51,6 +44,12 @@ namespace Negocio
         {
             bool resulta = esProfesor.tieneCursos(id_p);
             return resulta;
+        }
+
+        public void crearNuevoExamen(string nombre, string descripcion, int duracion, DateTime tiempotope, DateTime horatope, int porcentaje, int idcurso)
+        {
+            esProfesor.altaExamen(nombre, descripcion, duracion, tiempotope, horatope, idcurso);
+            esProfesor.agregarPorcentaje(porcentaje);
         }
     }
 }
