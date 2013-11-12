@@ -14,7 +14,7 @@ namespace TP_ExamenesEnLinea
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            fecCalendario2.Calendario = DateTime.Today.AddMonths(1);
+              
         }
 
         protected void btncrear_Click(object sender, EventArgs e)
@@ -25,8 +25,8 @@ namespace TP_ExamenesEnLinea
             int estado = 1;
             int id_p = Convert.ToInt32(Session["Id"]);
             //PARA GUARDAR LAS FECHAS:
-            DateTime feini = fecCalendario1.Calendario;
-            DateTime fefin = fecCalendario2.Calendario;
+            string feini = fecCalendario1.Calendario;
+            string fefin = fecCalendario2.Calendario;
 
             if (Page.IsValid)
             {

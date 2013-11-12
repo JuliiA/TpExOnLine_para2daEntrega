@@ -11,7 +11,7 @@
     <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-responsive.min.css"
         media="all" />
     <link rel="Shortcut Icon" href="imagen/curso_online.png" />
-    <title>.:.Sistemas de Examenes OnLine</title>
+    <title>.:.Sistemas de Examenes OnLine.:.</title>
 </head>
 <body class="body">
     <div class="container">

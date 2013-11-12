@@ -30,8 +30,8 @@ namespace TP_ExamenesEnLinea
                 {
                     TextBox1.Text = elCurso.consultarNombre(id_c);
                     check.Checked = elCurso.consultarEstado(id_c);
-                    fecini.Calendario = elCurso.consultarFechaInicio(id_c);
-                    fecfin.Calendario = elCurso.consultarFechaFin(id_c);
+                    fecini.Calendario = elCurso.consultarFechaInicio(id_c).ToString();
+                    fecfin.Calendario = elCurso.consultarFechaFin(id_c).ToString();
                     txtmails.Text = string.Join(";", elCurso.consultarLosMails(id_c).ToArray());
 
                 }

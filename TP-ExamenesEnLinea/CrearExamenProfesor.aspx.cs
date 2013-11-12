@@ -29,7 +29,7 @@ namespace TP_ExamenesEnLinea
             Int32 idcurso = Convert.ToInt32(ddlcursos.SelectedValue);
             string nombre = txtnomcurso.Text;
             string descripcion = txtdesc.Text;
-            DateTime tiempotope = fechatope.Calendario;
+            string tiempotope = fechatope.Calendario;
             Int32 duracion = Convert.ToInt32(ddlduracion.SelectedItem.Text);
             Int32 porcentaje = Convert.ToInt32(ddlporcentaje.SelectedItem.Text); 
             DateTime hora = Convert.ToDateTime(txthoratope.Text);
@@ -41,7 +41,7 @@ namespace TP_ExamenesEnLinea
                 {
                     if (ddlcursos.Items.Count != 0)
                     {
-                        miServicio.crearNuevoExamen(nombre, descripcion, duracion, tiempotope, hora,porcentaje,idcurso);
+                        miServicio.crearNuevoExamen(nombre,descripcion,duracion,tiempotope,hora,porcentaje,idcurso);
                         Label1.Text = "Se creo la primera parte";
                     }
                 }

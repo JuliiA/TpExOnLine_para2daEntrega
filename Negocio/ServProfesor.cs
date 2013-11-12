@@ -46,9 +46,14 @@ namespace Negocio
             return resulta;
         }
 
-        public void crearNuevoExamen(string nombre, string descripcion, int duracion, DateTime tiempotope, DateTime horatope, int porcentaje, int idcurso)
+        public void crearNuevoExamen(string nombre, string descripcion, int duracion, string tiempotope, DateTime horatope, int porcentaje, int idcurso)
         {
-            esProfesor.altaExamen(nombre, descripcion, duracion, tiempotope, horatope, idcurso);
+            string[] fec = tiempotope.Split('/');
+            int mes = Convert.ToInt16(fec[0]);
+            int dia = Convert.ToInt16(fec[1]);
+            int anio = Convert.ToInt16(fec[2]);
+            DateTime fecini = new DateTime(anio, mes, dia);
+            esProfesor.altaExamen(nombre, descripcion, duracion, fecini, horatope, idcurso);
             esProfesor.agregarPorcentaje(porcentaje);
         }
     }

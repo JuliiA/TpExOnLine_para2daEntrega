@@ -18,9 +18,21 @@ namespace Negocio
             return misCursos;
         }
         
-        public void AltaCurso(string nombre, int estado, DateTime fini, DateTime ffin, int id_p)
+        public void AltaCurso(string nombre, int estado, string fini, string ffin, int id_p)
         {
-            elCurso.CrearNuevoCurso(nombre, estado, fini, ffin, id_p);
+            string[] fec = fini.Split('/');
+            int mes = Convert.ToInt16(fec[0]);
+            int dia = Convert.ToInt16(fec[1]);
+            int anio = Convert.ToInt16(fec[2]);
+            DateTime fecini = new DateTime(anio, mes, dia);
+
+            string[] fecf = ffin.Split('/');
+            int mesf = Convert.ToInt16(fecf[0]);
+            int diaf = Convert.ToInt16(fecf[1]);
+            int aniof = Convert.ToInt16(fecf[2]);
+            DateTime fecfin = new DateTime(aniof, mesf, diaf);
+
+            elCurso.CrearNuevoCurso(nombre, estado, fecini, fecfin, id_p);
         }
         
         public void crearBucle(string[] words, string n)
@@ -115,9 +127,21 @@ namespace Negocio
             }
         }
 
-        public void CargarCurso(int id_c, string p, bool p_2, DateTime dateTime, DateTime dateTime_2)
+        public void CargarCurso(int id_c, string p, bool p_2, string dateTime, string dateTime_2)
         {
-            elCurso.CargarDatos(id_c, p, p_2, dateTime, dateTime_2);
+            string[] fec = dateTime.Split('/');
+            int mes = Convert.ToInt16(fec[0]);
+            int dia = Convert.ToInt16(fec[1]);
+            int anio = Convert.ToInt16(fec[2]);
+            DateTime fecini = new DateTime(anio, mes, dia);
+
+            string[] fecf = dateTime_2.Split('/');
+            int mesf = Convert.ToInt16(fecf[0]);
+            int diaf = Convert.ToInt16(fecf[1]);
+            int aniof = Convert.ToInt16(fecf[2]);
+            DateTime fecfin = new DateTime(aniof, mesf, diaf);
+
+            elCurso.CargarDatos(id_c, p, p_2, fecini, fecfin);
         }
 
         public void borrarLasAusencias(List<string> aBorrar)

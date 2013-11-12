@@ -1,16 +1,18 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="Fecha.ascx.cs" Inherits="TP_ExamenesEnLinea.Fecha" %>
-<asp:Calendar ID="Calendar1" runat="server" BackColor="White" 
-    BorderColor="#3366CC" BorderWidth="1px" CellPadding="1" 
-    DayNameFormat="Shortest" Font-Names="Verdana" Font-Size="8pt" 
-    ForeColor="#003399" Height="200px" Width="220px">
-    <DayHeaderStyle BackColor="#99CCCC" ForeColor="#336666" Height="1px" />
-    <NextPrevStyle Font-Size="8pt" ForeColor="#CCCCFF" />
-    <OtherMonthDayStyle ForeColor="#999999" />
-    <SelectedDayStyle BackColor="#009999" Font-Bold="True" ForeColor="#CCFF99" />
-    <SelectorStyle BackColor="#99CCCC" ForeColor="#336666" />
-    <TitleStyle BackColor="#003399" BorderColor="#3366CC" BorderWidth="1px" 
-        Font-Bold="True" Font-Size="10pt" ForeColor="#CCCCFF" Height="25px" />
-    <TodayDayStyle BackColor="#99CCCC" ForeColor="White" />
-    <WeekendDayStyle BackColor="#CCCCFF" />
-</asp:Calendar>
+<link href="datepicker/themes/base/jquery.ui.all.css" rel="stylesheet" type="text/css" />
+    <script src="datepicker/datepicker/jquery-1.9.1.js" type="text/javascript"></script>
+    <script src="datepicker/datepicker/jquery.ui.core.js" type="text/javascript"></script>
+    <script src="datepicker/datepicker/jquery.ui.widget.js" type="text/javascript"></script>
+    <script src="datepicker/datepicker/jquery.ui.datepicker.js" type="text/javascript"></script>
+    <%--<script type="text/javascript" src="Script/funciones.js"></script>--%>
+       <script type="text/javascript">
+           $(function () {
+               $.datepicker.setDefaults($.datepicker.regional['es']);
+               $("#<%=datepicker1.ClientID %>").datepicker($.datepicker.regional['es']);
+           }); 
+    </script>
+
+<div>
+<asp:TextBox ID="datepicker1" runat="server"></asp:TextBox>
+</div>
 

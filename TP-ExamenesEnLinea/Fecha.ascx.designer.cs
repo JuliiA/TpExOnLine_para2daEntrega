@@ -13,12 +13,12 @@ namespace TP_ExamenesEnLinea {
     public partial class Fecha {
         
         /// <summary>
-        /// Control Calendar1.
+        /// Control datepicker1.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Calendar Calendar1;
+        protected global::System.Web.UI.WebControls.TextBox datepicker1;
     }
 }
