@@ -4,11 +4,12 @@
     <script src="datepicker/datepicker/jquery.ui.core.js" type="text/javascript"></script>
     <script src="datepicker/datepicker/jquery.ui.widget.js" type="text/javascript"></script>
     <script src="datepicker/datepicker/jquery.ui.datepicker.js" type="text/javascript"></script>
-    <%--<script type="text/javascript" src="Script/funciones.js"></script>--%>
-       <script type="text/javascript">
+    <%--<script src="Script/funciones.js" type="text/javascript"></script>
+    --%>   
+    <script type="text/javascript">
            $(function () {
                $.datepicker.setDefaults($.datepicker.regional['es']);
-               $("#<%=datepicker1.ClientID %>").datepicker($.datepicker.regional['es']);
+               $('#<%=datepicker1.ClientID %>').datepicker($.datepicker.regional['es']);
            }); 
     </script>
 

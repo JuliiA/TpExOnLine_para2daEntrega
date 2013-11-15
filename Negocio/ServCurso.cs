@@ -23,7 +23,7 @@ namespace Negocio
             int mes = Convert.ToInt16(fec[0]);
             int dia = Convert.ToInt16(fec[1]);
             int anio = Convert.ToInt16(fec[2]);
-            DateTime fecini = new DateTime(anio,mes,dia);
+            DateTime fecini = new DateTime(anio, mes, dia);
 
             string[] fecf = ffin.Split('/');
             int mesf = Convert.ToInt16(fecf[0]);

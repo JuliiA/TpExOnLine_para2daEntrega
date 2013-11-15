@@ -1,7 +1,5 @@
 ﻿$(function () {
-
     $.datepicker.setDefaults($.datepicker.regional['es']);
-
     $("#<%=datepicker1.ClientID %>").datepicker($.datepicker.regional['es']);
 
 }); 
