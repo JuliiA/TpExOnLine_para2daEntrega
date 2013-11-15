@@ -44,18 +44,20 @@ namespace TP_ExamenesEnLinea
         {
             if (e.Row.RowType == DataControlRowType.DataRow)
             {
-                switch (Convert.ToInt32(e.Row.Cells[3].Text))
-                {
-                    case 1: e.Row.Cells[3].Text = "Aprobado"; break;
-                    case 2: e.Row.Cells[3].Text = "Desaprobado"; break;
-                    case 3: e.Row.Cells[3].Text = "<a href='RealizarExamenAlumno.aspx'>Realizar Examen</a>"; break;
-                }
                 switch (Convert.ToInt32(e.Row.Cells[4].Text))
                 {
-                    case 1: e.Row.Cells[4].Text = "Disponible"; break;
-                    case 2: e.Row.Cells[4].Text = "Vencido"; break;
+                    case 1: e.Row.Cells[4].Text = "Aprobado"; break;
+                    case 2: e.Row.Cells[4].Text = "Desaprobado"; break;
+                    case 3: e.Row.Cells[4].Text = "<a href='PrevioExamenAlumno.aspx'>Realizar Examen</a>"; break;
+                    case 4: e.Row.Cells[4].Text = "Vencido"; break;
                 }
+               
             }
+        }
+
+        protected void gvexamenes_RowCreated(object sender, GridViewRowEventArgs e)
+        {
+            e.Row.Cells[0].Visible = false;
         }
     }
 }

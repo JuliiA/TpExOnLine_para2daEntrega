@@ -10,7 +10,8 @@
             <div class="table table-striped table-hover">
                 <asp:Label ID="lblmensaje" runat="server" Text=""></asp:Label>
                 <asp:GridView ID="gvexamenes" runat="server" 
-                    OnRowDataBound="gvexamenes_RowDataBound" Width="80%">
+                    OnRowDataBound="gvexamenes_RowDataBound" Width="80%" 
+                    onrowcreated="gvexamenes_RowCreated">
                 </asp:GridView>
             </div>
         </div>

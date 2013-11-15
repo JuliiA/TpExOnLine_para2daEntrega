@@ -1,24 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="ExamenOnLineModelStoreContainer" CdmEntityContainer="ExOnLineEntities">
-    <FunctionImportMapping FunctionImportName="ListarCursos" FunctionName="ExamenOnLineModel.Store.listarCursosProfesor">
-      <ResultMapping>
-        <ComplexTypeMapping TypeName="ExamenOnLineModel.ListarCursos_Result">
-          <ScalarProperty Name="CURSOS" ColumnName="CURSOS" />
-          <ScalarProperty Name="EXAMEN" ColumnName="EXAMEN" />
-          <ScalarProperty Name="FECHA_Y_HORA" ColumnName="FECHA_Y_HORA" />
-        </ComplexTypeMapping>
-      </ResultMapping>
-    </FunctionImportMapping>
-    <FunctionImportMapping FunctionImportName="ListarExamenes" FunctionName="ExamenOnLineModel.Store.listarExamenesProfesor">
-      <ResultMapping>
-        <ComplexTypeMapping TypeName="ExamenOnLineModel.ListarExamenes_Result">
-          <ScalarProperty Name="CURSOS" ColumnName="CURSOS" />
-          <ScalarProperty Name="EXAMEN" ColumnName="EXAMEN" />
-          <ScalarProperty Name="FECHA_Y_HORA" ColumnName="FECHA_Y_HORA" />
-        </ComplexTypeMapping>
-      </ResultMapping>
-    </FunctionImportMapping>
     <EntitySetMapping Name="Alumnos">
       <EntityTypeMapping TypeName="ExamenOnLineModel.ALUMNO">
         <MappingFragment StoreEntitySet="ALUMNO">
@@ -117,5 +99,29 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="ExamenesProfesor" FunctionName="ExamenOnLineModel.Store.listarExamenesProfesor">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ExamenOnLineModel.ExamenesProfesor_Result">
+          <ScalarProperty Name="EXAMEN" ColumnName="EXAMEN" />
+          <ScalarProperty Name="CURSOS" ColumnName="CURSOS" />
+          <ScalarProperty Name="FECHA_Y_HORA" ColumnName="FECHA_Y_HORA" />
+          <ScalarProperty Name="RINDIERON" ColumnName="RINDIERON" />
+          <ScalarProperty Name="APROBARON" ColumnName="APROBARON" />
+          <ScalarProperty Name="REPROBARON" ColumnName="REPROBARON" />
+          <ScalarProperty Name="FALTANTES" ColumnName="FALTANTES" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_traerExamenes" FunctionName="ExamenOnLineModel.Store.SP_traer_examenes">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ExamenOnLineModel.SP_traer_examenes_Result1">
+          <ScalarProperty Name="IdExamen" ColumnName="IdExamen" />
+          <ScalarProperty Name="EXAMEN" ColumnName="EXAMEN" />
+          <ScalarProperty Name="CURSO" ColumnName="CURSO" />
+          <ScalarProperty Name="FECHA_HORA" ColumnName="FECHA_HORA" />
+          <ScalarProperty Name="RESULTADO" ColumnName="RESULTADO" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
   </EntityContainerMapping>
 </Mapping>

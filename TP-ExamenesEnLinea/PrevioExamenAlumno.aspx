@@ -7,11 +7,12 @@
             Examen</h3>
         <div class="panel panel-danger">
             <div class="panel-heading">
-                Numeros complejos</div>
+                Nombre Examen:<asp:Label ID="lblnombre" runat="server" Text=""></asp:Label></div>
             <div class="panel-heading">
-                Descripcion: Responder en base a la teoria vista en las ultimas dos clases</div>
+                Descripcion: 
+                <asp:Label ID="lbldescripcion" runat="server" Text=""></asp:Label></div>
             <div class="panel-heading">
-                Fecha tope: 20/09/2013 13:00</div>
+                Fecha y Hora Tope:<asp:Label ID="lblfechora" runat="server" Text=""></asp:Label></div>
         </div>
         <ul class="pager">
             <li><a href="ExamenesDisponiblesAlumnos.aspx" class="btn btn-default btn-lgk">« Volver

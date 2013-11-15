@@ -8,7 +8,7 @@
     <div class="nav-tabs breadcrumb col-md-offset-0">
         <h3>
             Grilla Cursos</h3>
-        <asp:Label ID="lblmensaje" CssClass="text-danger" runat="server" Text=""></asp:Label>
+        <asp:Label ID="lblmensaje" CssClass="text-warning" runat="server" Text=""></asp:Label>
         <div class="breadcrumb col-mg-2">
             <div class="table table-striped table-hover">
                 <asp:GridView ID="gvprueba" runat="server" 
@@ -16,11 +16,11 @@
                     OnRowDataBound="gvcursos_RowDataBound" OnRowCreated="gvcursos_RowCreated" 
                     Width="90%">
                 <Columns>
-                 <asp:HyperLinkField DataNavigateUrlFields="_idcurso" DataNavigateUrlFormatString="~/EditarCursoProfesor.aspx?id={0}"
+                 <asp:HyperLinkField DataNavigateUrlFields="IdCurso" DataNavigateUrlFormatString="~/EditarCursoProfesor.aspx?id={0}"
                             HeaderText="Edicion" Text="" ControlStyle-CssClass="icon-pencil">
                             <ControlStyle CssClass="icon-pencil"></ControlStyle>
                         </asp:HyperLinkField>
-                        <asp:HyperLinkField DataNavigateUrlFields="_idcurso" DataNavigateUrlFormatString="~/BorrarCursoProfesor.aspx?id={0}"
+                        <asp:HyperLinkField DataNavigateUrlFields="IdCurso" DataNavigateUrlFormatString="~/BorrarCursoProfesor.aspx?id={0}"
                             HeaderText="Borrado" Text="" ControlStyle-CssClass="icon-remove-circle">
                             <ControlStyle CssClass="icon-remove-circle"></ControlStyle>
                         </asp:HyperLinkField>

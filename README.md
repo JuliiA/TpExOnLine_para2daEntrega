@@ -1,13 +1,19 @@
-Hasta la fecha 10/11
-Este es el resumen de lo que esta y de lo que falta:
-1.Login de Profesor	 				>hecho
+2da Entrega- 13/11/2013
 
-2.ABM de Cursos						>hecho en 80%
-	-Datepicker en calendario userControl		>para proxima entrega
+LoginProfesor
+Email:yulii@yahoo.com	
+Password: sho246
 
-3.Login de Alumno					>hecho
+LoginAlumno
+Email: clau_max@yahoo.net	(usuario antiguo)
+Password: claudiopass
 
-4.Administracion de Examenes 				>hecho 80%
-	-Manejo porcentaje de aprobacion		>sin hacer
-	
-5.Lista de Examenes					>hecho 
+Email: usuario@creado.com	(usuario no registrado)
+Password: usuario@creado.com
+
+Email: alozada@gmail.com
+password: adri23me
+
+Email: clau_max@yahoo.net
+password:clau_max@yahoo.net
+

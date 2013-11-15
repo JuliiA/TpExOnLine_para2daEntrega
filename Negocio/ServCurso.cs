@@ -14,8 +14,7 @@ namespace Negocio
         AlumnoDatos elAlumno = new AlumnoDatos();
 
         public object muestraCursos(int idlogueado) {
-            List<CursoEntidad> misCursos = elCurso.listarCursosCantidad(idlogueado);
-            return misCursos;
+            return elCurso.listarCursosCantidad(idlogueado);
         }
         
         public void AltaCurso(string nombre, int estado, string fini, string ffin, int id_p)
@@ -24,13 +23,13 @@ namespace Negocio
             int mes = Convert.ToInt16(fec[0]);
             int dia = Convert.ToInt16(fec[1]);
             int anio = Convert.ToInt16(fec[2]);
-            DateTime fecini = new DateTime(anio, mes, dia);
+            DateTime fecini = new DateTime(anio,mes,dia);
 
             string[] fecf = ffin.Split('/');
             int mesf = Convert.ToInt16(fecf[0]);
             int diaf = Convert.ToInt16(fecf[1]);
             int aniof = Convert.ToInt16(fecf[2]);
-            DateTime fecfin = new DateTime(aniof, mesf, diaf);
+            DateTime fecfin = new DateTime(aniof,mesf,diaf);
 
             elCurso.CrearNuevoCurso(nombre, estado, fecini, fecfin, id_p);
         }
@@ -133,21 +132,27 @@ namespace Negocio
             int mes = Convert.ToInt16(fec[0]);
             int dia = Convert.ToInt16(fec[1]);
             int anio = Convert.ToInt16(fec[2]);
-            DateTime fecini = new DateTime(anio, mes, dia);
+            DateTime fecini = new DateTime(anio,mes,dia);
 
             string[] fecf = dateTime_2.Split('/');
             int mesf = Convert.ToInt16(fecf[0]);
             int diaf = Convert.ToInt16(fecf[1]);
             int aniof = Convert.ToInt16(fecf[2]);
-            DateTime fecfin = new DateTime(aniof, mesf, diaf);
+            DateTime fecfin = new DateTime(aniof,mesf,diaf);
 
-            elCurso.CargarDatos(id_c, p, p_2, fecini, fecfin);
+            int estado;
+            if (p_2 == true)
+                estado = 1;
+            else
+                estado = 2;
+
+            elCurso.CargarDatos(id_c, p, estado, fecini, fecfin);
         }
 
-        public void borrarLasAusencias(List<string> aBorrar)
+        public void borrarLasAusencias(List<string> aBorrar,int idcurso)
         {
             for (int i = 0; i < aBorrar.Count(); i++) {
-                elAlumno.borrarDelCurso(aBorrar[i]);
+                elAlumno.borrarDelCurso(aBorrar[i],idcurso);
             }
         }
     }

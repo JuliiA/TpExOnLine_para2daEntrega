@@ -12,8 +12,15 @@
         <div class="breadcrumb col-mg-2">
             <div class="table text-center table-condensed">
                 <asp:GridView ID="gvexamenes" runat="server" CellPadding="4" 
-                    ForeColor="#333333" GridLines="None" Width="90%">
+                    ForeColor="#333333" GridLines="None" Width="90%" 
+                    onrowcreated="gvexamenes_RowCreated">
                     <AlternatingRowStyle BackColor="White" />
+                    <Columns>
+                        <asp:HyperLinkField DataNavigateUrlFields="IdExamen" DataNavigateUrlFormatString="~/BorrarExamen.aspx?id={0}"
+                            HeaderText="Eliminar" Text="" ControlStyle-CssClass="icon-remove-sign">
+                            <ControlStyle CssClass="icon-remove-sign"></ControlStyle>
+                        </asp:HyperLinkField>
+                    </Columns>
                     <EditRowStyle BackColor="#2461BF" />
                     <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
                     <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />

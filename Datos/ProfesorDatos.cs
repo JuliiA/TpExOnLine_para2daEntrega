@@ -29,11 +29,11 @@ namespace Datos
             return esUsuario;
         }
 
-        public int BuscarId(string passUsuario)
+        public int BuscarId(string mailUsuario)
         {
             int RetornaId;
             var usID = (from u in ctx.Profesores
-                        where u.Contrasenia == passUsuario
+                        where u.Mail == mailUsuario
                         select u.IdProfesor).FirstOrDefault();
             RetornaId = usID;
             return RetornaId;
@@ -52,14 +52,14 @@ namespace Datos
         public object ListarLosExamenes(int id_p)
         {
             ObjectParameter _idProf = new ObjectParameter("Id_Profesor", typeof(String));
-            var resulta = ctx.ExamenesProfesor(id_p);
+            var resulta = ctx.listarExamenesProfesor(id_p);
             return resulta;
         }
 
         public object ListarLosCursosEnCombo(int id_p)
         {
             var retornaCursos = (from c in ctx.Cursos
-                                 where c.ProfId == id_p && c.Estado ==1
+                                 where c.ProfId == id_p && c.Estado == 1
                                  select c).ToList();
             return retornaCursos;
         }
@@ -78,7 +78,7 @@ namespace Datos
             }
         }
 
-        public void altaExamen(string nombre, string descripcion, int duracion, DateTime tiempotope, DateTime horatope,int idcurso)
+        public void altaExamen(string nombre, string descripcion, int duracion, DateTime tiempotope, DateTime horatope, int idcurso)
         {
             //concatenar los valores fecha y hora:
             DateTime fechahora = Convert.ToDateTime(tiempotope.Date + horatope.TimeOfDay);
@@ -110,6 +110,34 @@ namespace Datos
                           orderby e.IdExamen descending
                           select e.IdExamen).FirstOrDefault();
             return ultimo;
+        }
+
+        public string buscarExamen(int id_c)
+        {
+            EXAMEN miExamen = ctx.Examenes.Where(e => e.IdExamen == id_c).FirstOrDefault();
+            //var miExamen = (from e in ctx.Examenes
+            //                where e.IdExamen == id_c
+            //                select e.Nombre).FirstOrDefault();
+            return miExamen.Nombre;
+        }
+
+        public bool examenYaFueResuelto(int id_e)
+        {
+            RESULTADO res_EnExamen = ctx.Resultados.Where(re => re.ExamenId == id_e).FirstOrDefault();
+            if (res_EnExamen == null)
+                return false;
+            else
+                return true;
+        }
+
+        public void darBajaExamen(int id_e)
+        {
+            var _borrar = (from e in ctx.Examenes
+                           where e.IdExamen == id_e
+                           select e).FirstOrDefault();
+
+            ctx.Examenes.DeleteObject(_borrar);
+            ctx.SaveChanges();
         }
     }
 }

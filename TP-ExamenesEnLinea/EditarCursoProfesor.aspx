@@ -6,6 +6,7 @@
     <div class="nav-tabs breadcrumb col-md-offset-0">
         <h3>
             Editar Curso: </h3>
+                <asp:Label ID="lblmensaje" runat="server" Text="" CssClass="text-warning"></asp:Label>
         <asp:Label ID="lblid" runat="server" Text="" CssClass="text-info"></asp:Label>
         <div class="breadcrumb col-mg-2">
             <div class="formio">
@@ -39,7 +40,6 @@
                     <asp:Button ID="Button1" runat="server" class="btn btn-success" 
                         Text="Guardar cambios" onclick="Button1_Click" />
                 </div>
-                <asp:Label ID="lblmensaje" runat="server" Text="" CssClass="text-danger"></asp:Label>
             </div>
         </div>
     </div>

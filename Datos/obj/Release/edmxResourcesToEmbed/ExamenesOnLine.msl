@@ -99,20 +99,21 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <FunctionImportMapping FunctionImportName="listar_examenes" FunctionName="ExamenOnLineModel.Store.SP_traer_examenes">
+    <FunctionImportMapping FunctionImportName="SP_traerExamenes" FunctionName="ExamenOnLineModel.Store.SP_traer_examenes">
       <ResultMapping>
-        <ComplexTypeMapping TypeName="ExamenOnLineModel.listar_examenes_Result">
+        <ComplexTypeMapping TypeName="ExamenOnLineModel.SP_traer_examenes_Result1">
+          <ScalarProperty Name="IdExamen" ColumnName="IdExamen" />
           <ScalarProperty Name="EXAMEN" ColumnName="EXAMEN" />
           <ScalarProperty Name="CURSO" ColumnName="CURSO" />
           <ScalarProperty Name="FECHA_HORA" ColumnName="FECHA_HORA" />
           <ScalarProperty Name="RESULTADO" ColumnName="RESULTADO" />
-          <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
         </ComplexTypeMapping>
       </ResultMapping>
     </FunctionImportMapping>
-    <FunctionImportMapping FunctionImportName="ExamenesProfesor" FunctionName="ExamenOnLineModel.Store.listarExamenesProfesor">
+    <FunctionImportMapping FunctionImportName="listarExamenesProfesor" FunctionName="ExamenOnLineModel.Store.listarExamenesProfesor">
       <ResultMapping>
-        <ComplexTypeMapping TypeName="ExamenOnLineModel.ExamenesProfesor_Result">
+        <ComplexTypeMapping TypeName="ExamenOnLineModel.listarExamenesProfesor_Result">
+          <ScalarProperty Name="IdExamen" ColumnName="IdExamen" />
           <ScalarProperty Name="EXAMEN" ColumnName="EXAMEN" />
           <ScalarProperty Name="CURSOS" ColumnName="CURSOS" />
           <ScalarProperty Name="FECHA_Y_HORA" ColumnName="FECHA_Y_HORA" />
@@ -120,6 +121,18 @@
           <ScalarProperty Name="APROBARON" ColumnName="APROBARON" />
           <ScalarProperty Name="REPROBARON" ColumnName="REPROBARON" />
           <ScalarProperty Name="FALTANTES" ColumnName="FALTANTES" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_CursosProfesor" FunctionName="ExamenOnLineModel.Store.SP_CursosProfesor">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ExamenOnLineModel.SP_CursosProfesor_Result">
+          <ScalarProperty Name="IdCurso" ColumnName="IdCurso" />
+          <ScalarProperty Name="CURSO" ColumnName="CURSO" />
+          <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
+          <ScalarProperty Name="FECHA_INICIO" ColumnName="FECHA_INICIO" />
+          <ScalarProperty Name="FECHA_FIN" ColumnName="FECHA_FIN" />
+          <ScalarProperty Name="CANTIDAD" ColumnName="CANTIDAD" />
         </ComplexTypeMapping>
       </ResultMapping>
     </FunctionImportMapping>

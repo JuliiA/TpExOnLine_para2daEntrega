@@ -1,0 +1,72 @@
+
+ Fecha del Log : 13/11/2013 07:47:26 p.m.
+ Error ocurrido en la pagina : http://localhost:56719/LoginUsuario.aspx
+
+ Descripcion :
+System.Threading.ThreadAbortException: Subproceso anulado.
+   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en TP_ExamenesEnLinea.LoginUsuario.abrirSesionProfesor(String passUsuario, String mailU) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\LoginUsuario.aspx.cs:línea 46
+
+<===========================================================================>
+
+ Fecha del Log : 13/11/2013 07:53:27 p.m.
+ Error ocurrido en la pagina : http://localhost:56719/EditarCursoProfesor.aspx?id=49
+
+ Descripcion :
+System.ArgumentOutOfRangeException: Los parámetros de año, mes y día describen un campo DateTime que no se puede representar.
+   en System.DateTime.DateToTicks(Int32 year, Int32 month, Int32 day)
+   en System.DateTime..ctor(Int32 year, Int32 month, Int32 day)
+   en Negocio.ServCurso.CargarCurso(Int32 id_c, String p, Boolean p_2, String dateTime, String dateTime_2) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\Negocio\ServCurso.cs:línea 136
+   en TP_ExamenesEnLinea.EditarCursoProfesor.Button1_Click(Object sender, EventArgs e) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\EditarCursoProfesor.aspx.cs:línea 62
+
+<===========================================================================>
+
+ Fecha del Log : 13/11/2013 08:15:08 p.m.
+ Error ocurrido en la pagina : http://localhost:56719/LoginUsuario2.aspx
+
+ Descripcion :
+System.Threading.ThreadAbortException: Subproceso anulado.
+   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en TP_ExamenesEnLinea.LoginUsuario2.abrirSesionAlumno(String mailu, String passu) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\LoginUsuario2.aspx.cs:línea 52
+
+<===========================================================================>
+
+ Fecha del Log : 13/11/2013 08:22:43 p.m.
+ Error ocurrido en la pagina : http://localhost:56719/LoginUsuario2.aspx
+
+ Descripcion :
+System.Threading.ThreadAbortException: Subproceso anulado.
+   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en TP_ExamenesEnLinea.LoginUsuario2.abrirSesionAlumno(String mailu, String passu) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\LoginUsuario2.aspx.cs:línea 52
+
+<===========================================================================>
+
+ Fecha del Log : 13/11/2013 08:25:15 p.m.
+ Error ocurrido en la pagina : http://localhost:56719/LoginUsuario.aspx
+
+ Descripcion :
+System.Threading.ThreadAbortException: Subproceso anulado.
+   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url)
+   en TP_ExamenesEnLinea.LoginUsuario.abrirSesionProfesor(String passUsuario, String mailU) en C:\Users\Juliana\Documents\Visual Studio 2010\Settings\Projects\TP-ExamenesEnLinea\TP-ExamenesEnLinea\LoginUsuario.aspx.cs:línea 46
+
+<===========================================================================>

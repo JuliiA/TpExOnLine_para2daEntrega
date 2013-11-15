@@ -15,14 +15,10 @@ namespace TP_ExamenesEnLinea
         protected void Page_Load(object sender, EventArgs e)
         {
             int id_p = Convert.ToInt32(Session["id"]);
-            if (txtmail.Text == string.Empty)
-            {
-                txtmail.Text = elServicio.recuperarMailAlumno(id_p);
-            }
-
-            if(txtcontraseñaactual.Text == string.Empty){
-                txtcontraseñaactual.Text = elServicio.recuperarContraseniaActual(id_p);
-            }//txtnombre.Text = elServicio.RecuperaNombreLogueado(txtmail.Text);
+            txtmail.Text = elServicio.recuperarMailAlumno(id_p);
+            EmptyTextBoxes(txtnombre);
+            EmptyTextBoxes(txtdni);
+            EmptyTextBoxes(txtcontraseñaactual);
         }
 
         protected void Button1_Click(object sender, EventArgs e)
@@ -56,7 +52,7 @@ namespace TP_ExamenesEnLinea
         {
             int id_p = Convert.ToInt32(Session["id"]);
             if (Page.IsValid) {
-                if (elServicio.CambiarContrasenia(id_p, txtcontraseñaactual.Text, txtcontraseñanueva.Text))
+                if (elServicio.CambiarContrasenia(id_p,txtcontraseñaactual.Text,txtcontraseñanueva.Text))
                 {
                     lblnueva.Text = "La clave se ha cambiado correctamente";
                 }
@@ -66,6 +62,16 @@ namespace TP_ExamenesEnLinea
             }
         }
 
-       
+        public void EmptyTextBoxes(Control control)
+        {
+            foreach (Control c in control.Controls)
+            {
+                if (c is TextBox)
+                {
+                    ((TextBox)c).Text = String.Empty;
+                }
+            }
+        }
+
     }
 }

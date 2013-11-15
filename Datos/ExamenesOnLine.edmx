@@ -260,6 +260,9 @@
         <Function Name="listarExamenesProfesor" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="Id_Profesor" Type="int" Mode="In" />
         </Function>
+        <Function Name="SP_CursosProfesor" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id_Profesor" Type="int" Mode="In" />
+        </Function>
         <Function Name="SP_traer_examenes" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="id_Alumno" Type="int" Mode="In" />
         </Function>
@@ -313,11 +316,14 @@
             <End Role="EXAMEN" EntitySet="Examenes" />
             <End Role="TabPorcentaje" EntitySet="Porcentaje" />
           </AssociationSet>
-          <FunctionImport Name="listar_examenes" ReturnType="Collection(ExamenOnLineModel.listar_examenes_Result)">
+          <FunctionImport Name="SP_traerExamenes" ReturnType="Collection(ExamenOnLineModel.SP_traer_examenes_Result1)">
           <Parameter Name="id_Alumno" Mode="In" Type="Int32" />
           </FunctionImport>
-          <FunctionImport Name="ExamenesProfesor" ReturnType="Collection(ExamenOnLineModel.ExamenesProfesor_Result)">
-            <Parameter Name="Id_Profesor" Mode="In" Type="Int32" />
+          <FunctionImport Name="listarExamenesProfesor" ReturnType="Collection(ExamenOnLineModel.listarExamenesProfesor_Result)">
+          <Parameter Name="Id_Profesor" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="SP_CursosProfesor" ReturnType="Collection(ExamenOnLineModel.SP_CursosProfesor_Result)">
+            <Parameter Name="id_Profesor" Mode="In" Type="Int32" />
           </FunctionImport>
           </EntityContainer>
         <EntityType Name="ALUMNO">
@@ -551,6 +557,37 @@
           <Property Type="Int32" Name="REPROBARON" Nullable="true" />
           <Property Type="Int32" Name="FALTANTES" Nullable="true" />
         </ComplexType>
+        <ComplexType Name="SP_traer_examenes_Result">
+          <Property Type="String" Name="EXAMEN" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="CURSO" Nullable="true" />
+          <Property Type="DateTime" Name="FECHA_HORA" Nullable="true" Precision="23" />
+          <Property Type="Int32" Name="RESULTADO" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="SP_traer_examenes_Result1">
+          <Property Type="Int32" Name="IdExamen" Nullable="false" />
+          <Property Type="String" Name="EXAMEN" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="CURSO" Nullable="true" />
+          <Property Type="DateTime" Name="FECHA_HORA" Nullable="true" Precision="23" />
+          <Property Type="Int32" Name="RESULTADO" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="listarExamenesProfesor_Result">
+          <Property Type="Int32" Name="IdExamen" Nullable="false" />
+          <Property Type="String" Name="EXAMEN" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="CURSOS" Nullable="true" />
+          <Property Type="DateTime" Name="FECHA_Y_HORA" Nullable="true" Precision="23" />
+          <Property Type="Int32" Name="RINDIERON" Nullable="true" />
+          <Property Type="Int32" Name="APROBARON" Nullable="true" />
+          <Property Type="Int32" Name="REPROBARON" Nullable="true" />
+          <Property Type="Int32" Name="FALTANTES" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="SP_CursosProfesor_Result">
+          <Property Type="Int32" Name="IdCurso" Nullable="false" />
+          <Property Type="String" Name="CURSO" Nullable="true" />
+          <Property Type="Int32" Name="ESTADO" Nullable="true" />
+          <Property Type="DateTime" Name="FECHA_INICIO" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="FECHA_FIN" Nullable="true" Precision="23" />
+          <Property Type="Int32" Name="CANTIDAD" Nullable="true" />
+        </ComplexType>
         </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -655,20 +692,21 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <FunctionImportMapping FunctionImportName="listar_examenes" FunctionName="ExamenOnLineModel.Store.SP_traer_examenes">
+          <FunctionImportMapping FunctionImportName="SP_traerExamenes" FunctionName="ExamenOnLineModel.Store.SP_traer_examenes">
             <ResultMapping>
-              <ComplexTypeMapping TypeName="ExamenOnLineModel.listar_examenes_Result">
+              <ComplexTypeMapping TypeName="ExamenOnLineModel.SP_traer_examenes_Result1">
+                <ScalarProperty Name="IdExamen" ColumnName="IdExamen" />
                 <ScalarProperty Name="EXAMEN" ColumnName="EXAMEN" />
                 <ScalarProperty Name="CURSO" ColumnName="CURSO" />
                 <ScalarProperty Name="FECHA_HORA" ColumnName="FECHA_HORA" />
                 <ScalarProperty Name="RESULTADO" ColumnName="RESULTADO" />
-                <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
-          <FunctionImportMapping FunctionImportName="ExamenesProfesor" FunctionName="ExamenOnLineModel.Store.listarExamenesProfesor">
+          <FunctionImportMapping FunctionImportName="listarExamenesProfesor" FunctionName="ExamenOnLineModel.Store.listarExamenesProfesor">
             <ResultMapping>
-              <ComplexTypeMapping TypeName="ExamenOnLineModel.ExamenesProfesor_Result">
+              <ComplexTypeMapping TypeName="ExamenOnLineModel.listarExamenesProfesor_Result">
+                <ScalarProperty Name="IdExamen" ColumnName="IdExamen" />
                 <ScalarProperty Name="EXAMEN" ColumnName="EXAMEN" />
                 <ScalarProperty Name="CURSOS" ColumnName="CURSOS" />
                 <ScalarProperty Name="FECHA_Y_HORA" ColumnName="FECHA_Y_HORA" />
@@ -676,6 +714,18 @@
                 <ScalarProperty Name="APROBARON" ColumnName="APROBARON" />
                 <ScalarProperty Name="REPROBARON" ColumnName="REPROBARON" />
                 <ScalarProperty Name="FALTANTES" ColumnName="FALTANTES" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SP_CursosProfesor" FunctionName="ExamenOnLineModel.Store.SP_CursosProfesor">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ExamenOnLineModel.SP_CursosProfesor_Result">
+                <ScalarProperty Name="IdCurso" ColumnName="IdCurso" />
+                <ScalarProperty Name="CURSO" ColumnName="CURSO" />
+                <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
+                <ScalarProperty Name="FECHA_INICIO" ColumnName="FECHA_INICIO" />
+                <ScalarProperty Name="FECHA_FIN" ColumnName="FECHA_FIN" />
+                <ScalarProperty Name="CANTIDAD" ColumnName="CANTIDAD" />
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>

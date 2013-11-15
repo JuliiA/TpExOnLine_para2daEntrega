@@ -36,5 +36,10 @@ namespace TP_ExamenesEnLinea
                 lblmensaje.Text = "No se pudo cargar La grilla";
             }
         }
+
+        protected void gvexamenes_RowCreated(object sender, GridViewRowEventArgs e)
+        {
+            e.Row.Cells[1].Visible = false;
+        }
     }
 }

@@ -23,11 +23,16 @@ namespace TP_ExamenesEnLinea
                 btncrear.Visible = false;
             }
             lblnrp.Text = Request.QueryString["x"];
+            if(Convert.ToInt32(Request.QueryString["x"])>5){
+                Response.Redirect("Error404.aspx");        
+            }
+
             if (Convert.ToInt32(Request.QueryString["x"]) == 5)
             {
                 btncrear.Visible = true;
                 btnsig.Visible = false;
             }
+
         }
 
         protected void btnsig_Click1(object sender, EventArgs e)

@@ -10,9 +10,9 @@ namespace Negocio
     {
         ProfesorDatos esProfesor = new ProfesorDatos();
 
-        public int RecuperarIdLogueado(string passUsuario)
+        public int RecuperarIdLogueado(string mailUsuario)
         {
-            int idUser = esProfesor.BuscarId(passUsuario);
+            int idUser = esProfesor.BuscarId(mailUsuario);
             return idUser;
         }
 
@@ -36,7 +36,7 @@ namespace Negocio
 
         public bool validarUsuario(string user, string pass)
         {
-            bool comprobar = esProfesor.ComprobarUsuario(user, pass);
+            bool comprobar = esProfesor.ComprobarUsuario(user, ServConfiguracion.HashMD5(pass));
             return comprobar;
         }
 
@@ -55,6 +55,23 @@ namespace Negocio
             DateTime fecini = new DateTime(anio, mes, dia);
             esProfesor.altaExamen(nombre, descripcion, duracion, fecini, horatope, idcurso);
             esProfesor.agregarPorcentaje(porcentaje);
+        }
+
+        public string consultarNombreExamen(int id_c)
+        {
+            string resulta = esProfesor.buscarExamen(id_c);
+            return resulta;
+        }
+
+        public bool noPuedeSerBorrado(int id_e)
+        {
+            bool resulta = esProfesor.examenYaFueResuelto(id_e);
+            return resulta;
+        }
+
+        public void eliminarExamen(int id_e)
+        {
+            esProfesor.darBajaExamen(id_e);
         }
     }
 }

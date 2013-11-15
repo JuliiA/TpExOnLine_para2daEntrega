@@ -27,10 +27,10 @@ namespace Datos
             }
             return esUsuario;
         }
-        public int BuscarId(string passUsuario)
+        public int BuscarId(string mailUsuario)
         {
             var _usId = (from u in ctx.Alumnos
-                             where u.Contrasenia == passUsuario
+                             where u.Mail == mailUsuario
                              select u.IdAlumno).FirstOrDefault();
             return _usId;
         }
@@ -44,7 +44,7 @@ namespace Datos
                              select b.Nombre).FirstOrDefault();
             if (_name == null)
             {
-                user = "ALumno";
+                user = "Alumno";
             }
             else
             {
@@ -144,11 +144,11 @@ namespace Datos
             return resulta;
         }
 
-        public void borrarDelCurso(string p)
+        public void borrarDelCurso(string p,int idcurso)
         {
             int id = obtenerIdPorMail(p);
             var elimina = (from e in ctx.CursosAl
-                           where e.IDALUMNO == id
+                           where e.IDALUMNO == id && e.IDCURSO ==idcurso
                            select e);
             foreach (Curso_Alumno cal in elimina)
                 ctx.CursosAl.DeleteObject(cal);
@@ -158,7 +158,7 @@ namespace Datos
         public object consultarExamenes(int id_p)
         {
             ObjectParameter _idAl = new ObjectParameter("id_Alumno", typeof(String));
-            var resulta = ctx.listar_examenes(id_p);
+            var resulta = ctx.SP_traerExamenes(id_p);
             return resulta;
         }
     }

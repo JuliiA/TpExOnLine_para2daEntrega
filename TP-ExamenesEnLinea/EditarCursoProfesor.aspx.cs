@@ -30,10 +30,11 @@ namespace TP_ExamenesEnLinea
                 {
                     TextBox1.Text = elCurso.consultarNombre(id_c);
                     check.Checked = elCurso.consultarEstado(id_c);
-                    fecini.Calendario = elCurso.consultarFechaInicio(id_c).ToString();
-                    fecfin.Calendario = elCurso.consultarFechaFin(id_c).ToString();
-                    txtmails.Text = string.Join(";", elCurso.consultarLosMails(id_c).ToArray());
-
+                    fecini.Calendario = elCurso.consultarFechaInicio(id_c).ToShortDateString();
+                    fecfin.Calendario = elCurso.consultarFechaFin(id_c).ToShortDateString();
+                    //if(elCurso.tieneExamenOAlumno(id_c))
+                        txtmails.Text = string.Join(";", elCurso.consultarLosMails(id_c).ToArray());
+                    
                 }
                 catch (Exception ex)
                 {
@@ -46,34 +47,43 @@ namespace TP_ExamenesEnLinea
         protected void Button1_Click(object sender, EventArgs e)
         {
             string nombre = TextBox1.Text;
-            string mails = txtmails.Text;
-
-            char[] delimiterChars = { ';' };
-
-            string[] words = mails.Split(delimiterChars);
+            bool estado = check.Checked;
+            string feini = fecini.Calendario;
+            string fefin = fecfin.Calendario;
+            
             int id_p = Convert.ToInt32(Session["id"]);
             int id_c = Convert.ToInt32(Request.QueryString["id"]); //Para buscar los datos por id de curso
+            
             if (Page.IsValid)
             {
                 try
                 {
-                    elCurso.CargarCurso(id_c, TextBox1.Text, check.Checked, fecini.Calendario, fecfin.Calendario);
-                    //consulto los mails asociados al curso 
-                    List<string> consulta = elCurso.consultarLosMails(id_c);
-
-                    //comparo componentes de cada lista para saber lo que ya no estan
-                    IEnumerable<string> Diferencias = consulta.Except(words);
+                    elCurso.CargarCurso(id_c, nombre, estado, feini, fefin);
+                    string mails = txtmails.Text;
+                    char[] delimiterChars = { ';' };
+                    string[] words = mails.Split(delimiterChars);
                     
-                    //guardo en nueva lista los componentes que no son iguales
-                    List<string> aBorrar = new List<string>();
-                    foreach (string f in Diferencias)
+                    if (String.IsNullOrEmpty(mails))
                     {
-                        aBorrar.Add(f);
+                        //consulto los mails asociados al curso 
+                        List<string> consulta = elCurso.consultarLosMails(id_c);
+
+                        //comparo componentes de cada lista para saber lo que ya no estan
+                        IEnumerable<string> Diferencias = consulta.Except(words);
+
+                        //guardo en nueva lista los componentes que no son iguales
+                        List<string> aBorrar = new List<string>();
+                        foreach (string f in Diferencias)
+                        {
+                            aBorrar.Add(f);
+                        }
+
+                        elCurso.borrarLasAusencias(aBorrar,id_c);
                     }
-                    
-                    elCurso.crearBucle(words,id_c);
-                    elCurso.borrarLasAusencias(aBorrar);
-                    lblmensaje.Text = "Curso modificado correctamente";
+                    else{
+                            elCurso.crearBucle(words, id_c);
+                            lblmensaje.Text = "Curso modificado correctamente";
+                        }
                 }
                 catch (Exception ex)
                 {

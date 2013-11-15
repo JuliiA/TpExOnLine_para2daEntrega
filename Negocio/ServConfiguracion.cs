@@ -2,19 +2,27 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using Datos;
+using System.Security.Cryptography;
 
 namespace Negocio
 {
     public class ServConfiguracion
     {
-        Configuracion cs = new Configuracion();
+        public static string HashMD5(string texto) {
+            MD5 md5 = new MD5CryptoServiceProvider();
+            md5.ComputeHash(ASCIIEncoding.ASCII.GetBytes(texto));
+            
+            byte[] resulta = md5.Hash;
+            int cantidad = resulta.Length;
 
-        public bool validarUsuario(string user, string pass) {
-            bool comprobar = cs.ComprobarUsuario(user, pass);
-            return comprobar;
+            StringBuilder str = new StringBuilder();
+            
+            for (int i = 0; i < cantidad; i++)
+            {
+                str.Append(resulta[i].ToString("x2"));
+            }
+
+            return str.ToString();
         }
-
-
     }
 }

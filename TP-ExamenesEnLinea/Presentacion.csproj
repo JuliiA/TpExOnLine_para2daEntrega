@@ -52,8 +52,100 @@
   <ItemGroup>
     <Content Include="AdminProfesor.aspx" />
     <Content Include="BorrarCursoProfesor.aspx" />
+    <Content Include="BorrarExamen.aspx" />
     <Content Include="CrearExamenProfesor.aspx" />
     <Content Include="CursosProfesor.aspx" />
+    <Content Include="datepicker\datepicker\jquery-1.9.0.min.js" />
+    <Content Include="datepicker\datepicker\jquery-1.9.1.js" />
+    <Content Include="datepicker\datepicker\jquery.ui.core.js" />
+    <Content Include="datepicker\datepicker\jquery.ui.datepicker.js" />
+    <Content Include="datepicker\datepicker\jquery.ui.widget.js" />
+    <Content Include="datepicker\themes\base\images\animated-overlay.gif" />
+    <Content Include="datepicker\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="datepicker\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="datepicker\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="datepicker\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="datepicker\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="datepicker\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="datepicker\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="datepicker\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="datepicker\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="datepicker\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="datepicker\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="datepicker\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="datepicker\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="datepicker\themes\base\jquery-ui.css" />
+    <Content Include="datepicker\themes\base\jquery.ui.all.css" />
+    <Content Include="datepicker\themes\base\jquery.ui.base.css" />
+    <Content Include="datepicker\themes\base\jquery.ui.core.css" />
+    <Content Include="datepicker\themes\base\jquery.ui.datepicker.css" />
+    <Content Include="datepicker\themes\base\jquery.ui.resizable.css" />
+    <Content Include="datepicker\themes\base\jquery.ui.selectable.css" />
+    <Content Include="datepicker\themes\base\jquery.ui.theme.css" />
+    <Content Include="datepicker\themes\base\minified\images\animated-overlay.gif" />
+    <Content Include="datepicker\themes\base\minified\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="datepicker\themes\base\minified\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="datepicker\themes\base\minified\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="datepicker\themes\base\minified\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="datepicker\themes\base\minified\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="datepicker\themes\base\minified\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="datepicker\themes\base\minified\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="datepicker\themes\base\minified\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="datepicker\themes\base\minified\images\ui-icons_222222_256x240.png" />
+    <Content Include="datepicker\themes\base\minified\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="datepicker\themes\base\minified\images\ui-icons_454545_256x240.png" />
+    <Content Include="datepicker\themes\base\minified\images\ui-icons_888888_256x240.png" />
+    <Content Include="datepicker\themes\base\minified\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="datepicker\themes\base\minified\jquery-ui.min.css" />
+    <Content Include="datepicker\themes\base\minified\jquery.ui.core.min.css" />
+    <Content Include="datepicker\themes\base\minified\jquery.ui.datepicker.min.css" />
+    <Content Include="datepicker\themes\base\minified\jquery.ui.resizable.min.css" />
+    <Content Include="datepicker\themes\base\minified\jquery.ui.selectable.min.css" />
+    <Content Include="datepicker\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="datepicker\themes\ui-lightness\images\animated-overlay.gif" />
+    <Content Include="datepicker\themes\ui-lightness\images\ui-bg_diagonals-thick_18_b81900_40x40.png" />
+    <Content Include="datepicker\themes\ui-lightness\images\ui-bg_diagonals-thick_20_666666_40x40.png" />
+    <Content Include="datepicker\themes\ui-lightness\images\ui-bg_flat_10_000000_40x100.png" />
+    <Content Include="datepicker\themes\ui-lightness\images\ui-bg_glass_100_f6f6f6_1x400.png" />
+    <Content Include="datepicker\themes\ui-lightness\images\ui-bg_glass_100_fdf5ce_1x400.png" />
+    <Content Include="datepicker\themes\ui-lightness\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="datepicker\themes\ui-lightness\images\ui-bg_gloss-wave_35_f6a828_500x100.png" />
+    <Content Include="datepicker\themes\ui-lightness\images\ui-bg_highlight-soft_100_eeeeee_1x100.png" />
+    <Content Include="datepicker\themes\ui-lightness\images\ui-bg_highlight-soft_75_ffe45c_1x100.png" />
+    <Content Include="datepicker\themes\ui-lightness\images\ui-icons_222222_256x240.png" />
+    <Content Include="datepicker\themes\ui-lightness\images\ui-icons_228ef1_256x240.png" />
+    <Content Include="datepicker\themes\ui-lightness\images\ui-icons_ef8c08_256x240.png" />
+    <Content Include="datepicker\themes\ui-lightness\images\ui-icons_ffd27a_256x240.png" />
+    <Content Include="datepicker\themes\ui-lightness\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="datepicker\themes\ui-lightness\jquery-ui.css" />
+    <Content Include="datepicker\themes\ui-lightness\jquery.ui.all.css" />
+    <Content Include="datepicker\themes\ui-lightness\jquery.ui.base.css" />
+    <Content Include="datepicker\themes\ui-lightness\jquery.ui.core.css" />
+    <Content Include="datepicker\themes\ui-lightness\jquery.ui.datepicker.css" />
+    <Content Include="datepicker\themes\ui-lightness\jquery.ui.resizable.css" />
+    <Content Include="datepicker\themes\ui-lightness\jquery.ui.selectable.css" />
+    <Content Include="datepicker\themes\ui-lightness\jquery.ui.theme.css" />
+    <Content Include="datepicker\themes\ui-lightness\minified\images\animated-overlay.gif" />
+    <Content Include="datepicker\themes\ui-lightness\minified\images\ui-bg_diagonals-thick_18_b81900_40x40.png" />
+    <Content Include="datepicker\themes\ui-lightness\minified\images\ui-bg_diagonals-thick_20_666666_40x40.png" />
+    <Content Include="datepicker\themes\ui-lightness\minified\images\ui-bg_flat_10_000000_40x100.png" />
+    <Content Include="datepicker\themes\ui-lightness\minified\images\ui-bg_glass_100_f6f6f6_1x400.png" />
+    <Content Include="datepicker\themes\ui-lightness\minified\images\ui-bg_glass_100_fdf5ce_1x400.png" />
+    <Content Include="datepicker\themes\ui-lightness\minified\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="datepicker\themes\ui-lightness\minified\images\ui-bg_gloss-wave_35_f6a828_500x100.png" />
+    <Content Include="datepicker\themes\ui-lightness\minified\images\ui-bg_highlight-soft_100_eeeeee_1x100.png" />
+    <Content Include="datepicker\themes\ui-lightness\minified\images\ui-bg_highlight-soft_75_ffe45c_1x100.png" />
+    <Content Include="datepicker\themes\ui-lightness\minified\images\ui-icons_222222_256x240.png" />
+    <Content Include="datepicker\themes\ui-lightness\minified\images\ui-icons_228ef1_256x240.png" />
+    <Content Include="datepicker\themes\ui-lightness\minified\images\ui-icons_ef8c08_256x240.png" />
+    <Content Include="datepicker\themes\ui-lightness\minified\images\ui-icons_ffd27a_256x240.png" />
+    <Content Include="datepicker\themes\ui-lightness\minified\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="datepicker\themes\ui-lightness\minified\jquery-ui.min.css" />
+    <Content Include="datepicker\themes\ui-lightness\minified\jquery.ui.core.min.css" />
+    <Content Include="datepicker\themes\ui-lightness\minified\jquery.ui.datepicker.min.css" />
+    <Content Include="datepicker\themes\ui-lightness\minified\jquery.ui.resizable.min.css" />
+    <Content Include="datepicker\themes\ui-lightness\minified\jquery.ui.selectable.min.css" />
+    <Content Include="datepicker\themes\ui-lightness\minified\jquery.ui.theme.min.css" />
     <Content Include="EditarCursoProfesor.aspx" />
     <Content Include="EditarDatosAlumno.aspx" />
     <Content Include="Error404.aspx" />
@@ -62,6 +154,12 @@
     <Content Include="ExamenesDisponiblesAlumnos.aspx" />
     <Content Include="ExamenesProfesor.aspx" />
     <Content Include="Fecha.ascx" />
+    <Content Include="imagen\404-pizarra.jpg" />
+    <Content Include="imagen\404.jpg" />
+    <Content Include="imagen\curso_online.png" />
+    <Content Include="imagen\Error.png" />
+    <Content Include="imagen\img.png" />
+    <Content Include="imagen\sin-conexion.jpg" />
     <Content Include="Index.aspx" />
     <Content Include="LoginUsuario.aspx" />
     <Content Include="LoginUsuario2.aspx" />
@@ -71,6 +169,7 @@
     <Content Include="RealizarExamenAlumno.aspx" />
     <Content Include="ResultadoExamenAlumno.aspx" />
     <Content Include="bootstrap\js\Script.js" />
+    <Content Include="Script\funciones.js" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -95,6 +194,13 @@
     </Compile>
     <Compile Include="BorrarCursoProfesor.aspx.designer.cs">
       <DependentUpon>BorrarCursoProfesor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BorrarExamen.aspx.cs">
+      <DependentUpon>BorrarExamen.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BorrarExamen.aspx.designer.cs">
+      <DependentUpon>BorrarExamen.aspx</DependentUpon>
     </Compile>
     <Compile Include="ClientException.cs" />
     <Compile Include="CrearExamenProfesor.aspx.cs">

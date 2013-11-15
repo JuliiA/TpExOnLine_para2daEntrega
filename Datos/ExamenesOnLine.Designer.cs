@@ -307,7 +307,7 @@ namespace Datos
         /// No hay documentación de metadatos disponible.
         /// </summary>
         /// <param name="id_Alumno">No hay documentación de metadatos disponible.</param>
-        public ObjectResult<listar_examenes_Result> listar_examenes(Nullable<global::System.Int32> id_Alumno)
+        public ObjectResult<SP_traer_examenes_Result1> SP_traerExamenes(Nullable<global::System.Int32> id_Alumno)
         {
             ObjectParameter id_AlumnoParameter;
             if (id_Alumno.HasValue)
@@ -319,14 +319,14 @@ namespace Datos
                 id_AlumnoParameter = new ObjectParameter("id_Alumno", typeof(global::System.Int32));
             }
     
-            return base.ExecuteFunction<listar_examenes_Result>("listar_examenes", id_AlumnoParameter);
+            return base.ExecuteFunction<SP_traer_examenes_Result1>("SP_traerExamenes", id_AlumnoParameter);
         }
     
         /// <summary>
         /// No hay documentación de metadatos disponible.
         /// </summary>
         /// <param name="id_Profesor">No hay documentación de metadatos disponible.</param>
-        public ObjectResult<ExamenesProfesor_Result> ExamenesProfesor(Nullable<global::System.Int32> id_Profesor)
+        public ObjectResult<listarExamenesProfesor_Result> listarExamenesProfesor(Nullable<global::System.Int32> id_Profesor)
         {
             ObjectParameter id_ProfesorParameter;
             if (id_Profesor.HasValue)
@@ -338,7 +338,26 @@ namespace Datos
                 id_ProfesorParameter = new ObjectParameter("Id_Profesor", typeof(global::System.Int32));
             }
     
-            return base.ExecuteFunction<ExamenesProfesor_Result>("ExamenesProfesor", id_ProfesorParameter);
+            return base.ExecuteFunction<listarExamenesProfesor_Result>("listarExamenesProfesor", id_ProfesorParameter);
+        }
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        /// <param name="id_Profesor">No hay documentación de metadatos disponible.</param>
+        public ObjectResult<SP_CursosProfesor_Result> SP_CursosProfesor(Nullable<global::System.Int32> id_Profesor)
+        {
+            ObjectParameter id_ProfesorParameter;
+            if (id_Profesor.HasValue)
+            {
+                id_ProfesorParameter = new ObjectParameter("id_Profesor", id_Profesor);
+            }
+            else
+            {
+                id_ProfesorParameter = new ObjectParameter("id_Profesor", typeof(global::System.Int32));
+            }
+    
+            return base.ExecuteFunction<SP_CursosProfesor_Result>("SP_CursosProfesor", id_ProfesorParameter);
         }
 
         #endregion
@@ -2622,6 +2641,676 @@ namespace Datos
         private global::System.Int32 _ESTADO;
         partial void OnESTADOChanging(global::System.Int32 value);
         partial void OnESTADOChanged();
+
+        #endregion
+
+    }
+    
+    /// <summary>
+    /// No hay documentación de metadatos disponible.
+    /// </summary>
+    [EdmComplexTypeAttribute(NamespaceName="ExamenOnLineModel", Name="listarExamenesProfesor_Result")]
+    [DataContractAttribute(IsReference=true)]
+    [Serializable()]
+    public partial class listarExamenesProfesor_Result : ComplexObject
+    {
+        #region Método de generador
+    
+        /// <summary>
+        /// Crear un nuevo objeto listarExamenesProfesor_Result.
+        /// </summary>
+        /// <param name="idExamen">Valor inicial de la propiedad IdExamen.</param>
+        public static listarExamenesProfesor_Result CreatelistarExamenesProfesor_Result(global::System.Int32 idExamen)
+        {
+            listarExamenesProfesor_Result listarExamenesProfesor_Result = new listarExamenesProfesor_Result();
+            listarExamenesProfesor_Result.IdExamen = idExamen;
+            return listarExamenesProfesor_Result;
+        }
+
+        #endregion
+
+        #region Propiedades primitivas
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 IdExamen
+        {
+            get
+            {
+                return _IdExamen;
+            }
+            set
+            {
+                OnIdExamenChanging(value);
+                ReportPropertyChanging("IdExamen");
+                _IdExamen = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("IdExamen");
+                OnIdExamenChanged();
+            }
+        }
+        private global::System.Int32 _IdExamen;
+        partial void OnIdExamenChanging(global::System.Int32 value);
+        partial void OnIdExamenChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String EXAMEN
+        {
+            get
+            {
+                return _EXAMEN;
+            }
+            set
+            {
+                OnEXAMENChanging(value);
+                ReportPropertyChanging("EXAMEN");
+                _EXAMEN = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("EXAMEN");
+                OnEXAMENChanged();
+            }
+        }
+        private global::System.String _EXAMEN;
+        partial void OnEXAMENChanging(global::System.String value);
+        partial void OnEXAMENChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String CURSOS
+        {
+            get
+            {
+                return _CURSOS;
+            }
+            set
+            {
+                OnCURSOSChanging(value);
+                ReportPropertyChanging("CURSOS");
+                _CURSOS = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("CURSOS");
+                OnCURSOSChanged();
+            }
+        }
+        private global::System.String _CURSOS;
+        partial void OnCURSOSChanging(global::System.String value);
+        partial void OnCURSOSChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.DateTime> FECHA_Y_HORA
+        {
+            get
+            {
+                return _FECHA_Y_HORA;
+            }
+            set
+            {
+                OnFECHA_Y_HORAChanging(value);
+                ReportPropertyChanging("FECHA_Y_HORA");
+                _FECHA_Y_HORA = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("FECHA_Y_HORA");
+                OnFECHA_Y_HORAChanged();
+            }
+        }
+        private Nullable<global::System.DateTime> _FECHA_Y_HORA;
+        partial void OnFECHA_Y_HORAChanging(Nullable<global::System.DateTime> value);
+        partial void OnFECHA_Y_HORAChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> RINDIERON
+        {
+            get
+            {
+                return _RINDIERON;
+            }
+            set
+            {
+                OnRINDIERONChanging(value);
+                ReportPropertyChanging("RINDIERON");
+                _RINDIERON = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("RINDIERON");
+                OnRINDIERONChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _RINDIERON;
+        partial void OnRINDIERONChanging(Nullable<global::System.Int32> value);
+        partial void OnRINDIERONChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> APROBARON
+        {
+            get
+            {
+                return _APROBARON;
+            }
+            set
+            {
+                OnAPROBARONChanging(value);
+                ReportPropertyChanging("APROBARON");
+                _APROBARON = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("APROBARON");
+                OnAPROBARONChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _APROBARON;
+        partial void OnAPROBARONChanging(Nullable<global::System.Int32> value);
+        partial void OnAPROBARONChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> REPROBARON
+        {
+            get
+            {
+                return _REPROBARON;
+            }
+            set
+            {
+                OnREPROBARONChanging(value);
+                ReportPropertyChanging("REPROBARON");
+                _REPROBARON = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("REPROBARON");
+                OnREPROBARONChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _REPROBARON;
+        partial void OnREPROBARONChanging(Nullable<global::System.Int32> value);
+        partial void OnREPROBARONChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> FALTANTES
+        {
+            get
+            {
+                return _FALTANTES;
+            }
+            set
+            {
+                OnFALTANTESChanging(value);
+                ReportPropertyChanging("FALTANTES");
+                _FALTANTES = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("FALTANTES");
+                OnFALTANTESChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _FALTANTES;
+        partial void OnFALTANTESChanging(Nullable<global::System.Int32> value);
+        partial void OnFALTANTESChanged();
+
+        #endregion
+
+    }
+    
+    /// <summary>
+    /// No hay documentación de metadatos disponible.
+    /// </summary>
+    [EdmComplexTypeAttribute(NamespaceName="ExamenOnLineModel", Name="SP_CursosProfesor_Result")]
+    [DataContractAttribute(IsReference=true)]
+    [Serializable()]
+    public partial class SP_CursosProfesor_Result : ComplexObject
+    {
+        #region Método de generador
+    
+        /// <summary>
+        /// Crear un nuevo objeto SP_CursosProfesor_Result.
+        /// </summary>
+        /// <param name="idCurso">Valor inicial de la propiedad IdCurso.</param>
+        public static SP_CursosProfesor_Result CreateSP_CursosProfesor_Result(global::System.Int32 idCurso)
+        {
+            SP_CursosProfesor_Result sP_CursosProfesor_Result = new SP_CursosProfesor_Result();
+            sP_CursosProfesor_Result.IdCurso = idCurso;
+            return sP_CursosProfesor_Result;
+        }
+
+        #endregion
+
+        #region Propiedades primitivas
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 IdCurso
+        {
+            get
+            {
+                return _IdCurso;
+            }
+            set
+            {
+                OnIdCursoChanging(value);
+                ReportPropertyChanging("IdCurso");
+                _IdCurso = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("IdCurso");
+                OnIdCursoChanged();
+            }
+        }
+        private global::System.Int32 _IdCurso;
+        partial void OnIdCursoChanging(global::System.Int32 value);
+        partial void OnIdCursoChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String CURSO
+        {
+            get
+            {
+                return _CURSO;
+            }
+            set
+            {
+                OnCURSOChanging(value);
+                ReportPropertyChanging("CURSO");
+                _CURSO = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("CURSO");
+                OnCURSOChanged();
+            }
+        }
+        private global::System.String _CURSO;
+        partial void OnCURSOChanging(global::System.String value);
+        partial void OnCURSOChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> ESTADO
+        {
+            get
+            {
+                return _ESTADO;
+            }
+            set
+            {
+                OnESTADOChanging(value);
+                ReportPropertyChanging("ESTADO");
+                _ESTADO = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("ESTADO");
+                OnESTADOChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _ESTADO;
+        partial void OnESTADOChanging(Nullable<global::System.Int32> value);
+        partial void OnESTADOChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.DateTime> FECHA_INICIO
+        {
+            get
+            {
+                return _FECHA_INICIO;
+            }
+            set
+            {
+                OnFECHA_INICIOChanging(value);
+                ReportPropertyChanging("FECHA_INICIO");
+                _FECHA_INICIO = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("FECHA_INICIO");
+                OnFECHA_INICIOChanged();
+            }
+        }
+        private Nullable<global::System.DateTime> _FECHA_INICIO;
+        partial void OnFECHA_INICIOChanging(Nullable<global::System.DateTime> value);
+        partial void OnFECHA_INICIOChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.DateTime> FECHA_FIN
+        {
+            get
+            {
+                return _FECHA_FIN;
+            }
+            set
+            {
+                OnFECHA_FINChanging(value);
+                ReportPropertyChanging("FECHA_FIN");
+                _FECHA_FIN = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("FECHA_FIN");
+                OnFECHA_FINChanged();
+            }
+        }
+        private Nullable<global::System.DateTime> _FECHA_FIN;
+        partial void OnFECHA_FINChanging(Nullable<global::System.DateTime> value);
+        partial void OnFECHA_FINChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> CANTIDAD
+        {
+            get
+            {
+                return _CANTIDAD;
+            }
+            set
+            {
+                OnCANTIDADChanging(value);
+                ReportPropertyChanging("CANTIDAD");
+                _CANTIDAD = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("CANTIDAD");
+                OnCANTIDADChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _CANTIDAD;
+        partial void OnCANTIDADChanging(Nullable<global::System.Int32> value);
+        partial void OnCANTIDADChanged();
+
+        #endregion
+
+    }
+    
+    /// <summary>
+    /// No hay documentación de metadatos disponible.
+    /// </summary>
+    [EdmComplexTypeAttribute(NamespaceName="ExamenOnLineModel", Name="SP_traer_examenes_Result")]
+    [DataContractAttribute(IsReference=true)]
+    [Serializable()]
+    public partial class SP_traer_examenes_Result : ComplexObject
+    {
+        #region Método de generador
+    
+        /// <summary>
+        /// Crear un nuevo objeto SP_traer_examenes_Result.
+        /// </summary>
+        /// <param name="rESULTADO">Valor inicial de la propiedad RESULTADO.</param>
+        public static SP_traer_examenes_Result CreateSP_traer_examenes_Result(global::System.Int32 rESULTADO)
+        {
+            SP_traer_examenes_Result sP_traer_examenes_Result = new SP_traer_examenes_Result();
+            sP_traer_examenes_Result.RESULTADO = rESULTADO;
+            return sP_traer_examenes_Result;
+        }
+
+        #endregion
+
+        #region Propiedades primitivas
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String EXAMEN
+        {
+            get
+            {
+                return _EXAMEN;
+            }
+            set
+            {
+                OnEXAMENChanging(value);
+                ReportPropertyChanging("EXAMEN");
+                _EXAMEN = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("EXAMEN");
+                OnEXAMENChanged();
+            }
+        }
+        private global::System.String _EXAMEN;
+        partial void OnEXAMENChanging(global::System.String value);
+        partial void OnEXAMENChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String CURSO
+        {
+            get
+            {
+                return _CURSO;
+            }
+            set
+            {
+                OnCURSOChanging(value);
+                ReportPropertyChanging("CURSO");
+                _CURSO = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("CURSO");
+                OnCURSOChanged();
+            }
+        }
+        private global::System.String _CURSO;
+        partial void OnCURSOChanging(global::System.String value);
+        partial void OnCURSOChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.DateTime> FECHA_HORA
+        {
+            get
+            {
+                return _FECHA_HORA;
+            }
+            set
+            {
+                OnFECHA_HORAChanging(value);
+                ReportPropertyChanging("FECHA_HORA");
+                _FECHA_HORA = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("FECHA_HORA");
+                OnFECHA_HORAChanged();
+            }
+        }
+        private Nullable<global::System.DateTime> _FECHA_HORA;
+        partial void OnFECHA_HORAChanging(Nullable<global::System.DateTime> value);
+        partial void OnFECHA_HORAChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 RESULTADO
+        {
+            get
+            {
+                return _RESULTADO;
+            }
+            set
+            {
+                OnRESULTADOChanging(value);
+                ReportPropertyChanging("RESULTADO");
+                _RESULTADO = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("RESULTADO");
+                OnRESULTADOChanged();
+            }
+        }
+        private global::System.Int32 _RESULTADO;
+        partial void OnRESULTADOChanging(global::System.Int32 value);
+        partial void OnRESULTADOChanged();
+
+        #endregion
+
+    }
+    
+    /// <summary>
+    /// No hay documentación de metadatos disponible.
+    /// </summary>
+    [EdmComplexTypeAttribute(NamespaceName="ExamenOnLineModel", Name="SP_traer_examenes_Result1")]
+    [DataContractAttribute(IsReference=true)]
+    [Serializable()]
+    public partial class SP_traer_examenes_Result1 : ComplexObject
+    {
+        #region Método de generador
+    
+        /// <summary>
+        /// Crear un nuevo objeto SP_traer_examenes_Result1.
+        /// </summary>
+        /// <param name="idExamen">Valor inicial de la propiedad IdExamen.</param>
+        /// <param name="rESULTADO">Valor inicial de la propiedad RESULTADO.</param>
+        public static SP_traer_examenes_Result1 CreateSP_traer_examenes_Result1(global::System.Int32 idExamen, global::System.Int32 rESULTADO)
+        {
+            SP_traer_examenes_Result1 sP_traer_examenes_Result1 = new SP_traer_examenes_Result1();
+            sP_traer_examenes_Result1.IdExamen = idExamen;
+            sP_traer_examenes_Result1.RESULTADO = rESULTADO;
+            return sP_traer_examenes_Result1;
+        }
+
+        #endregion
+
+        #region Propiedades primitivas
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 IdExamen
+        {
+            get
+            {
+                return _IdExamen;
+            }
+            set
+            {
+                OnIdExamenChanging(value);
+                ReportPropertyChanging("IdExamen");
+                _IdExamen = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("IdExamen");
+                OnIdExamenChanged();
+            }
+        }
+        private global::System.Int32 _IdExamen;
+        partial void OnIdExamenChanging(global::System.Int32 value);
+        partial void OnIdExamenChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String EXAMEN
+        {
+            get
+            {
+                return _EXAMEN;
+            }
+            set
+            {
+                OnEXAMENChanging(value);
+                ReportPropertyChanging("EXAMEN");
+                _EXAMEN = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("EXAMEN");
+                OnEXAMENChanged();
+            }
+        }
+        private global::System.String _EXAMEN;
+        partial void OnEXAMENChanging(global::System.String value);
+        partial void OnEXAMENChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String CURSO
+        {
+            get
+            {
+                return _CURSO;
+            }
+            set
+            {
+                OnCURSOChanging(value);
+                ReportPropertyChanging("CURSO");
+                _CURSO = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("CURSO");
+                OnCURSOChanged();
+            }
+        }
+        private global::System.String _CURSO;
+        partial void OnCURSOChanging(global::System.String value);
+        partial void OnCURSOChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.DateTime> FECHA_HORA
+        {
+            get
+            {
+                return _FECHA_HORA;
+            }
+            set
+            {
+                OnFECHA_HORAChanging(value);
+                ReportPropertyChanging("FECHA_HORA");
+                _FECHA_HORA = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("FECHA_HORA");
+                OnFECHA_HORAChanged();
+            }
+        }
+        private Nullable<global::System.DateTime> _FECHA_HORA;
+        partial void OnFECHA_HORAChanging(Nullable<global::System.DateTime> value);
+        partial void OnFECHA_HORAChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 RESULTADO
+        {
+            get
+            {
+                return _RESULTADO;
+            }
+            set
+            {
+                OnRESULTADOChanging(value);
+                ReportPropertyChanging("RESULTADO");
+                _RESULTADO = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("RESULTADO");
+                OnRESULTADOChanged();
+            }
+        }
+        private global::System.Int32 _RESULTADO;
+        partial void OnRESULTADOChanging(global::System.Int32 value);
+        partial void OnRESULTADOChanged();
 
         #endregion
 

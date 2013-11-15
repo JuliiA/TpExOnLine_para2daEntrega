@@ -1,12 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="ExamenOnLineModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
   <EntityContainer Name="ExOnLineEntities" annotation:LazyLoadingEnabled="true">
-    <FunctionImport Name="ListarCursos" ReturnType="Collection(ExamenOnLineModel.ListarCursos_Result)">
-      <Parameter Name="Id_Profesor" Mode="In" Type="Int32" />
-    </FunctionImport>
-    <FunctionImport Name="ListarExamenes" ReturnType="Collection(ExamenOnLineModel.ListarExamenes_Result)">
-      <Parameter Name="Id_Profesor" Mode="In" Type="Int32" />
-    </FunctionImport>
     <EntitySet Name="Alumnos" EntityType="ExamenOnLineModel.ALUMNO" />
     <EntitySet Name="Cursos" EntityType="ExamenOnLineModel.CURSO" />
     <EntitySet Name="Examenes" EntityType="ExamenOnLineModel.EXAMEN" />
@@ -52,17 +46,13 @@
       <End Role="EXAMEN" EntitySet="Examenes" />
       <End Role="TabPorcentaje" EntitySet="Porcentaje" />
     </AssociationSet>
+    <FunctionImport Name="ExamenesProfesor" ReturnType="Collection(ExamenOnLineModel.ExamenesProfesor_Result)">
+      <Parameter Name="Id_Profesor" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SP_traerExamenes" ReturnType="Collection(ExamenOnLineModel.SP_traer_examenes_Result1)">
+      <Parameter Name="id_Alumno" Mode="In" Type="Int32" />
+    </FunctionImport>
   </EntityContainer>
-  <ComplexType Name="ListarCursos_Result">
-    <Property Type="String" Name="CURSOS" Nullable="true" />
-    <Property Type="String" Name="EXAMEN" Nullable="true" MaxLength="50" />
-    <Property Type="DateTime" Name="FECHA_Y_HORA" Nullable="true" Precision="23" />
-  </ComplexType>
-  <ComplexType Name="ListarExamenes_Result">
-    <Property Type="String" Name="CURSOS" Nullable="true" />
-    <Property Type="String" Name="EXAMEN" Nullable="true" MaxLength="50" />
-    <Property Type="DateTime" Name="FECHA_Y_HORA" Nullable="true" Precision="23" />
-  </ComplexType>
   <EntityType Name="ALUMNO">
     <Key>
       <PropertyRef Name="IdAlumno" />
@@ -278,4 +268,33 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <ComplexType Name="listar_examenes_Result">
+    <Property Type="String" Name="EXAMEN" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="CURSO" Nullable="true" />
+    <Property Type="DateTime" Name="FECHA_HORA" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="RESULTADO" Nullable="false" />
+    <Property Type="Int32" Name="ESTADO" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="ExamenesProfesor_Result">
+    <Property Type="String" Name="EXAMEN" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="CURSOS" Nullable="true" />
+    <Property Type="DateTime" Name="FECHA_Y_HORA" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="RINDIERON" Nullable="true" />
+    <Property Type="Int32" Name="APROBARON" Nullable="true" />
+    <Property Type="Int32" Name="REPROBARON" Nullable="true" />
+    <Property Type="Int32" Name="FALTANTES" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="SP_traer_examenes_Result">
+    <Property Type="String" Name="EXAMEN" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="CURSO" Nullable="true" />
+    <Property Type="DateTime" Name="FECHA_HORA" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="RESULTADO" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="SP_traer_examenes_Result1">
+    <Property Type="Int32" Name="IdExamen" Nullable="false" />
+    <Property Type="String" Name="EXAMEN" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="CURSO" Nullable="true" />
+    <Property Type="DateTime" Name="FECHA_HORA" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="RESULTADO" Nullable="false" />
+  </ComplexType>
 </Schema>

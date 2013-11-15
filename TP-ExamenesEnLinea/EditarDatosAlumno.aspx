@@ -27,7 +27,7 @@
                 <br />
                 <asp:Label ID="lblcontraseñaactual" runat="server" Text="Contraseña actual"></asp:Label>
                 <div>
-                    <asp:TextBox ID="txtcontraseñaactual" runat="server" ValidationGroup="validar"></asp:TextBox></div>
+                    <asp:TextBox ID="txtcontraseñaactual" TextMode="Password" runat="server" ValidationGroup="validar"></asp:TextBox></div>
                 <br />
                 <div class="tab-content">
                     <asp:Label ID="lblcontraseñanueva" runat="server" Text="Contraseña nueva"></asp:Label>
@@ -42,12 +42,12 @@
                             Display="Dynamic" CssClass="text-danger"></asp:CompareValidator><br />
                         <asp:Button ID="Button2" runat="server" CssClass="btn-mini" Text="Validar Contraseña"
                             ValidationGroup="validar" onclick="Button2_Click" /><br />
-                        <asp:Label ID="lblnueva" runat="server" Text=""></asp:Label>
+                        <asp:Label ID="lblnueva" runat="server" Text="" CssClass="text-warning"></asp:Label>
                     </div>
                 </div>
                 <br />
                 <asp:Button ID="Button1" runat="server" Text="Guardar cambios" CssClass="btn btn-success "
-                    OnClick="Button1_Click" ValidationGroup="Editar" />
+                    OnClick="Button1_Click" ValidationGroup="Editar"/>
             </div>
         </div>
     </div>

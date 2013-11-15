@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Data;
 using System.Data.SqlClient;
+using System.Data.Objects;
 
 namespace Datos
 {
@@ -11,38 +12,10 @@ namespace Datos
     {
         ExOnLineEntities ctxto = new ExOnLineEntities();
        
-        public List<CursoEntidad> listarCursosCantidad(int idlogueado)
+        public object listarCursosCantidad(int idlogueado)
         {
-            //List<CursoEntidad> concatena;
-            var curso = (from c in ctxto.Cursos
-                         join c in ctxto.CursosAl on c.IdCurso equals c.IDCURSO
-                         into c2
-                         from fd in c2.DefaultIfEmpty()
-                         where c.ProfId == idlogueado
-                         group c by new
-                         {
-                             idCurso2 = c.IdCurso,
-                             Nombre2 = c.Nombre,
-                             Activo2 = (int)c.Estado,
-                             FecahIni2 = (DateTime)c.FecIni,
-                             FechaFin2 = (DateTime)c.FecFin,
-                             idProf2 = c.ProfId
-                         }
-                         //hago la junta de cantidad con la lista obtenida de cursos
-                             into agrupa
-                             let cantidadAlumnos = agrupa.Count()
-                             orderby cantidadAlumnos
-                         //agrupo los datos obtenidos en una nueva clase CursoEntidad
-                             select new CursoEntidad
-                             {
-                                 _idcurso = agrupa.Key.idCurso2,
-                                 CURSO = agrupa.Key.Nombre2,
-                                 estado = (int)agrupa.Key.Activo2,
-                                 FECHA_INICIO = (DateTime)agrupa.Key.FecahIni2,
-                                 FECHA_FIN = (DateTime)agrupa.Key.FechaFin2,
-                                 _profid = (int)agrupa.Key.idProf2,
-                                 CANTIDAD_ALUMNOS = cantidadAlumnos
-                             }).ToList();
+            ObjectParameter _idProf = new ObjectParameter("id_Profesor", typeof(int));
+            var curso = ctxto.SP_CursosProfesor(idlogueado);
             return curso;
         }
   
@@ -65,8 +38,9 @@ namespace Datos
         public bool tieneAsignaciones(int id_c)
         {
             EXAMEN ex_encurso = ctxto.Examenes.Where(ex => ex.CursoId == id_c).FirstOrDefault();
+            Curso_Alumno cal_encurso = ctxto.CursosAl.Where(cal => cal.IDCURSO == id_c).FirstOrDefault();
             //LA ASIGNACION DE ALGUN ALUMNO A UN CURSO COMO LA CONSULTO??
-            if (ex_encurso == null)
+            if (ex_encurso == null || cal_encurso == null)
             {
                 return false;
             }
@@ -161,13 +135,13 @@ namespace Datos
             return fefinal;
         }
 
-        public void CargarDatos(int id_c, string p, bool p_2, DateTime dateTime, DateTime dateTime_2)
+        public void CargarDatos(int id_c, string p, int estado, DateTime dateTime, DateTime dateTime_2)
         {
             CURSO edcur = ctxto.Cursos.Where(s => s.IdCurso == id_c).First();
-
+            
             edcur.IdCurso = id_c;
             edcur.Nombre = p;
-            edcur.Estado = Convert.ToInt32(p_2);
+            edcur.Estado = estado;
             edcur.FecIni = dateTime;
             edcur.FecFin = dateTime_2;
 

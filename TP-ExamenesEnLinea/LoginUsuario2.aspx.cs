@@ -43,7 +43,7 @@ namespace TP_ExamenesEnLinea
         {
             try
             {
-                int id = miServicio.RecuperarIdLogueado(passu);
+                int id = miServicio.RecuperarIdLogueado(mailu);
                 string nombre = miServicio.RecuperaNombreLogueado(mailu);
 
                 Session["Id"] = id;

@@ -255,6 +255,9 @@
   <Function Name="listarExamenesProfesor" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="Id_Profesor" Type="int" Mode="In" />
   </Function>
+  <Function Name="SP_CursosProfesor" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id_Profesor" Type="int" Mode="In" />
+  </Function>
   <Function Name="SP_traer_examenes" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="id_Alumno" Type="int" Mode="In" />
   </Function>

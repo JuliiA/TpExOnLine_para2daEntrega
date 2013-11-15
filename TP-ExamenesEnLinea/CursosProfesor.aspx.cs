@@ -52,7 +52,7 @@ namespace TP_ExamenesEnLinea
         protected void gvcursos_RowCreated(object sender, GridViewRowEventArgs e)
         {
             e.Row.Cells[2].Visible = false;
-            e.Row.Cells[7].Visible = false;
+            ////e.Row.Cells[7].Visible = false;
         }
 
         protected void gvcursos_RowDataBound(object sender, GridViewRowEventArgs e)
@@ -64,9 +64,9 @@ namespace TP_ExamenesEnLinea
                     case 1: e.Row.Cells[4].Text = "Activado"; break;
                     case 2: e.Row.Cells[4].Text = "Desactivado"; break;
                 }
-                switch (Convert.ToInt32(e.Row.Cells[8].Text))
+                switch (Convert.ToInt32(e.Row.Cells[7].Text))
                 {
-                    case 1: e.Row.Cells[8].Text = "Sin Alumnos"; break;
+                    case 0: e.Row.Cells[7].Text = "Sin Alumnos"; break;
                 }
             }
            

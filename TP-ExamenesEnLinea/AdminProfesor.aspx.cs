@@ -14,14 +14,16 @@ namespace TP_ExamenesEnLinea
 
         protected void Page_Load(object sender, EventArgs e)
         {
-              
+            if (!Page.IsPostBack)
+            {
+                fecCalendario2.Calendario = DateTime.Now.AddMonths(1).ToShortDateString();
+                CheckBox1.Checked = true;
+            }
         }
 
         protected void btncrear_Click(object sender, EventArgs e)
         {
             string nombre = txtcurso.Text;
-            string mails = txtmails.Text;
-            
             int estado = 1;
             int id_p = Convert.ToInt32(Session["Id"]);
             //PARA GUARDAR LAS FECHAS:
@@ -34,15 +36,20 @@ namespace TP_ExamenesEnLinea
                 {
                     //crear logica de alta curso
                     elServicio.AltaCurso(nombre, estado, feini, fefin, id_p);
-                    if (mails != null)
+                    if (String.IsNullOrEmpty(txtmails.Text))
                     {
+                        lblmensaje.Text = "Curso creado correctamente";
+                    }
+                    else
+                    {
+                        string mails = txtmails.Text;
                         //cadena que resulta de busqueda en el texto ingresado como separador
                         char[] delimiterChars = { ';' };
                         //creo un array 
                         string[] words = mails.Split(delimiterChars);
                         elServicio.crearBucle(words, nombre);
                     }
-                    lblmensaje.Text = "Curso creado correctamente";
+                    
                     
                 }
                 catch (Exception ex)
@@ -59,14 +66,6 @@ namespace TP_ExamenesEnLinea
             Response.Redirect(Request.RawUrl);
         }
 
-        //Validar el check, siempre tiene que estar activo para que se cree el curso:
-        protected void CustomValidator1_ServerValidate(object source, ServerValidateEventArgs args)
-        {
-            if (CheckBox1.Checked)
-                args.IsValid = true;
-            else
-                args.IsValid = false;
-        }
 
     }
 }

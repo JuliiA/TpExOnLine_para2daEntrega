@@ -11,12 +11,12 @@ namespace Negocio
         AlumnoDatos esAlumno = new AlumnoDatos();
         public bool validarUsuario(string user, string pass)
         {
-            bool comprobar = esAlumno.ComprobarUsuario(user, pass);
+            bool comprobar = esAlumno.ComprobarUsuario(user,pass);
             return comprobar;
         }
-        public int RecuperarIdLogueado(string passUsuario)
+        public int RecuperarIdLogueado(string mailUsuario)
         {
-            int idUser = esAlumno.BuscarId(passUsuario);
+            int idUser = esAlumno.BuscarId(mailUsuario);
             return idUser;
         }
         public string RecuperaNombreLogueado(string mailu)

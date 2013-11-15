@@ -6,6 +6,7 @@
     <div class="nav-tabs breadcrumb col-md-offset-0">
         <h3>
             Alta de Curso</h3>
+            <asp:Label ID="lblmensaje" runat="server" Text="" CssClass="text-warning"></asp:Label>
         <div class="breadcrumb col-mg-2">
             <div class="formio">
                 <div class="control-group">
@@ -18,10 +19,7 @@
                 <div class="control-group">
                     <div class="controls">
                         <asp:CheckBox ID="CheckBox1" runat="server" Text="Estado: Activo/Desactivo"/>
-                        <asp:CustomValidator ID="CustomValidator1" runat="server" 
-                            ErrorMessage="*Campo Obligatorio" 
-                            onservervalidate="CustomValidator1_ServerValidate" ValidationGroup="crear" CssClass="text-danger"></asp:CustomValidator>
-                    </div>
+                     </div>
                 </div>
                 <div class="control-group">
                    Fecha de Inicio<fec:Calendario ID="fecCalendario1" runat="server"></fec:Calendario>
@@ -31,7 +29,7 @@
                 <div class="control-group">
                     <asp:Label ID="lblmails" runat="server" CssClass="control-label" Text="Email Alumnos"></asp:Label>
                     <div class="controls">
-                        <asp:Label ID="Label2" runat="server" Text="[INGRESE LOS MAIL SEPARADOS POR COMA(,)]"></asp:Label>
+                        <asp:Label ID="Label2" runat="server" Text="[INGRESE LOS MAIL SEPARADOS POR (;)]"></asp:Label>
                         <asp:TextBox ID="txtmails" runat="server" MaxLength="140" Rows="6" TextMode="MultiLine" ValidationGroup="btncurso"></asp:TextBox>    
                     </div>
                 </div>
@@ -41,7 +39,7 @@
                     <asp:Button ID="btncancelar" runat="server" CssClass="btn btn-inverse" 
                         Text="Cancelar" onclick="btncancelar_Click" />
                 </div>
-                <asp:Label ID="lblmensaje" runat="server" Text="" CssClass="text-danger"></asp:Label>
+                
             </div>
         </div>
     </div>

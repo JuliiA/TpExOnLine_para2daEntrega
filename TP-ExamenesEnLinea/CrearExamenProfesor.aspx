@@ -6,6 +6,8 @@
     <div class="nav-tabs breadcrumb col-md-offset-0">
         <h3>
             Crear Examen</h3>
+            
+                <asp:Label ID="Label1" runat="server" CssClass="text-warning" Text=""></asp:Label>
         <div class="breadcrumb">
             <div class="formio">
                 <asp:Label ID="lblcurso" runat="server" Text="Curso"></asp:Label>
@@ -34,9 +36,13 @@
                         <asp:ListItem Value="4" Text="30"></asp:ListItem>
                         <asp:ListItem Value="5" Text="35"></asp:ListItem>
                         <asp:ListItem Value="6" Text="45"></asp:ListItem>
-                        <asp:ListItem Value="7" Text="60"></asp:ListItem>
+                        <asp:ListItem Value="7" Text="50"></asp:ListItem> 
+                        <asp:ListItem Value="8" Text="60"></asp:ListItem>
+                        <asp:ListItem Value="9" Text="90"></asp:ListItem>
+                        <asp:ListItem Value="10" Text="120"></asp:ListItem>
                     </asp:DropDownList>
                 </div>
+                    <asp:Label ID="Label3" runat="server" Text="Fecha Tope"></asp:Label>
                      <fec:Calendario ID="fechatope" runat="server" /><div>
                     <asp:Label ID="Label2" runat="server" Text="Hora Tope"></asp:Label><br />
                     <asp:TextBox ID="txthoratope" runat="server"></asp:TextBox>hh:mm</div>
@@ -44,7 +50,7 @@
                 <asp:Label ID="lblporcentaje" runat="server" Text="Porcentaje de aprobacion"></asp:Label>
                 <div>
                     <asp:DropDownList ID="ddlporcentaje" runat="server" AutoPostBack="true">
-                        <asp:ListItem Value="0" Text="Seleccione los minutos"></asp:ListItem>
+                        <asp:ListItem Value="0" Text="Seleccione porcentaje"></asp:ListItem>
                         <asp:ListItem Value="1" Text="40"></asp:ListItem>
                         <asp:ListItem Value="2" Text="60"></asp:ListItem>
                         <asp:ListItem Value="3" Text="80"></asp:ListItem>
@@ -55,7 +61,6 @@
                 <asp:Button ID="btnsig" runat="server" CssClass="btn btn-success" 
                     Text="Siguiente" onclick="btnsig_Click" />
                 <%--<a href="Preguntas.aspx">[PREGUNTAS]</a>--%>
-                <asp:Label ID="Label1" runat="server" CssClass="text-danger" Text=""></asp:Label>
             </div>
         
         </div>

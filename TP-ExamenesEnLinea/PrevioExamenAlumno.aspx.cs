@@ -11,7 +11,7 @@ namespace TP_ExamenesEnLinea
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            int id_a = Convert.ToInt32(Session["Id"]);
         }
     }
 }
